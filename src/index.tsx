@@ -1,10 +1,22 @@
-import * as React from 'react'
+import React from 'react'
 import styles from './styles.module.css'
+
+import VButton from "./Buttons/VButton"
 
 interface Props {
   text: string
 }
 
-export const ExampleComponent = ({ text }: Props) => {
-  return <div className={styles.test}>Example Component: {text}</div>
+const ExampleComponent = ({ text }: Props) => {
+  return (
+    <div>
+      <div className={styles.test}>{`This is the custom wrapper >>> ${text} <<<`}</div>
+    </div>
+  )
+   
+
+}
+export {
+  ExampleComponent,
+  VButton
 }

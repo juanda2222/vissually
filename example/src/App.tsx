@@ -1,10 +1,17 @@
 import React from 'react'
 
-import { ExampleComponent } from 'vissually'
+import { ExampleComponent, VButton } from 'vissually'
+//import { VButton } from 'vissually/Buttons'
 import 'vissually/dist/index.css'
 
 const App = () => {
-  return <ExampleComponent text="Create React Library Example 😄" />
+  return (
+    <div>
+      <ExampleComponent text="Create React Library Example 😄" />
+      <VButton>{"hey"}</VButton>
+
+    </div>
+  )
 }
 
 export default App
