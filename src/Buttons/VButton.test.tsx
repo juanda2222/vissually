@@ -1,4 +1,4 @@
-import { VButton } from './index'
+import VButton from './VButton'
 
 describe('VButton', () => {
   it('is truthy', () => {

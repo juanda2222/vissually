@@ -1,18 +1,45 @@
 import * as React from 'react'
 
 import styles from './VButton.module.css'
+import styled from 'styled-components';
 
-
-//HTMLButtonElement
-
-const clicked_button = (event: React.MouseEvent<HTMLDivElement, MouseEvent>) => {
+const wrapped_onClick = (
+  event: React.MouseEvent<HTMLDivElement, MouseEvent>,
+  onClick?: ((event: React.MouseEvent<HTMLDivElement, MouseEvent>) => void) | undefined
+) => {
   console.log(event)
+  if (typeof  onClick === 'function') { onClick(event) }
 }
 
-export default ({ children }: React.DetailedHTMLProps<React.ButtonHTMLAttributes<HTMLButtonElement>, HTMLButtonElement>)  => {
+export default (props: ButtonProps ) => {
+  
+  const { 
+    children,
+    className,
+    theme,
+    onClick
+  } = props
+  const wrapped_className = [styles.action_button, styles.animate, className].join(" ")
+
+  const StyledButton = theme
+  ? styled.div`
+
+  ` : styled.div`
+    color: #494949;
+    background-color: #146E8E;
+    border-bottom: 5px solid #0C445C;
+    &:hover{
+      background-color: #135b75;
+      border-bottom: 5px solid #0a2531;
+    }
+  `;
+
   return (
-    <div onClick={clicked_button}>
-      <button onMouseDown={(e) => { console.log(e)}} className={styles.button}>{children}</button>
-    </div>
+    <StyledButton
+      onClick={(event) => { wrapped_onClick(event, onClick) }}
+      className={wrapped_className}
+    >
+      {children}
+    </StyledButton>
   )
 }

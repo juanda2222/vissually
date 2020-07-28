@@ -1,6 +1,6 @@
 import React from 'react'
 import styles from './styles.module.css'
-
+import ThemeProvider from "./ThemeProvider/ThemeProvider"
 import VButton from "./Buttons/VButton"
 
 interface Props {
@@ -14,9 +14,10 @@ const ExampleComponent = ({ text }: Props) => {
     </div>
   )
    
-
 }
+
 export {
+  ThemeProvider,
   ExampleComponent,
-  VButton
+  VButton,
 }

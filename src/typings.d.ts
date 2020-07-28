@@ -15,3 +15,19 @@ declare module '*.svg' {
   export default svgUrl;
   export { svgComponent as ReactComponent }
 }
+
+interface Theme {
+  primary: {
+    color1: string
+    color2: string
+    color3: string
+    color4: string
+  }
+}
+interface ThemeProps {
+  theme?: Theme
+  children: React.Component
+}
+interface ButtonProps extends React.DetailedHTMLProps<React.HTMLAttributes<HTMLDivElement>, HTMLDivElement> {
+  theme?: Theme
+}
