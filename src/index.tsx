@@ -1,7 +1,7 @@
 import React from 'react'
 import styles from './styles.module.css'
-import ThemeProvider from "./ThemeProvider/ThemeProvider"
-import VButton from "./Buttons/VButton"
+import ThemeProvider from './ThemeProvider/ThemeProvider'
+import VButton from './Buttons/VButton'
 
 interface Props {
   text: string

@@ -18,10 +18,12 @@ declare module '*.svg' {
 
 interface Theme {
   primary: {
-    color1: string
-    color2: string
-    color3: string
-    color4: string
+    textColor1: string,
+    textColor2: string,
+    color1: string,
+    color2: string,
+    backgroundColor1: string,
+    backgroundColor2: string,
   }
 }
 interface ThemeProps {
