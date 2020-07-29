@@ -17,20 +17,29 @@ declare module '*.svg' {
 }
 
 interface Theme {
-  primary: {
-    textColor1: string,
-    textColor2: string,
-    color1: string,
-    color2: string,
-    backgroundColor1: string,
-    backgroundColor2: string,
-  }
+  textColor1: string,
+  textColor2: string,
+  color1: string,
+  color2: string,
+  backgroundColor1: string,
+  backgroundColor2: string,
 }
 interface ThemeProps {
-  theme?: Theme
-  children: React.Component
+  primary?:boolean,
+  secundary?:boolean,
+  dark?:boolean,
+  theme?: Theme,
+  children: React.Component,
+  [propName: string]: any;
 }
 interface ButtonProps extends React.DetailedHTMLProps<React.HTMLAttributes<HTMLDivElement>, HTMLDivElement> {
   children: React.Component
   theme?: Theme
+}
+
+function withProperties<A, B>(component: A, properties: B): A & B {
+  Object.keys(properties).forEach(key => {
+    component[key] = properties[key]
+  });
+  return component as A & B;
 }
