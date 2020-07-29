@@ -8,8 +8,10 @@ var Color2Vec = function (color_string: string): number[] {
   if (clean_color_string.length >= 10) {
     // use the rgb string parce a vector
     var rgb: number[] = clean_color_string.substring(4, clean_color_string.length - 1).replace(/ /g, '').split(',').map(val => parseInt(val, 10));
-    
-    if (!rgb) { throw new Error("rgb string in wrong format") };
+    if ( (rgb.length <= 1) || (isNaN(rgb[0])) ) {
+      console.log("throwing...")
+      throw new Error(`rgb string in wrong format`)
+    };
     return rgb;
 
   // #ffffff format

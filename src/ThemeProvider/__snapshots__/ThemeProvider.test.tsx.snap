@@ -1,0 +1,10 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`ThemeConfig Rendering with props. Snapshot test 1`] = `
+<div
+  className="sc-AxjAm iglPrW action_button animate "
+  onClick={[Function]}
+>
+  Button test name
+</div>
+`;

@@ -10,10 +10,11 @@ interface Props {
 const ExampleComponent = ({ text }: Props) => {
   return (
     <div>
-      <div className={styles.test}>{`This is the custom wrapper >>> ${text} <<<`}</div>
+      <div
+        className={styles.test}>
+        {`This is the custom wrapper >>> ${text} <<<`}</div>
     </div>
   )
-   
 }
 
 export {

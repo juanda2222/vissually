@@ -24,11 +24,17 @@
     }
   },
   "rules": {
+    "no-extra-semi":0,
+    "switch-colon-spacing":0,
+    "semi":0,
+    "semi-spacing":0,
+    "semi-style":0,
     "space-before-function-paren": 0,
+    "no-whitespace-before-property":0,
     "react/prop-types": 0,
     "react/jsx-handler-names": 0,
     "react/jsx-fragments": 0,
     "react/no-unused-prop-types": 0,
-    "import/export": 0
+    "import/export": 1
   }
 }

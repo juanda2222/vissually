@@ -21,12 +21,3 @@
 	font-family: 'opensans-bold', sans-serif;
 	font-size: 18px;
 }
-
-.action_button:active
-{
-	margin: 14px 5px 2px 5px;
-	transform: translate(0px,5px);
-  -webkit-transform: translate(0px,5px);
-	border-bottom: 1px solid;
-	border-color: transparent;
-}

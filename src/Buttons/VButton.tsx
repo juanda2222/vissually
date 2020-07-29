@@ -2,7 +2,6 @@ import * as React from 'react'
 
 import styles from './VButton.module.css'
 import styled from 'styled-components';
-import PropTypes from 'prop-types';
 import { Color2Vec } from "../Tools/ColorTools"
 
 const wrapped_onClick = (
@@ -13,15 +12,13 @@ const wrapped_onClick = (
   if (typeof onClick === 'function') { onClick(event) }
 }
 
-const VButton = (props: ButtonProps) => {
-
-  // get the usable properties
-  const {
-    children,
-    className,
-    theme,
-    onClick
-  } = props
+const VButton = ({
+  children,
+  className,
+  theme,
+  style,
+  onClick
+}: ButtonProps) => {
 
 
   const wrapped_className = [styles.action_button, styles.animate, className].join(" ")
@@ -30,16 +27,16 @@ const VButton = (props: ButtonProps) => {
   // customize the style if a style is given
   if (!( typeof(theme) == "undefined")) {
 
-    const mainColor = theme.primary.color1
-    const rgb_list = Color2Vec(mainColor)
+    const main_rgb = Color2Vec(theme.primary.color1)
+    //const secundary_rgb = Color2Vec(theme.primary.color2)
 
     StyledButton = styled.div`
       color: rgb(255, 255, 255);
-      background-color: ${mainColor};
-      border-bottom: 5px solid rgb(${rgb_list[0] - 40}, ${rgb_list[1] - 40}, ${rgb_list[2] - 40});
+      background-color: ${main_rgb};
+      border-bottom: 5px solid rgb(${main_rgb[0] - 40}, ${main_rgb[1] - 40}, ${main_rgb[2] - 40});
       &:hover{
-        background-color: rgb(${rgb_list[0] + 20}, ${rgb_list[1] + 20}, ${rgb_list[2] + 20});
-        border-bottom: 5px solid rgb(${rgb_list[0] - 20}, ${rgb_list[1] - 20}, ${rgb_list[2] - 20});
+        background-color: rgb(${main_rgb[0] + 20}, ${main_rgb[1] + 20}, ${main_rgb[2] + 20});
+        border-bottom: 5px solid rgb(${main_rgb[0] - 20}, ${main_rgb[1] - 20}, ${main_rgb[2] - 20});
       }
       &:active{
         margin: 14px 20px 2px 5px;
@@ -73,6 +70,7 @@ const VButton = (props: ButtonProps) => {
     <StyledButton
       onClick={(event) => { wrapped_onClick(event, onClick) }}
       className={wrapped_className}
+      style={style}
     >
       {children}
     </StyledButton>
@@ -80,12 +78,18 @@ const VButton = (props: ButtonProps) => {
 }
 
 
-VButton.propTypes = {
-  items: PropTypes.array,
-};
 
 VButton.defaultProps = {
-  items: [],
+  theme: {
+    primary: {
+      textColor1: "#ffffff",
+      textColor2: "#ffffff",
+      color1: "#146E8E",
+      color2: "#146E8E",
+      backgroundColor1: "#ffffff",
+      backgroundColor2: "#ffffff",
+    }
+  }
 };
 
 

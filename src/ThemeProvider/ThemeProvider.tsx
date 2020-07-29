@@ -15,12 +15,14 @@ const ThemeConfig = ({ children, theme }: ThemeProps) => {
 
 ThemeConfig.defaultProps = {
   theme: {
-    textColor1: "rgb(255, 255, 255)",
-    textColor2: "rgb(255, 255, 255)",
-    color1: "#135b75",
-    color2: "#135b75",
-    backgroundColor1: "rgb(255, 255, 255)",
-    backgroundColor2: "rgb(255, 255, 255)",
+    primary: {
+      textColor1: "rgb(255, 255, 255)",
+      textColor2: "rgb(255, 255, 255)",
+      color1: "#135b75",
+      color2: "#135b75",
+      backgroundColor1: "rgb(255, 255, 255)",
+      backgroundColor2: "rgb(255, 255, 255)",
+    }
   }
 };
 
