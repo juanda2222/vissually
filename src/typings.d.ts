@@ -29,11 +29,11 @@ interface ThemeProps {
   secundary?:boolean,
   dark?:boolean,
   theme?: Theme,
-  children: React.Component,
+  children?: React.ReactNode,
   [propName: string]: any;
 }
 interface ButtonProps extends React.DetailedHTMLProps<React.HTMLAttributes<HTMLDivElement>, HTMLDivElement> {
-  children: React.Component
+  children: React.ReactNode
   theme?: Theme
 }
 

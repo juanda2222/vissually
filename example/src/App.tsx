@@ -1,6 +1,10 @@
 import React from 'react'
 
-import { ExampleComponent, VButton, ThemeProvider } from 'vissually'
+import {
+  ExampleComponent,
+  VButton,
+  ThemeProvider
+} from 'vissually'
 import 'vissually/dist/index.css'
 
 const App = () => {

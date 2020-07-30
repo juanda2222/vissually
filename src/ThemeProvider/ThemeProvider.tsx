@@ -1,6 +1,6 @@
-import * as React from 'react'
+import React, { } from 'react'
 
-import { ThemeProvider, withTheme } from 'styled-components'
+import { ThemeProvider } from 'styled-components'
 
 const DefaultThemes = {
   primary: {
@@ -34,9 +34,6 @@ const ThemeConfig = (props: ThemeProps) => {
   const { children, theme, primary, secundary, dark } = {
     ...props
   }
-  console.log(theme)
-  console.log(primary)
-  console.log(secundary)
 
   var current_theme;
   if (secundary) {
@@ -48,14 +45,15 @@ const ThemeConfig = (props: ThemeProps) => {
   } else if (primary) {
     console.log("primary")
     current_theme = DefaultThemes.primary
+  } else if (theme) {
+    console.log("input theme")
+    current_theme = theme
   } else {
     console.log("default")
     current_theme = DefaultThemes.primary
   }
-  
-  console.log(current_theme)
   return (
-    <ThemeProvider {...props} theme={current_theme}>
+    <ThemeProvider theme={current_theme}>
       {children}
     </ThemeProvider>
   )
@@ -69,4 +67,4 @@ ThemeConfig.defaultProps = {
   dark:null
 };
 
-export default withTheme(ThemeConfig)
+export default ThemeConfig
