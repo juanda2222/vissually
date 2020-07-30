@@ -32,9 +32,16 @@ interface ThemeProps {
   children?: React.ReactNode,
   [propName: string]: any;
 }
+
+interface InputProps extends React.DetailedHTMLProps<React.InputHTMLAttributes<HTMLInputElement>, HTMLInputElement> {
+  theme?: Theme,
+  [propName: string]: any;
+}
+
 interface ButtonProps extends React.DetailedHTMLProps<React.HTMLAttributes<HTMLDivElement>, HTMLDivElement> {
   children: React.ReactNode
-  theme?: Theme
+  theme: Theme
+  [propName: string]: any;
 }
 
 function withProperties<A, B>(component: A, properties: B): A & B {

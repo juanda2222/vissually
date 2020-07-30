@@ -37,19 +37,19 @@ const ThemeConfig = (props: ThemeProps) => {
 
   var current_theme;
   if (secundary) {
-    console.log("secundary")
+    console.debug("secundary")
     current_theme = DefaultThemes.secundary
   } else if (dark) {
-    console.log("dark")
+    console.debug("dark")
     current_theme = DefaultThemes.dark
   } else if (primary) {
-    console.log("primary")
+    console.debug("primary")
     current_theme = DefaultThemes.primary
   } else if (theme) {
-    console.log("input theme")
+    console.debug("input theme")
     current_theme = theme
   } else {
-    console.log("default")
+    console.debug("default")
     current_theme = DefaultThemes.primary
   }
   return (

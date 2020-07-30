@@ -1,0 +1,15 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`VButton Default render. Snapshot test 1`] = `
+<input
+  className="input_text"
+  type="text"
+/>
+`;
+
+exports[`VButton Rendering with props. Snapshot test 1`] = `
+<input
+  className="input_text"
+  type="text"
+/>
+`;

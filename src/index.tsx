@@ -2,6 +2,7 @@ import React from 'react'
 import styles from './styles.module.css'
 import ThemeProvider from './ThemeProvider/ThemeProvider'
 import VButton from './Buttons/VButton'
+import VTextInput from './Input/VTextInput'
 
 interface Props {
   text: string
@@ -21,4 +22,5 @@ export {
   ThemeProvider,
   ExampleComponent,
   VButton,
+  VTextInput,
 }

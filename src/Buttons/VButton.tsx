@@ -12,62 +12,46 @@ const wrapped_onClick = (
   if (typeof onClick === 'function') { onClick(event) }
 }
 
-const VButton = ({
+const VButton:React.SFC<ButtonProps> = ({
   children,
   className,
   style,
+  theme,
   onClick
-}: ButtonProps) => {  
+}) => {  
 
   const wrapped_className = [styles.action_button, styles.animate, className].join(" ")
-  const theme = useContext(ThemeContext);
-  console.debug("Context theme: ", theme)
+  const contex_theme = useContext(ThemeContext);
   
-  var StyledButton;
+  var button_theme;
 
-  // customize the style if a style is given
-  if (!( typeof(theme) == "undefined")) {
-
-    console.debug("Theme received: ", theme)
-    const main_rgb = Color2Vec(theme.color1)
-
-    StyledButton = styled.div`
-      color: rgb(255, 255, 255);
-      background-color: rgb(${main_rgb[0]}, ${main_rgb[1]}, ${main_rgb[2]});
-      border-bottom: 5px solid rgb(${main_rgb[0] - 40}, ${main_rgb[1] - 40}, ${main_rgb[2] - 40});
-
-      &:hover{
-        background-color: rgb(${main_rgb[0] + 20}, ${main_rgb[1] + 20}, ${main_rgb[2] + 20});
-        border-bottom: 5px solid rgb(${main_rgb[0] - 20}, ${main_rgb[1] - 20}, ${main_rgb[2] - 20});
-      }
-      &:active{
-        margin: 14px 5px 2px 5px;
-        transform: translate(0px,5px);
-        -webkit-transform: translate(0px,5px);
-        border-bottom: 1px solid;
-        border-color: transparent;
-      }
-    `;
+  // use theme if a style is given
+  if (!(typeof (contex_theme) == "undefined")) {
+    button_theme = contex_theme
   } else {
-      StyledButton = styled.div`
-      color: rgb(255, 255, 255);
-      background-color: #146E8E;
-      border-bottom: 5px solid #0C445C;
-
-      &:hover{
-        background-color: #135b75;
-        border-bottom: 5px solid #0a2531;
-      }
-      &:active{
-        margin: 14px 5px 2px 5px;
-        transform: translate(0px,5px);
-        -webkit-transform: translate(0px,5px);  
-        border-bottom: 1px solid;
-        border-color: transparent;
-      }
-      `
+    button_theme = theme
   }
+  console.debug("Context received: ", button_theme)
+  
+  const main_rgb = Color2Vec(button_theme.color1)
 
+  const StyledButton = styled.div`
+    color: rgb(255, 255, 255);
+    background-color: rgb(${main_rgb[0]}, ${main_rgb[1]}, ${main_rgb[2]});
+    border-bottom: 5px solid rgb(${main_rgb[0] - 40}, ${main_rgb[1] - 40}, ${main_rgb[2] - 40});
+
+    &:hover{
+      background-color: rgb(${main_rgb[0] + 20}, ${main_rgb[1] + 20}, ${main_rgb[2] + 20});
+      border-bottom: 5px solid rgb(${main_rgb[0] - 20}, ${main_rgb[1] - 20}, ${main_rgb[2] - 20});
+    }
+    &:active{
+      margin: 14px 5px 2px 5px;
+      transform: translate(0px,5px);
+      -webkit-transform: translate(0px,5px);
+      border-bottom: 1px solid;
+      border-color: transparent;
+    }
+  `
 
 
   return (
