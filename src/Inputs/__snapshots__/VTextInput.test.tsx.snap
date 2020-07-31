@@ -2,14 +2,14 @@
 
 exports[`VButton Default render. Snapshot test 1`] = `
 <input
-  className="input_text"
+  className="sc-AxjAm kxmMId input_text "
   type="text"
 />
 `;
 
 exports[`VButton Rendering with props. Snapshot test 1`] = `
 <input
-  className="input_text"
+  className="sc-AxirZ fbSlPi input_text some_classname"
   type="text"
 />
 `;

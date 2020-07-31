@@ -23,4 +23,8 @@
 	letter-spacing: 1px;
 	font-family: 'opensans-bold', sans-serif;
 	font-size: 18px;
+
+	/*animations: */
+	transition: all 0.1s;
+	-webkit-transition: all 0.1s;
 }

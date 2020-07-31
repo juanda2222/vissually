@@ -4,6 +4,8 @@ import React, { useContext } from 'react'
 import styles from './VButton.module.css'
 import styled, { ThemeContext } from 'styled-components';
 import { Color2Vec } from "../Tools/ColorTools"
+import { DefaultThemes } from "../ThemeProvider/ThemeProvider"
+
 
 const wrapped_onClick = (
   event: React.MouseEvent<HTMLDivElement, MouseEvent>,
@@ -13,28 +15,37 @@ const wrapped_onClick = (
 }
 
 const VButton:React.SFC<ButtonProps> = ({
-  children,
+  //styling properties
   className,
   style,
   theme,
+  primary, secundary, dark,
+
+  //functional properties
+  children,
   onClick
 }) => {  
 
-  const wrapped_className = [styles.action_button, styles.animate, className].join(" ")
-  const contex_theme = useContext(ThemeContext);
+  // get the theme from the context
+  const contex_theme: Theme = useContext(ThemeContext);
+  const wrapped_className = [styles.action_button, className].join(" ")
   
-  var button_theme;
-
-  // use theme if a style is given
-  if (!(typeof (contex_theme) == "undefined")) {
-    button_theme = contex_theme
+  // generat the theme depending on the boolean inputs or the theme input
+  var current_theme;
+  if (secundary) {
+    current_theme = DefaultThemes.secundary
+  } else if (dark) {
+    current_theme = DefaultThemes.dark
+  } else if (primary) {
+    current_theme = DefaultThemes.primary
+  } else if (!(typeof (contex_theme) == "undefined")) {
+    current_theme = contex_theme
   } else {
-    button_theme = theme
+    current_theme = theme 
   }
-  console.debug("Context received: ", button_theme)
-  
-  const main_rgb = Color2Vec(button_theme.color1)
 
+  // generate the component from the style
+  const main_rgb = Color2Vec(current_theme.color1)
   const StyledButton = styled.div`
     color: rgb(255, 255, 255);
     background-color: rgb(${main_rgb[0]}, ${main_rgb[1]}, ${main_rgb[2]});
@@ -69,14 +80,7 @@ const VButton:React.SFC<ButtonProps> = ({
 
 VButton.defaultProps = {
   className:"",
-  theme: {
-    textColor1: "#ffffff",
-    textColor2: "#ffffff",
-    color1: "#135b75",
-    color2: "#135b75",
-    backgroundColor1: "#ffffff",
-    backgroundColor2: "#ffffff",
-  }
+  theme: DefaultThemes.primary
 
 };
 

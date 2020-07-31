@@ -1,8 +1,9 @@
 import React from 'react'
 import styles from './styles.module.css'
-import ThemeProvider from './ThemeProvider/ThemeProvider'
+import { VThemeProvider } from './ThemeProvider/ThemeProvider'
 import VButton from './Buttons/VButton'
-import VTextInput from './Input/VTextInput'
+import VClickableList from "./Lists/VClickableList"
+import VTextInput from './Inputs/VTextInput'
 
 interface Props {
   text: string
@@ -12,15 +13,16 @@ const ExampleComponent = ({ text }: Props) => {
   return (
     <div>
       <div
-        className={styles.test}>
+        className={styles.test}>VClickableListVClickableList
         {`This is the custom wrapper >>> ${text} <<<`}</div>
     </div>
   )
 }
 
 export {
-  ThemeProvider,
   ExampleComponent,
+  VThemeProvider,
   VButton,
   VTextInput,
+  VClickableList,
 }

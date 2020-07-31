@@ -17,12 +17,12 @@ declare module '*.svg' {
 }
 
 interface Theme {
-  textColor1: string,
-  textColor2: string,
-  color1: string,
-  color2: string,
-  backgroundColor1: string,
-  backgroundColor2: string,
+  textColor1: string, //darkish
+  textColor2: string, //lightish
+  color1: string, //vivid1
+  color2: string, //vivid2
+  backgroundColor1: string, //lightish
+  backgroundColor2: string, //darkish
 }
 interface ThemeProps {
   primary?:boolean,
@@ -33,20 +33,39 @@ interface ThemeProps {
   [propName: string]: any;
 }
 
+
+interface ListProps {
+  theme: Theme,
+  className: string,
+  style: any,
+  primary?: boolean, secundary?: boolean, dark?: boolean,
+
+  list: string[],
+  onClick?: (index:number, text:string) => void,
+  [propName: string]: any;
+}
+
+interface SelectProps {
+  theme: Theme,
+  className: string,
+  style: any,
+  primary?: boolean, secundary?: boolean, dark?: boolean,
+
+  list: string[],
+  onChange?: (index:number, text:string) => void,
+  [propName: string]: any;
+}
+
+
 interface InputProps extends React.DetailedHTMLProps<React.InputHTMLAttributes<HTMLInputElement>, HTMLInputElement> {
-  theme?: Theme,
+  theme: Theme,
+  primary?:boolean, secundary?:boolean, dark?:boolean,
   [propName: string]: any;
 }
 
 interface ButtonProps extends React.DetailedHTMLProps<React.HTMLAttributes<HTMLDivElement>, HTMLDivElement> {
+  theme: Theme,
+  primary?: boolean, secundary?: boolean, dark?: boolean,
   children: React.ReactNode
-  theme: Theme
   [propName: string]: any;
-}
-
-function withProperties<A, B>(component: A, properties: B): A & B {
-  Object.keys(properties).forEach(key => {
-    component[key] = properties[key]
-  });
-  return component as A & B;
 }

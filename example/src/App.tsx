@@ -4,8 +4,10 @@ import {
   ExampleComponent,
   VButton,
   VTextInput,
-  ThemeProvider,
+  VThemeProvider,
+  VClickableList,
 } from 'vissually'
+
 import 'vissually/dist/index.css'
 
 const App = () => {
@@ -18,20 +20,28 @@ const App = () => {
         <p> Default Button: </p>
         <VButton>{"hey"}</VButton>
         <p> Themed Button: </p>
-        <ThemeProvider secundary>
+        <VThemeProvider secundary>
           <VButton>{"themed button"}</VButton>
-        </ThemeProvider>
+        </VThemeProvider>
       </div>
       <div style={{display:"flex", flexDirection:"column", alignItems:"center"}}>
         <h3>Inputs:</h3>
         <p> Default Text Inputs: </p>
         <VTextInput/>
         <p> Themed Text Inputs: </p>
-        <ThemeProvider secundary>
+        <VThemeProvider secundary>
           <VTextInput/>
-        </ThemeProvider>
+        </VThemeProvider>
       </div>
-        
+      <div style={{display:"flex", flexDirection:"column", alignItems:"center"}}>
+        <h3>Lists:</h3>
+        <p> Default lists: </p>
+        <VClickableList list={["item 1", "item 2", "item 3", "another one", "addition"]}/>
+        <p> Themed Default lists: </p>
+        <VThemeProvider secundary>
+          <VClickableList list={["item 1", "item 2", "item 3", "another one", "addition"]}/>
+        </VThemeProvider>
+      </div>
     </div>
   )
 }

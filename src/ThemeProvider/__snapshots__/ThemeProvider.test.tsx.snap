@@ -2,9 +2,9 @@
 
 exports[`ThemeConfig Rendering with props. Snapshot test 1`] = `
 <div
-  className="sc-AxjAm koCBfw action_button animate "
+  className="sc-AxjAm koCBfw action_button "
   onClick={[Function]}
 >
-  Button test name
+  Button test with theme
 </div>
 `;

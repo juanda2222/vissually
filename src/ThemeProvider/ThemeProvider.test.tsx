@@ -1,24 +1,24 @@
 
 import React from "react"
-import ThemeConfig from './ThemeProvider'
+import { VThemeProvider } from './ThemeProvider'
 import VButton from '../Buttons/VButton'
 import renderer from 'react-test-renderer';
 
 describe('ThemeConfig', () => {
   it('is truthy', () => {
-    expect(ThemeConfig).toBeTruthy()
+    expect(VThemeProvider).toBeTruthy()
   })
 
   test("Rendering with props. Snapshot test", () => { 
 
 
     const ButtonWithProps = renderer.create(
-      <ThemeConfig>
+      <VThemeProvider>
         <VButton
         >
-          Button test name
+          Button test with theme
         </VButton>
-      </ThemeConfig>
+      </VThemeProvider>
     ).toJSON();
 
     console.log(ButtonWithProps)

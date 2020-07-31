@@ -2,14 +2,14 @@ import React, { } from 'react'
 
 import { ThemeProvider } from 'styled-components'
 
-const DefaultThemes = {
+const DefaultThemes: {primary: Theme, secundary: Theme, dark: Theme} = {
   primary: {
-    textColor1: "rgb(255, 255, 255)",
-    textColor2: "rgb(0, 0, 0)",
-    color1: "#135b75",
-    color2: "#135b75",
-    backgroundColor1: "rgb(255, 255, 255)",
-    backgroundColor2: "rgb(70, 140, 170)",
+    textColor1: "rgb(255, 255, 255)", 
+    textColor2: "rgb(0, 0, 0)", 
+    color1: "#135b75", 
+    color2: "#135b75", 
+    backgroundColor1: "rgb(255, 255, 255)", 
+    backgroundColor2: "rgb(70, 140, 170)", 
   },
   secundary: {
     textColor1: "rgb(255, 255, 255)",
@@ -29,7 +29,7 @@ const DefaultThemes = {
   }
 }
 
-const ThemeConfig = (props: ThemeProps) => {
+const VThemeProvider = (props: ThemeProps) => {
   
   const { children, theme, primary, secundary, dark } = {
     ...props
@@ -60,11 +60,14 @@ const ThemeConfig = (props: ThemeProps) => {
   
 }
 
-ThemeConfig.defaultProps = {
+VThemeProvider.defaultProps = {
   theme: null,
   primary: null,
   secundary: null,
   dark:null
 };
 
-export default ThemeConfig
+export {
+  VThemeProvider,
+  DefaultThemes
+}
