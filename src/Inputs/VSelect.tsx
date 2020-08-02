@@ -6,9 +6,10 @@ import { DefaultThemes } from "../ThemeProvider/ThemeProvider"
 import VButton from "../Buttons/VButton"
 import VClickableList from "../Lists/VClickableList"
 
+
 const VSelect: React.FunctionComponent < SelectProps > = ({
   //styling properties
-  //className,
+  className,
   style,
   theme,
   primary, secundary, dark,
@@ -16,7 +17,7 @@ const VSelect: React.FunctionComponent < SelectProps > = ({
 
   //functional properties
   list,
-  //onChange,
+  onChange,
   label,
 }) => {  
 
@@ -26,7 +27,7 @@ const VSelect: React.FunctionComponent < SelectProps > = ({
 
   // get the theme from the context
   const contex_theme: Theme = useContext(ThemeContext);
-  const wrapped_className = [styles.button_style].join(" ")
+  const wrapped_className = [styles.button_style, className ? className : ""].join(" ")
   //const wrapped_list_className = [styles.list_style, listClassName].join(" ")
 
   // generat the theme depending on the boolean inputs or the theme input
@@ -40,11 +41,11 @@ const VSelect: React.FunctionComponent < SelectProps > = ({
   } else if (!(typeof (contex_theme) == "undefined")) {
     current_theme = contex_theme
   } else {
-    current_theme = theme
+    current_theme = theme ? theme : DefaultThemes.primary
   }
 
   return (
-    <div>
+    <div className={styles.big_container}>
       <VButton
         style={style}
         className={wrapped_className}
@@ -67,9 +68,15 @@ const VSelect: React.FunctionComponent < SelectProps > = ({
           />}
         
       </VButton>
-      <VClickableList
+      {isOpen ? <VClickableList
         list={list}
-      />
+        onClick={(index, value) => {
+          setOpen(false)
+          onChange && onChange(index, value)
+        }}
+      /> :
+        null
+      }
       <img 
         src="./assets/arrow-down.svg" 
         alt=""
@@ -79,13 +86,6 @@ const VSelect: React.FunctionComponent < SelectProps > = ({
     </div>
   )
 }
-
-
-
-VSelect.defaultProps = {
-  className: "",
-  theme: DefaultThemes.primary
-} as SelectProps;
 
 
 export default VSelect

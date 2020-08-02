@@ -1,5 +1,11 @@
 /* add css module styles here (optional) */
 
+.big_container{
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+}
+
 .button_style{
 
 }
