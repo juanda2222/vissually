@@ -35,9 +35,9 @@ interface ThemeProps {
 
 
 interface ListProps {
-  theme: Theme,
-  className: string,
-  style: any,
+  theme?: Theme,
+  className?: string,
+  style?: any,
   primary?: boolean, secundary?: boolean, dark?: boolean,
 
   list: string[],
@@ -46,25 +46,26 @@ interface ListProps {
 }
 
 interface SelectProps {
-  theme: Theme,
-  className: string,
-  style: any,
+  theme?: Theme,
+  className?: string,
+  style?: any,
   primary?: boolean, secundary?: boolean, dark?: boolean,
 
   list: string[],
+  label: string,
   onChange?: (index:number, text:string) => void,
   [propName: string]: any;
 }
 
 
 interface InputProps extends React.DetailedHTMLProps<React.InputHTMLAttributes<HTMLInputElement>, HTMLInputElement> {
-  theme: Theme,
+  theme?: Theme,
   primary?:boolean, secundary?:boolean, dark?:boolean,
   [propName: string]: any;
 }
 
 interface ButtonProps extends React.DetailedHTMLProps<React.HTMLAttributes<HTMLDivElement>, HTMLDivElement> {
-  theme: Theme,
+  theme?: Theme,
   primary?: boolean, secundary?: boolean, dark?: boolean,
   children: React.ReactNode
   [propName: string]: any;

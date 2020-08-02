@@ -11,6 +11,7 @@ const VClickableList: React.FunctionComponent<ListProps> = ({
   style,
   theme,
   primary, secundary, dark,
+  containerClassName,
 
   //functional properties
   list,
@@ -19,7 +20,8 @@ const VClickableList: React.FunctionComponent<ListProps> = ({
 
   // get the theme from the context
   const contex_theme = useContext(ThemeContext);
-  const wrapped_className = [styles.list_item, className].join(" ")
+  const wrapped_className = [styles.list_item, className ? className : ""].join(" ")
+  const wrapped_container_className = [styles.list_container, containerClassName].join(" ")
 
   // generat the theme depending on the boolean inputs or the theme input
   var current_theme: Theme;
@@ -32,7 +34,7 @@ const VClickableList: React.FunctionComponent<ListProps> = ({
   } else if (!(typeof (contex_theme) == "undefined")) {
     current_theme = contex_theme
   } else {
-    current_theme = theme
+    current_theme = theme ? theme : DefaultThemes.primary
   }
   
   // generate the component from the style
@@ -44,11 +46,10 @@ const VClickableList: React.FunctionComponent<ListProps> = ({
     `;
   
   // style the childs:
-  const div_list = list.map((item_text, index) => {
+  const div_list = (list ? list : []).map((item_text, index) => {
 
     var StyledItem = styled.div`
-      ${(index == list.length - 1) ? "border-radius: 0 0 0.5em 0.5em;" : ""}
-      ${(index == 0) ? "border-radius: 0.5em 0.5em 0 0;" : ""}
+      
       color: ${current_theme.textColor2};
       background: rgba(${rgb_list[0] - 20}, ${rgb_list[1] - 20}, ${rgb_list[2] - 20}, 0.5);
       &:hover{
@@ -72,20 +73,12 @@ const VClickableList: React.FunctionComponent<ListProps> = ({
 
   return (
     <StyledContainer
-      className={styles.list_container}
+      className={wrapped_container_className}
     >
       {div_list}  
     </StyledContainer>
   )
 }
-
-
-
-VClickableList.defaultProps = {
-  className: "",
-  theme: DefaultThemes.primary,
-  list: [],
-};
 
 
 export default VClickableList

@@ -1,25 +1,33 @@
-import React, { useContext } from 'react'
-import styled, { ThemeContext } from 'styled-components';
+import React, { useContext, useState } from 'react'
+import { ThemeContext } from 'styled-components';
 
 import styles from './VSelect.module.css'
-import { Color2Vec } from "../Tools/ColorTools"
 import { DefaultThemes } from "../ThemeProvider/ThemeProvider"
+import VButton from "../Buttons/VButton"
+import VClickableList from "../Lists/VClickableList"
 
-const VTextInput: React.FunctionComponent<SelectProps> = ({
+const VSelect: React.FunctionComponent < SelectProps > = ({
   //styling properties
-  className,
+  //className,
   style,
   theme,
   primary, secundary, dark,
+  //listClassName,
 
   //functional properties
   list,
-  onChange,
+  //onChange,
+  label,
 }) => {  
 
+  const [isOpen, setOpen] = useState(false)
+  //const [selectedItem, setSelectedItem] = useState("")
+
+
   // get the theme from the context
-  const contex_theme:Theme = useContext(ThemeContext);
-  const wrapped_className = [styles.list_style, className].join(" ")
+  const contex_theme: Theme = useContext(ThemeContext);
+  const wrapped_className = [styles.button_style].join(" ")
+  //const wrapped_list_className = [styles.list_style, listClassName].join(" ")
 
   // generat the theme depending on the boolean inputs or the theme input
   var current_theme;
@@ -34,41 +42,50 @@ const VTextInput: React.FunctionComponent<SelectProps> = ({
   } else {
     current_theme = theme
   }
-  
-  // generate the component from the style
-  const rgb_list = Color2Vec(current_theme.color1)
-  const StyledInput = styled.input`
-    padding: 0.5em;
-    margin: 0.5em;
-    color: ${current_theme.textColor2};
-    background: rgba(${rgb_list[0]}, ${rgb_list[1]}, ${rgb_list[2]}, 0.2);
-    border: none;
-    border-radius: 3px;
-  `;
-
-  const div_list = list.map(() => {
-    return (<img 
-      src="equilateral.svg" 
-      alt="triangle with all three sides equal"
-      height="87"
-      width="100"
-    />)
-  })
 
   return (
     <div>
-      {}  
+      <VButton
+        style={style}
+        className={wrapped_className}
+        theme={current_theme}
+        onClick={() => { 
+          setOpen(!isOpen)
+        }}
+      >
+        {label}
+        {isOpen ? <img 
+            src="./assets/arrow-down.svg" 
+            alt=""
+            height="20"
+            width="20"
+          />: <img 
+            src="./assets/arrow-up.svg" 
+            alt=""
+            height="20"
+            width="20"
+          />}
+        
+      </VButton>
+      <VClickableList
+        list={list}
+      />
+      <img 
+        src="./assets/arrow-down.svg" 
+        alt=""
+        height="20"
+        width="20"
+        />
     </div>
   )
 }
 
 
 
-VTextInput.defaultProps = {
+VSelect.defaultProps = {
   className: "",
-  type: "text",
   theme: DefaultThemes.primary
-};
+} as SelectProps;
 
 
-export default VTextInput
+export default VSelect

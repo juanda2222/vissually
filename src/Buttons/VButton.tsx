@@ -28,7 +28,7 @@ const VButton:React.SFC<ButtonProps> = ({
 
   // get the theme from the context
   const contex_theme: Theme = useContext(ThemeContext);
-  const wrapped_className = [styles.action_button, className].join(" ")
+  const wrapped_className = [styles.action_button, className ? className: ""].join(" ")
   
   // generat the theme depending on the boolean inputs or the theme input
   var current_theme;
@@ -41,7 +41,7 @@ const VButton:React.SFC<ButtonProps> = ({
   } else if (!(typeof (contex_theme) == "undefined")) {
     current_theme = contex_theme
   } else {
-    current_theme = theme 
+    current_theme = theme ? theme : DefaultThemes.primary
   }
 
   // generate the component from the style
@@ -56,7 +56,7 @@ const VButton:React.SFC<ButtonProps> = ({
       border-bottom: 5px solid rgb(${main_rgb[0] - 20}, ${main_rgb[1] - 20}, ${main_rgb[2] - 20});
     }
     &:active{
-      margin: 14px 5px 2px 5px;
+      margin: 14px 5px 7px 5px;
       transform: translate(0px,5px);
       -webkit-transform: translate(0px,5px);
       border-bottom: 1px solid;
@@ -77,12 +77,6 @@ const VButton:React.SFC<ButtonProps> = ({
 }
 
 
-
-VButton.defaultProps = {
-  className:"",
-  theme: DefaultThemes.primary
-
-};
 
 
 export default VButton

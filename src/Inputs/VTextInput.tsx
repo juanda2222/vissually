@@ -22,7 +22,7 @@ const VTextInput: React.FunctionComponent<InputProps> = ({
 
   // get the theme from the context
   const contex_theme:Theme = useContext(ThemeContext);
-  const wrapped_className = [styles.input_text, className].join(" ")
+  const wrapped_className = [styles.input_text, className ? className : ""].join(" ")
 
   // generat the theme depending on the boolean inputs or the theme input
   var current_theme;
@@ -35,7 +35,7 @@ const VTextInput: React.FunctionComponent<InputProps> = ({
   } else if (!(typeof (contex_theme) == "undefined")) {
     current_theme = contex_theme
   } else {
-    current_theme = theme
+    current_theme = theme ? theme : DefaultThemes.primary
   }
   
   // generate the component from the style
@@ -51,7 +51,7 @@ const VTextInput: React.FunctionComponent<InputProps> = ({
   
   return (
     <StyledInput
-      type={type}
+      type={type ? type : "text"}
       value={value} 
       className={wrapped_className} 
       style={style}
@@ -60,14 +60,6 @@ const VTextInput: React.FunctionComponent<InputProps> = ({
     />
   )
 }
-
-
-
-VTextInput.defaultProps = {
-  className: "",
-  type: "text",
-  theme: DefaultThemes.primary
-};
 
 
 export default VTextInput

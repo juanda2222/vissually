@@ -16,7 +16,7 @@ describe('VButton', () => {
   })
 
   test("Rendering with props. Snapshot test", () => { 
-3
+    
 
     const ButtonWithProps = renderer.create(
         <VSelect

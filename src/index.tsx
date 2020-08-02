@@ -4,6 +4,8 @@ import { VThemeProvider } from './ThemeProvider/ThemeProvider'
 import VButton from './Buttons/VButton'
 import VClickableList from "./Lists/VClickableList"
 import VTextInput from './Inputs/VTextInput'
+import VSelect from './Inputs/VSelect'
+
 
 interface Props {
   text: string
@@ -25,4 +27,5 @@ export {
   VButton,
   VTextInput,
   VClickableList,
+  VSelect,
 }

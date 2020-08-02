@@ -17,21 +17,19 @@
 		opacity: 1;
 	}
 }
-  
+
+.list_item{
+	padding: 0.2em 1em 0.2em 1em;
+}
 
 .list_container{
-	-webkit-animation: fade-in 0.3s ease-in-out both;
-	animation: fade-in 0.3s ease-in-out both;
-
-	border-radius: 0.5em;
-	animation-name: appear;
-	animation-duration: 0.2s;
-  	animation-iteration-count: 1;
-}
-
-.button
-{
 	
-}
+	/* animations: 3*/
+	-webkit-animation: fade-in 0.2s ease-in-out both;
+	animation: fade-in 0.2s ease-in-out both;
+	
+	/*animation-iteration-count: 1;*/
+	border-radius: 0.5em;
 
+}
 

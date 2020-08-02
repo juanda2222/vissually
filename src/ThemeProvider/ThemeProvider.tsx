@@ -37,19 +37,14 @@ const VThemeProvider = (props: ThemeProps) => {
 
   var current_theme;
   if (secundary) {
-    console.debug("secundary")
     current_theme = DefaultThemes.secundary
   } else if (dark) {
-    console.debug("dark")
     current_theme = DefaultThemes.dark
   } else if (primary) {
-    console.debug("primary")
     current_theme = DefaultThemes.primary
   } else if (theme) {
-    console.debug("input theme")
     current_theme = theme
   } else {
-    console.debug("default")
     current_theme = DefaultThemes.primary
   }
   return (
