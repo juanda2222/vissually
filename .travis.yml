@@ -2,3 +2,22 @@ language: node_js
 node_js:
   - 12
   - 10
+
+
+before_install:
+  - echo "before install script"
+before_script:
+  - echo "before build script"
+after_script:
+  - echo "after build script"
+after_success:
+  - echo "success job!"
+after_failure:
+  - echo "failed job"
+  
+# safelist
+branches:
+  only:
+  - master
+
+cache: yarn

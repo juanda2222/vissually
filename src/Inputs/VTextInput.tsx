@@ -2,9 +2,9 @@ import React, { useContext } from 'react'
 
 
 import styles from './VTextInput.module.css'
-import styled, { ThemeContext } from 'styled-components';
+import styled from 'styled-components';
 import { Color2Vec } from "../Tools/ColorTools"
-import { DefaultThemes } from "../ThemeProvider/ThemeProvider"
+import { DefaultThemes, ThemeContext } from "../ThemeProvider/ThemeProvider"
 
 const VTextInput: React.FunctionComponent<InputProps> = ({
   //styling properties

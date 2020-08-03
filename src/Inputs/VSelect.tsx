@@ -1,8 +1,8 @@
 import React, { useContext, useState } from 'react'
-import { ThemeContext } from 'styled-components';
+
 
 import styles from './VSelect.module.css'
-import { DefaultThemes } from "../ThemeProvider/ThemeProvider"
+import { DefaultThemes, ThemeContext } from "../ThemeProvider/ThemeProvider"
 import VButton from "../Buttons/VButton"
 import VClickableList from "../Lists/VClickableList"
 import ArrowDownSVG from "../assets/arrow-down.js" 
@@ -64,13 +64,13 @@ const VSelect: React.FunctionComponent < SelectProps > = ({
         {isOpen ?
           <ArrowUpSVG style={{
             fill: current_theme.textColor2,
-            width: "6%", height: "6%",
-            margin: "auto 4px"
+            width: "0.7em", height: "0.7em",
+            margin: "auto 6px"
           }}/> :
           <ArrowDownSVG style={{
             fill: current_theme.textColor2,
-            width: "6%", height: "6%",
-            margin: "auto 4px"
+            width: "0.7em", height: "0.7em",
+            margin: "auto 6px"
           }}/>
         }
         

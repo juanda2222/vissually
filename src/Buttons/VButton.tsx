@@ -2,9 +2,9 @@ import React, { useContext } from 'react'
 
 
 import styles from './VButton.module.css'
-import styled, { ThemeContext } from 'styled-components';
+import styled from 'styled-components';
 import { Color2Vec } from "../Tools/ColorTools"
-import { DefaultThemes } from "../ThemeProvider/ThemeProvider"
+import { DefaultThemes, ThemeContext } from "../ThemeProvider/ThemeProvider"
 
 
 const wrapped_onClick = (
@@ -56,7 +56,7 @@ const VButton:React.SFC<ButtonProps> = ({
       border-bottom: 5px solid rgb(${main_rgb[0] - 20}, ${main_rgb[1] - 20}, ${main_rgb[2] - 20});
     }
     &:active{
-      margin: 14px 5px 7px 5px;
+      margin: 14px auto 7px auto;
       transform: translate(0px,5px);
       -webkit-transform: translate(0px,5px);
       border-bottom: 1px solid;

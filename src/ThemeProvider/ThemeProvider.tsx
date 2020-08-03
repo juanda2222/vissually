@@ -1,6 +1,5 @@
 import React, { } from 'react'
 
-import { ThemeProvider } from 'styled-components'
 
 const DefaultThemes: {primary: Theme, secundary: Theme, dark: Theme} = {
   primary: {
@@ -29,11 +28,15 @@ const DefaultThemes: {primary: Theme, secundary: Theme, dark: Theme} = {
   }
 }
 
+const ThemeContext = React.createContext(DefaultThemes.primary)
+
 const VThemeProvider = (props: ThemeProps) => {
   
-  const { children, theme, primary, secundary, dark } = {
-    ...props
-  }
+  const {
+    children,
+    theme,
+    primary, secundary, dark
+  } = props
 
   var current_theme;
   if (secundary) {
@@ -47,22 +50,17 @@ const VThemeProvider = (props: ThemeProps) => {
   } else {
     current_theme = DefaultThemes.primary
   }
+
   return (
-    <ThemeProvider theme={current_theme}>
+    <ThemeContext.Provider value={current_theme}>
       {children}
-    </ThemeProvider>
+    </ThemeContext.Provider>
   )
-  
 }
 
-VThemeProvider.defaultProps = {
-  theme: null,
-  primary: null,
-  secundary: null,
-  dark:null
-};
 
 export {
   VThemeProvider,
+  ThemeContext,
   DefaultThemes
 }

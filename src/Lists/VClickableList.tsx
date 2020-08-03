@@ -1,9 +1,11 @@
 import React, { useContext } from 'react'
-import styled, { ThemeContext } from 'styled-components';
+import styled  from 'styled-components';
 
 import styles from './VClickableList.module.css'
 import { Color2Vec } from "../Tools/ColorTools"
-import { DefaultThemes } from "../ThemeProvider/ThemeProvider"
+import { DefaultThemes, ThemeContext } from "../ThemeProvider/ThemeProvider"
+
+
 
 const VClickableList: React.FunctionComponent<ListProps> = ({
   //styling properties
@@ -40,25 +42,25 @@ const VClickableList: React.FunctionComponent<ListProps> = ({
   // generate the component from the style
   const rgb_list = Color2Vec(current_theme.backgroundColor1)
   
+  
   // style the container
-  var StyledContainer = styled.div`
-      border: 0.5px solid ${current_theme.color1};
-    `;
+  const StyledContainer = styled.div`
+        border: 0.5px solid ${current_theme.color1};`;
   
   // style the childs:
   const div_list = (list ? list : []).map((item_text, index) => {
 
     var StyledItem = styled.div`
-      
-      color: ${current_theme.textColor1};
-      background: rgba(${rgb_list[0] - 20}, ${rgb_list[1] - 20}, ${rgb_list[2] - 20}, 0.5);
-      &:hover{
-        background: rgba(${rgb_list[0] - 40}, ${rgb_list[1] - 40}, ${rgb_list[2] - 40}, 0.5);
-      };
-      &:active{
-        background: rgba(${rgb_list[0] - 60}, ${rgb_list[1] - 60}, ${rgb_list[2] - 60}, 0.5);
-      }
-    `;
+        
+        color: ${current_theme.textColor1};
+        background: rgba(${rgb_list[0] - 20}, ${rgb_list[1] - 20}, ${rgb_list[2] - 20}, 0.5);
+        &:hover{
+          background: rgba(${rgb_list[0] - 40}, ${rgb_list[1] - 40}, ${rgb_list[2] - 40}, 0.5);
+        };
+        &:active{
+          background: rgba(${rgb_list[0] - 60}, ${rgb_list[1] - 60}, ${rgb_list[2] - 60}, 0.5);
+        }
+      `;
     return (
       <StyledItem
         className={wrapped_className}
@@ -68,16 +70,16 @@ const VClickableList: React.FunctionComponent<ListProps> = ({
       >
         {item_text}
       </StyledItem>
-    )
+    )   
   })
 
-  return (
+  return StyledContainer ? (
     <StyledContainer
       className={wrapped_container_className}
     >
       {div_list}  
     </StyledContainer>
-  )
+  ):null
 }
 
 

@@ -7,8 +7,8 @@
 
 .list_container{
 	
-	border-radius: 0.5em;
+	border-radius: 8px;
 	overflow: hidden;
-	
+	margin: 0px 5px;
 }
 
