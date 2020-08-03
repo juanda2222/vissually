@@ -43,8 +43,8 @@ const VTextInput: React.FunctionComponent<InputProps> = ({
   const StyledInput = styled.input`
     padding: 0.5em;
     margin: 0.5em;
-    color: ${current_theme.textColor2};
-    background: rgba(${rgb_list[0]}, ${rgb_list[1]}, ${rgb_list[2]}, 0.2);
+    color: ${current_theme.textColor1};
+    background: rgba(${rgb_list[0]}, ${rgb_list[1]}, ${rgb_list[2]}, 0.3);
     border: none;
     border-radius: 3px;
   `;

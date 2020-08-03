@@ -4,19 +4,19 @@ import { ThemeProvider } from 'styled-components'
 
 const DefaultThemes: {primary: Theme, secundary: Theme, dark: Theme} = {
   primary: {
-    textColor1: "rgb(255, 255, 255)", 
-    textColor2: "rgb(0, 0, 0)", 
+    textColor1: "rgb(0, 0, 0)", 
+    textColor2: "rgb(255, 255, 255)", 
     color1: "#135b75", 
     color2: "#135b75", 
     backgroundColor1: "rgb(255, 255, 255)", 
     backgroundColor2: "rgb(70, 140, 170)", 
   },
   secundary: {
-    textColor1: "rgb(255, 255, 255)",
-    textColor2: "rgb(0, 0, 0)",
+    textColor1: "rgb(30, 30, 30)",
+    textColor2:  "rgb(240, 240, 240)",
     color1: "#10b462",
     color2: "#10b462",
-    backgroundColor1: "rgb(255, 255, 255)",
+    backgroundColor1: "rgb(250, 250, 250)",
     backgroundColor2: "rgb(70, 140, 170)",
   },
   dark: {

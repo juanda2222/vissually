@@ -50,7 +50,7 @@ const VClickableList: React.FunctionComponent<ListProps> = ({
 
     var StyledItem = styled.div`
       
-      color: ${current_theme.textColor2};
+      color: ${current_theme.textColor1};
       background: rgba(${rgb_list[0] - 20}, ${rgb_list[1] - 20}, ${rgb_list[2] - 20}, 0.5);
       &:hover{
         background: rgba(${rgb_list[0] - 40}, ${rgb_list[1] - 40}, ${rgb_list[2] - 40}, 0.5);

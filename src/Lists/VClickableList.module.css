@@ -1,22 +1,5 @@
 /* add css module styles here (optional) */
 
-@-webkit-keyframes fade-in {
-	0% {
-		opacity: 0;
-	}
-	100% {
-		opacity: 1;
-	}
-}
-
-@keyframes fade-in {
-	0% {
-		opacity: 0;
-	}
-	100% {
-		opacity: 1;
-	}
-}
 
 .list_item{
 	padding: 0.2em 1em 0.2em 1em;
@@ -24,13 +7,8 @@
 
 .list_container{
 	
-	/* animations: 3*/
-	-webkit-animation: fade-in 0.2s ease-in-out both;
-	animation: fade-in 0.2s ease-in-out both;
-	
-	/*animation-iteration-count: 1;*/
 	border-radius: 0.5em;
 	overflow: hidden;
-
+	
 }
 

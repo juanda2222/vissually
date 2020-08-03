@@ -5,6 +5,8 @@ import styles from './VSelect.module.css'
 import { DefaultThemes } from "../ThemeProvider/ThemeProvider"
 import VButton from "../Buttons/VButton"
 import VClickableList from "../Lists/VClickableList"
+import ArrowDownSVG from "../assets/arrow-down.js" 
+import ArrowUpSVG from "../assets/arrow-up.js" 
 
 
 const VSelect: React.FunctionComponent < SelectProps > = ({
@@ -13,7 +15,7 @@ const VSelect: React.FunctionComponent < SelectProps > = ({
   style,
   theme,
   primary, secundary, dark,
-  //listClassName,
+  listClassName,
 
   //functional properties
   list,
@@ -28,7 +30,11 @@ const VSelect: React.FunctionComponent < SelectProps > = ({
   // get the theme from the context
   const contex_theme: Theme = useContext(ThemeContext);
   const wrapped_className = [styles.button_style, className ? className : ""].join(" ")
-  //const wrapped_list_className = [styles.list_style, listClassName].join(" ")
+  const wrapped_list_className = [
+    styles.list_style,
+    isOpen ? styles.fadeIn : styles.fadeOut,
+    listClassName ? listClassName : ""
+  ].join(" ")
 
   // generat the theme depending on the boolean inputs or the theme input
   var current_theme;
@@ -55,34 +61,28 @@ const VSelect: React.FunctionComponent < SelectProps > = ({
         }}
       >
         {label}
-        {isOpen ? <img 
-            src="./assets/arrow-down.svg" 
-            alt=""
-            height="20"
-            width="20"
-          />: <img 
-            src="./assets/arrow-up.svg" 
-            alt=""
-            height="20"
-            width="20"
-          />}
+        {isOpen ?
+          <ArrowUpSVG style={{
+            fill: current_theme.textColor2,
+            width: "6%", height: "6%",
+            margin: "auto 4px"
+          }}/> :
+          <ArrowDownSVG style={{
+            fill: current_theme.textColor2,
+            width: "6%", height: "6%",
+            margin: "auto 4px"
+          }}/>
+        }
         
       </VButton>
-      {isOpen ? <VClickableList
+      <VClickableList
         list={list}
+        containerClassName={wrapped_list_className }
         onClick={(index, value) => {
           setOpen(false)
           onChange && onChange(index, value)
         }}
-      /> :
-        null
-      }
-      <img 
-        src="./assets/arrow-down.svg" 
-        alt=""
-        height="20"
-        width="20"
-        />
+      />
     </div>
   )
 }

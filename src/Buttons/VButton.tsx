@@ -47,7 +47,7 @@ const VButton:React.SFC<ButtonProps> = ({
   // generate the component from the style
   const main_rgb = Color2Vec(current_theme.color1)
   const StyledButton = styled.div`
-    color: rgb(255, 255, 255);
+    color: ${current_theme.textColor2};
     background-color: rgb(${main_rgb[0]}, ${main_rgb[1]}, ${main_rgb[2]});
     border-bottom: 5px solid rgb(${main_rgb[0] - 40}, ${main_rgb[1] - 40}, ${main_rgb[2] - 40});
 
