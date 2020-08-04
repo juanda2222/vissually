@@ -6,7 +6,23 @@ import { Color2Vec } from "../Tools/ColorTools"
 import { DefaultThemes, ThemeContext } from "../ThemeProvider/ThemeProvider"
 
 
+// style the container
+const StyledContainer = styled("div")<{border_color:string}>`
+  border: 0.5px solid ${props => props.border_color};`;
 
+// style the selectable item:
+var StyledItem = styled("div") < { text_color: string, main_rgb: number[] }>`
+      
+  color: ${props => props.text_color};
+  background: ${ props => `rgba(${props.main_rgb[0] - 20}, ${props.main_rgb[1] - 20}, ${props.main_rgb[2] - 20}, 0.5)`};
+  &:hover{
+    background: ${ props => `rgba(${props.main_rgb[0] - 40}, ${props.main_rgb[1] - 40}, ${props.main_rgb[2] - 40}, 0.5)`};
+  };
+  &:active{
+    background: ${ props => `rgba(${props.main_rgb[0] - 60}, ${props.main_rgb[1] - 60}, ${props.main_rgb[2] - 60}, 0.5)`};
+  }
+`;
+    
 const VClickableList: React.FunctionComponent<ListProps> = ({
   //styling properties
   className,
@@ -43,26 +59,14 @@ const VClickableList: React.FunctionComponent<ListProps> = ({
   const rgb_list = Color2Vec(current_theme.backgroundColor1)
   
   
-  // style the container
-  const StyledContainer = styled.div`
-        border: 0.5px solid ${current_theme.color1};`;
-  
   // style the childs:
   const div_list = (list ? list : []).map((item_text, index) => {
 
-    var StyledItem = styled.div`
-        
-        color: ${current_theme.textColor1};
-        background: rgba(${rgb_list[0] - 20}, ${rgb_list[1] - 20}, ${rgb_list[2] - 20}, 0.5);
-        &:hover{
-          background: rgba(${rgb_list[0] - 40}, ${rgb_list[1] - 40}, ${rgb_list[2] - 40}, 0.5);
-        };
-        &:active{
-          background: rgba(${rgb_list[0] - 60}, ${rgb_list[1] - 60}, ${rgb_list[2] - 60}, 0.5);
-        }
-      `;
     return (
       <StyledItem
+        text_color={current_theme.textColor1}
+        main_rgb={rgb_list}
+
         className={wrapped_className}
         style={style}
         key={index}
@@ -75,6 +79,7 @@ const VClickableList: React.FunctionComponent<ListProps> = ({
 
   return StyledContainer ? (
     <StyledContainer
+      border_color={current_theme.color1}
       className={wrapped_container_className}
     >
       {div_list}  

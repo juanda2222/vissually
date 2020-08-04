@@ -6,6 +6,17 @@ import styled from 'styled-components';
 import { Color2Vec } from "../Tools/ColorTools"
 import { DefaultThemes, ThemeContext } from "../ThemeProvider/ThemeProvider"
 
+
+const StyledInput = styled("input")<{textColor:string, main_rgb:number[]}>`
+    padding: 0.5em;
+    margin: 0.5em;
+    color: ${props => props.textColor};
+    background: ${props => `rgba(${props.main_rgb[0]}, ${props.main_rgb[1]}, ${props.main_rgb[2]}, 0.3)`};
+    border: none;
+    border-radius: 3px;
+  `;
+
+
 const VTextInput: React.FunctionComponent<InputProps> = ({
   //styling properties
   className,
@@ -40,17 +51,12 @@ const VTextInput: React.FunctionComponent<InputProps> = ({
   
   // generate the component from the style
   const rgb_list = Color2Vec(current_theme.color1)
-  const StyledInput = styled.input`
-    padding: 0.5em;
-    margin: 0.5em;
-    color: ${current_theme.textColor1};
-    background: rgba(${rgb_list[0]}, ${rgb_list[1]}, ${rgb_list[2]}, 0.3);
-    border: none;
-    border-radius: 3px;
-  `;
+  
   
   return (
     <StyledInput
+      main_rgb={rgb_list}
+      textColor={current_theme.textColor1}
       type={type ? type : "text"}
       value={value} 
       className={wrapped_className} 
