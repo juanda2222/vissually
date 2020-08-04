@@ -1,0 +1,118 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`VButton Default render. Snapshot test 1`] = `
+<div
+  className="big_container"
+>
+  <div
+    className="sc-AxjAm gDXVAl action_button button_style "
+    onClick={[Function]}
+  >
+    <span />
+    <span>
+      
+    </span>
+    <svg
+      height="451.847px"
+      id="Capa_1"
+      style={
+        Object {
+          "fill": "rgb(255, 255, 255)",
+          "height": "0.7em",
+          "margin": "auto 6px",
+          "width": "0.7em",
+        }
+      }
+      version="1.1"
+      viewBox="0 0 451.847 451.847"
+      width="451.847px"
+      x="0px"
+      y="0px"
+    >
+      <path
+        d="M225.923,354.706c-8.098,0-16.195-3.092-22.369-9.263L9.27,151.157c-12.359-12.359-12.359-32.397,0-44.751
+ c12.354-12.354,32.388-12.354,44.748,0l171.905,171.915l171.906-171.909c12.359-12.354,32.391-12.354,44.744,0
+ c12.365,12.354,12.365,32.392,0,44.751L248.292,345.449C242.115,351.621,234.018,354.706,225.923,354.706z"
+      />
+    </svg>
+  </div>
+  <div
+    className="sc-AxirZ fVduVY list_container list_style fadeOut "
+  />
+</div>
+`;
+
+exports[`VButton Rendering with props. Snapshot test 1`] = `
+<div
+  className="big_container"
+>
+  <div
+    className="sc-AxjAm gDXVAl action_button button_style "
+    onClick={[Function]}
+  >
+    <span>
+      label
+    </span>
+    <span>
+      
+    </span>
+    <svg
+      height="451.847px"
+      id="Capa_1"
+      style={
+        Object {
+          "fill": "rgb(255, 255, 255)",
+          "height": "0.7em",
+          "margin": "auto 6px",
+          "width": "0.7em",
+        }
+      }
+      version="1.1"
+      viewBox="0 0 451.847 451.847"
+      width="451.847px"
+      x="0px"
+      y="0px"
+    >
+      <path
+        d="M225.923,354.706c-8.098,0-16.195-3.092-22.369-9.263L9.27,151.157c-12.359-12.359-12.359-32.397,0-44.751
+ c12.354-12.354,32.388-12.354,44.748,0l171.905,171.915l171.906-171.909c12.359-12.354,32.391-12.354,44.744,0
+ c12.365,12.354,12.365,32.392,0,44.751L248.292,345.449C242.115,351.621,234.018,354.706,225.923,354.706z"
+      />
+    </svg>
+  </div>
+  <div
+    className="sc-AxirZ fVduVY list_container list_style fadeOut "
+  >
+    <div
+      className="sc-AxiKw dHbpMd list_item list_item"
+      onClick={[Function]}
+    >
+      some_thing
+    </div>
+    <div
+      className="sc-AxiKw dHbpMd list_item list_item"
+      onClick={[Function]}
+    >
+      some_name
+    </div>
+    <div
+      className="sc-AxiKw dHbpMd list_item list_item"
+      onClick={[Function]}
+    >
+      some_name2
+    </div>
+    <div
+      className="sc-AxiKw dHbpMd list_item list_item"
+      onClick={[Function]}
+    >
+      other name
+    </div>
+    <div
+      className="sc-AxiKw dHbpMd list_item list_item"
+      onClick={[Function]}
+    >
+      whatever list
+    </div>
+  </div>
+</div>
+`;

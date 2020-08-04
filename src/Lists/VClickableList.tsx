@@ -64,11 +64,13 @@ const VClickableList: React.FunctionComponent<ListProps> = ({
 
     return (
       <StyledItem
+        //custom theme:
         text_color={current_theme.textColor1}
         main_rgb={rgb_list}
-
+        //styling
         className={wrapped_className}
         style={style}
+        //function:
         key={index}
         onClick={() => { onClick && onClick(index, item_text) }}
       >

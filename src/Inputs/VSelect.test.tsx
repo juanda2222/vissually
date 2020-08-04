@@ -17,11 +17,11 @@ describe('VButton', () => {
 
   test("Rendering with props. Snapshot test", () => { 
     
-
     const ButtonWithProps = renderer.create(
         <VSelect
         list={["some_thing", "some_name", "some_name2", "other name", "whatever list"]}
-        onCLick={() => { }}
+        onSelect={(i, value) => { console.log("clicked!", i, value) }}
+        label = "label"
         />
     ).toJSON();
 
