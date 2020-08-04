@@ -3,11 +3,12 @@
 .fadeOut{
 	opacity: 0; 
 	z-index: -1;
-
 }
 .fadeIn{
 	opacity: 1; 
 	z-index: 200;
+	transform: translate(0px,5px);
+	-webkit-transform: translate(0px,5px);
 }
 
 
@@ -38,6 +39,6 @@
 	
 	width: 95%;
 	position: absolute;
-	top: 3.6em;
+	top: 3.5em;
 	
 }

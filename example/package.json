@@ -20,6 +20,7 @@
     "react": "link:../node_modules/react",
     "react-dom": "link:../node_modules/react-dom",
     "react-scripts": "link:../node_modules/react-scripts",
+    "react-syntax-highlighter": "^13.2.1",
     "typescript": "link:../node_modules/typescript",
     "vissually": "link:.."
   },

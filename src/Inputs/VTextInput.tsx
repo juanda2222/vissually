@@ -1,4 +1,6 @@
-import React, { useContext } from 'react'
+import React, {
+  useContext
+} from 'react'
 
 
 import styles from './VTextInput.module.css'
@@ -8,14 +10,11 @@ import { DefaultThemes, ThemeContext } from "../ThemeProvider/ThemeProvider"
 
 
 const StyledInput = styled("input")<{textColor:string, main_rgb:number[]}>`
-    padding: 0.5em;
-    margin: 0.5em;
-    color: ${props => props.textColor};
-    background: ${props => `rgba(${props.main_rgb[0]}, ${props.main_rgb[1]}, ${props.main_rgb[2]}, 0.3)`};
-    border: none;
-    border-radius: 3px;
+    
   `;
-
+const StyledLabel = styled("label")<{borderColor:string}>`
+  
+`;
 
 const VTextInput: React.FunctionComponent<InputProps> = ({
   //styling properties
@@ -27,13 +26,18 @@ const VTextInput: React.FunctionComponent<InputProps> = ({
   //functional properties
   value,
   id,
+  name,
   type,
+  required,
+  placeholder,
   onChange,
 }) => {  
 
+  
+  
   // get the theme from the context
   const contex_theme:Theme = useContext(ThemeContext);
-  const wrapped_className = [styles.input_text, className ? className : ""].join(" ")
+  const wrapped_className = [styles.input_element, className ? className : ""].join(" ")
 
   // generat the theme depending on the boolean inputs or the theme input
   var current_theme;
@@ -54,16 +58,30 @@ const VTextInput: React.FunctionComponent<InputProps> = ({
   
   
   return (
-    <StyledInput
-      main_rgb={rgb_list}
-      textColor={current_theme.textColor1}
-      type={type ? type : "text"}
-      value={value} 
-      className={wrapped_className} 
-      style={style}
-      id={id}
-      onChange={onChange}
-    />
+    <div className={styles.container} >
+      <StyledInput
+        //custom style
+        main_rgb={rgb_list}
+        textColor={current_theme.textColor1}
+        // parent stying props:
+        className={wrapped_className} 
+        style={style}
+        // functional props
+        value={value} 
+        placeholder={placeholder}
+        id={id}
+        name={name}
+        type={type}
+        required={required}
+        onChange={onChange}
+      />      
+      <StyledLabel
+        className={styles.label_element}
+        borderColor={current_theme.color1}
+      >
+        Name
+      </StyledLabel>
+    </div>
   )
 }
 

@@ -82,12 +82,9 @@ const VSelect: React.FunctionComponent<SelectProps> = ({
           setOpen(!isOpen)
         }}
       >
-        <span>
-          {label}
-        </span>
-        <span>
-          {selectedItem}
-        </span>
+        
+        {selectedItem == "" ? label : selectedItem}
+        
         {isOpen ?
           <ArrowUpSVG style={{
             fill: current_theme.textColor2,

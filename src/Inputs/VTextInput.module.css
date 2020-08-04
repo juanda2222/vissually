@@ -1,15 +1,61 @@
 /* add css module styles here (optional) */
-
-.input_text
-{
-	/*animations*/
-	transition: all 0.1s;
-	-webkit-transition: all 0.1s;
-	
-	/*positions and margin*/
-	padding: 10px 20px 10px 20px;
- 	margin: 10px 5px 2px 5px;
-	letter-spacing: 1px;
-	font-family: 'opensans-bold', sans-serif;
-	font-size: 18px;
+.container {
+	position: relative;
+	padding: 15px 0 0;
+	margin-top: 10px;
+	width: 50%;
 }
+  
+.input_element {
+	font-family: inherit;
+	width: 100%;
+	border: 0;
+	border-bottom: 2px solid #444;
+	outline: 0;
+	font-size: 1.3rem;
+	color: #000;
+	padding: 7px 0;
+	background: transparent;
+	transition: border-color 0.2s;
+	-webkit-transition: border-color 0.2s;
+}
+.input_element::placeholder {
+	color: transparent;
+}
+.input_element:placeholder-shown ~ .label_element {
+	font-size: 1.3rem;
+	cursor: text;
+	top: 20px;
+}
+
+.label_element {
+	position: absolute;
+	top: 0;
+	display: block;
+	transition: 0.2s;
+	font-size: 1rem;
+	color: #333;
+}
+  
+.input_element:focus {
+	padding-bottom: 6px;
+	font-weight: 700;
+	border-width: 3px;
+	border-image: linear-gradient(to right, #11998e, #38ef7d);
+	border-image-slice: 1;
+}
+.input_element:focus ~ .label_element {
+	position: absolute;
+	top: 0;
+	display: block;
+	transition: 0.2s;
+	font-size: 1rem;
+	color: #11998e;
+	font-weight: 700;
+}
+
+/* reset input */
+.input_element:required, .input_element:invalid {
+	box-shadow: none;
+}
+
