@@ -72,5 +72,7 @@ interface ButtonProps extends React.DetailedHTMLProps<React.HTMLAttributes<HTMLD
   theme?: Theme,
   primary?: boolean, secundary?: boolean, dark?: boolean,
   children: React.ReactNode
+
+  isPressed?:boolean
   [propName: string]: any;
 }

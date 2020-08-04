@@ -14,11 +14,20 @@ import { Color2Vec } from "../Tools/ColorTools"
 import { DefaultThemes, ThemeContext } from "../ThemeProvider/ThemeProvider"
 
 
-const StyledButton = styled("div")<{text_color:string, main_rgb: number[]}>`
+const StyledButton = styled("div")<{isActive?:boolean, text_color:string, main_rgb: number[]}>`
+
     color: ${props => props.text_color};
     background-color: ${props => `rgb(${props.main_rgb[0]}, ${props.main_rgb[1]}, ${props.main_rgb[2]})`};
     border-bottom: 5px solid ${props => `rgb(${props.main_rgb[0] - 40}, ${props.main_rgb[1] - 40}, ${props.main_rgb[2] - 40})`};
-  
+
+    ${props => props.isActive ? `
+      margin: 14px auto 7px auto;
+      transform: translate(0px,5px);
+      -webkit-transform: translate(0px,5px);
+      border-bottom: 1px solid;
+      border-color: transparent;
+    `: ""}
+
     &:hover{
       background-color: ${props => `rgb(${props.main_rgb[0] + 20}, ${props.main_rgb[1] + 20}, ${props.main_rgb[2] + 20})`};
       border-bottom: 5px solid ${props => `rgb(${props.main_rgb[0] - 20}, ${props.main_rgb[1] - 20}, ${props.main_rgb[2] - 20})`};
@@ -40,6 +49,7 @@ const VButton: React.FunctionComponent<ButtonProps> = ({
   primary, secundary, dark,
 
   //functional properties
+  isPressed,
   children,
   onClick,
   //onMouseEnter,
@@ -48,7 +58,6 @@ const VButton: React.FunctionComponent<ButtonProps> = ({
 
   // get the theme from the context and its hooks
   const contex_theme: Theme = useContext(ThemeContext);
-  //const [isHover, setHover] = useState(false);
 
 
   // all the event handlers wrapped for custom styling
@@ -57,14 +66,14 @@ const VButton: React.FunctionComponent<ButtonProps> = ({
   ) => {
     if (typeof onClick === 'function') { onClick(event) }
   }
-//
+
   //const wrapped_onMouseEnter = (
   //  event: React.MouseEvent<HTMLDivElement, MouseEvent>,
   //) => {
   //  setHover(true)
   //  if (typeof onMouseEnter === 'function') { onMouseEnter(event) }
   //}
-//
+  //
   //const wrapped_onMouseLeave = (
   //  event: React.MouseEvent<HTMLDivElement, MouseEvent>,
   //) => {
@@ -92,13 +101,19 @@ const VButton: React.FunctionComponent<ButtonProps> = ({
 
   return (
     <StyledButton
-      //onMouseEnter={wrapped_onMouseEnter}
-      //onMouseLeave={wrapped_onMouseLeave}
+      // custom style props
+      isActive={isPressed}
       text_color={current_theme.textColor2}
       main_rgb={main_rgb}
-      onClick={wrapped_onClick}
+
+      //hierachy props
       className={wrapped_className}
       style={style}
+
+      //functional
+      onClick={wrapped_onClick}
+      //onMouseEnter={wrapped_onMouseEnter}
+      //onMouseLeave={wrapped_onMouseLeave}
     >
       {children}
     </StyledButton>

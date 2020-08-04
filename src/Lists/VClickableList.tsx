@@ -14,12 +14,12 @@ const StyledContainer = styled("div")<{border_color:string}>`
 var StyledItem = styled("div") < { text_color: string, main_rgb: number[] }>`
       
   color: ${props => props.text_color};
-  background: ${ props => `rgba(${props.main_rgb[0] - 20}, ${props.main_rgb[1] - 20}, ${props.main_rgb[2] - 20}, 0.5)`};
+  background: ${ props => `rgba(${props.main_rgb[0] - 20}, ${props.main_rgb[1] - 20}, ${props.main_rgb[2] - 20}, 0.9)`};
   &:hover{
-    background: ${ props => `rgba(${props.main_rgb[0] - 40}, ${props.main_rgb[1] - 40}, ${props.main_rgb[2] - 40}, 0.5)`};
+    background: ${ props => `rgba(${props.main_rgb[0] - 40}, ${props.main_rgb[1] - 40}, ${props.main_rgb[2] - 40}, 0.9)`};
   };
   &:active{
-    background: ${ props => `rgba(${props.main_rgb[0] - 60}, ${props.main_rgb[1] - 60}, ${props.main_rgb[2] - 60}, 0.5)`};
+    background: ${ props => `rgba(${props.main_rgb[0] - 60}, ${props.main_rgb[1] - 60}, ${props.main_rgb[2] - 60}, 0.9)`};
   }
 `;
     

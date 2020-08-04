@@ -1,12 +1,12 @@
 /* add css module styles here (optional) */
 
 .fadeOut{
-	visibility: hidden; 
+	opacity: 0; 
 	z-index: -1;
 
 }
 .fadeIn{
-	visibility: visible; 
+	opacity: 1; 
 	z-index: 200;
 }
 
@@ -29,15 +29,15 @@
 .list_style
 {
 	/*animations*/
-	-webkit-transition: all 0.4s ease-in-out;
-    -moz-transition: all 0.4s ease-in-out;
-    -o-transition: all 0.4s ease-in-out;
-	transition: all 0.4s ease-in-out;
+	-webkit-transition: all 0.3s ease-in-out;
+    -moz-transition: all 0.3s ease-in-out;
+    -o-transition: all 0.3s ease-in-out;
+	transition: all 0.3s ease-in-out;
 	
 	/*traslation*/
 	
-	width: 100%;
+	width: 95%;
 	position: absolute;
-	top: 40px;
+	top: 3.5em;
 	
 }

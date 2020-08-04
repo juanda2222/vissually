@@ -1,4 +1,4 @@
-import React, { useContext, useState } from 'react'
+import React, { useContext, useState, useEffect, useRef } from 'react'
 
 
 import styles from './VSelect.module.css'
@@ -36,7 +36,7 @@ const VSelect: React.FunctionComponent < SelectProps > = ({
     listClassName ? listClassName : ""
   ].join(" ")
 
-  // generat the theme depending on the boolean inputs or the theme input
+  // generate the theme depending on the boolean inputs or the theme input
   var current_theme;
   if (secundary) {
     current_theme = DefaultThemes.secundary
@@ -50,8 +50,29 @@ const VSelect: React.FunctionComponent < SelectProps > = ({
     current_theme = theme ? theme : DefaultThemes.primary
   }
 
+  // use effect to subscribe the outside click element
+  const wrapperRef = useRef<HTMLDivElement>(null);
+  useEffect(() => {
+
+    // on outside click handler
+    const handleClickOutside = (event: MouseEvent) => {
+      if (wrapperRef.current && !wrapperRef.current.contains(event.target as Node)) {
+        setOpen(false)
+      }
+    }
+    document.addEventListener('mousedown', handleClickOutside);
+
+    // cleanup:
+    return () => {
+      // Unbind the event listener on clean up
+      document.removeEventListener("mousedown", handleClickOutside);
+  };
+  }, [wrapperRef]);
+
   return (
-    <div className={styles.big_container}>
+    <div
+      ref={wrapperRef}
+      className={styles.big_container}>
       <VButton
         style={style}
         className={wrapped_className}
@@ -77,6 +98,7 @@ const VSelect: React.FunctionComponent < SelectProps > = ({
       </VButton>
       <VClickableList
         list={list}
+        className={styles.list_item}
         containerClassName={wrapped_list_className }
         onClick={(index, value) => {
           setOpen(false)
