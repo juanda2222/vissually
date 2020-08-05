@@ -1,12 +1,12 @@
 /* add css module styles here (optional) */
-div.container {
+.container {
 	position: relative;
 	padding: 15px 0 0;
 	margin-top: 10px;
 	width: 50%;
 }
   
-input.input_element {
+.input_element {
 	
 	margin: 4px 4px;
 	font-family: inherit;
@@ -24,22 +24,22 @@ input.input_element {
 	/*color: #000;*/
 }
 
-input.input_element:hover {
+.input_element:hover {
 	border-width: 3px;
 	margin: 3px 4px 3px 4px
 }
 
 
 /* we are providing our own placeholder*/
-input.input_element::placeholder { 
+.input_element::placeholder { 
 	color: transparent;
 }
 
 /* Change the behaviour of the autofill color: */
-input.input_element:-webkit-autofill,
-input.input_element:-webkit-autofill:hover, 
-input.input_element:-webkit-autofill:focus, 
-input.input_element:-webkit-autofill:active  {
+.input_element:-webkit-autofill,
+.input_element:-webkit-autofill:hover, 
+.input_element:-webkit-autofill:focus, 
+.input_element:-webkit-autofill:active  {
 
 	/*autocomplete background color created from an inseted shadow:*/
 	-webkit-box-shadow: 0 0 0 30px transparent inset !important;
@@ -48,20 +48,20 @@ input.input_element:-webkit-autofill:active  {
 
 }
 
-input.input_element:-webkit-autofill{
+.input_element:-webkit-autofill{
 	-webkit-text-fill-color: #000 !important; /*input text color*/
 }
 
 
 
 
-input.input_element:placeholder-shown ~ label.label_element {
+.input_element:placeholder-shown ~ .label_element {
 	font-size: 1.1rem;
 	cursor: text;
 	top: 28px;
 }
 
-label.label_element {
+.label_element {
 	position: absolute;
 	top: -5px;
 	left: 10px;
@@ -78,7 +78,7 @@ label.label_element {
 	/*color: #333;*/
 }
   
-input.input_element:focus {
+.input_element:focus {
 	padding-bottom: 6px;
 	font-weight: 500;
 	margin: 4px 4px 3px 4px;
@@ -88,8 +88,8 @@ input.input_element:focus {
 	/*border-color: #11998e;*/
 }
 
-/*
-input.input_element:focus ~ label.label_element {
+
+.input_element:focus ~ .label_element {
 	
 	position: absolute;
 	top: -5px;
@@ -102,10 +102,10 @@ input.input_element:focus ~ label.label_element {
 	
 	/*given dinamically:*/
 	/*color: #11998e;*/
-/*}*/
+}
 
 /* reset input */
-input.input_element:required, .input_element:invalid {
+.input_element:required, .input_element:invalid {
 	box-shadow: none;
 }
 

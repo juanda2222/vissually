@@ -1,6 +1,6 @@
 import React, {
   useContext,
-  //useState,
+  useState,
   //useEffect,
   //useRef,
 } from 'react'
@@ -18,14 +18,14 @@ const StyledInput = styled("input") <{ textColor: number[], main_rgb: number[] }
   &:focus {
     border-color: ${props => `rgb(${props.main_rgb[0]}, ${props.main_rgb[1]}, ${props.main_rgb[2]});`};
   }
-  &:focus ~ &{
-    color: ${props => `rgb(${props.main_rgb[0]}, ${props.main_rgb[1]}, ${props.main_rgb[2]})`};
-  }
    
 `;
 
-const StyledLabel = styled("label")<{textColor:number[]}>`
-  color: ${props => `rgb(${props.textColor[0]}, ${props.textColor[1]}, ${props.textColor[2]})`};
+const StyledLabel = styled("label") <{ textColor: number[], isFocused: boolean, main_rgb: number[] }>`
+  color: ${props => props.isFocused ?
+    `rgb(${props.main_rgb[0]}, ${props.main_rgb[1]}, ${props.main_rgb[2]})` :
+    `rgb(${props.textColor[0]}, ${props.textColor[1]}, ${props.textColor[2]})`
+  };
 `;
 
 const VTextInput: React.FunctionComponent<InputProps> = ({
@@ -43,11 +43,32 @@ const VTextInput: React.FunctionComponent<InputProps> = ({
   required,
   placeholder,
   onChange,
-  onClick,
+  onFocus,
+  onBlur,
 }) => {  
 
   // get the theme from the context
   const contex_theme: Theme = useContext(ThemeContext);
+  const [isFocused, setFocused] = useState(false)
+
+  // all the event handlers wrapped for custom styling
+  const wrapped_onFocus = (
+    event: React.FocusEvent<HTMLInputElement>,
+  ) => {
+    if (typeof onFocus === 'function') {
+      setFocused(true)
+      onFocus(event)
+    }
+  }
+
+  const wrapped_onBlur = (
+    event: React.FocusEvent<HTMLInputElement>,
+  ) => {
+    if (typeof onBlur === 'function') {
+      setFocused(false)
+      onBlur(event)
+    }
+  }
 
   // generat the theme depending on the boolean inputs or the theme input
   const wrapped_className = [styles.input_element, className ? className : ""].join(" ")
@@ -87,14 +108,14 @@ const VTextInput: React.FunctionComponent<InputProps> = ({
         type={type}
         required={required}
         onChange={onChange}
-        onClick={(e) => {
-          console.log("sdsd")
-          onClick && onClick(e)
-        }}
+        onFocus={wrapped_onFocus}
+        onBlur={wrapped_onBlur}
       />      
       <StyledLabel
         className={styles.label_element}
+        isFocused={isFocused}
         textColor={rgb_textColor_list}
+        main_rgb={rgb_main_list}
       >
         {placeholder}
       </StyledLabel>
