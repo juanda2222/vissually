@@ -1,61 +1,111 @@
 /* add css module styles here (optional) */
-.container {
+div.container {
 	position: relative;
 	padding: 15px 0 0;
 	margin-top: 10px;
 	width: 50%;
 }
   
-.input_element {
+input.input_element {
+	
+	margin: 4px 4px;
 	font-family: inherit;
 	width: 100%;
-	border: 0;
-	border-bottom: 2px solid #444;
+	border-radius: 5px;
 	outline: 0;
-	font-size: 1.3rem;
-	color: #000;
-	padding: 7px 0;
+	font-size: 1rem;
+	padding: 7px 5px;
 	background: transparent;
 	transition: border-color 0.2s;
 	-webkit-transition: border-color 0.2s;
+
+	/*given dinamically:*/
+	/*border: 2px solid #444;*/
+	/*color: #000;*/
 }
-.input_element::placeholder {
+
+input.input_element:hover {
+	border-width: 3px;
+	margin: 3px 4px 3px 4px
+}
+
+
+/* we are providing our own placeholder*/
+input.input_element::placeholder { 
 	color: transparent;
 }
-.input_element:placeholder-shown ~ .label_element {
-	font-size: 1.3rem;
-	cursor: text;
-	top: 20px;
+
+/* Change the behaviour of the autofill color: */
+input.input_element:-webkit-autofill,
+input.input_element:-webkit-autofill:hover, 
+input.input_element:-webkit-autofill:focus, 
+input.input_element:-webkit-autofill:active  {
+
+	/*autocomplete background color created from an inseted shadow:*/
+	-webkit-box-shadow: 0 0 0 30px transparent inset !important;
+	-moz-box-shadow: 0 0 0 30px transparent inset !important;
+	box-shadow: 0 0 0 30px transparent inset !important;
+
 }
 
-.label_element {
+input.input_element:-webkit-autofill{
+	-webkit-text-fill-color: #000 !important; /*input text color*/
+}
+
+
+
+
+input.input_element:placeholder-shown ~ label.label_element {
+	font-size: 1.1rem;
+	cursor: text;
+	top: 28px;
+}
+
+label.label_element {
 	position: absolute;
-	top: 0;
+	top: -5px;
+	left: 10px;
 	display: block;
 	transition: 0.2s;
-	font-size: 1rem;
-	color: #333;
+	font-size: 0.9rem;
+	background-color: transparent;
+
+	/* disable the label interaction*/
+	user-select: none;
+	pointer-events: none;
+
+	/*given dinamically:*/
+	/*color: #333;*/
 }
   
-.input_element:focus {
+input.input_element:focus {
 	padding-bottom: 6px;
-	font-weight: 700;
+	font-weight: 500;
+	margin: 4px 4px 3px 4px;
 	border-width: 3px;
-	border-image: linear-gradient(to right, #11998e, #38ef7d);
-	border-image-slice: 1;
+
+	/*given dinamically:*/
+	/*border-color: #11998e;*/
 }
-.input_element:focus ~ .label_element {
+
+/*
+input.input_element:focus ~ label.label_element {
+	
 	position: absolute;
-	top: 0;
+	top: -5px;
+	left: 10px;
 	display: block;
 	transition: 0.2s;
 	font-size: 1rem;
-	color: #11998e;
-	font-weight: 700;
-}
+	font-weight: 500;
+	
+	
+	/*given dinamically:*/
+	/*color: #11998e;*/
+/*}*/
 
 /* reset input */
-.input_element:required, .input_element:invalid {
+input.input_element:required, .input_element:invalid {
 	box-shadow: none;
 }
 

@@ -1,7 +1,7 @@
 
 import React from "react"
 
-import { PrismLight  as SyntaxHighlighter } from 'react-syntax-highlighter';
+import SyntaxHighlighter from 'react-syntax-highlighter';
 import { docco } from 'react-syntax-highlighter/dist/esm/styles/hljs';
 import { anOldHope } from 'react-syntax-highlighter/dist/esm/styles/hljs';
 
