@@ -12,7 +12,7 @@ const StyledContainer = styled("div")<{border_color:string}>`
 
 // style the selectable item:
 var StyledItem = styled("div") < { text_color: string, main_rgb: number[] }>`
-      
+  
   color: ${props => props.text_color};
   background: ${ props => `rgba(${props.main_rgb[0] - 20}, ${props.main_rgb[1] - 20}, ${props.main_rgb[2] - 20}, 0.9)`};
   &:hover{
@@ -21,6 +21,15 @@ var StyledItem = styled("div") < { text_color: string, main_rgb: number[] }>`
   &:active{
     background: ${ props => `rgba(${props.main_rgb[0] - 60}, ${props.main_rgb[1] - 60}, ${props.main_rgb[2] - 60}, 0.9)`};
   }
+`;
+
+var StyledTopItem = styled(StyledItem)`
+  border-top-left-radius: 8px;
+  border-top-right-radius: 8px;
+`;
+var StyledBottomItem = styled(StyledItem)`
+  border-top-bottom-radius: 8px;
+  border-top-bottom-radius: 8px;
 `;
     
 const VClickableList: React.FunctionComponent<ListProps> = ({
@@ -61,22 +70,30 @@ const VClickableList: React.FunctionComponent<ListProps> = ({
   
   // style the childs:
   const div_list = (list ? list : []).map((item_text, index) => {
+    let item_props = {
+      //custom theme:
+      text_color:current_theme.textColor1,
+      main_rgb:rgb_list,
+      //styling
+      className:wrapped_className,
+      style:style,
+      //function:
+      key:index,
+      onClick:() => { onClick && onClick(index, item_text) },
+    }
 
-    return (
-      <StyledItem
-        //custom theme:
-        text_color={current_theme.textColor1}
-        main_rgb={rgb_list}
-        //styling
-        className={wrapped_className}
-        style={style}
-        //function:
-        key={index}
-        onClick={() => { onClick && onClick(index, item_text) }}
-      >
-        {item_text}
-      </StyledItem>
-    )   
+    // top item
+    if (index == 0) {
+      console.log("cero")
+      return <StyledTopItem {...item_props} >{item_text}</StyledTopItem>
+    // bottom item
+    } else if (index == list.length - 1) {
+      console.log("last")
+      return <StyledBottomItem {...item_props} >{item_text}</StyledBottomItem>
+    //middle items:
+    } else {
+      return <StyledItem {...item_props} >{item_text}</StyledItem>
+    }
   })
 
   return StyledContainer ? (

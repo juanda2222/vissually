@@ -6,9 +6,9 @@
 }
 
 .list_container{
-	
 	border-radius: 8px;
-	overflow: hidden;
+	overflow-y: auto;
+	max-height: 200px;
 	margin: 0px 5px;
 }
 
