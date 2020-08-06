@@ -1,7 +1,7 @@
 
 import React from "react"
 import renderer from 'react-test-renderer';
-import VAutocomplete from './VAutoComplete'
+import VAutoComplete from './VAutoComplete'
 import VTextInput from '../Inputs/VTextInput'
 
 
@@ -15,31 +15,31 @@ const autocomplete_list = [
   { title: "Schindler's List", year: 1993 },
 ]
 
-describe('VButton', () => {
+describe('AutoComplete', () => {
 
-  test('Button declaration has no errors', () => {
-    expect(VAutocomplete).toBeTruthy()
+  test('AutoComplete declaration has no errors', () => {
+    expect(VAutoComplete).toBeTruthy()
   })
 
   test("Default render. Snapshot test", () => { 
-    const ButtonTree = renderer.create(<VAutocomplete/>).toJSON();
-    console.log(ButtonTree)
-    expect(ButtonTree).toMatchSnapshot();
+    const AutoCompleteTree = renderer.create(<VAutoComplete/>).toJSON();
+    console.log(AutoCompleteTree)
+    expect(AutoCompleteTree).toMatchSnapshot();
   })
 
   test("Rendering with props. Snapshot test", () => { 
     
-    const ButtonWithProps = renderer.create(
-      <VAutocomplete
+    const AutoCompletePropsTree = renderer.create(
+      <VAutoComplete
         options={autocomplete_list}
         getOptionLabel={(option) => option.title}
         style={{ width: 300 }}
-        renderInput={(params) => <VTextInput {...params} label="Combo box" variant="outlined" />}
+        renderInput={(params) => <VTextInput {...params} placeholder="Combo box" />}
       />
     ).toJSON();
 
-    console.log(ButtonWithProps)
-    expect(ButtonWithProps).toMatchSnapshot();
+    console.log(AutoCompletePropsTree)
+    expect(AutoCompletePropsTree).toMatchSnapshot();
   })
 
 
