@@ -43,7 +43,7 @@ interface ListProps {
   primary?: boolean, secundary?: boolean, dark?: boolean,
 
   list: string[],
-  onClick?: (index:number, text:string) => void,
+  onClick?: (event:{ index: number, label: string}) => void,
   [propName: string]: any;
 }
 
@@ -55,7 +55,7 @@ interface SelectProps {
 
   list: string[],
   label: string,
-  onChange?: (index:number, text:string) => void,
+  onChange?: (event:{ index: number, label: string}) => void,
   [propName: string]: any;
 }
 

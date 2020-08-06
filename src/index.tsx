@@ -6,6 +6,7 @@ import VClickableList from "./Lists/VClickableList"
 import VTextInput from './Inputs/VTextInput'
 import VSelect from './Inputs/VSelect'
 import VChip from './Display/VChip'
+import VAutoComplete from './Autocomplete/VAutoComplete'
 
 
 interface Props {
@@ -30,4 +31,5 @@ export {
   VClickableList,
   VSelect,
   VChip,
+  VAutoComplete,
 }

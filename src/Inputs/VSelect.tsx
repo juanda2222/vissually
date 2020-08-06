@@ -103,10 +103,10 @@ const VSelect: React.FunctionComponent<SelectProps> = ({
         list={list}
         className={styles.list_item}
         containerClassName={wrapped_list_className}
-        onClick={(index, value) => {
+        onClick={({ index, label }) => {
           setOpen(false)
-          setSelectedItem(value)
-          onSelect && onSelect(index, value)
+          setSelectedItem(label)
+          onSelect && onSelect(index, label)
         }}
       />
     </div>

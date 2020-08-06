@@ -42,6 +42,7 @@ const VClickableList: React.FunctionComponent<ListProps> = ({
 
   //functional properties
   list,
+  getLabel,
   onClick,
 }) => {  
 
@@ -67,9 +68,20 @@ const VClickableList: React.FunctionComponent<ListProps> = ({
   // generate the component from the style
   const rgb_list = Color2Vec(current_theme.backgroundColor1)
   
-  
+
   // style the childs:
-  const div_list = (list ? list : []).map((item_text, index) => {
+  const div_list = (list ? list : []).map((item, index) => {
+
+    let label = ""
+    // depending on the list structure get the label:
+    if (typeof getLabel === 'function') {
+      label = getLabel(item)
+    // a plain text list:
+    } else {
+      label = item
+    }
+
+
     let item_props = {
       //custom theme:
       text_color:current_theme.textColor1,
@@ -79,20 +91,18 @@ const VClickableList: React.FunctionComponent<ListProps> = ({
       style:style,
       //function:
       key:index,
-      onClick:() => { onClick && onClick(index, item_text) },
+      onClick: () => { onClick && onClick({ index: index, label: label }) },
     }
 
     // top item
     if (index == 0) {
-      console.log("cero")
-      return <StyledTopItem {...item_props} >{item_text}</StyledTopItem>
+      return <StyledTopItem {...item_props} >{label}</StyledTopItem>
     // bottom item
     } else if (index == list.length - 1) {
-      console.log("last")
-      return <StyledBottomItem {...item_props} >{item_text}</StyledBottomItem>
+      return <StyledBottomItem {...item_props} >{label}</StyledBottomItem>
     //middle items:
     } else {
-      return <StyledItem {...item_props} >{item_text}</StyledItem>
+      return <StyledItem {...item_props} >{label}</StyledItem>
     }
   })
 
