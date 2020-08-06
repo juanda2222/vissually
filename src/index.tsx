@@ -5,6 +5,7 @@ import VButton from './Buttons/VButton'
 import VClickableList from "./Lists/VClickableList"
 import VTextInput from './Inputs/VTextInput'
 import VSelect from './Inputs/VSelect'
+import VChip from './Display/VChip'
 
 
 interface Props {
@@ -28,4 +29,5 @@ export {
   VTextInput,
   VClickableList,
   VSelect,
+  VChip,
 }

@@ -55,19 +55,15 @@ const VTextInput: React.FunctionComponent<InputProps> = ({
   const wrapped_onFocus = (
     event: React.FocusEvent<HTMLInputElement>,
   ) => {
-    if (typeof onFocus === 'function') {
-      setFocused(true)
-      onFocus(event)
-    }
+    setFocused(true)
+    if (typeof onFocus === 'function') {onFocus(event)}
   }
 
   const wrapped_onBlur = (
     event: React.FocusEvent<HTMLInputElement>,
   ) => {
-    if (typeof onBlur === 'function') {
-      setFocused(false)
-      onBlur(event)
-    }
+    setFocused(false)
+    if (typeof onBlur === 'function') {onBlur(event)}
   }
 
   // generat the theme depending on the boolean inputs or the theme input

@@ -18,8 +18,6 @@ declare module '*.svg' {
   export { svgComponent as ReactComponent }
 }
 
-
-
 interface Theme {
   textColor1: string, //darkish
   textColor2: string, //lightish
@@ -74,5 +72,23 @@ interface ButtonProps extends React.DetailedHTMLProps<React.HTMLAttributes<HTMLD
   children: React.ReactNode
 
   isPressed?:boolean
+  [propName: string]: any;
+}
+
+interface ChipProps{
+    
+  className?:string,
+  style?:any,
+  theme?: Theme,
+  primary?: boolean, secundary?: boolean, dark?: boolean,
+  label:string,
+  onDelete?:any,
+  onClick?:any,
+  [propName?: string]: any;
+}
+
+interface AutoCompleteProps{
+  theme?: Theme,
+  primary?: boolean, secundary?: boolean, dark?: boolean,
   [propName: string]: any;
 }
