@@ -10,6 +10,7 @@ import TextInputBanner from "./components/banners/TextInputBanner"
 import NumberInputBanner from "./components/banners/NumberInputBanner"
 import ChipBanner from "./components/banners/ChipBanner"
 import AutoCompleteBanner from "./components/banners/AutoCompleteBanner"
+import NavBar from "./components/navigation/NavBar"
 
 import 'vissually/dist/index.css'
 
@@ -17,6 +18,7 @@ const App = () => {
   return (
     
     <div>
+      <NavBar/>
       <ExampleComponent text="Create React Library Example 😄" />
       <ButtonBanner/>
       <TextInputBanner />
