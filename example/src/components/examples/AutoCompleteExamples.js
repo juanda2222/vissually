@@ -77,6 +77,14 @@ const TextInputExample = props => (
             style={{ width: 300 }}
             renderInput={(params) => <VTextInput {...params} placeholder="Combo box" />}
         />
+        <p> Multiple AutoComplete: </p>
+        <VAutoComplete
+            multiple
+            options={autocomplete_list}
+            getOptionLabel={(option) => option.title}
+            style={{ width: 300 }}
+            renderInput={(params) => <VTextInput {...params} placeholder="Movies" />}
+        />
         <p> Themed AutoComplete: </p>
         <VThemeProvider secundary>
             <VAutoComplete

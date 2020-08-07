@@ -47,6 +47,18 @@ interface ListProps {
   [propName: string]: any;
 }
 
+interface ChipListProps {
+  theme?: Theme,
+  className?: string,
+  style?: any,
+  primary?: boolean, secundary?: boolean, dark?: boolean,
+
+  list: string[],
+  onClick?: (event: { index: number, label: string }) => void,
+  onDelete?: (event:{ index: number, label: string}) => void,
+  [propName: string]: any;
+}
+
 interface SelectProps {
   theme?: Theme,
   className?: string,

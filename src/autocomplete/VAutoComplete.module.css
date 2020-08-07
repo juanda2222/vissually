@@ -32,7 +32,7 @@
 	transition: all 0.3s ease-in-out;
 	
 	/*traslation*/
-	width: 95%;
+	/*width: 95%;*/
 	position: absolute;
 	top: 4em;
 }

@@ -14,7 +14,7 @@ exports[`AutoComplete Rendering with props. Snapshot test 1`] = `
     className="container"
   >
     <input
-      className="sc-AxhUy dVcGKr input_element input_style"
+      className="sc-AxheI kbekTD input_element input_style"
       onBlur={[Function]}
       onChange={[Function]}
       onFocus={[Function]}
@@ -22,7 +22,7 @@ exports[`AutoComplete Rendering with props. Snapshot test 1`] = `
       value=""
     />
     <label
-      className="sc-AxgMl czqKlY label_element"
+      className="sc-Axmtr ixJmyd label_element"
     >
       Combo box
     </label>
@@ -31,7 +31,7 @@ exports[`AutoComplete Rendering with props. Snapshot test 1`] = `
     className="sc-AxjAm jNAsBD list_container list_style fadeOut "
   >
     <div
-      className="sc-AxirZ sc-AxiKw crVGut list_item list_item"
+      className="sc-AxirZ sc-AxiKw crVGut list_item "
       onClick={[Function]}
       style={
         Object {
@@ -42,7 +42,7 @@ exports[`AutoComplete Rendering with props. Snapshot test 1`] = `
       The Shawshank Redemption
     </div>
     <div
-      className="sc-AxirZ jFyzcN list_item list_item"
+      className="sc-AxirZ jFyzcN list_item "
       onClick={[Function]}
       style={
         Object {
@@ -53,7 +53,7 @@ exports[`AutoComplete Rendering with props. Snapshot test 1`] = `
       The Godfather
     </div>
     <div
-      className="sc-AxirZ jFyzcN list_item list_item"
+      className="sc-AxirZ jFyzcN list_item "
       onClick={[Function]}
       style={
         Object {
@@ -64,7 +64,7 @@ exports[`AutoComplete Rendering with props. Snapshot test 1`] = `
       The Godfather: Part II
     </div>
     <div
-      className="sc-AxirZ jFyzcN list_item list_item"
+      className="sc-AxirZ jFyzcN list_item "
       onClick={[Function]}
       style={
         Object {
@@ -75,7 +75,7 @@ exports[`AutoComplete Rendering with props. Snapshot test 1`] = `
       The Dark Knight
     </div>
     <div
-      className="sc-AxirZ jFyzcN list_item list_item"
+      className="sc-AxirZ jFyzcN list_item "
       onClick={[Function]}
       style={
         Object {
@@ -86,7 +86,7 @@ exports[`AutoComplete Rendering with props. Snapshot test 1`] = `
       12 Angry Men
     </div>
     <div
-      className="sc-AxirZ sc-AxhCb fvJznW list_item list_item"
+      className="sc-AxirZ sc-AxhCb fvJznW list_item "
       onClick={[Function]}
       style={
         Object {
