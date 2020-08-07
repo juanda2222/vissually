@@ -8,10 +8,6 @@ exports[`VButton Default render. Snapshot test 1`] = `
     className="sc-AxjAm gDXVAl action_button button_style "
     onClick={[Function]}
   >
-    <span />
-    <span>
-      
-    </span>
     <svg
       height="451.847px"
       id="Capa_1"
@@ -36,9 +32,6 @@ exports[`VButton Default render. Snapshot test 1`] = `
       />
     </svg>
   </div>
-  <div
-    className="sc-AxirZ fVduVY list_container list_style fadeOut "
-  />
 </div>
 `;
 
@@ -50,12 +43,7 @@ exports[`VButton Rendering with props. Snapshot test 1`] = `
     className="sc-AxjAm gDXVAl action_button button_style "
     onClick={[Function]}
   >
-    <span>
-      label
-    </span>
-    <span>
-      
-    </span>
+    label
     <svg
       height="451.847px"
       id="Capa_1"
@@ -84,31 +72,31 @@ exports[`VButton Rendering with props. Snapshot test 1`] = `
     className="sc-AxirZ fVduVY list_container list_style fadeOut "
   >
     <div
-      className="sc-AxiKw dHbpMd list_item list_item"
+      className="sc-AxiKw sc-AxhCb gcNYfB list_item list_item"
       onClick={[Function]}
     >
       some_thing
     </div>
     <div
-      className="sc-AxiKw dHbpMd list_item list_item"
+      className="sc-AxiKw ceVRZF list_item list_item"
       onClick={[Function]}
     >
       some_name
     </div>
     <div
-      className="sc-AxiKw dHbpMd list_item list_item"
+      className="sc-AxiKw ceVRZF list_item list_item"
       onClick={[Function]}
     >
       some_name2
     </div>
     <div
-      className="sc-AxiKw dHbpMd list_item list_item"
+      className="sc-AxiKw ceVRZF list_item list_item"
       onClick={[Function]}
     >
       other name
     </div>
     <div
-      className="sc-AxiKw dHbpMd list_item list_item"
+      className="sc-AxiKw sc-AxhUy bjGxvv list_item list_item"
       onClick={[Function]}
     >
       whatever list

@@ -1,15 +1,56 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`VButton Default render. Snapshot test 1`] = `
-<input
-  className="sc-AxjAm kxmMId input_text "
-  type="text"
-/>
+exports[`VTextInput VTextInput dDefault render. Snapshot test 1`] = `
+<div
+  className="container"
+>
+  <input
+    className="sc-AxjAm LIrVh input_element "
+    onBlur={[Function]}
+    onFocus={[Function]}
+  />
+  <label
+    className="sc-AxirZ iyFEor label_element"
+  />
+</div>
 `;
 
-exports[`VButton Rendering with props. Snapshot test 1`] = `
-<input
-  className="sc-AxirZ fbSlPi input_text some_classname"
-  type="text"
-/>
+exports[`VTextInput VTextInput rendering with props type='number'. Snapshot test 1`] = `
+<div
+  className="container"
+>
+  <input
+    className="sc-AxjAm LIrVh input_element some_classname"
+    name="age"
+    onBlur={[Function]}
+    onChange={[Function]}
+    onFocus={[Function]}
+    placeholder="age"
+    type="number"
+  />
+  <label
+    className="sc-AxirZ iyFEor label_element"
+  >
+    age
+  </label>
+</div>
+`;
+
+exports[`VTextInput VTextInput rendering with props. Snapshot test 1`] = `
+<div
+  className="container"
+>
+  <input
+    className="sc-AxjAm LIrVh input_element some_classname"
+    onBlur={[Function]}
+    onChange={[Function]}
+    onFocus={[Function]}
+    placeholder="heeey"
+  />
+  <label
+    className="sc-AxirZ iyFEor label_element"
+  >
+    heeey
+  </label>
+</div>
 `;

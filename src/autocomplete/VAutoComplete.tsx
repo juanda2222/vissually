@@ -29,7 +29,8 @@ const VAutoComplete: React.FunctionComponent<AutoCompleteProps> = ({
   const doubleBinded = typeof onChange === 'function' && value ? true : false
 
   //generate a dynamic list depending on the state
-  const filtered_list = options.filter( (item:any) => { 
+  const wrapped_options = options ? options : []
+  const filtered_list = wrapped_options.filter( (item:any) => { 
     let label = ""
     // depending on the list structure get the label:
     if (typeof getOptionLabel === 'function') {
@@ -40,7 +41,7 @@ const VAutoComplete: React.FunctionComponent<AutoCompleteProps> = ({
     }
 
     // filter by content:
-    return (label.includes(inputText) || inputText=="")
+    return (label.toLowerCase().includes(inputText.toLowerCase()) || inputText=="")
   })
 
   // create all the wrappers for the inputs
@@ -71,15 +72,11 @@ const VAutoComplete: React.FunctionComponent<AutoCompleteProps> = ({
     },
   }
 
-
-  
-
-
   return (
     <div
       className={styles.big_container}
     >
-      {renderInput(input_component_props)}
+      {typeof renderInput === 'function' && renderInput(input_component_props)}
       <VClickableList
         style={style}
         className={styles.list_item}
