@@ -25,8 +25,23 @@ const VAutoComplete: React.FunctionComponent<AutoCompleteProps> = ({
 
   // hooks and state:
   const [isOpen, setOpen] = useState(false)
-  const [selectedItem, setSelectedItem] = useState("")
+  const [inputText, setInputText] = useState("")
   const doubleBinded = typeof onChange === 'function' && value ? true : false
+
+  //generate a dynamic list depending on the state
+  const filtered_list = options.filter( (item:any) => { 
+    let label = ""
+    // depending on the list structure get the label:
+    if (typeof getOptionLabel === 'function') {
+      label = getOptionLabel(item)
+    // a plain text list:
+    } else {
+      label = item
+    }
+
+    // filter by content:
+    return (label.includes(inputText) || inputText=="")
+  })
 
   // create all the wrappers for the inputs
   const wrapped_list_className = [
@@ -37,9 +52,10 @@ const VAutoComplete: React.FunctionComponent<AutoCompleteProps> = ({
 
   // wrapp the rendered element with a two way binding
   const input_component_props = {
-    value: doubleBinded ? value : selectedItem,
+    className: styles.input_style,
+    value: doubleBinded ? value : inputText,
     onChange: (e: React.ChangeEvent<HTMLInputElement>) => {
-      setSelectedItem(e.target.value)
+      setInputText(e.target.value)
       onChange && onChange(e)
     },
 
@@ -50,10 +66,14 @@ const VAutoComplete: React.FunctionComponent<AutoCompleteProps> = ({
     },
     onBlur: (e: React.FocusEvent<HTMLInputElement>) => {
       setOpen(false)
+      if (filtered_list.length < 1) { setInputText("") }
       if (typeof onBlur === 'function') {onBlur(e)}
     },
   }
+
+
   
+
 
   return (
     <div
@@ -63,12 +83,12 @@ const VAutoComplete: React.FunctionComponent<AutoCompleteProps> = ({
       <VClickableList
         style={style}
         className={styles.list_item}
-        list={options}
+        list={filtered_list}
         getLabel={getOptionLabel}
         containerClassName={wrapped_list_className}
         onClick={(obj) => {
           setOpen(false)
-          setSelectedItem(obj.label)
+          setInputText(obj.label)
         }}
       />
     </div>

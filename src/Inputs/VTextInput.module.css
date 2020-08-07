@@ -1,25 +1,26 @@
 
 /* add css module styles here (optional) */
-/* add css module styles here (optional) */
 .container {
 	position: relative;
-	padding: 15px 0 0;
+	display:flex;
+	padding: 15px 0 0 0;
 	margin-top: 10px;
-	width: 50%;
+	min-width: 150px;
+	width: 16em;
 }
   
 .input_element {
 	
-	margin: 4px 4px;
 	font-family: inherit;
 	width: 100%;
-	border-radius: 5px;
+	border-radius: 6px;
 	outline: 0;
 	font-size: 1rem;
-	padding: 7px 5px;
 	background: transparent;
 	transition: border-color 0.2s;
 	-webkit-transition: border-color 0.2s;
+	padding: 7px 5px;
+	margin: 4px;	
 
 	/*given dinamically:*/
 	/*border: 2px solid #444;*/
@@ -28,9 +29,22 @@
 
 .input_element:hover {
 	border-width: 3px;
-	margin: 3px 4px 3px 4px
+	margin: 3px;
+	/*margin: 1px 1px 1px 1px*/
 }
 
+
+.input_element:focus {
+	
+	font-weight: 500;
+	border-width: 3px;
+	margin: 3px;
+	/*margin: 3px 3px 3px 3px*/
+	/*padding-bottom: 6px;*/
+	
+	/*given dinamically:*/
+	/*border-color: #11998e;*/
+}
 
 /* we are providing our own placeholder*/
 .input_element::placeholder { 
@@ -54,9 +68,6 @@
 	-webkit-text-fill-color: #000 !important; /*input text color*/
 }
 
-
-
-
 .input_element:placeholder-shown ~ .label_element {
 	font-size: 1.1rem;
 	cursor: text;
@@ -66,8 +77,8 @@
 .label_element {
 	position: absolute;
 	top: -5px;
-	left: 10px;
-	display: block;
+	left: 12px;
+	/*display: block;*/
 	transition: 0.2s;
 	font-size: 0.9rem;
 	background-color: transparent;
@@ -80,23 +91,14 @@
 	/*color: #333;*/
 }
   
-.input_element:focus {
-	padding-bottom: 6px;
-	font-weight: 500;
-	margin: 4px 4px 3px 4px;
-	border-width: 3px;
-
-	/*given dinamically:*/
-	/*border-color: #11998e;*/
-}
 
 
 .input_element:focus ~ .label_element {
 	
 	position: absolute;
 	top: -5px;
-	left: 10px;
-	display: block;
+	left: 12px;
+	/*display: block;*/
 	transition: 0.2s;
 	font-size: 1rem;
 	font-weight: 500;

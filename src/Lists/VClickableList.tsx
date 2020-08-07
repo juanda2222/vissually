@@ -44,7 +44,7 @@ const VClickableList: React.FunctionComponent<ListProps> = ({
   list,
   getLabel,
   onClick,
-}) => {  
+}) => {
 
   // get the theme from the context
   const contex_theme = useContext(ThemeContext);
@@ -70,13 +70,14 @@ const VClickableList: React.FunctionComponent<ListProps> = ({
   
 
   // style the childs:
-  const div_list = (list ? list : []).map((item, index) => {
+  const wrapped_list = list ? list : []
+  const div_list = wrapped_list.map((item, index) => {
 
     let label = ""
     // depending on the list structure get the label:
     if (typeof getLabel === 'function') {
       label = getLabel(item)
-    // a plain text list:
+      // a plain text list:
     } else {
       label = item
     }
@@ -84,36 +85,39 @@ const VClickableList: React.FunctionComponent<ListProps> = ({
 
     let item_props = {
       //custom theme:
-      text_color:current_theme.textColor1,
-      main_rgb:rgb_list,
+      text_color: current_theme.textColor1,
+      main_rgb: rgb_list,
       //styling
-      className:wrapped_className,
-      style:style,
+      className: wrapped_className,
+      style: style,
       //function:
-      key:index,
+      key: index,
       onClick: () => { onClick && onClick({ index: index, label: label }) },
     }
 
     // top item
     if (index == 0) {
       return <StyledTopItem {...item_props} >{label}</StyledTopItem>
-    // bottom item
+      // bottom item
     } else if (index == list.length - 1) {
       return <StyledBottomItem {...item_props} >{label}</StyledBottomItem>
-    //middle items:
+      //middle items:
     } else {
       return <StyledItem {...item_props} >{label}</StyledItem>
     }
   })
 
-  return StyledContainer ? (
-    <StyledContainer
-      border_color={current_theme.color1}
-      className={wrapped_container_className}
-    >
-      {div_list}  
-    </StyledContainer>
-  ):null
+
+  return (
+    wrapped_list.length > 0 ?
+      <StyledContainer
+        border_color={current_theme.color1}
+        className={wrapped_container_className}
+      >
+        {div_list}
+      </StyledContainer>
+    : null
+  )
 }
 
 
