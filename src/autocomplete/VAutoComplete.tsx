@@ -81,8 +81,6 @@ const VAutoComplete: React.FunctionComponent<AutoCompleteProps> = ({
   const doubleBinded = typeof onChange === 'function' && value ? true : false
   const [SelectedList, setSelectedList] = useState(new Array())
 
-  console.log(SelectedList)
-
   //generate a dynamic list depending on the state
   const wrapped_options = options ? options : []
   const filtered_list = wrapped_options.filter( (item:any) => { 

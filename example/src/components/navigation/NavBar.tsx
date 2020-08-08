@@ -7,12 +7,10 @@ import AppBar from '@material-ui/core/AppBar';
 import Toolbar from '@material-ui/core/Toolbar';
 import Typography from '@material-ui/core/Typography';
 import IconButton from '@material-ui/core/IconButton';
-import MenuIcon from '@material-ui/icons/Menu';
 import GitHubIcon from '@material-ui/icons/GitHub';
 import Brightness4Icon from '@material-ui/icons/Brightness4';
 import NightsStayIcon from '@material-ui/icons/NightsStay';
-
-
+import MenuButtonLeftDrawer from './MenuButtonLeftDrawer';
 
 
 const useStyles = makeStyles((theme:Theme) =>
@@ -27,7 +25,7 @@ const useStyles = makeStyles((theme:Theme) =>
       flexGrow: 1,
     },
     icons: {
-      margin: "4px"
+      margin: "4px",
     }
   }),
 );
@@ -40,22 +38,25 @@ export default function ButtonAppBar() {
     <div className={classes.root}>
       <AppBar position="static">
         <Toolbar>
-          <IconButton edge="start" className={classes.menuButton} color="inherit" aria-label="menu">
-            <MenuIcon />
-          </IconButton>
+          <MenuButtonLeftDrawer className={classes.menuButton}/>
           <Typography variant="h6" className={classes.title}>
             Vissually
-          </Typography>
-          {isNight ? 
-          <Brightness4Icon
-            onClick={() => { setNight(false) }}
-            className={classes.icons}
-          /> : 
-          <NightsStayIcon
-            onClick={() => { setNight(true) }}
-            className={classes.icons}
-          />}
-          <GitHubIcon className={classes.icons} />
+          </Typography>  
+          {isNight ?
+            <IconButton
+              color="inherit" 
+              onClick={() => { setNight(false) }}>
+              <Brightness4Icon className={classes.icons}/>
+            </IconButton> :
+            <IconButton
+              color="inherit" 
+              onClick={() => { setNight(false) }}>
+              <NightsStayIcon  className={classes.icons}/>
+            </IconButton>
+          }
+          <IconButton color="inherit" >
+            <GitHubIcon className={classes.icons} />
+          </IconButton>
         </Toolbar>
       </AppBar>
     </div>

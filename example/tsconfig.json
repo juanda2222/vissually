@@ -1,5 +1,6 @@
 {
   "compilerOptions": {
+    "skipLibCheck": true,
     "outDir": "dist",
     "module": "esnext",
     "lib": [
@@ -21,7 +22,6 @@
     "allowSyntheticDefaultImports": true,
     "target": "es5",
     "allowJs": true,
-    "skipLibCheck": true,
     "strict": true,
     "forceConsistentCasingInFileNames": true,
     "resolveJsonModule": true,
