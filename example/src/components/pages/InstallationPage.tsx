@@ -15,7 +15,7 @@ const useStyles = makeStyles({
   },
 });
 
-const InstallationPage = (props: { dark: boolean }) => {
+const InstallationPage = (props: { dark?: boolean }) => {
   
   const classes = useStyles();
 

@@ -8,6 +8,10 @@ import ListItem from '@material-ui/core/ListItem';
 import ListItemText from '@material-ui/core/ListItemText';
 import IconButton from '@material-ui/core/IconButton';
 import MenuIcon from '@material-ui/icons/Menu';
+import {
+  Link as RouterLink,
+} from "react-router-dom";
+//import Link from '@material-ui/core/Link';
 //import Typography from '@material-ui/core/Typography';
 //import ListItemIcon from '@material-ui/core/ListItemIcon';
 
@@ -19,6 +23,8 @@ const useStyles = makeStyles({
     width: 'auto',
   },
 });
+
+
 
 type Anchor = 'top' | 'left' | 'bottom' | 'right';
 
@@ -59,15 +65,19 @@ const TemporaryDrawerButton:React.FunctionComponent<TemporaryDrawerProps>  = ({
       onKeyDown={toggleDrawer(false)}
     >
       <List>
-        {['Get Started', 'Components', 'Styles'].map((text) => (
-          <ListItem button key={text}>
-            <ListItemText primary={text} />
-          </ListItem>
-        ))}
+        <ListItem button component={RouterLink} to="/get-started">
+            <ListItemText primary={"Get Started"} />
+        </ListItem >
+        <ListItem button component={RouterLink} to="/components">
+            <ListItemText primary={"Components"} />
+        </ListItem>
+        <ListItem button component={RouterLink} to="/styles">
+            <ListItemText primary={"Styles"} />
+        </ListItem>
       </List>
       <Divider />
       <List>
-        <ListItem button key={"About"}>
+        <ListItem button component={RouterLink} to="/about">
           <ListItemText primary={"About"} />
         </ListItem>
       </List>

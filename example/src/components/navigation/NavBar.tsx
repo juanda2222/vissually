@@ -5,13 +5,17 @@ import React, { useState } from 'react';
 import { createStyles, makeStyles, Theme } from '@material-ui/core/styles';
 import AppBar from '@material-ui/core/AppBar';
 import Toolbar from '@material-ui/core/Toolbar';
-import Typography from '@material-ui/core/Typography';
+//import Typography from '@material-ui/core/Typography';
 import IconButton from '@material-ui/core/IconButton';
 import GitHubIcon from '@material-ui/icons/GitHub';
 import Brightness4Icon from '@material-ui/icons/Brightness4';
 import NightsStayIcon from '@material-ui/icons/NightsStay';
-import MenuButtonLeftDrawer from './MenuButtonLeftDrawer';
+import Button from '@material-ui/core/Button';
+import {
+  Link as RouterLink,
+} from "react-router-dom";
 
+import MenuButtonLeftDrawer from './MenuButtonLeftDrawer';
 
 const useStyles = makeStyles((theme:Theme) =>
   createStyles({
@@ -22,7 +26,9 @@ const useStyles = makeStyles((theme:Theme) =>
       marginRight: theme.spacing(2),
     },
     title: {
-      flexGrow: 1,
+      marginRight: "auto",
+      fontWeight: 500,
+      fontSize: "1rem"
     },
     icons: {
       margin: "4px",
@@ -39,9 +45,9 @@ export default function ButtonAppBar() {
       <AppBar position="static">
         <Toolbar>
           <MenuButtonLeftDrawer className={classes.menuButton}/>
-          <Typography variant="h6" className={classes.title}>
+          <Button color="inherit" className={classes.title} component={RouterLink} to="/">
             Vissually
-          </Typography>  
+          </Button>  
           {isNight ?
             <IconButton
               color="inherit" 

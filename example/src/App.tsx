@@ -1,18 +1,15 @@
 import React from 'react'
 
-import { createMuiTheme, ThemeProvider } from '@material-ui/core/styles';
-
 import {
-  ExampleComponent,
-} from 'vissually'
-
-import ButtonBanner from "./components/banners/ButtonBanner.js"
-import SelectInputBanner from "./components/banners/SelectInputBanner.js"
-import TextInputBanner from "./components/banners/TextInputBanner.js"
-import NumberInputBanner from "./components/banners/NumberInputBanner.js"
-import ChipBanner from "./components/banners/ChipBanner.js"
-import AutoCompleteBanner from "./components/banners/AutoCompleteBanner.js"
+  BrowserRouter as Router,
+  Switch,
+  Route,
+} from "react-router-dom";
+import { createMuiTheme, ThemeProvider } from '@material-ui/core/styles';
 import NavBar from "./components/navigation/NavBar"
+import Components from "./components/pages/Components"
+import InstallationPage from "./components/pages/InstallationPage"
+import HomePage from "./components/pages/HomePage"
 
 import 'vissually/dist/index.css'
 
@@ -21,19 +18,23 @@ let theme = createMuiTheme();
 const App = () => {
 
   return (
-    
-    <div>
-      <ThemeProvider theme={theme}>
-        <NavBar/>
-        <ExampleComponent text="Create React Library Example 😄" />
-        <ButtonBanner/>
-        <TextInputBanner />
-        <SelectInputBanner />
-        <NumberInputBanner dark />
-        <AutoCompleteBanner/>
-        <ChipBanner/>
-      </ThemeProvider>
-    </div>
+  
+    <ThemeProvider theme={theme}>
+      <Router>
+        <NavBar />
+        <Switch>
+          <Route exact path="/">
+            <HomePage />
+          </Route>
+          <Route path="/installation">
+            <InstallationPage/>
+          </Route>
+          <Route path="/Components">
+            <Components />
+          </Route>
+        </Switch>
+      </Router>
+    </ThemeProvider>
   ) 
 }
 
