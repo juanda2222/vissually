@@ -28,7 +28,11 @@ const InstallationPage = (props: { dark?: boolean }) => {
           Install Vissually, the world's less popular React UI Library!
       </Typography> 
       <Typography variant="h6" >Vissually is available as a </Typography>
-      <Link href="https://www.npmjs.com/package/@juandara22/vissually" onClick={(event: React.SyntheticEvent) => event.preventDefault()}>npm package</Link>
+      <Link
+        href="https://www.npmjs.com/package/@juandara22/vissually"
+        onClick={(event: React.SyntheticEvent) => event.preventDefault()}>
+        npm package
+        </Link>
       <Typography variant="h3" className={classes.title} >
         npm
       </Typography>  

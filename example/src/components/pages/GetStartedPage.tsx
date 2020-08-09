@@ -1,10 +1,10 @@
 
 import React from "react"
 import Typography from '@material-ui/core/Typography';
-import Button from '@material-ui/core/Button';
+//import Button from '@material-ui/core/Button';
 import { createStyles, makeStyles, Theme } from '@material-ui/core/styles';
-import personal_logo from "../../assets/personal_logo.png"
-import {Link as RouterLink} from "react-router-dom";
+//import { Link as RouterLink } from "react-router-dom";
+import Link from '@material-ui/core/Link';
 
 const useStyles = makeStyles((theme: Theme) =>
   createStyles({
@@ -39,39 +39,24 @@ const useStyles = makeStyles((theme: Theme) =>
   })
 );
 
-const HomePage = () => {
+const GetStartedPage = () => {
 
   const classes = useStyles();
 
   return (
-    <div className={classes.root}>
-      <img style={{
-        width: "auto",
-        height: "auto",
-        display: "block",
-        maxWidth:"250px",
-
-      }} alt="personal logo" src={personal_logo} />
-      <div className={classes.container}>
-        <Typography color="primary" variant="h2">
-          Vissually
-        </Typography>
-        <Typography color="primary" variant="h5">
-          React components for faster and easier web development. Build your own design system, or start with Vissually.
-        </Typography>
-        <Button
-          className={classes.button}
-          color="primary"
-          variant="outlined"
-          component={RouterLink}
-          to="/get-started"
-        >
-          Get Started
-        </Button>
-      </div>
+    <div className={classes.container}>
+      <Typography color="inherit" variant="h2">
+        Installation
+      </Typography>
+      <Typography color="inherit" variant="h5">
+        Install Vissually, the world's most popular React UI framework.
+      </Typography>
+      <Typography color="inherit" variant="h6">
+        Material-UI is available as an <Link color="secondary" href="https://www.npmjs.com/package/@juandara22/vissually" >npm package</Link> .
+      </Typography>
     </div>
   );
 };
 
 
-export default HomePage
+export default GetStartedPage
