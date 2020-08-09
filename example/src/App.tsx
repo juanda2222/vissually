@@ -10,10 +10,32 @@ import NavBar from "./components/navigation/NavBar"
 import Components from "./components/pages/Components"
 import InstallationPage from "./components/pages/InstallationPage"
 import HomePage from "./components/pages/HomePage"
+import blue from '@material-ui/core/colors/blue';
+import lime from '@material-ui/core/colors/lime';
 
 import 'vissually/dist/index.css'
 
-let theme = createMuiTheme();
+const theme = createMuiTheme({
+  breakpoints: {
+    values: {
+      xs: 0,
+      sm: 600,
+      md: 960,
+      lg: 1280,
+      xl: 1920,
+    },
+  },
+  typography: {
+  },
+  palette: {
+    primary: {
+      main: blue[700],
+    },
+    secondary: {
+      main: lime[700],
+    },
+  },
+});
 
 const App = () => {
 

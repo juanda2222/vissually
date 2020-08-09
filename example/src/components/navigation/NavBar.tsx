@@ -56,11 +56,11 @@ export default function ButtonAppBar() {
             </IconButton> :
             <IconButton
               color="inherit" 
-              onClick={() => { setNight(false) }}>
+              onClick={() => { setNight(true) }}>
               <NightsStayIcon  className={classes.icons}/>
             </IconButton>
           }
-          <IconButton color="inherit" >
+          <IconButton href="https://github.com/juanda2222/vissually" color="inherit" >
             <GitHubIcon className={classes.icons} />
           </IconButton>
         </Toolbar>
