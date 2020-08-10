@@ -74,6 +74,9 @@ const VSelect: React.FunctionComponent<SelectProps> = ({
       ref={wrapperRef}
       className={styles.big_container}>
       <VButton
+        primary={primary}
+        secundary={secundary}
+        dark={dark}
         isPressed={isOpen}
         style={style}
         className={wrapped_className}
