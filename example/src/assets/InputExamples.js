@@ -3,7 +3,7 @@ export default {
 
     string:`
     import React, { useState } from 'react'
-    import { VInput, VButton, } from 'vissually'
+    import { VInput, VButton, } from '@juandara22/vissually'
 
     const TextInputExample = () => {
         

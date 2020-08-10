@@ -6,7 +6,7 @@ export default {
         VButton,
         VThemeProvider,
         VInput,
-      } from 'vissually'
+      } from '@juandara22/vissually'
     
     
     interface Theme {

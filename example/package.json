@@ -4,7 +4,8 @@
   "version": "0.0.0",
   "private": true,
   "scripts": {
-    "start": "node ../node_modules/react-scripts/bin/react-scripts.js start",
+    "start": "serve -s build",
+    "start:dev": "node ../node_modules/react-scripts/bin/react-scripts.js start",
     "build": "node ../node_modules/react-scripts/bin/react-scripts.js build",
     "test": "node ../node_modules/react-scripts/bin/react-scripts.js test",
     "eject": "node ../node_modules/react-scripts/bin/react-scripts.js eject"
@@ -31,6 +32,7 @@
     "react-router-dom": "^5.2.0",
     "react-scripts": "link:../node_modules/react-scripts",
     "react-syntax-highlighter": "^13.2.1",
+    "serve": "^11.3.2",
     "typescript": "link:../node_modules/typescript",
     "vissually": "link:.."
   },

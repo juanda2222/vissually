@@ -13,9 +13,9 @@ const useStyles = makeStyles((theme: Theme) =>
     BigContainer: {
       backgroundColor: theme.palette.background.default,
       height: "calc(100vh - 124px)",
+      width: "100%",
       minHeight: "100%",
       //padding: "10vh 6vw",
-      paddingLeft: "12vw",
       display: "flex",
       justifyContent: "center",
       alignItems: "center",
@@ -25,10 +25,19 @@ const useStyles = makeStyles((theme: Theme) =>
         textAlign: "center",
       },
     },
+    img: {
+      margin: "0px",
+      [theme.breakpoints.up('md')]: {
+        marginLeft: "12vw",
+      },
+    },
     container: {
       display: "flex",
       flexDirection: "column",
       marginLeft: "10vh",
+      [theme.breakpoints.down('sm')]: {
+        marginLeft: "0px"
+      },
       marginTop:"5vh",
       "& > *": {
         margin: "10px",
@@ -53,7 +62,9 @@ const HomePage = () => {
 
   return (
     <Box className={classes.BigContainer}>
-      <img style={{
+      <img
+        className={classes.img}
+        style={{
         width: "auto",
         height: "auto",
         display: "block",

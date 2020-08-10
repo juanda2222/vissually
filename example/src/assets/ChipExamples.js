@@ -6,7 +6,7 @@ export default {
     import {
         VChip,
         VThemeProvider,
-    } from 'vissually'
+    } from '@juandara22/vissually'
 
     const TextInputExample = props => (
         

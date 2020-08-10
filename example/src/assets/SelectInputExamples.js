@@ -3,7 +3,7 @@ export default {
     string:`
         
     import React from 'react'
-    import { VSelect } from 'vissually'
+    import { VSelect } from '@juandara22/vissually'
 
     const example_list=[
             "item 1", 

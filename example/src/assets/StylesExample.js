@@ -6,7 +6,7 @@ export default {
     import {
         VButton,
         VInput,
-    } from 'vissually'
+    } from '@juandara22/vissually'
 
     const StylesExample = () => (
         <div style={{display:"flex", flexDirection:"column", alignItems:"center"}}>

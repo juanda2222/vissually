@@ -58,6 +58,7 @@ const GetStartedPage = (props: { dark: boolean }) => {
           import React from 'react';
           import ReactDOM from 'react-dom';
           import VButton from '@juandara/vissually';
+          import '@juandara22/vissually/dist/index.css'
 
           function App() {
             return (

@@ -3,7 +3,7 @@ export default {
     string:`
         
         import React from 'react'
-        import { VButton } from 'vissually'
+        import { VButton } from '@juandara22/vissually'
 
         const ButtonExample = () => (
             

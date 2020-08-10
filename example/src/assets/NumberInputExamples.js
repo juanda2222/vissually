@@ -4,7 +4,7 @@ export default {
     string:`
     
     import React from 'react'
-    import { VInput } from 'vissually'
+    import { VInput } from '@juandara22/vissually'
 
     const TextInputExample = () => (
         

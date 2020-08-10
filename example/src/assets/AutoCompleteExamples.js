@@ -8,7 +8,7 @@ export default {
     import {
         VInput,
         VAutoComplete,
-    } from 'vissually'
+    } from '@juandara22/vissually'
 
     const autocomplete_list = [
         { title: 'The Shawshank Redemption', year: 1994 },
