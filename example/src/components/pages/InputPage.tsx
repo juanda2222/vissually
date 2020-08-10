@@ -44,11 +44,11 @@ const InputPage = (props: {dark?:boolean}) => {
       <Typography color="inherit" variant="h6">
         Text fields allow users to enter text into a UI. They typically appear in forms and dialogs.
       </Typography>
-      <Typography color="inherit" variant="h3">
+      <Typography color="inherit" variant="h4">
         Text Input
       </Typography>
       <TextInputBanner />
-      <Typography color="inherit" variant="h3">
+      <Typography color="inherit" variant="h4">
         Number Input
       </Typography>
       <NumberInputBanner />
@@ -59,8 +59,8 @@ const InputPage = (props: {dark?:boolean}) => {
         <li>
           <Link style={{ backgroundColor: dark ? "#0f0f0f" : "#f0f0f0"}}
             color="secondary" 
-            href="/components/input" >
-            {"<VInput/>"}
+            href="/components/button" >
+            {"<VButton/>"}
           </Link>
         </li>
         <li>

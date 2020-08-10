@@ -29,7 +29,8 @@
     "react-scripts": "link:../node_modules/react-scripts",
     "react-syntax-highlighter": "^13.2.1",
     "typescript": "link:../node_modules/typescript",
-    "vissually": "link:.."
+    "vissually": "link:..",
+    "@types/vissually": "link:.."
   },
   "devDependencies": {
     "@babel/plugin-syntax-object-rest-spread": "^7.8.3"

@@ -5,7 +5,7 @@ import {
     VThemeProvider,
   } from 'vissually'
 
-const TextInputExample = props => (
+const TextInputExample = () => (
     
     <div style={{display:"flex", flexDirection:"column", alignItems:"center"}}>
         <h3>Inputs:</h3>

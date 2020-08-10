@@ -5,7 +5,7 @@ import {
     VSelect,
   } from 'vissually'
 
-const SelectInputExample = props => (
+const SelectInputExample = () => (
     
     <div style={{display:"flex", flexDirection:"column", alignItems:"center"}}>
         <p> Default select: </p>
@@ -18,16 +18,16 @@ const SelectInputExample = props => (
                 "item 3", 
                 "another one", 
                 "addition",
-                "item 1", 
-                "item 2", 
-                "item 3", 
+                "item 7", 
+                "item 8", 
+                "item 9", 
                 "another one", 
                 "addition",
-                "item 1", 
-                "item 2", 
-                "item 3", 
-                "another one", 
-                "addition",
+                "item 10", 
+                "item 11", 
+                "item 12", 
+                "other one", 
+                "last one",
             ]}/>
         <p> Themed Default lists: </p>
         <VThemeProvider secundary>

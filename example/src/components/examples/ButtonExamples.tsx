@@ -2,7 +2,7 @@
 import React from 'react'
 import { VButton } from 'vissually'
 
-const ButtonExample = props => (
+const ButtonExample = () => (
     
     <div style={{display:"flex",  justifyContent:"center" }}>
         <VButton>{"Default"}</VButton>

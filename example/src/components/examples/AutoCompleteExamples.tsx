@@ -66,32 +66,32 @@ const autocomplete_list = [
     { title: 'Django Unchained', year: 2012 },
 ]
 
-const TextInputExample = props => (
+const TextInputExample = () => (
     
     <div style={{display:"flex", flexDirection:"column", alignItems:"center"}}>
         <h3>AutoComplete:</h3>
         <p> Default AutoComplete: </p>
         <VAutoComplete
             options={autocomplete_list}
-            getOptionLabel={(option) => option.title}
+            getOptionLabel={(option: {title:number, year:string}) => option.title}
             style={{ width: 300 }}
-            renderInput={(params) => <VInput {...params} placeholder="Combo box" />}
+            renderInput={(params:any) => <VInput {...params} placeholder="Combo box" />}
         />
         <p> Multiple AutoComplete: </p>
         <VAutoComplete
             multiple
             options={autocomplete_list}
-            getOptionLabel={(option) => option.title}
+            getOptionLabel={(option: {title:number, year:string}) => option.title}
             style={{ width: 300 }}
-            renderInput={(params) => <VInput {...params} placeholder="Movies" />}
+            renderInput={(params:any) => <VInput {...params} placeholder="Movies" />}
         />
         <p> Themed AutoComplete: </p>
         <VThemeProvider secundary>
             <VAutoComplete
                 options={autocomplete_list}
-                getOptionLabel={(option) => option.title}
+                getOptionLabel={(option: {title:number, year:string}) => option.title}
                 style={{ width: 300 }}
-                renderInput={(params) => <VInput {...params} placeholder="placeholder!" />}
+                renderInput={(params:any) => <VInput {...params} placeholder="placeholder!" />}
             />
         </VThemeProvider>
     </div>
