@@ -31,13 +31,13 @@ const StylesExample = () => (
             <p>Default theme provider:</p>
             <VButton style={{padding:"30px", }}>{"BIG"}</VButton>
             <VButton style={{ padding: "5px" }}>{"small"}</VButton>
-            <VInput style={{width: "400px"}} placeholder="large" name="name"/>
+            <VInput parentStyle={{width: "400px"}} placeholder="large" name="name"/>
         </VThemeProvider>
         <VThemeProvider theme={custom_theme}>
             <p>Custom theme:</p>
             <VButton style={{padding:"30px", }}>{"BIG"}</VButton>
             <VButton style={{ padding: "5px" }}>{"small"}</VButton>
-            <VInput style={{width: "400px"}} placeholder="large" name="name"/>
+            <VInput parentStyle={{width: "400px"}} placeholder="large" name="name"/>
         </VThemeProvider>
     </div>
 )

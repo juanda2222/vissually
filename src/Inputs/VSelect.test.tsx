@@ -10,7 +10,7 @@ describe('VButton', () => {
   })
 
   test("Default render. Snapshot test", () => { 
-    const SelectTree = renderer.create(<VSelect/>).toJSON();
+    const SelectTree = renderer.create(<VSelect list={["1","2"]} label="label" />).toJSON();
     console.log(SelectTree)
     expect(SelectTree).toMatchSnapshot();
   })
@@ -20,7 +20,7 @@ describe('VButton', () => {
     const SelectTreeWithProps = renderer.create(
         <VSelect
         list={["some_thing", "some_name", "some_name2", "other name", "whatever list"]}
-        onSelect={(i, value) => { console.log("clicked!", i, value) }}
+        onSelect={(i:number, value:any) => { console.log("clicked!", i.toString(10), value) }}
         label = "label"
         />
     ).toJSON();

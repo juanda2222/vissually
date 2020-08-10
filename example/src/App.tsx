@@ -19,6 +19,9 @@ import Usage from "./components/pages/UsagePage"
 import Installation from "./components/pages/InstallationPage"
 import StylesPage from "./components/pages/StylesPage"
 
+import { Provider } from 'react-redux'
+import store from './stores/RootStore'
+
 import 'vissually/dist/index.css'
 
 const theme = createMuiTheme({
@@ -48,23 +51,25 @@ const App = () => {
   return (
   
     <ThemeProvider theme={theme}>
-      <Router>
-        <NavBar />
-        <Switch>
-          <Route exact path="/">
-            <HomePage />
-          </Route>
-          <Route path='/get-started/installation' component={Installation} />
-          <Route path='/get-started/usage' component={Usage} />
-        
-          <Route path='/components/button' component={ButtonPage} />
-          <Route path='/components/input' component={InputPage} />
-          <Route path='/components/select' component={SelectPage} />
-          <Route path='/components/autocomplete' component={AutocompletePage} />
+      <Provider store={store}>
+        <Router>
+          <NavBar />
+          <Switch>
+            <Route exact path="/">
+              <HomePage />
+            </Route>
+            <Route path='/get-started/installation' component={Installation} />
+            <Route path='/get-started/usage' component={Usage} />
+          
+            <Route path='/components/button' component={ButtonPage} />
+            <Route path='/components/input' component={InputPage} />
+            <Route path='/components/select' component={SelectPage} />
+            <Route path='/components/autocomplete' component={AutocompletePage} />
 
-          <Route path='/styles/themes' component={StylesPage} />
-        </Switch>
-      </Router>
+            <Route path='/styles/themes' component={StylesPage} />
+          </Switch>
+        </Router>
+      </Provider>
     </ThemeProvider>
   ) 
 }

@@ -10,7 +10,7 @@ describe('VButton', () => {
   })
 
   test("Default render. no list given", () => { 
-    const Chip = renderer.create(<VChip/>).toJSON();
+    const Chip = renderer.create(<VChip label="snapshot"/>).toJSON();
     console.log(Chip)
     expect(Chip).toMatchSnapshot();
   })

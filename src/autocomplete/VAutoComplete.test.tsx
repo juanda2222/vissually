@@ -2,7 +2,7 @@
 import React from "react"
 import renderer from 'react-test-renderer';
 import VAutoComplete from './VAutoComplete'
-import VTextInput from '../Inputs/VTextInput'
+import VInput from '../Inputs/VInput'
 
 
 
@@ -32,9 +32,9 @@ describe('AutoComplete', () => {
     const AutoCompletePropsTree = renderer.create(
       <VAutoComplete
         options={autocomplete_list}
-        getOptionLabel={(option) => option.title}
+        getOptionLabel={(option: {[prop:string]:any}) => option.title}
         style={{ width: 300 }}
-        renderInput={(params) => <VTextInput {...params} placeholder="Combo box" />}
+        renderInput={(params: {[prop:string]:any}) => <VInput {...params} placeholder="Combo box" />}
       />
     ).toJSON();
 
