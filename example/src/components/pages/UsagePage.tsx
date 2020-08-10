@@ -25,7 +25,7 @@ const useStyles = makeStyles(() =>
   })
 );
 
-const GetStartedPage = () => {
+const GetStartedPage = (props: { dark: boolean }) => {
 
   const classes = useStyles();
 
@@ -52,7 +52,7 @@ const GetStartedPage = () => {
             literally all you need:
           </Typography>
       </div>
-      <SyntaxHighlighter language="javascript" style={false ? anOldHope : docco}>
+      <SyntaxHighlighter language="javascript" style={props.dark ? anOldHope : docco}>
         {
           `
           import React from 'react';

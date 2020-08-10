@@ -1,25 +1,49 @@
 
 export default {
     string:`
-        import React from 'react'
-        import {
-            VThemeProvider,
-            VSelect,
-        } from 'vissually'
-        
-        const SelectInputExample = props => (
-            
-            <div style={{display:"flex", flexDirection:"column", alignItems:"center"}}>
-                <h3>Select item:</h3>
-                <p> Default select: </p>
-                <VSelect label="select me" list={["item 1", "item 2", "item 3", "another one", "addition"]}/>
-                <p> Themed Default lists: </p>
-                <VThemeProvider secundary>
-                    <VSelect label="select me" list={["item 1", "item 2", "item 3", "another one", "addition"]}/>
-                </VThemeProvider>
-            </div>
-        )
-        
-        export default SelectInputExample
+    import React from 'react'
+    import {
+        VButton,
+        VThemeProvider,
+        VInput,
+      } from 'vissually'
+    
+    
+    interface Theme {
+        textColor1: string,
+        textColor2: string,
+        color1: string,
+        color2: string,
+        backgroundColor1: string,
+        backgroundColor2: string,
+    }
+    
+    const custom_theme:Theme = {
+        textColor1: "rgb(0, 0, 0)", 
+        textColor2: "rgb(255, 255, 255)", 
+        color1: "#6D597A", 
+        color2: "#E56B6F", 
+        backgroundColor1: "rgb(255, 255, 255)", 
+        backgroundColor2: "rgb(70, 140, 170)", 
+    }
+    
+    const StylesExample = () => (
+        <div style={{ display: "flex", flexDirection: "column", alignItems: "center" }}>
+            <VThemeProvider secundary>
+                <p>Default theme provider:</p>
+                <VButton style={{padding:"30px", }}>{"BIG"}</VButton>
+                <VButton style={{ padding: "5px" }}>{"small"}</VButton>
+                <VInput parentStyle={{width: "400px"}} placeholder="large" name="name"/>
+            </VThemeProvider>
+            <VThemeProvider theme={custom_theme}>
+                <p>Custom theme:</p>
+                <VButton style={{padding:"30px", }}>{"BIG"}</VButton>
+                <VButton style={{ padding: "5px" }}>{"small"}</VButton>
+                <VInput parentStyle={{width: "400px"}} placeholder="large" name="name"/>
+            </VThemeProvider>
+        </div>
+    )
+    
+    export default StylesExample
     `
 }

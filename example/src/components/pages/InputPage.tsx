@@ -47,11 +47,11 @@ const InputPage = (props: {dark?:boolean}) => {
       <Typography color="inherit" variant="h4">
         Text Input
       </Typography>
-      <InputBanner />
+      <InputBanner dark={dark} />
       <Typography color="inherit" variant="h4">
         Number Input
       </Typography>
-      <NumberInputBanner />
+      <NumberInputBanner dark={dark} />
       <Typography color="inherit" variant="h5">
         See the theme implementations:
       </Typography>

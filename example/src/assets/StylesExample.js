@@ -1,25 +1,21 @@
 
 export default {
     string:`
-        import React from 'react'
-        import {
-            VThemeProvider,
-            VSelect,
-        } from 'vissually'
         
-        const SelectInputExample = props => (
-            
-            <div style={{display:"flex", flexDirection:"column", alignItems:"center"}}>
-                <h3>Select item:</h3>
-                <p> Default select: </p>
-                <VSelect label="select me" list={["item 1", "item 2", "item 3", "another one", "addition"]}/>
-                <p> Themed Default lists: </p>
-                <VThemeProvider secundary>
-                    <VSelect label="select me" list={["item 1", "item 2", "item 3", "another one", "addition"]}/>
-                </VThemeProvider>
-            </div>
-        )
-        
-        export default SelectInputExample
+    import React from 'react'
+    import {
+        VButton,
+        VInput,
+    } from 'vissually'
+
+    const StylesExample = () => (
+        <div style={{display:"flex", flexDirection:"column", alignItems:"center"}}>
+            <VButton style={{padding:"30px", }}>{"BIG"}</VButton>
+            <VButton style={{ padding: "5px" }}>{"small"}</VButton>
+            <VInput parentStyle={{width: "500px"}} placeholder="large" name="name"/>
+        </div>
+    )
+
+    export default StylesExample
     `
 }

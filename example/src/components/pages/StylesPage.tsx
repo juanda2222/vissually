@@ -28,7 +28,7 @@ const useStyles = makeStyles(() =>
 );
 
 
-const StylePage = () => {
+const StylePage = (props: {dark:boolean}) => {
   
   const classes = useStyles();
 
@@ -43,11 +43,11 @@ const StylePage = () => {
       <Typography color="inherit" variant="h4">
         Basic Styles
       </Typography>
-      <StylesBanner />
+      <StylesBanner dark={props.dark}/>
       <Typography color="inherit" variant="h4">
         Themed Styles
       </Typography>
-      <StylesThemeBanner />
+      <StylesThemeBanner dark={props.dark}/> 
       <Typography color="inherit" variant="h5">
         Keep reading!
       </Typography>

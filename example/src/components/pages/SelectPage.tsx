@@ -43,7 +43,7 @@ const SelectPage = (props: {dark?:boolean}) => {
       <Typography color="inherit" variant="h4">
         Select Input
       </Typography>
-      <SelectInputBanner />
+      <SelectInputBanner dark={dark} />
       <Typography color="inherit" variant="h5">
         Keep reading!
       </Typography>

@@ -26,12 +26,13 @@ import 'vissually/dist/index.css'
 
 interface AppProps {
   palette_type: "light" | "dark",
+  is_dark:boolean
 }
 
 
 const App = (props:AppProps) => {
 
-  const { palette_type } = props
+  const { palette_type, is_dark } = props
 
   const theme = createMuiTheme({
     breakpoints: {
@@ -66,15 +67,15 @@ const App = (props:AppProps) => {
             <Route exact path="/">
               <HomePage />
             </Route>
-            <Route path='/get-started/installation' component={Installation} />
-            <Route path='/get-started/usage' component={Usage} />
+            <Route path='/get-started/installation' component={()=> <Installation dark={is_dark}/>} />
+            <Route path='/get-started/usage' component={()=> <Usage dark={is_dark}/>} />
           
-            <Route path='/components/button' component={ButtonPage} />
-            <Route path='/components/input' component={InputPage} />
-            <Route path='/components/select' component={SelectPage} />
-            <Route path='/components/autocomplete' component={AutocompletePage} />
+            <Route path='/components/button' component={()=> <ButtonPage dark={is_dark}/>} />
+            <Route path='/components/input' component={()=> <InputPage dark={is_dark}/>} />
+            <Route path='/components/select' component={()=> <SelectPage dark={is_dark}/>} />
+            <Route path='/components/autocomplete' component={()=> <AutocompletePage dark={is_dark}/>} />
 
-            <Route path='/styles/themes' component={StylesPage} />
+            <Route path='/styles/themes' component={()=> <StylesPage dark={is_dark}/>} />
           </Switch>
         </Router>
     </ThemeProvider>
@@ -82,7 +83,8 @@ const App = (props:AppProps) => {
 }
 const mapStateToProps = (state:ThemeStateType /*, ownProps*/) => {
   return {
-    palette_type: state.palette_type
+    palette_type: state.palette_type,
+    is_dark: state.is_dark,
   }
 }
 

@@ -42,7 +42,7 @@ const useStyles = makeStyles((theme: Theme) =>
   })
 );
 
-const InstallationPage = () => {
+const InstallationPage = (props: {dark:boolean}) => {
 
   const classes = useStyles();
 
@@ -63,7 +63,7 @@ const InstallationPage = () => {
       <Typography color="inherit" variant="h5" >
         To install and save in your <code>package.json</code> dependencies, run:
       </Typography>  
-      <SyntaxHighlighter language="bash" style={false ? anOldHope : docco}>
+      <SyntaxHighlighter language="bash" style={props.dark ? anOldHope : docco}>
         {
           `
           # with npm

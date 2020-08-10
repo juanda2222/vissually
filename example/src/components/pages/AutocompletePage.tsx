@@ -42,7 +42,7 @@ const AutoCompletePage = (props: {dark?:boolean}) => {
       <Typography color="inherit" variant="h5">
         The autocomplete is a normal text input enhanced by a panel of suggested options.
       </Typography>
-      <AutoCompleteBanner />
+      <AutoCompleteBanner dark={dark}/>
       <Typography color="inherit" variant="h5">
         Keep reading!
       </Typography>

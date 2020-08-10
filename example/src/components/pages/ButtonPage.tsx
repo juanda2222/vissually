@@ -40,7 +40,7 @@ const ButtonPage = (props: {dark?:boolean}) => {
       <Typography color="inherit" variant="h5">
         Buttons allow users to take actions, and make choices, with a single tap.
       </Typography>
-      <ButtonBanner />
+      <ButtonBanner dark={dark} />
       <Typography color="inherit" variant="h5">
         Keep reading!
       </Typography>
