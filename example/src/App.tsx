@@ -15,8 +15,8 @@ import ButtonPage from "./components/pages/ButtonPage"
 import InputPage from "./components/pages/TextInputPage"
 import SelectPage from "./components/pages/SelectPage"
 import AutocompletePage from "./components/pages/AutocompletePage"
-import InstallationPage from "./components/pages/InstallationPage"
-import GetStarted from "./components/pages/GetStartedPage"
+import Usage from "./components/pages/Usage"
+import Installation from "./components/pages/InstallationPage"
 import StylesBasicPage from "./components/pages/StylesBasicPage"
 import StylesThemePage from "./components/pages/StylesThemePage"
 
@@ -55,8 +55,8 @@ const App = () => {
           <Route exact path="/">
             <HomePage />
           </Route>
-          <Route path='/get-started/installation' component={InstallationPage} />
-          <Route path='/get-started/usage' component={GetStarted} />
+          <Route path='/get-started/installation' component={Installation} />
+          <Route path='/get-started/usage' component={Usage} />
         
           <Route path='/components/button' component={ButtonPage} />
           <Route path='/components/input' component={InputPage} />

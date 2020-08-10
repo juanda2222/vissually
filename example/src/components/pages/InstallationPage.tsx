@@ -1,57 +1,83 @@
 
 import React from "react"
-import { makeStyles } from '@material-ui/core/styles';
-import  SyntaxHighlighter from 'react-syntax-highlighter';
-import { docco } from 'react-syntax-highlighter/dist/esm/styles/hljs';
-// @ts-ignore: has no exported member 'anOldHope'
-import { anOldHope } from 'react-syntax-highlighter/dist/esm/styles/hljs';
-
 import Typography from '@material-ui/core/Typography';
+//import Button from '@material-ui/core/Button';
+import { createStyles, makeStyles, Theme } from '@material-ui/core/styles';
+//import { Link as RouterLink } from "react-router-dom";
 import Link from '@material-ui/core/Link';
 
-const useStyles = makeStyles({
-  title: {
-    flexGrow: 1,
-  },
-});
+import  SyntaxHighlighter from 'react-syntax-highlighter';
+// @ts-ignore: has no exported member 'anOldHope'
+import { anOldHope, docco } from 'react-syntax-highlighter/dist/esm/styles/hljs';
 
-const InstallationPage = (props: { dark?: boolean }) => {
-  
+
+const useStyles = makeStyles((theme: Theme) =>
+  createStyles({
+    
+    root: {
+      backgroundColor: theme.palette.background.default,
+      margin:"8vh 6vw",
+      display: "flex",
+      justifyContent: "center",
+      alignItems: "center",
+      flexDirection: "row",
+      [theme.breakpoints.down('sm')]: {
+        flexDirection: "column",
+        textAlign: "center",
+      },
+    },
+    container: {
+      display: "flex",
+      flexDirection: "column",
+      margin: "5vh",
+      "& > *": {
+        margin: "10px",
+      }
+    },
+    button: {
+      marginRight: "auto",
+      [theme.breakpoints.down('sm')]: {
+        margin: "12px auto"
+      },
+    }
+  })
+);
+
+const GetStartedPage = () => {
+
   const classes = useStyles();
 
   return (
-    <div>
-      <Typography variant="h1" className={classes.title} >
-          Installation
-      </Typography>  
-      <Typography variant="body1" >
-          Install Vissually, the world's less popular React UI Library!
-      </Typography> 
-      <Typography variant="h6" >Vissually is available as a </Typography>
-      <Link
-        href="https://www.npmjs.com/package/@juandara22/vissually"
-        onClick={(event: React.SyntheticEvent) => event.preventDefault()}>
-        npm package
-        </Link>
-      <Typography variant="h3" className={classes.title} >
+    <div className={classes.container}>
+      <Typography color="inherit" variant="h2">
+        Installation
+      </Typography>
+      <Typography color="inherit" variant="h5">
+        Install Vissually, the world's most popular React UI framework.
+      </Typography>
+      <Typography color="inherit" variant="h6">
+        Material-UI is available as an <Link color="secondary" href="https://www.npmjs.com/package/@juandara22/vissually" >npm package</Link> .
+      </Typography>
+      <Typography  color="inherit" variant="h2" >
         npm
       </Typography>  
-      <Typography variant="h6" className={classes.title} >
+      <Typography color="inherit" variant="h5" >
         To install and save in your <code>package.json</code> dependencies, run:
       </Typography>  
-      <SyntaxHighlighter language="bash" style={props.dark ? anOldHope : docco}>
+      <SyntaxHighlighter language="bash" style={false ? anOldHope : docco}>
         {
-          `// with npm
-          npm install @material-ui/core
+          `
+          # with npm
+          npm install @juandara/vissually
 
-          // with yarn
-          yarn add @material-ui/core`
+          # with yarn
+          yarn add @juandara/vissually
+          `
         }
       </SyntaxHighlighter>
-
     </div>
   );
 };
 
 
-export default InstallationPage
+export default GetStartedPage

@@ -5,13 +5,17 @@ import Button from '@material-ui/core/Button';
 import { createStyles, makeStyles, Theme } from '@material-ui/core/styles';
 import personal_logo from "../../assets/personal_logo.png"
 import {Link as RouterLink} from "react-router-dom";
+import Box from '@material-ui/core/Box';
 
 const useStyles = makeStyles((theme: Theme) =>
   createStyles({
     
-    root: {
+    BigContainer: {
       backgroundColor: theme.palette.background.default,
-      margin:"8vh 6vw",
+      height: "calc(100vh - 124px)",
+      minHeight: "100%",
+      //padding: "10vh 6vw",
+      paddingLeft: "12vw",
       display: "flex",
       justifyContent: "center",
       alignItems: "center",
@@ -24,7 +28,7 @@ const useStyles = makeStyles((theme: Theme) =>
     container: {
       display: "flex",
       flexDirection: "column",
-      marginLeft: "5vh",
+      marginLeft: "10vh",
       marginTop:"5vh",
       "& > *": {
         margin: "10px",
@@ -44,12 +48,12 @@ const HomePage = () => {
   const classes = useStyles();
 
   return (
-    <div className={classes.root}>
+    <Box className={classes.BigContainer}>
       <img style={{
         width: "auto",
         height: "auto",
         display: "block",
-        maxWidth:"250px",
+        maxWidth:"200px",
 
       }} alt="personal logo" src={personal_logo} />
       <div className={classes.container}>
@@ -64,12 +68,12 @@ const HomePage = () => {
           color="primary"
           variant="outlined"
           component={RouterLink}
-          to="/get-started"
+          to="/get-started/installationh"
         >
           Get Started
         </Button>
       </div>
-    </div>
+    </Box>
   );
 };
 
