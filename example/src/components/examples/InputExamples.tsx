@@ -6,7 +6,7 @@ const TextInputExample = () => {
     
     const [text, setText] = useState("")
     return (    
-        <div style={{display:"flex", flexDirection:"column", alignItems:"center"}}>
+        <div style={{display:"flex", flexDirection:"column", alignItems:"center", backgroundColor:"#fafafa"}}>
             <p> Simple Text Inputs: </p>
             <div style={{display:"flex",  justifyContent:"center", marginBottom:"15px"}}>
                 <VInput placeholder="default" name="name"

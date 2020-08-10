@@ -11,9 +11,9 @@ import ButtonExample from "../examples/ButtonExamples"
 const ButtonBanner = (props: {dark?:boolean}) => {
   return (
     <div>
-        <h3>Button examples:</h3>
+        <h3 style={{color:props.dark ? "#ffffff":"#000000"}}>Button examples:</h3>
         <ButtonExample/>
-        <h3>Full Code:</h3>
+        <h3 style={{color:props.dark ? "#ffffff":"#000000"}}>Full Code:</h3>
         <SyntaxHighlighter language="javascript" style={props.dark ? anOldHope : docco}>
             {ButtonExampleCode.string}
         </SyntaxHighlighter>

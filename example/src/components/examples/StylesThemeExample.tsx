@@ -26,7 +26,7 @@ const custom_theme:Theme = {
 }
 
 const StylesExample = () => (
-    <div style={{ display: "flex", flexDirection: "column", alignItems: "center" }}>
+    <div style={{ display: "flex", flexDirection: "column", alignItems: "center", backgroundColor:"#fafafa"}}>
         <VThemeProvider secundary>
             <p>Default theme provider:</p>
             <VButton style={{padding:"30px", }}>{"BIG"}</VButton>

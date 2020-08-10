@@ -12,7 +12,9 @@ import  SyntaxHighlighter from 'react-syntax-highlighter';
 
 const useStyles = makeStyles((theme: Theme) =>
   createStyles({
-    
+    text: {
+      color: theme.palette.text.primary,
+    },
     root: {
       backgroundColor: theme.palette.background.default,
       margin:"8vh 6vw",
@@ -48,19 +50,19 @@ const InstallationPage = (props: {dark:boolean}) => {
 
   return (
     <div className={classes.container}>
-      <Typography color="inherit" variant="h2">
+      <Typography className={classes.text} variant="h2">
         Installation
       </Typography>
-      <Typography color="inherit" variant="h5">
+      <Typography className={classes.text} variant="h5">
         Install Vissually, the world's most popular React UI framework.
       </Typography>
-      <Typography color="inherit" variant="h6">
+      <Typography className={classes.text} variant="h6">
         Vissually is available as an <Link color="secondary" href="https://www.npmjs.com/package/@juandara22/vissually" >npm package.</Link>
       </Typography>
-      <Typography  color="inherit" variant="h2" >
+      <Typography  className={classes.text} variant="h2" >
         npm
       </Typography>  
-      <Typography color="inherit" variant="h5" >
+      <Typography className={classes.text} variant="h5" >
         To install and save in your <code>package.json</code> dependencies, run:
       </Typography>  
       <SyntaxHighlighter language="bash" style={props.dark ? anOldHope : docco}>
@@ -74,7 +76,7 @@ const InstallationPage = (props: {dark:boolean}) => {
           `
         }
       </SyntaxHighlighter>
-      <Typography style={{ display: "flex" }} color="inherit" variant="h6">
+      <Typography style={{ display: "flex" }} className={classes.text} variant="h6">
         Go to the
         <Link style={{ marginLeft: "5px", marginRight: "5px" }} color="secondary" href="/get-started/usage" >
           usage 

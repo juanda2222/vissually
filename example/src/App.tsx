@@ -4,7 +4,7 @@ import {
   BrowserRouter as Router,
   Switch,
   Route,
-} from "react-router-dom";
+} from "react-router-dom"
 import { createMuiTheme, ThemeProvider } from '@material-ui/core/styles';
 import blue from '@material-ui/core/colors/blue';
 import green from '@material-ui/core/colors/green';
@@ -28,6 +28,7 @@ interface AppProps {
   palette_type: "light" | "dark",
   is_dark:boolean
 }
+
 
 
 const App = (props:AppProps) => {
@@ -57,27 +58,26 @@ const App = (props:AppProps) => {
     },
   });
 
-  return (
-  
-    <ThemeProvider theme={theme}>
-      
-        <Router>
-          <NavBar />
-          <Switch>
-            <Route exact path="/">
-              <HomePage />
-            </Route>
-            <Route path='/get-started/installation' component={()=> <Installation dark={is_dark}/>} />
-            <Route path='/get-started/usage' component={()=> <Usage dark={is_dark}/>} />
-          
-            <Route path='/components/button' component={()=> <ButtonPage dark={is_dark}/>} />
-            <Route path='/components/input' component={()=> <InputPage dark={is_dark}/>} />
-            <Route path='/components/select' component={()=> <SelectPage dark={is_dark}/>} />
-            <Route path='/components/autocomplete' component={()=> <AutocompletePage dark={is_dark}/>} />
 
-            <Route path='/styles/themes' component={()=> <StylesPage dark={is_dark}/>} />
-          </Switch>
-        </Router>
+  return (
+    <ThemeProvider theme={theme}>
+      <Router>
+        <NavBar />
+        <Switch>
+          <Route exact path="/">
+            <HomePage />
+          </Route>
+          <Route path='/get-started/installation' component={()=> <Installation dark={is_dark}/>} />
+          <Route path='/get-started/usage' component={()=> <Usage dark={is_dark}/>} />
+        
+          <Route path='/components/button' component={()=> <ButtonPage dark={is_dark}/>} />
+          <Route path='/components/input' component={()=> <InputPage dark={is_dark}/>} />
+          <Route path='/components/select' component={()=> <SelectPage dark={is_dark}/>} />
+          <Route path='/components/autocomplete' component={()=> <AutocompletePage dark={is_dark}/>} />
+
+          <Route path='/styles/themes' component={()=> <StylesPage dark={is_dark}/>} />
+        </Switch>
+      </Router>
     </ThemeProvider>
   ) 
 }

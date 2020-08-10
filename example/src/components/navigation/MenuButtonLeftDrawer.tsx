@@ -13,7 +13,7 @@ import Collapse from '@material-ui/core/Collapse';
 import {
   Link as RouterLink,
 } from "react-router-dom";
-//import Link from '@material-ui/core/Link';
+import Link from '@material-ui/core/Link';
 import Typography from '@material-ui/core/Typography';
 //import ListItemIcon from '@material-ui/core/ListItemIcon';
 
@@ -128,7 +128,7 @@ const TemporaryDrawerButton:React.FunctionComponent<TemporaryDrawerProps>  = ({
       </List>
       <Divider />
       <List>
-        <ListItem button component={RouterLink} to="/about">
+        <ListItem color="inherit" button component={Link} href="https://david.alfagenos.com/#about_banner_pointer">
         <ListItemText primary={<Typography className={classes.ParentText}>About</Typography>} />
         </ListItem>
       </List>

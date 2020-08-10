@@ -32,9 +32,13 @@ const useStyles = makeStyles((theme: Theme) =>
       marginTop:"5vh",
       "& > *": {
         margin: "10px",
-      }
+      },
+    },
+    text: {
+      color: theme.palette.type==="dark" ? theme.palette.text.primary: theme.palette.primary.main,
     },
     button: {
+      color: theme.palette.type==="dark" ? theme.palette.primary.light : theme.palette.primary.dark,
       marginRight: "auto",
       [theme.breakpoints.down('sm')]: {
         margin: "12px auto"
@@ -57,10 +61,10 @@ const HomePage = () => {
 
       }} alt="personal logo" src={personal_logo} />
       <div className={classes.container}>
-        <Typography color="primary" variant="h2">
+        <Typography className={classes.text} color="primary" variant="h2">
           Vissually
         </Typography>
-        <Typography color="primary" variant="h5">
+        <Typography className={classes.text} color="primary" variant="h5">
           React components for faster and easier web development. Build your own design system, or start with Vissually.
         </Typography>
         <Button

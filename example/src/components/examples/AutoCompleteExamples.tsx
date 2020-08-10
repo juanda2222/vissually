@@ -66,7 +66,7 @@ const autocomplete_list = [
 ]
 
 const AutoCompleteExample = () => (
-    <div style={{display:"flex", flexDirection:"column", alignItems:"center"}}>
+    <div style={{display:"flex", flexDirection:"column", alignItems:"center", backgroundColor:"#fafafa"}}>
         <p> Simple AutoComplete: </p>
         <div style={{display:"flex",  justifyContent:"center", marginBottom:"15px"}}>
             <VAutoComplete

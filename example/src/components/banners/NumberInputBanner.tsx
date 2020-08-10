@@ -11,9 +11,9 @@ import NumberInputExample from "../examples/NumberInputExamples"
 const TextInputBanner = (props: {dark?:boolean}) => {
   return (
     <div>
-        <h3>TextInput examples:</h3>
+        <h3 style={{color:props.dark ? "#ffffff":"#000000"}}>TextInput examples:</h3>
         <NumberInputExample/>
-        <h3>Full Code:</h3>
+        <h3 style={{color:props.dark ? "#ffffff":"#000000"}}>Full Code:</h3>
         <SyntaxHighlighter language="javascript" style={props.dark ? anOldHope : docco}>
             {NumberInputExampleCode.string}
         </SyntaxHighlighter>

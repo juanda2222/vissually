@@ -6,7 +6,7 @@ import {
   } from 'vissually'
 
 const StylesExample = () => (
-    <div style={{display:"flex", flexDirection:"column", alignItems:"center"}}>
+    <div style={{display:"flex", flexDirection:"column", alignItems:"center", backgroundColor:"#fafafa"}}>
         <VButton style={{padding:"30px", }}>{"BIG"}</VButton>
         <VButton style={{ padding: "5px" }}>{"small"}</VButton>
         <VInput parentStyle={{width: "500px"}} placeholder="large" name="name"/>
