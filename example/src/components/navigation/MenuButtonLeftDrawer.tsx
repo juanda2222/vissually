@@ -120,9 +120,6 @@ const TemporaryDrawerButton:React.FunctionComponent<TemporaryDrawerProps>  = ({
         </ListItem>
         <Collapse in={state.isStylesOpen} timeout="auto" unmountOnExit>
           <List onClick={toggleDrawer(false)}  component="div" disablePadding>
-            <ListItem button component={RouterLink} to="/styles/basic">
-              <ListItemText primary={"Basic"} />
-            </ListItem>
             <ListItem button component={RouterLink} to="/styles/themes">
               <ListItemText primary={"Themes"} />
             </ListItem>

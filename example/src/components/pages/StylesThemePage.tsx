@@ -15,7 +15,7 @@ const useStyles = makeStyles({
   },
 });
 
-const InstallationPage = () => {
+const AdvancedStyles = () => {
   
   const classes = useStyles();
 
@@ -32,4 +32,4 @@ const InstallationPage = () => {
 };
 
 
-export default InstallationPage
+export default AdvancedStyles

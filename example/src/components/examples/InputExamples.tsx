@@ -7,7 +7,7 @@ const TextInputExample = () => {
     const [text, setText] = useState("")
     return (    
         <div style={{display:"flex", flexDirection:"column", alignItems:"center"}}>
-            <p> Default Text Inputs: </p>
+            <p> Simple Text Inputs: </p>
             <div style={{display:"flex",  justifyContent:"center", marginBottom:"15px"}}>
                 <VInput placeholder="default" name="name"
                     onChange={(e:React.ChangeEvent<HTMLInputElement>) => {

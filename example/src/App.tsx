@@ -62,8 +62,6 @@ const App = () => {
           <Route path='/components/input' component={InputPage} />
           <Route path='/components/select' component={SelectPage} />
           <Route path='/components/autocomplete' component={AutocompletePage} />
-
-          <Route path='/styles/basic' component={StylesBasicPage} />
           <Route path='/styles/themes' component={StylesThemePage} />
         </Switch>
       </Router>

@@ -3,7 +3,6 @@ import React from 'react'
 import {
     VInput,
     VAutoComplete,
-    VThemeProvider,
   } from 'vissually'
 
 const autocomplete_list = [
@@ -66,35 +65,42 @@ const autocomplete_list = [
     { title: 'Django Unchained', year: 2012 },
 ]
 
-const TextInputExample = () => (
-    
+const AutoCompleteExample = () => (
     <div style={{display:"flex", flexDirection:"column", alignItems:"center"}}>
-        <h3>AutoComplete:</h3>
-        <p> Default AutoComplete: </p>
-        <VAutoComplete
-            options={autocomplete_list}
-            getOptionLabel={(option: {title:number, year:string}) => option.title}
-            style={{ width: 300 }}
-            renderInput={(params:any) => <VInput {...params} placeholder="Combo box" />}
-        />
-        <p> Multiple AutoComplete: </p>
+        <p> Simple AutoComplete: </p>
+        <div style={{display:"flex",  justifyContent:"center", marginBottom:"15px"}}>
+            <VAutoComplete
+                options={autocomplete_list}
+                getOptionLabel={(option: {title:number, year:string}) => option.title}
+                style={{ width: 300 }}
+                renderInput={(params:any) => <VInput {...params} placeholder="Default" />}
+            />
+            <VAutoComplete
+                secundary
+                options={autocomplete_list}
+                getOptionLabel={(option: {title:number, year:string}) => option.title}
+                style={{ width: 300 }}
+                renderInput={(params:any) => <VInput {...params} placeholder="Secundary" />}
+            />
+            <VAutoComplete
+                options={autocomplete_list}
+                getOptionLabel={(option: {title:number, year:string}) => option.title}
+                style={{ width: 300}}
+                renderInput={(params: any) => <VInput {...params}
+                    style={{ borderColor: "rgb(150,20,20)" }}
+                    placeholder="Custom"
+                />}
+            />
+        </div>
+        <p> Multiple Selection: </p>
         <VAutoComplete
             multiple
             options={autocomplete_list}
             getOptionLabel={(option: {title:number, year:string}) => option.title}
             style={{ width: 300 }}
-            renderInput={(params:any) => <VInput {...params} placeholder="Movies" />}
+            renderInput={(params:any) => <VInput {...params} placeholder="Multiple" />}
         />
-        <p> Themed AutoComplete: </p>
-        <VThemeProvider secundary>
-            <VAutoComplete
-                options={autocomplete_list}
-                getOptionLabel={(option: {title:number, year:string}) => option.title}
-                style={{ width: 300 }}
-                renderInput={(params:any) => <VInput {...params} placeholder="placeholder!" />}
-            />
-        </VThemeProvider>
     </div>
 )
 
-export default TextInputExample
+export default AutoCompleteExample

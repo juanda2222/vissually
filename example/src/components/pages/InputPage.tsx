@@ -5,7 +5,7 @@ import { createStyles, makeStyles, /*Theme*/ } from '@material-ui/core/styles';
 import Typography from '@material-ui/core/Typography';
 import Link from '@material-ui/core/Link';
 
-import TextInputBanner from "../banners/TextInputBanner"
+import InputBanner from "../banners/InputBanner"
 import NumberInputBanner from "../banners/NumberInputBanner"
 
 const useStyles = makeStyles(() =>
@@ -47,13 +47,13 @@ const InputPage = (props: {dark?:boolean}) => {
       <Typography color="inherit" variant="h4">
         Text Input
       </Typography>
-      <TextInputBanner />
+      <InputBanner />
       <Typography color="inherit" variant="h4">
         Number Input
       </Typography>
       <NumberInputBanner />
       <Typography color="inherit" variant="h5">
-        Keep reading!
+        See the theme implementations:
       </Typography>
       <ul className={classes.linkContanier}>
         <li>

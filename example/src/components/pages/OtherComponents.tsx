@@ -5,7 +5,7 @@ import React from "react"
 import ChipBanner from "../banners/ChipBanner"
 
 
-const pages = () => {
+const OtherComponents = () => {
   
   return (
     <React.Fragment>
@@ -15,4 +15,4 @@ const pages = () => {
 };
 
 
-export default pages
+export default OtherComponents

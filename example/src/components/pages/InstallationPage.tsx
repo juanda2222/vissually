@@ -42,7 +42,7 @@ const useStyles = makeStyles((theme: Theme) =>
   })
 );
 
-const GetStartedPage = () => {
+const InstallationPage = () => {
 
   const classes = useStyles();
 
@@ -86,4 +86,4 @@ const GetStartedPage = () => {
 };
 
 
-export default GetStartedPage
+export default InstallationPage
