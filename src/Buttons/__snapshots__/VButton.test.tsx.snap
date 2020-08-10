@@ -2,7 +2,7 @@
 
 exports[`VButton Default render. Snapshot test 1`] = `
 <div
-  className="sc-AxjAm koCBfw action_button "
+  className="sc-AxjAm gDXVAl action_button "
   onClick={[Function]}
 >
   Button test name
@@ -11,7 +11,7 @@ exports[`VButton Default render. Snapshot test 1`] = `
 
 exports[`VButton Rendering with props. Snapshot test 1`] = `
 <div
-  className="sc-AxirZ hhEGYf action_button some_classname"
+  className="sc-AxjAm gDXVAl action_button some_classname"
   onClick={[Function]}
 >
   Button test name

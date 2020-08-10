@@ -1,60 +1,77 @@
 import React from 'react'
 
 import {
-  ExampleComponent,
-  VButton,
-  VTextInput,
-  VThemeProvider,
-  VClickableList,
-  VSelect,
-} from 'vissually'
+  BrowserRouter as Router,
+  Switch,
+  Route,
+} from "react-router-dom";
+import { createMuiTheme, ThemeProvider } from '@material-ui/core/styles';
+import blue from '@material-ui/core/colors/blue';
+import green from '@material-ui/core/colors/green';
+
+import NavBar from "./components/navigation/NavBar"
+import HomePage from "./components/pages/HomePage"
+import ButtonPage from "./components/pages/ButtonPage"
+import InputPage from "./components/pages/InputPage"
+import SelectPage from "./components/pages/SelectPage"
+import AutocompletePage from "./components/pages/AutocompletePage"
+import Usage from "./components/pages/UsagePage"
+import Installation from "./components/pages/InstallationPage"
+import StylesPage from "./components/pages/StylesPage"
+
+import { Provider } from 'react-redux'
+import store from './stores/RootStore'
 
 import 'vissually/dist/index.css'
 
+const theme = createMuiTheme({
+  breakpoints: {
+    values: {
+      xs: 0,
+      sm: 600,
+      md: 960,
+      lg: 1280,
+      xl: 1920,
+    },
+  },
+  typography: {
+  },
+  palette: {
+    primary: {
+      main: blue[700],
+    },
+    secondary: {
+      main: green[700],
+    }
+  },
+});
+
 const App = () => {
+
   return (
-    
-    <div>
-      <ExampleComponent text="Create React Library Example 😄" />
-      <div style={{display:"flex", flexDirection:"column",  alignItems:"center", }}>
-        <h3>Buttons:</h3>
-        <p> Default Button: </p>
-        <VButton>{"hey"}</VButton>
-        <p> Themed Button: </p>
-        <VThemeProvider secundary>
-          <VButton>{"themed button"}</VButton>
-        </VThemeProvider>
-      </div>
-      <div style={{display:"flex", flexDirection:"column", alignItems:"center"}}>
-        <h3>Inputs:</h3>
-        <p> Default Text Inputs: </p>
-        <VTextInput/>
-        <p> Themed Text Inputs: </p>
-        <VThemeProvider secundary>
-          <VTextInput/>
-        </VThemeProvider>
-      </div>
-      <div style={{display:"flex", flexDirection:"column", alignItems:"center"}}>
-        <h3>Select item:</h3>
-        <p> Default select: </p>
-        <VSelect label="select me" list={["item 1", "item 2", "item 3", "another one", "addition"]}/>
-        <p> Themed Default lists: </p>
-        <VThemeProvider secundary>
-          <VSelect label="select me" list={["item 1", "item 2", "item 3", "another one", "addition"]}/>
-        </VThemeProvider>
-      </div>
-      <div style={{display:"flex", flexDirection:"column", alignItems:"center"}}>
-        <h3>Lists:</h3>
-        <p> Default lists: </p>
-        <VClickableList list={["item 1", "item 2", "item 3", "another one", "addition"]}/>
-        <p> Themed Default lists: </p>
-        <VThemeProvider secundary>
-          <VClickableList list={["item 1", "item 2", "item 3", "another one", "addition"]}/>
-        </VThemeProvider>
-      </div>
-      
-    </div>
-  )
+  
+    <ThemeProvider theme={theme}>
+      <Provider store={store}>
+        <Router>
+          <NavBar />
+          <Switch>
+            <Route exact path="/">
+              <HomePage />
+            </Route>
+            <Route path='/get-started/installation' component={Installation} />
+            <Route path='/get-started/usage' component={Usage} />
+          
+            <Route path='/components/button' component={ButtonPage} />
+            <Route path='/components/input' component={InputPage} />
+            <Route path='/components/select' component={SelectPage} />
+            <Route path='/components/autocomplete' component={AutocompletePage} />
+
+            <Route path='/styles/themes' component={StylesPage} />
+          </Switch>
+        </Router>
+      </Provider>
+    </ThemeProvider>
+  ) 
 }
 
 export default App

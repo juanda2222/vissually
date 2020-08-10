@@ -1,10 +1,37 @@
 import React, { useContext } from 'react'
-import styled, { ThemeContext } from 'styled-components';
+import styled  from 'styled-components';
 
 import styles from './VClickableList.module.css'
 import { Color2Vec } from "../Tools/ColorTools"
-import { DefaultThemes } from "../ThemeProvider/ThemeProvider"
+import { DefaultThemes, ThemeContext } from "../ThemeProvider/ThemeProvider"
 
+
+// style the container
+const StyledContainer = styled("div")<{border_color:string}>`
+  border: 0.5px solid ${props => props.border_color};`;
+
+// style the selectable item:
+var StyledItem = styled("div") < { text_color: string, main_rgb: number[] }>`
+  
+  color: ${props => props.text_color};
+  background: ${ props => `rgba(${props.main_rgb[0] - 20}, ${props.main_rgb[1] - 20}, ${props.main_rgb[2] - 20}, 0.9)`};
+  &:hover{
+    background: ${ props => `rgba(${props.main_rgb[0] - 40}, ${props.main_rgb[1] - 40}, ${props.main_rgb[2] - 40}, 0.9)`};
+  };
+  &:active{
+    background: ${ props => `rgba(${props.main_rgb[0] - 60}, ${props.main_rgb[1] - 60}, ${props.main_rgb[2] - 60}, 0.9)`};
+  }
+`;
+
+var StyledTopItem = styled(StyledItem)`
+  border-top-left-radius: 8px;
+  border-top-right-radius: 8px;
+`;
+var StyledBottomItem = styled(StyledItem)`
+  border-top-bottom-radius: 8px;
+  border-top-bottom-radius: 8px;
+`;
+    
 const VClickableList: React.FunctionComponent<ListProps> = ({
   //styling properties
   className,
@@ -15,8 +42,9 @@ const VClickableList: React.FunctionComponent<ListProps> = ({
 
   //functional properties
   list,
+  getLabel,
   onClick,
-}) => {  
+}) => {
 
   // get the theme from the context
   const contex_theme = useContext(ThemeContext);
@@ -40,43 +68,55 @@ const VClickableList: React.FunctionComponent<ListProps> = ({
   // generate the component from the style
   const rgb_list = Color2Vec(current_theme.backgroundColor1)
   
-  // style the container
-  var StyledContainer = styled.div`
-      border: 0.5px solid ${current_theme.color1};
-    `;
-  
-  // style the childs:
-  const div_list = (list ? list : []).map((item_text, index) => {
 
-    var StyledItem = styled.div`
-      
-      color: ${current_theme.textColor2};
-      background: rgba(${rgb_list[0] - 20}, ${rgb_list[1] - 20}, ${rgb_list[2] - 20}, 0.5);
-      &:hover{
-        background: rgba(${rgb_list[0] - 40}, ${rgb_list[1] - 40}, ${rgb_list[2] - 40}, 0.5);
-      };
-      &:active{
-        background: rgba(${rgb_list[0] - 60}, ${rgb_list[1] - 60}, ${rgb_list[2] - 60}, 0.5);
-      }
-    `;
-    return (
-      <StyledItem
-        className={wrapped_className}
-        style={style}
-        key={index}
-        onClick={() => { onClick && onClick(index, item_text) }}
-      >
-        {item_text}
-      </StyledItem>
-    )
+  // style the childs:
+  const wrapped_list = list ? list : []
+  const div_list = wrapped_list.map((item, index) => {
+
+    let label = ""
+    // depending on the list structure get the label:
+    if (typeof getLabel === 'function') {
+      label = getLabel(item)
+      // a plain text list:
+    } else {
+      label = item
+    }
+
+
+    let item_props = {
+      //custom theme:
+      text_color: current_theme.textColor1,
+      main_rgb: rgb_list,
+      //styling
+      className: wrapped_className,
+      style: style,
+      //function:
+      key: index,
+      onClick: () => { onClick && onClick({ index: index, label: label }) },
+    }
+
+    // top item
+    if (index == 0) {
+      return <StyledTopItem {...item_props} >{label}</StyledTopItem>
+      // bottom item
+    } else if (index == list.length - 1) {
+      return <StyledBottomItem {...item_props} >{label}</StyledBottomItem>
+      //middle items:
+    } else {
+      return <StyledItem {...item_props} >{label}</StyledItem>
+    }
   })
 
+
   return (
-    <StyledContainer
-      className={wrapped_container_className}
-    >
-      {div_list}  
-    </StyledContainer>
+    wrapped_list.length > 0 ?
+      <StyledContainer
+        border_color={current_theme.color1}
+        className={wrapped_container_className}
+      >
+        {div_list}
+      </StyledContainer>
+    : null
   )
 }
 

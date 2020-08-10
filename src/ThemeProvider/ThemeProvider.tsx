@@ -1,22 +1,21 @@
 import React, { } from 'react'
 
-import { ThemeProvider } from 'styled-components'
 
 const DefaultThemes: {primary: Theme, secundary: Theme, dark: Theme} = {
   primary: {
-    textColor1: "rgb(255, 255, 255)", 
-    textColor2: "rgb(0, 0, 0)", 
+    textColor1: "rgb(0, 0, 0)", 
+    textColor2: "rgb(255, 255, 255)", 
     color1: "#135b75", 
     color2: "#135b75", 
     backgroundColor1: "rgb(255, 255, 255)", 
     backgroundColor2: "rgb(70, 140, 170)", 
   },
   secundary: {
-    textColor1: "rgb(255, 255, 255)",
-    textColor2: "rgb(0, 0, 0)",
+    textColor1: "rgb(30, 30, 30)",
+    textColor2:  "rgb(240, 240, 240)",
     color1: "#10b462",
     color2: "#10b462",
-    backgroundColor1: "rgb(255, 255, 255)",
+    backgroundColor1: "rgb(250, 250, 250)",
     backgroundColor2: "rgb(70, 140, 170)",
   },
   dark: {
@@ -29,11 +28,15 @@ const DefaultThemes: {primary: Theme, secundary: Theme, dark: Theme} = {
   }
 }
 
+const ThemeContext = React.createContext(DefaultThemes.primary)
+
 const VThemeProvider = (props: ThemeProps) => {
   
-  const { children, theme, primary, secundary, dark } = {
-    ...props
-  }
+  const {
+    children,
+    theme,
+    primary, secundary, dark
+  } = props
 
   var current_theme;
   if (secundary) {
@@ -47,22 +50,17 @@ const VThemeProvider = (props: ThemeProps) => {
   } else {
     current_theme = DefaultThemes.primary
   }
+
   return (
-    <ThemeProvider theme={current_theme}>
+    <ThemeContext.Provider value={current_theme}>
       {children}
-    </ThemeProvider>
+    </ThemeContext.Provider>
   )
-  
 }
 
-VThemeProvider.defaultProps = {
-  theme: null,
-  primary: null,
-  secundary: null,
-  dark:null
-};
 
 export {
   VThemeProvider,
+  ThemeContext,
   DefaultThemes
 }

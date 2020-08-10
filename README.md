@@ -2,7 +2,7 @@
 
 > Easy to use grafic components for react
 
-[![NPM](https://img.shields.io/npm/v/vissually.svg)](https://www.npmjs.com/package/vissually) [![JavaScript Style Guide](https://img.shields.io/badge/code_style-standard-brightgreen.svg)](https://standardjs.com)
+[![NPM](https://img.shields.io/npm/v/vissually.svg)](https://www.npmjs.com/package/@juandara22/vissually) [![JavaScript Style Guide](https://img.shields.io/badge/code_style-standard-brightgreen.svg)](https://standardjs.com)
 
 ## Install
 

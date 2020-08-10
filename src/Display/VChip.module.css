@@ -1,0 +1,23 @@
+/* add css module styles here (optional) */
+
+
+.delete_button{
+	display:flex;
+	border-radius: 50%;
+	margin-left: 10px;
+	padding: 1px;
+}
+
+.container{
+	
+	display: flex;
+	border-radius: 1.6rem;
+	margin: 0px 5px;
+	padding: 10px 13px;
+}
+
+.container > {
+	
+	margin: 5px;
+}
+

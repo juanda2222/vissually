@@ -1,7 +1,9 @@
+
 /**
  * Default CSS definition for typescript,
  * will be overridden with file-specific definitions by rollup
  */
+
 declare module '*.css' {
   const content: { [className: string]: string }
   export default content
@@ -41,7 +43,19 @@ interface ListProps {
   primary?: boolean, secundary?: boolean, dark?: boolean,
 
   list: string[],
-  onClick?: (index:number, text:string) => void,
+  onClick?: (event:{ index: number, label: string}) => void,
+  [propName: string]: any;
+}
+
+interface ChipListProps {
+  theme?: Theme,
+  className?: string,
+  style?: any,
+  primary?: boolean, secundary?: boolean, dark?: boolean,
+
+  list: string[],
+  onClick?: (event: { index: number, label: string }) => void,
+  onDelete?: (event:{ index: number, label: string}) => void,
   [propName: string]: any;
 }
 
@@ -53,7 +67,7 @@ interface SelectProps {
 
   list: string[],
   label: string,
-  onChange?: (index:number, text:string) => void,
+  onChange?: (event:{ index: number, label: string}) => void,
   [propName: string]: any;
 }
 
@@ -68,5 +82,25 @@ interface ButtonProps extends React.DetailedHTMLProps<React.HTMLAttributes<HTMLD
   theme?: Theme,
   primary?: boolean, secundary?: boolean, dark?: boolean,
   children: React.ReactNode
+
+  isPressed?:boolean
+  [propName: string]: any;
+}
+
+interface ChipProps{
+    
+  className?:string,
+  style?:any,
+  theme?: Theme,
+  primary?: boolean, secundary?: boolean, dark?: boolean,
+  label:string,
+  onDelete?:any,
+  onClick?:any,
+  [propName?: string]: any;
+}
+
+interface AutoCompleteProps{
+  theme?: Theme,
+  primary?: boolean, secundary?: boolean, dark?: boolean,
   [propName: string]: any;
 }

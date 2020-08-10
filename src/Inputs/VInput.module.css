@@ -1,0 +1,116 @@
+
+/* add css module styles here (optional) */
+.container {
+	position: relative;
+	display:flex;
+	padding: 15px 0 0 0;
+	margin-top: 10px;
+	margin-left: 5px;
+	margin-right: 5px;
+	min-width: 150px;
+	width: 16em;
+}
+  
+.input_element {
+	
+	font-family: inherit;
+	width: 100%;
+	border-radius: 6px;
+	outline: 0;
+	font-size: 1rem;
+	background: transparent;
+	transition: border-color 0.2s;
+	-webkit-transition: border-color 0.2s;
+	padding: 7px 5px;
+	margin: 4px;	
+
+	/*given dinamically:*/
+	/*border: 2px solid #444;*/
+	/*color: #000;*/
+}
+
+.input_element:hover {
+	border-width: 3px;
+	margin: 3px;
+	/*margin: 1px 1px 1px 1px*/
+}
+
+
+.input_element:focus {
+	
+	font-weight: 500;
+	border-width: 3px;
+	margin: 3px;
+	/*margin: 3px 3px 3px 3px*/
+	/*padding-bottom: 6px;*/
+	
+	/*given dinamically:*/
+	/*border-color: #11998e;*/
+}
+
+/* we are providing our own placeholder*/
+.input_element::placeholder { 
+	color: transparent;
+}
+
+/* Change the behaviour of the autofill color: */
+.input_element:-webkit-autofill,
+.input_element:-webkit-autofill:hover, 
+.input_element:-webkit-autofill:focus, 
+.input_element:-webkit-autofill:active  {
+
+	/*autocomplete background color created from an inseted shadow:*/
+	-webkit-box-shadow: 0 0 0 30px transparent inset !important;
+	-moz-box-shadow: 0 0 0 30px transparent inset !important;
+	box-shadow: 0 0 0 30px transparent inset !important;
+
+}
+
+.input_element:-webkit-autofill{
+	-webkit-text-fill-color: #000 !important; /*input text color*/
+}
+
+.input_element:placeholder-shown ~ .label_element {
+	font-size: 1.1rem;
+	cursor: text;
+	top: 28px;
+}
+
+.label_element {
+	position: absolute;
+	top: -5px;
+	left: 12px;
+	/*display: block;*/
+	transition: 0.2s;
+	font-size: 0.9rem;
+	background-color: transparent;
+
+	/* disable the label interaction*/
+	user-select: none;
+	pointer-events: none;
+
+	/*given dinamically:*/
+	/*color: #333;*/
+}
+  
+
+
+.input_element:focus ~ .label_element {
+	
+	position: absolute;
+	top: -5px;
+	left: 12px;
+	/*display: block;*/
+	transition: 0.2s;
+	font-size: 1rem;
+	font-weight: 500;
+	
+	
+	/*given dinamically:*/
+	/*color: #11998e;*/
+}
+
+/* reset input */
+.input_element:required, .input_element:invalid {
+	box-shadow: none;
+}

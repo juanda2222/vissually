@@ -1,0 +1,61 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`VButton Default render. no list given 1`] = `
+<div
+  className="sc-AxjAm dkuJXE container "
+>
+  <span>
+    snapshot
+  </span>
+</div>
+`;
+
+exports[`VButton Rendering with props. Snapshot test 1`] = `
+<div>
+  <div
+    className="sc-AxjAm dkuJXE container "
+  >
+    <span>
+      label!
+    </span>
+  </div>
+  <div
+    className="sc-AxjAm dkuJXE container "
+    onClick={[Function]}
+  >
+    <span>
+      other one
+    </span>
+  </div>
+  <div
+    className="sc-AxjAm dkuJXE container "
+    onClick={[Function]}
+  >
+    <span>
+      delete me
+    </span>
+    <div
+      className="sc-AxirZ kWaCOc delete_button"
+      onClick={[Function]}
+    >
+      <svg
+        height="24"
+        style={
+          Object {
+            "fill": "rgb(0, 0, 0)",
+            "height": "0.6em",
+            "margin": "auto 6px",
+            "width": "0.6em",
+          }
+        }
+        viewBox="0 0 24 24"
+        width="24"
+      >
+        <path
+          d="M24 20.188l-8.315-8.209 8.2-8.282-3.697-3.697-8.212 8.318-8.31-8.203-3.666 3.666 8.321 8.24-8.206 8.313 3.666 3.666 8.237-8.318 8.285 8.203z"
+        />
+      </svg>
+    </div>
+  </div>
+</div>
+`;
