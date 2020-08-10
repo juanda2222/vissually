@@ -57,11 +57,11 @@ const GetStartedPage = () => {
           `
           import React from 'react';
           import ReactDOM from 'react-dom';
-          import Button from '@material-ui/core/Button';
+          import VButton from '@juandara/vissually';
 
           function App() {
             return (
-              <Button variant="contained" color="primary">
+              <Button primary>
                 Hello World
               </Button>
             );

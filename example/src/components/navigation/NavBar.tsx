@@ -45,7 +45,7 @@ export default function ButtonAppBar() {
       <AppBar position="static">
         <Toolbar>
           <MenuButtonLeftDrawer className={classes.menuButton}/>
-          <Button color="inherit" className={classes.title} component={RouterLink} to="/">
+          <Button variant="text" color="inherit" className={classes.title} component={RouterLink} to="/">
             Vissually
           </Button>  
           {isNight ?

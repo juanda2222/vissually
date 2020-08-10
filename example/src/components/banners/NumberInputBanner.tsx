@@ -1,14 +1,14 @@
 
 import React from "react"
 
-import  SyntaxHighlighter from 'react-syntax-highlighter';
-import { docco } from 'react-syntax-highlighter/dist/esm/styles/hljs';
-import { anOldHope } from 'react-syntax-highlighter/dist/esm/styles/hljs';
+// @ts-ignore: has no exported member 'anOldHope'
+import { anOldHope, docco } from 'react-syntax-highlighter/dist/esm/styles/hljs';
+import SyntaxHighlighter from 'react-syntax-highlighter';
 
 import NumberInputExampleCode from "../../assets/NumberInputExamples"
 import NumberInputExample from "../examples/NumberInputExamples"
 
-const TextInputBanner = (props) => {
+const TextInputBanner = (props: {dark?:boolean}) => {
   return (
     <div>
         <h3>TextInput examples:</h3>

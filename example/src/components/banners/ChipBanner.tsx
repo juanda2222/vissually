@@ -1,14 +1,14 @@
 
 import React from "react"
 
+// @ts-ignore: has no exported member 'anOldHope'
+import { docco, anOldHope  } from 'react-syntax-highlighter/dist/esm/styles/hljs';
 import  SyntaxHighlighter from 'react-syntax-highlighter';
-import { docco } from 'react-syntax-highlighter/dist/esm/styles/hljs';
-import { anOldHope } from 'react-syntax-highlighter/dist/esm/styles/hljs';
 
 import ChipExampleCode from "../../assets/ChipExamples"
 import ChipExample from "../examples/ChipExamples"
 
-const TextInputBanner = (props) => {
+const TextInputBanner = (props:{dark?:boolean}) => {
   return (
     <div>
         <h3>Chip examples:</h3>

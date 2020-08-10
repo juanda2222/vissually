@@ -68,7 +68,7 @@ const HomePage = () => {
           color="primary"
           variant="outlined"
           component={RouterLink}
-          to="/get-started/installationh"
+          to="/get-started/installation"
         >
           Get Started
         </Button>

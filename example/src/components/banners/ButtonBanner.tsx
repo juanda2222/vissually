@@ -1,14 +1,14 @@
 
 import React from "react"
 
+// @ts-ignore: has no exported member 'anOldHope'
+import { anOldHope, docco } from 'react-syntax-highlighter/dist/esm/styles/hljs';
 import SyntaxHighlighter from 'react-syntax-highlighter';
-import { docco } from 'react-syntax-highlighter/dist/esm/styles/hljs';
-import { anOldHope } from 'react-syntax-highlighter/dist/esm/styles/hljs';
 
 import ButtonExampleCode from "../../assets/ButtonExamples"
 import ButtonExample from "../examples/ButtonExamples"
 
-const ButtonBanner = (props) => {
+const ButtonBanner = (props: {dark?:boolean}) => {
   return (
     <div>
         <h3>Button examples:</h3>

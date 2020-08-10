@@ -1,7 +1,7 @@
 
 import React from 'react'
 import {
-    VTextInput,
+    VInput,
     VAutoComplete,
     VThemeProvider,
   } from 'vissually'
@@ -75,7 +75,7 @@ const TextInputExample = props => (
             options={autocomplete_list}
             getOptionLabel={(option) => option.title}
             style={{ width: 300 }}
-            renderInput={(params) => <VTextInput {...params} placeholder="Combo box" />}
+            renderInput={(params) => <VInput {...params} placeholder="Combo box" />}
         />
         <p> Multiple AutoComplete: </p>
         <VAutoComplete
@@ -83,7 +83,7 @@ const TextInputExample = props => (
             options={autocomplete_list}
             getOptionLabel={(option) => option.title}
             style={{ width: 300 }}
-            renderInput={(params) => <VTextInput {...params} placeholder="Movies" />}
+            renderInput={(params) => <VInput {...params} placeholder="Movies" />}
         />
         <p> Themed AutoComplete: </p>
         <VThemeProvider secundary>
@@ -91,7 +91,7 @@ const TextInputExample = props => (
                 options={autocomplete_list}
                 getOptionLabel={(option) => option.title}
                 style={{ width: 300 }}
-                renderInput={(params) => <VTextInput {...params} placeholder="placeholder!" />}
+                renderInput={(params) => <VInput {...params} placeholder="placeholder!" />}
             />
         </VThemeProvider>
     </div>

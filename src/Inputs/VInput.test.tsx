@@ -1,24 +1,24 @@
 
 import React from "react"
 import renderer from 'react-test-renderer';
-import VTextInput from './VTextInput'
+import VInput from './VInput'
 
-describe('VTextInput', () => {
+describe('VInput', () => {
 
-  test('VTextInput declaration has no errors', () => {
-    expect(VTextInput).toBeTruthy()
+  test('VInput declaration has no errors', () => {
+    expect(VInput).toBeTruthy()
   })
 
-  test("VTextInput dDefault render. Snapshot test", () => { 
-    const TextInputTree = renderer.create(<VTextInput/>).toJSON();
+  test("VInput dDefault render. Snapshot test", () => { 
+    const TextInputTree = renderer.create(<VInput/>).toJSON();
     console.log(TextInputTree)
     expect(TextInputTree).toMatchSnapshot();
   })
 
-  test("VTextInput rendering with props. Snapshot test", () => { 
+  test("VInput rendering with props. Snapshot test", () => { 
 
     const TextInputTreeProps = renderer.create(
-        <VTextInput
+        <VInput
         className="some_classname"
         placeholder="heeey"
         onChange={(e) => {
@@ -32,10 +32,10 @@ describe('VTextInput', () => {
     expect(TextInputTreeProps).toMatchSnapshot();
   })
 
-  test("VTextInput rendering with props type='number'. Snapshot test", () => { 
+  test("VInput rendering with props type='number'. Snapshot test", () => { 
 
     const TextInputTreeProps = renderer.create(
-        <VTextInput
+        <VInput
         className="some_classname"
         placeholder="age"
         name="age"

@@ -1,19 +1,13 @@
 
 import React from "react"
 
-import {
-  ExampleComponent,
-} from 'vissually'
-
-
-import AutoCompleteBanner from "../banners/AutoCompleteBanner.js"
+import AutoCompleteBanner from "../banners/AutoCompleteBanner"
 
 
 const pages = () => {
   
   return (
     <React.Fragment>
-      <ExampleComponent text="Create React Library Example 😄" />
       <AutoCompleteBanner/>
     </React.Fragment>
   );

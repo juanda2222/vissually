@@ -7,15 +7,15 @@ import {
 } from "react-router-dom";
 import { createMuiTheme, ThemeProvider } from '@material-ui/core/styles';
 import blue from '@material-ui/core/colors/blue';
-import lime from '@material-ui/core/colors/lime';
+import green from '@material-ui/core/colors/green';
 
 import NavBar from "./components/navigation/NavBar"
 import HomePage from "./components/pages/HomePage"
 import ButtonPage from "./components/pages/ButtonPage"
-import InputPage from "./components/pages/TextInputPage"
+import InputPage from "./components/pages/InputPage"
 import SelectPage from "./components/pages/SelectPage"
 import AutocompletePage from "./components/pages/AutocompletePage"
-import Usage from "./components/pages/Usage"
+import Usage from "./components/pages/UsagePage"
 import Installation from "./components/pages/InstallationPage"
 import StylesBasicPage from "./components/pages/StylesBasicPage"
 import StylesThemePage from "./components/pages/StylesThemePage"
@@ -39,8 +39,8 @@ const theme = createMuiTheme({
       main: blue[700],
     },
     secondary: {
-      main: lime[700],
-    },
+      main: green[700],
+    }
   },
 });
 

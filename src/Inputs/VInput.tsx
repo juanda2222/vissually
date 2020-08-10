@@ -6,7 +6,7 @@ import React, {
 } from 'react'
 
 
-import styles from './VTextInput.module.css'
+import styles from './VInput.module.css'
 import styled from 'styled-components';
 import { Color2Vec } from "../Tools/ColorTools"
 import { DefaultThemes, ThemeContext } from "../ThemeProvider/ThemeProvider"

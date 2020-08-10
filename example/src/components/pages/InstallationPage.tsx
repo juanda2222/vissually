@@ -6,10 +6,9 @@ import { createStyles, makeStyles, Theme } from '@material-ui/core/styles';
 //import { Link as RouterLink } from "react-router-dom";
 import Link from '@material-ui/core/Link';
 
-import  SyntaxHighlighter from 'react-syntax-highlighter';
 // @ts-ignore: has no exported member 'anOldHope'
 import { anOldHope, docco } from 'react-syntax-highlighter/dist/esm/styles/hljs';
-
+import  SyntaxHighlighter from 'react-syntax-highlighter';
 
 const useStyles = makeStyles((theme: Theme) =>
   createStyles({
@@ -56,7 +55,7 @@ const GetStartedPage = () => {
         Install Vissually, the world's most popular React UI framework.
       </Typography>
       <Typography color="inherit" variant="h6">
-        Material-UI is available as an <Link color="secondary" href="https://www.npmjs.com/package/@juandara22/vissually" >npm package</Link> .
+        Vissually is available as an <Link color="secondary" href="https://www.npmjs.com/package/@juandara22/vissually" >npm package.</Link>
       </Typography>
       <Typography  color="inherit" variant="h2" >
         npm
@@ -68,13 +67,20 @@ const GetStartedPage = () => {
         {
           `
           # with npm
-          npm install @juandara/vissually
+          npm install @juandara22/vissually
 
           # with yarn
-          yarn add @juandara/vissually
+          yarn add @juandara22/vissually
           `
         }
       </SyntaxHighlighter>
+      <Typography style={{ display: "flex" }} color="inherit" variant="h6">
+        Go to the
+        <Link style={{ marginLeft: "5px", marginRight: "5px" }} color="secondary" href="/get-started/usage" >
+          usage 
+        </Link>
+        page to start!
+      </Typography>
     </div>
   );
 };

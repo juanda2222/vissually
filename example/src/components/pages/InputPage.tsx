@@ -2,10 +2,11 @@
 import React from "react"
 
 import { createStyles, makeStyles, /*Theme*/ } from '@material-ui/core/styles';
-import Link from '@material-ui/core/Link';
 import Typography from '@material-ui/core/Typography';
+import Link from '@material-ui/core/Link';
 
-import ButtonBanner from "../banners/ButtonBanner"
+import TextInputBanner from "../banners/TextInputBanner"
+import NumberInputBanner from "../banners/NumberInputBanner"
 
 const useStyles = makeStyles(() =>
   createStyles({
@@ -27,7 +28,7 @@ const useStyles = makeStyles(() =>
   })
 );
 
-const ButtonPage = (props: {dark?:boolean}) => {
+const InputPage = (props: {dark?:boolean}) => {
   
   const classes = useStyles();
   const { dark } = props
@@ -35,12 +36,22 @@ const ButtonPage = (props: {dark?:boolean}) => {
   return (
     <div className={classes.container}>
       <Typography color="inherit" variant="h2">
-        VButton
+        VInput
       </Typography>
       <Typography color="inherit" variant="h5">
-        Buttons allow users to take actions, and make choices, with a single tap.
+        Text and number fields let users enter and edit values like a normal html input tag.
       </Typography>
-      <ButtonBanner />
+      <Typography color="inherit" variant="h6">
+        Text fields allow users to enter text into a UI. They typically appear in forms and dialogs.
+      </Typography>
+      <Typography color="inherit" variant="h3">
+        Text Input
+      </Typography>
+      <TextInputBanner />
+      <Typography color="inherit" variant="h3">
+        Number Input
+      </Typography>
+      <NumberInputBanner />
       <Typography color="inherit" variant="h5">
         Keep reading!
       </Typography>
@@ -72,4 +83,4 @@ const ButtonPage = (props: {dark?:boolean}) => {
 };
 
 
-export default ButtonPage
+export default InputPage
