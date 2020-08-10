@@ -4,7 +4,9 @@ exports[`VButton Default render. no list given 1`] = `
 <div
   className="sc-AxjAm dkuJXE container "
 >
-  <span />
+  <span>
+    snapshot
+  </span>
 </div>
 `;
 

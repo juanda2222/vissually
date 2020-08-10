@@ -8,6 +8,7 @@ exports[`VButton Default render. Snapshot test 1`] = `
     className="sc-AxjAm gDXVAl action_button button_style "
     onClick={[Function]}
   >
+    label
     <svg
       height="451.847px"
       id="Capa_1"
@@ -31,6 +32,22 @@ exports[`VButton Default render. Snapshot test 1`] = `
  c12.365,12.354,12.365,32.392,0,44.751L248.292,345.449C242.115,351.621,234.018,354.706,225.923,354.706z"
       />
     </svg>
+  </div>
+  <div
+    className="sc-AxirZ fVduVY list_container list_style fadeOut "
+  >
+    <div
+      className="sc-AxiKw sc-AxhCb gcNYfB list_item list_item"
+      onClick={[Function]}
+    >
+      1
+    </div>
+    <div
+      className="sc-AxiKw sc-AxhUy bjGxvv list_item list_item"
+      onClick={[Function]}
+    >
+      2
+    </div>
   </div>
 </div>
 `;

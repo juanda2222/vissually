@@ -1,6 +1,23 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`VButton Default render. no list given 1`] = `null`;
+exports[`VButton Default render. no list given 1`] = `
+<div
+  className="sc-AxjAm jNAsBD list_container "
+>
+  <div
+    className="sc-AxirZ sc-AxiKw crVGut list_item "
+    onClick={[Function]}
+  >
+    1
+  </div>
+  <div
+    className="sc-AxirZ sc-AxhCb fvJznW list_item "
+    onClick={[Function]}
+  >
+    2
+  </div>
+</div>
+`;
 
 exports[`VButton Rendering with props. Snapshot test 1`] = `
 <div
