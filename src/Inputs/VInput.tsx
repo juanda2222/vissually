@@ -32,6 +32,7 @@ const VTextInput: React.FunctionComponent<InputProps> = ({
   //styling properties
   className,
   style,
+  parentStyle,
   theme,
   primary, secundary, dark,
 
@@ -88,6 +89,7 @@ const VTextInput: React.FunctionComponent<InputProps> = ({
   return (
     <div
       className={styles.container}
+      style={parentStyle}
     >
       <StyledInput
         //custom style:

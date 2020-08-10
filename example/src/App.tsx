@@ -17,8 +17,7 @@ import SelectPage from "./components/pages/SelectPage"
 import AutocompletePage from "./components/pages/AutocompletePage"
 import Usage from "./components/pages/UsagePage"
 import Installation from "./components/pages/InstallationPage"
-import StylesBasicPage from "./components/pages/StylesBasicPage"
-import StylesThemePage from "./components/pages/StylesThemePage"
+import StylesPage from "./components/pages/StylesPage"
 
 import 'vissually/dist/index.css'
 
@@ -62,7 +61,8 @@ const App = () => {
           <Route path='/components/input' component={InputPage} />
           <Route path='/components/select' component={SelectPage} />
           <Route path='/components/autocomplete' component={AutocompletePage} />
-          <Route path='/styles/themes' component={StylesThemePage} />
+
+          <Route path='/styles/themes' component={StylesPage} />
         </Switch>
       </Router>
     </ThemeProvider>
