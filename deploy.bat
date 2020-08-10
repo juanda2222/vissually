@@ -5,4 +5,4 @@
 npm publish --access public
 typedoc --out ./documentation/ src
 :: upload to aws s3 bucket the documentation
-git subtree push --prefix example heroku master
+git subtree push --force --prefix example heroku master

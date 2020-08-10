@@ -41,7 +41,7 @@ function App() {
 ReactDOM.render(<App />, document.querySelector('#app'));
 ```
 
-### About the demo App
+### About the [Demo App](https://salty-sierra-97134.herokuapp.com/)
 
 Keep it responsive!
 ![Recordit GIF](http://g.recordit.co/Xd44Tr823T.gif))
