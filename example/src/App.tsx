@@ -19,39 +19,47 @@ import Usage from "./components/pages/UsagePage"
 import Installation from "./components/pages/InstallationPage"
 import StylesPage from "./components/pages/StylesPage"
 
-import { Provider } from 'react-redux'
-import store from './stores/RootStore'
+import { connect } from 'react-redux'
 
 import 'vissually/dist/index.css'
 
-const theme = createMuiTheme({
-  breakpoints: {
-    values: {
-      xs: 0,
-      sm: 600,
-      md: 960,
-      lg: 1280,
-      xl: 1920,
-    },
-  },
-  typography: {
-  },
-  palette: {
-    primary: {
-      main: blue[700],
-    },
-    secondary: {
-      main: green[700],
-    }
-  },
-});
 
-const App = () => {
+interface AppProps {
+  palette_type: "light" | "dark",
+}
+
+
+const App = (props:AppProps) => {
+
+  const { palette_type } = props
+
+  const theme = createMuiTheme({
+    breakpoints: {
+      values: {
+        xs: 0,
+        sm: 600,
+        md: 960,
+        lg: 1280,
+        xl: 1920,
+      },
+    },
+    typography: {
+    },
+    palette: {
+      primary: {
+        main: blue[700],
+      },
+      secondary: {
+        main: green[700],
+      },
+      type: palette_type
+    },
+  });
 
   return (
   
     <ThemeProvider theme={theme}>
-      <Provider store={store}>
+      
         <Router>
           <NavBar />
           <Switch>
@@ -69,9 +77,16 @@ const App = () => {
             <Route path='/styles/themes' component={StylesPage} />
           </Switch>
         </Router>
-      </Provider>
     </ThemeProvider>
   ) 
 }
+const mapStateToProps = (state:ThemeStateType /*, ownProps*/) => {
+  return {
+    palette_type: state.palette_type
+  }
+}
 
-export default App
+export default connect(
+  mapStateToProps,
+  {}
+)(App)

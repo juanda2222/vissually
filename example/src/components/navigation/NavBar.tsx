@@ -1,7 +1,9 @@
 
 
 
-import React, { useState } from 'react';
+import React, { } from 'react';
+import { connect } from 'react-redux';
+import { change_theme } from '../../redux/actions/ThemeActions'
 import { createStyles, makeStyles, Theme } from '@material-ui/core/styles';
 import AppBar from '@material-ui/core/AppBar';
 import Toolbar from '@material-ui/core/Toolbar';
@@ -36,8 +38,14 @@ const useStyles = makeStyles((theme:Theme) =>
   }),
 );
 
-export default function ButtonAppBar() {
-  const [isNight, setNight] = useState(false)
+interface ButtonAppBarProps {
+  change_theme():void,
+  is_dark: boolean,
+}
+
+const ButtonAppBar = (props:ButtonAppBarProps) => {
+
+  const { change_theme, is_dark } = props
   const classes = useStyles();
 
   return (
@@ -48,15 +56,15 @@ export default function ButtonAppBar() {
           <Button variant="text" color="inherit" className={classes.title} component={RouterLink} to="/">
             Vissually
           </Button>  
-          {isNight ?
+          {is_dark ?
             <IconButton
               color="inherit" 
-              onClick={() => { setNight(false) }}>
+              onClick={() => { change_theme() }}>
               <Brightness4Icon className={classes.icons}/>
             </IconButton> :
             <IconButton
               color="inherit" 
-              onClick={() => { setNight(true) }}>
+              onClick={() => { change_theme() }}>
               <NightsStayIcon  className={classes.icons}/>
             </IconButton>
           }
@@ -68,3 +76,19 @@ export default function ButtonAppBar() {
     </div>
   );
 }
+
+
+
+const mapStateToProps = (state:ThemeStateType /*, ownProps*/) => {
+  return {
+    is_dark: state.is_dark
+  }
+}
+
+const mapDispatchToProps = { change_theme }
+
+
+export default connect(
+  mapStateToProps,
+  mapDispatchToProps
+)(ButtonAppBar)
