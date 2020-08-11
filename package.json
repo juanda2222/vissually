@@ -20,7 +20,7 @@
     "test:build": "run-s build",
     "test:lint": "eslint ./src/*",
     "test:unit": "cross-env CI=1 react-scripts test --env=jsdom",
-    "test:update": "react-scripts test --updateSnapshot",
+    "test:update": "cross-env CI=1 react-scripts test --updateSnapshot",
     "test:watch": "react-scripts test --env=jsdom",
     "predeploy": "cd example && yarn install && yarn run build",
     "deploy": "gh-pages -d example/build"
