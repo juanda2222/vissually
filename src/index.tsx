@@ -5,7 +5,7 @@ import VClickableList from "./Lists/VClickableList"
 import VInput from './Inputs/VInput'
 import VSelect from './Inputs/VSelect'
 import VChip from './Display/VChip'
-import VAutoComplete from './Autocomplete/VAutoComplete'
+import VAutoComplete from './AutoComplete/VAutoComplete'
 
 
 export {
