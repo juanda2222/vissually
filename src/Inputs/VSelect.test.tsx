@@ -3,9 +3,9 @@ import React from "react"
 import renderer from 'react-test-renderer';
 import VSelect from './VSelect'
 
-describe('VButton', () => {
+describe('VSelect', () => {
 
-  test('Button declaration has no errors', () => {
+  test('VSelect declaration has no errors', () => {
     expect(VSelect).toBeTruthy()
   })
 
@@ -19,9 +19,9 @@ describe('VButton', () => {
     
     const SelectTreeWithProps = renderer.create(
         <VSelect
-        list={["some_thing", "some_name", "some_name2", "other name", "whatever list"]}
-        onSelect={(i:number, value:any) => { console.log("clicked!", i.toString(10), value) }}
-        label = "label"
+          list={["some_thing", "some_name", "some_name2", "other name", "whatever list"]}
+          onSelect={(i:number, value:any) => { console.log("clicked!", i.toString(10), value) }}
+          label = "label"
         />
     ).toJSON();
 
