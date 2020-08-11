@@ -7,3 +7,4 @@ interface ThemeStateType {
 }
 
 type ChangeTemeActionType = () => void
+
