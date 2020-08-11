@@ -3,7 +3,7 @@ import React from "react"
 import Typography from '@material-ui/core/Typography';
 //import Button from '@material-ui/core/Button';
 import { createStyles, makeStyles, Theme } from '@material-ui/core/styles';
-//import { Link as RouterLink } from "react-router-dom";
+import { Link as RouterLink } from "react-router-dom";
 import Link from '@material-ui/core/Link';
 
 // @ts-ignore: has no exported member 'anOldHope'
@@ -78,7 +78,11 @@ const InstallationPage = (props: {dark:boolean}) => {
       </SyntaxHighlighter>
       <Typography style={{ display: "flex" }} className={classes.text} variant="h6">
         Go to the
-        <Link style={{ marginLeft: "5px", marginRight: "5px" }} color="secondary" href="/get-started/usage" >
+        <Link
+          component={RouterLink}
+          style={{ marginLeft: "5px", marginRight: "5px" }}
+          color="secondary"
+          to="/get-started/usage" >
           usage 
         </Link>
         page to start!

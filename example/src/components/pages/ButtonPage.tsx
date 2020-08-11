@@ -3,6 +3,7 @@ import React from "react"
 
 import { createStyles, makeStyles, Theme } from '@material-ui/core/styles';
 import Link from '@material-ui/core/Link';
+import { Link as RouterLink } from "react-router-dom";
 import Typography from '@material-ui/core/Typography';
 
 import ButtonBanner from "../banners/ButtonBanner"
@@ -50,23 +51,29 @@ const ButtonPage = (props: {dark?:boolean}) => {
       </Typography>
       <ul className={classes.linkContanier}>
         <li>
-          <Link style={{ backgroundColor: dark ? "rgb(28, 29, 33)" : "#f0f0f0"}}
+          <Link
+            component={RouterLink}
+            style={{ backgroundColor: dark ? "rgb(28, 29, 33)" : "#f0f0f0" }}
             color="secondary" 
-            href="/components/input" >
+            to="/components/input" >
             {"<VInput/>"}
           </Link>
         </li>
         <li>
-          <Link style={{ backgroundColor: dark ? "rgb(28, 29, 33)" : "#f0f0f0"}}
+          <Link
+            component={RouterLink}
+            style={{ backgroundColor: dark ? "rgb(28, 29, 33)" : "#f0f0f0" }}
             color="secondary" 
-            href="/components/select" >
+            to="/components/select" >
               {"<VSelect/>"}
           </Link>
         </li>
         <li>
-          <Link style={{ backgroundColor: dark ? "rgb(28, 29, 33)" : "#f0f0f0"}}
+          <Link
+            component={RouterLink}
+            style={{ backgroundColor: dark ? "rgb(28, 29, 33)" : "#f0f0f0" }}
             color="secondary" 
-            href="/components/autocomplete" >
+            to="/components/autocomplete" >
               {"<VAutoComplete/>"}
           </Link>
         </li>
