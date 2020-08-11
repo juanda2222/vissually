@@ -1,6 +1,6 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`VButton Default render. Snapshot test 1`] = `
+exports[`VSelect Default render. Snapshot test 1`] = `
 <div
   className="big_container"
 >
@@ -52,7 +52,7 @@ exports[`VButton Default render. Snapshot test 1`] = `
 </div>
 `;
 
-exports[`VButton Rendering with props. Snapshot test 1`] = `
+exports[`VSelect Rendering with props. Snapshot test 1`] = `
 <div
   className="big_container"
 >

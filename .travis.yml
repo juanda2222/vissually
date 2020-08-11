@@ -20,4 +20,6 @@ branches:
   only:
   - master
 
-cache: yarn
+cache: yarn 
+  directories:
+    - node_modules

@@ -4,8 +4,6 @@ import renderer from 'react-test-renderer';
 import VAutoComplete from './VAutoComplete'
 import VInput from '../Inputs/VInput'
 
-
-
 const autocomplete_list = [
   { title: 'The Shawshank Redemption', year: 1994 },
   { title: 'The Godfather', year: 1972 },
