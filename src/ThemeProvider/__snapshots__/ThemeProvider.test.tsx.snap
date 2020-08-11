@@ -1,0 +1,10 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`ThemeConfig Rendering with props. Snapshot test 1`] = `
+<div
+  className="sc-AxjAm gDXVAl action_button "
+  onClick={[Function]}
+>
+  Button test with theme
+</div>
+`;

@@ -1,0 +1,101 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`AutoComplete Default render. Snapshot test 1`] = `
+<div
+  className="big_container"
+/>
+`;
+
+exports[`AutoComplete Rendering with props. Snapshot test 1`] = `
+<div
+  className="big_container"
+>
+  <div
+    className="container"
+  >
+    <input
+      className="sc-AxheI kbekTD input_element input_style"
+      onBlur={[Function]}
+      onChange={[Function]}
+      onFocus={[Function]}
+      placeholder="Combo box"
+      value=""
+    />
+    <label
+      className="sc-Axmtr ixJmyd label_element"
+    >
+      Combo box
+    </label>
+  </div>
+  <div
+    className="sc-AxjAm jNAsBD list_container list_style fadeOut "
+  >
+    <div
+      className="sc-AxirZ sc-AxiKw crVGut list_item "
+      onClick={[Function]}
+      style={
+        Object {
+          "width": 300,
+        }
+      }
+    >
+      The Shawshank Redemption
+    </div>
+    <div
+      className="sc-AxirZ jFyzcN list_item "
+      onClick={[Function]}
+      style={
+        Object {
+          "width": 300,
+        }
+      }
+    >
+      The Godfather
+    </div>
+    <div
+      className="sc-AxirZ jFyzcN list_item "
+      onClick={[Function]}
+      style={
+        Object {
+          "width": 300,
+        }
+      }
+    >
+      The Godfather: Part II
+    </div>
+    <div
+      className="sc-AxirZ jFyzcN list_item "
+      onClick={[Function]}
+      style={
+        Object {
+          "width": 300,
+        }
+      }
+    >
+      The Dark Knight
+    </div>
+    <div
+      className="sc-AxirZ jFyzcN list_item "
+      onClick={[Function]}
+      style={
+        Object {
+          "width": 300,
+        }
+      }
+    >
+      12 Angry Men
+    </div>
+    <div
+      className="sc-AxirZ sc-AxhCb fvJznW list_item "
+      onClick={[Function]}
+      style={
+        Object {
+          "width": 300,
+        }
+      }
+    >
+      Schindler's List
+    </div>
+  </div>
+</div>
+`;
