@@ -20,4 +20,4 @@ branches:
   only:
   - master
 
-cache: false
+cache: bundler
