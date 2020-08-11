@@ -12,7 +12,7 @@
     "node": ">=10"
   },
   "scripts": {
-    "build": "microbundle-crl --no-compress --format modern,cjs && cd example && yarn add all && yarn build",
+    "build": "microbundle-crl --no-compress --format modern,cjs",
     "start:module": "microbundle-crl watch --no-compress --format modern,cjs",
     "start": "ts-node ./example/server.js",
     "prepare": "run-s build",
