@@ -16,7 +16,6 @@ const useStyles = makeStyles((theme: Theme) =>
       color: theme.palette.text.primary,
     },
     root: {
-      backgroundColor: theme.palette.background.default,
       margin:"8vh 6vw",
       display: "flex",
       justifyContent: "center",
@@ -28,9 +27,10 @@ const useStyles = makeStyles((theme: Theme) =>
       },
     },
     container: {
+      backgroundColor: theme.palette.background.default,
       display: "flex",
       flexDirection: "column",
-      margin: "5vh",
+      padding: "5vh",
       "& > *": {
         margin: "10px",
       }

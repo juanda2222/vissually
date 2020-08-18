@@ -15,9 +15,10 @@ const useStyles = makeStyles((theme:Theme) =>
   createStyles({
     
     container: {
+      backgroundColor: theme.palette.background.default,
       display: "flex",
       flexDirection: "column",
-      margin: "5vh",
+      padding: "5vh",
       "& > *": {
         margin: "10px",
       }
@@ -41,24 +42,30 @@ const GetStartedPage = (props: { dark: boolean }) => {
 
   return (
     <div className={classes.container}>
-      <Typography color="inherit" variant="h2">
+      <Typography className={classes.text} variant="h2">
         Usage
       </Typography>
-      <Typography color="inherit" variant="h5">
+      <Typography className={classes.text} variant="h5">
         Get started with React and Vissually in no time.
       </Typography>
-      <Typography color="inherit" variant="h6">
+      <Typography className={classes.text} variant="h6">
         You can use any of the components as demonstrated in the documentation. Please refer to each component's demo page to see how they should be imported.
-        <Link style={{marginLeft:"6px"}} color="secondary" href="/components/button" >demo page.</Link>
+        <Link
+          component={RouterLink}
+          style={{ marginLeft: "6px" }}
+          color="secondary"
+          to="/components/button" >
+          demo page.
+        </Link>
       </Typography>
-      <Typography color="inherit" variant="h3">
+      <Typography className={classes.text} variant="h3">
         Quick start
       </Typography>
       <div style={{ display: "flex" }}>
-        <Typography color="inherit" variant="h6">
+        <Typography className={classes.text} variant="h6">
           Here's a quick example to get you started, it's
         </Typography>
-        <Typography color="inherit" variant="h6" style={{marginLeft:"6px" ,fontWeight:550}}>
+        <Typography className={classes.text} variant="h6" style={{marginLeft:"6px" ,fontWeight:550}}>
             literally all you need:
           </Typography>
       </div>
