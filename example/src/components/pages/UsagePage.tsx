@@ -99,7 +99,7 @@ const GetStartedPage = (props: { dark: boolean }) => {
             style={{ backgroundColor: props.dark ? "rgb(28, 29, 33)" : "#f0f0f0" }}
             color="secondary" 
             to="/components/button" >
-            {"<VInput/>"}
+            {"<VButton/>"}
           </Link>
         </li>
         <li>

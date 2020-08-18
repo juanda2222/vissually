@@ -58,9 +58,6 @@ const App = (props:AppProps) => {
     },
   });
 
-  console.log(theme)
-
-
   return (
     <ThemeProvider theme={theme}>
       <Router>

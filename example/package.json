@@ -1,6 +1,5 @@
 {
   "name": "vissually-example",
-  "homepage": ".",
   "version": "0.0.0",
   "private": true,
   "scripts": {
@@ -24,6 +23,8 @@
     "@types/react-router-dom": "^5.1.5",
     "@types/react-syntax-highlighter": "^11.0.4",
     "all": "^0.0.0",
+    "cors": "^2.8.5",
+    "helmet": "^4.1.0",
     "hoist-non-react-statics": "3.3.2",
     "react": "link:../node_modules/react",
     "react-dom": "link:../node_modules/react-dom",
