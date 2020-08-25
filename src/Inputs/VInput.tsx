@@ -49,7 +49,7 @@ const VTextInput: React.FunctionComponent<InputProps> = ({
 }) => {  
 
   // get the theme from the context
-  const contex_theme: Theme = useContext(ThemeContext);
+  const context_theme: Theme = useContext(ThemeContext);
   const [isFocused, setFocused] = useState(false)
 
   // all the event handlers wrapped for custom styling
@@ -67,7 +67,7 @@ const VTextInput: React.FunctionComponent<InputProps> = ({
     if (typeof onBlur === 'function') {onBlur(event)}
   }
 
-  // generat the theme depending on the boolean inputs or the theme input
+  // generate the theme depending on the boolean inputs or the theme input
   const wrapped_className = [styles.input_element, className ? className : ""].join(" ")
   var current_theme;
   if (secundary) {
@@ -76,8 +76,8 @@ const VTextInput: React.FunctionComponent<InputProps> = ({
     current_theme = DefaultThemes.dark
   } else if (primary) {
     current_theme = DefaultThemes.primary
-  } else if (!(typeof (contex_theme) == "undefined")) {
-    current_theme = contex_theme
+  } else if (!(typeof (context_theme) == "undefined")) {
+    current_theme = context_theme
   } else {
     current_theme = theme ? theme : DefaultThemes.primary
   }
@@ -95,7 +95,7 @@ const VTextInput: React.FunctionComponent<InputProps> = ({
         //custom style:
         main_rgb={rgb_main_list}
         textColor={rgb_textColor_list}
-        // parent stying props:
+        // parent styling props:
         className={wrapped_className}
         style={style}
         // functional props:

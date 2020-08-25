@@ -10,7 +10,7 @@ describe('VSelect', () => {
   })
 
   test("Default render. Snapshot test", () => { 
-    const SelectTree = renderer.create(<VSelect list={["1","2"]} label="label" />).toJSON();
+    const SelectTree = renderer.create(<VSelect list={["1", "2"]} label="label" />).toJSON();
     console.log(SelectTree)
     expect(SelectTree).toMatchSnapshot();
   })

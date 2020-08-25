@@ -47,11 +47,11 @@ const VClickableList: React.FunctionComponent<ListProps> = ({
 }) => {
 
   // get the theme from the context
-  const contex_theme = useContext(ThemeContext);
+  const context_theme = useContext(ThemeContext);
   const wrapped_className = [styles.list_item, className ? className : ""].join(" ")
   const wrapped_container_className = [styles.list_container, containerClassName].join(" ")
 
-  // generat the theme depending on the boolean inputs or the theme input
+  // generate the theme depending on the boolean inputs or the theme input
   var current_theme: Theme;
   if (secundary) {
     current_theme = DefaultThemes.secundary
@@ -59,8 +59,8 @@ const VClickableList: React.FunctionComponent<ListProps> = ({
     current_theme = DefaultThemes.dark
   } else if (primary) {
     current_theme = DefaultThemes.primary
-  } else if (!(typeof (contex_theme) == "undefined")) {
-    current_theme = contex_theme
+  } else if (!(typeof (context_theme) == "undefined")) {
+    current_theme = context_theme
   } else {
     current_theme = theme ? theme : DefaultThemes.primary
   }
@@ -69,7 +69,7 @@ const VClickableList: React.FunctionComponent<ListProps> = ({
   const rgb_list = Color2Vec(current_theme.backgroundColor1)
   
 
-  // style the childs:
+  // style the children:
   const wrapped_list = list ? list : []
   const div_list = wrapped_list.map((item, index) => {
 

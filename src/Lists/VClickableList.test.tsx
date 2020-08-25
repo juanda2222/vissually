@@ -10,7 +10,7 @@ describe('VButton', () => {
   })
 
   test("Default render. no list given", () => { 
-    const ButtonTree = renderer.create(<VClickableList list={["1","2"]}/>).toJSON();
+    const ButtonTree = renderer.create(<VClickableList list={["1", "2"]}/>).toJSON();
     console.log(ButtonTree)
     expect(ButtonTree).toMatchSnapshot();
   })
@@ -18,10 +18,12 @@ describe('VButton', () => {
   test("Rendering with props. Snapshot test", () => { 
 
     const ButtonWithProps = renderer.create(
-        <VClickableList
+      <VClickableList
         list={["some_thing", "some_name", "some_name2", "other name", "whatever list"]}
-        onCLick={(i:number, text:string) => { console.log("clicked! index:", i.toString(10), " Text: ", text)}}
-        />
+        onCLick={(i: number, text: string) => {
+          console.log("clicked! index:", i.toString(10), " Text: ", text)
+        }}
+      />
     ).toJSON();
 
     console.log(ButtonWithProps)

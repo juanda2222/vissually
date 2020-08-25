@@ -128,7 +128,11 @@ const TemporaryDrawerButton:React.FunctionComponent<TemporaryDrawerProps>  = ({
       </List>
       <Divider />
       <List>
-        <ListItem color="inherit" button component={Link} href="https://david.alfagenos.com/#about_banner_pointer">
+        <ListItem
+          color="inherit"
+          button
+          component={Link} href="https://david.alfagenos.com/#about_banner_pointer"
+        >
         <ListItemText primary={<Typography className={classes.ParentText}>About</Typography>} />
         </ListItem>
       </List>

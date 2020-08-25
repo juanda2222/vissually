@@ -28,7 +28,7 @@ const VSelect: React.FunctionComponent<SelectProps> = ({
 
 
   // get the theme from the context
-  const contex_theme: Theme = useContext(ThemeContext);
+  const context_theme: Theme = useContext(ThemeContext);
   const wrapped_className = [styles.button_style, className ? className : ""].join(" ")
   const wrapped_list_className = [
     styles.list_style,
@@ -44,8 +44,8 @@ const VSelect: React.FunctionComponent<SelectProps> = ({
     current_theme = DefaultThemes.dark
   } else if (primary) {
     current_theme = DefaultThemes.primary
-  } else if (!(typeof (contex_theme) == "undefined")) {
-    current_theme = contex_theme
+  } else if (!(typeof (context_theme) == "undefined")) {
+    current_theme = context_theme
   } else {
     current_theme = theme ? theme : DefaultThemes.primary
   }

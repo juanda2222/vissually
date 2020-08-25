@@ -20,8 +20,16 @@ describe('VButton', () => {
     const ChipList = renderer.create(
       <div>
         <VChip label="label!"/>
-        <VChip label="other one" onClick={()=>{console.log("Clicked on 'other one'")}}/>
-        <VChip label="delete me" onClick={()=>{console.log("Clicked on 'delete me'")}} onDelete={()=>{console.log("deleting")}}/>
+        <VChip label="other one" onClick={() => {
+          console.log("Clicked on 'other one'")
+        }} />
+        <VChip label="delete me"
+          onClick={() => {
+            console.log("Clicked on 'delete me'")
+          }}
+          onDelete={() => {
+            console.log("deleting")
+          }} />
       </div>
     ).toJSON();
     console.log(ChipList)

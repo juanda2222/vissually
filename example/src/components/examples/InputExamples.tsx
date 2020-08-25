@@ -34,7 +34,7 @@ const TextInputExample = () => {
                     console.log("controlled text: ", text)
                 }}
             />
-            <VButton onClick={()=>{setText("")}}>Delete</VButton>
+            <VButton onClick={()=>{ setText("") }}>Delete</VButton>
         </div>
     )
 }

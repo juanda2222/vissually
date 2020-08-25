@@ -19,7 +19,7 @@ const useStyles = makeStyles((theme: Theme) =>
         margin: "10px",
       }
     },
-    linkContanier: {
+    linkContainer: {
       display: "flex",
       flexDirection: "column",
       "& > *": {
@@ -50,7 +50,7 @@ const AutoCompletePage = (props: {dark?:boolean}) => {
       <Typography className={classes.text}  variant="h5">
         Keep reading!
       </Typography>
-      <ul className={classes.linkContanier}>
+      <ul className={classes.linkContainer}>
         <li>
           <Link 
             component={RouterLink}
@@ -80,7 +80,13 @@ const AutoCompletePage = (props: {dark?:boolean}) => {
         </li>
       </ul>
       <Typography className={classes.text} variant="h6">
-        Need more? See the full documentation <Link color="secondary" href="https://personal-public-files-23rde2.s3.amazonaws.com/documentation/index.html" >here.</Link>
+        Need more? See the full documentation
+        <Link
+          color="secondary"
+          href="https://personal-public-files-23rde2.s3.amazonaws.com/documentation/index.html"
+        >
+          here.
+        </Link>
       </Typography>
     </div>
   );

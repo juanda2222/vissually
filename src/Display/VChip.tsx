@@ -41,10 +41,10 @@ const VChip: React.FunctionComponent<ChipProps> = ({
 }) => {
 
   // get the theme from the context
-  const contex_theme = useContext(ThemeContext);
+  const context_theme = useContext(ThemeContext);
   const wrapped_className = [styles.container, className ? className : ""].join(" ")
 
-  // generat the theme depending on the boolean inputs or the theme input
+  // generate the theme depending on the boolean inputs or the theme input
   var current_theme:Theme;
   if (secundary) {
     current_theme = DefaultThemes.secundary
@@ -52,8 +52,8 @@ const VChip: React.FunctionComponent<ChipProps> = ({
     current_theme = DefaultThemes.dark
   } else if (primary) {
     current_theme = DefaultThemes.primary
-  } else if (!(typeof (contex_theme) == "undefined")) {
-    current_theme = contex_theme
+  } else if (!(typeof (context_theme) == "undefined")) {
+    current_theme = context_theme
   } else {
     current_theme = theme ? theme : DefaultThemes.primary
   }

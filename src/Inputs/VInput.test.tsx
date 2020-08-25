@@ -19,7 +19,7 @@ describe('VInput', () => {
 
     const TextInputTreeProps = renderer.create(
         <VInput
-        className="some_classname"
+        className="some_className"
         placeholder="heeey"
         onChange={(e) => {
           console.log("on change")
@@ -36,7 +36,7 @@ describe('VInput', () => {
 
     const TextInputTreeProps = renderer.create(
         <VInput
-        className="some_classname"
+        className="some_className"
         placeholder="age"
         name="age"
         type="number"

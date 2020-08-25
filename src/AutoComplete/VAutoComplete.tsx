@@ -17,7 +17,7 @@ const DisplayList: React.FunctionComponent<ChipListProps> = ({
   list,
 }) => {
 
-  // style the childs:
+  // style the children:
   const wrapped_list = list ? list : []
   const list_component =  wrapped_list.map((item, index) => {
 
@@ -104,7 +104,7 @@ const VAutoComplete: React.FunctionComponent<AutoCompleteProps> = ({
     className ? className : ""
   ].join(" ")
 
-  // wrapp the rendered element with a two way binding
+  // wrapped the rendered element with a two way binding
   const input_component_props = {
     primary:primary, secundary:secundary, dark:dark,
     className: styles.input_style,
@@ -114,7 +114,7 @@ const VAutoComplete: React.FunctionComponent<AutoCompleteProps> = ({
       onChange && onChange(e)
     },
 
-    // add the close and oppen interaction when the input is focused
+    // add the close and open interaction when the input is focused
     onFocus: (e: React.FocusEvent<HTMLInputElement>) => {
       setOpen(true)
       if (typeof onFocus === 'function') {onFocus(e)}

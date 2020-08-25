@@ -20,7 +20,7 @@ describe('VButton', () => {
 
     const ButtonWithProps = renderer.create(
         <VButton
-        className="some_classname"
+        className="some_className"
         onClick={(e) => { console.log("Click Event ", e) }}
         >
           Button test name
