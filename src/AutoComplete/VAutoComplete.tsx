@@ -78,8 +78,8 @@ const VAutoComplete: React.FunctionComponent<AutoCompleteProps> = ({
   // hooks and state:
   const [isOpen, setOpen] = useState(false)
   const [inputText, setInputText] = useState("")
-  const doubleBinded = typeof onChange === 'function' && value ? true : false
-  const [SelectedList, setSelectedList] = useState(new Array())
+  const isDoubleBinded = typeof onChange === 'function' && value ? true : false
+  const [SelectedList, setSelectedList] = useState([] as string[])
 
   //generate a dynamic list depending on the state
   const wrapped_options = options ? options : []
@@ -108,7 +108,7 @@ const VAutoComplete: React.FunctionComponent<AutoCompleteProps> = ({
   const input_component_props = {
     primary:primary, secundary:secundary, dark:dark,
     className: styles.input_style,
-    value: doubleBinded ? value : inputText,
+    value: isDoubleBinded ? value : inputText,
     onChange: (e: React.ChangeEvent<HTMLInputElement>) => {
       setInputText(e.target.value)
       onChange && onChange(e)
@@ -134,15 +134,17 @@ const VAutoComplete: React.FunctionComponent<AutoCompleteProps> = ({
     >
       
       {// render a list if multiple selection
-        multiple ? <DisplayList
-          list={SelectedList}
-          onDelete={(obj) => {
+        multiple ? (
+          <DisplayList
+            list={SelectedList}
+            onDelete={(obj) => {
 
-            //delete the item from the list
-            setSelectedList(SelectedList.filter(label => label !== obj.label));
-            
-          }}
-        /> : null
+              //delete the item from the list
+              setSelectedList(SelectedList.filter(label => label !== obj.label));
+              
+            }}
+          />
+        ) : null
       }
       {typeof renderInput === 'function' && renderInput(input_component_props)}
       <VClickableList

@@ -30,15 +30,15 @@ const DefaultThemes: {primary: Theme, secundary: Theme, dark: Theme} = {
 
 const ThemeContext = React.createContext(DefaultThemes.primary)
 
-const VThemeProvider = (props: ThemeProps) => {
-  
-  const {
-    children,
-    theme,
-    primary, secundary, dark
-  } = props
+const VThemeProvider: React.FunctionComponent<ThemeProps> = ({
+  children,
+  theme,
+  primary,
+  secundary,
+  dark
+}) => {
 
-  var current_theme;
+  var current_theme:Theme;
   if (secundary) {
     current_theme = DefaultThemes.secundary
   } else if (dark) {

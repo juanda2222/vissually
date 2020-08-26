@@ -8,10 +8,11 @@ import { DefaultThemes, ThemeContext } from "../ThemeProvider/ThemeProvider"
 
 // style the container
 const StyledContainer = styled("div")<{border_color:string}>`
-  border: 0.5px solid ${props => props.border_color};`;
+  border: 0.5px solid ${props => props.border_color};
+`;
 
 // style the selectable item:
-var StyledItem = styled("div") < { text_color: string, main_rgb: number[] }>`
+const StyledItem = styled("div") < { text_color: string, main_rgb: number[] }>`
   
   color: ${props => props.text_color};
   background: ${ props => `rgba(${props.main_rgb[0] - 20}, ${props.main_rgb[1] - 20}, ${props.main_rgb[2] - 20}, 0.9)`};
@@ -23,11 +24,11 @@ var StyledItem = styled("div") < { text_color: string, main_rgb: number[] }>`
   }
 `;
 
-var StyledTopItem = styled(StyledItem)`
+const StyledTopItem = styled(StyledItem)`
   border-top-left-radius: 8px;
   border-top-right-radius: 8px;
 `;
-var StyledBottomItem = styled(StyledItem)`
+const StyledBottomItem = styled(StyledItem)`
   border-top-bottom-radius: 8px;
   border-top-bottom-radius: 8px;
 `;
@@ -52,7 +53,7 @@ const VClickableList: React.FunctionComponent<ListProps> = ({
   const wrapped_container_className = [styles.list_container, containerClassName].join(" ")
 
   // generate the theme depending on the boolean inputs or the theme input
-  var current_theme: Theme;
+  let current_theme: Theme;
   if (secundary) {
     current_theme = DefaultThemes.secundary
   } else if (dark) {
@@ -109,14 +110,14 @@ const VClickableList: React.FunctionComponent<ListProps> = ({
 
 
   return (
-    wrapped_list.length > 0 ?
+    wrapped_list.length > 0 ? (
       <StyledContainer
         border_color={current_theme.color1}
         className={wrapped_container_className}
       >
         {div_list}
       </StyledContainer>
-    : null
+    ): null
   )
 }
 

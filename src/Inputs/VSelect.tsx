@@ -37,7 +37,7 @@ const VSelect: React.FunctionComponent<SelectProps> = ({
   ].join(" ")
 
   // generate the theme depending on the boolean inputs or the theme input
-  var current_theme;
+  let current_theme:Theme;
   if (secundary) {
     current_theme = DefaultThemes.secundary
   } else if (dark) {
@@ -85,22 +85,20 @@ const VSelect: React.FunctionComponent<SelectProps> = ({
           setOpen(!isOpen)
         }}
       >
-        
         {selectedItem == "" ? label : selectedItem}
-        
-        {isOpen ?
+        {isOpen ? (
           <ArrowUpSVG style={{
             fill: current_theme.textColor2,
             width: "0.7em", height: "0.7em",
             margin: "auto 6px"
-          }} /> :
+          }} />
+        ):(
           <ArrowDownSVG style={{
             fill: current_theme.textColor2,
             width: "0.7em", height: "0.7em",
             margin: "auto 6px"
-          }} />
-        }
-
+          }} />     
+        )}
       </VButton>
       <VClickableList
         list={list}

@@ -1,30 +1,35 @@
 
+/**
+ * This function will convert a css rgb equivalent: #FFFFFF | #ffffff | rgb(_,_,_) to a int list representing the rgb numbers
+ * @param color_string 
+ * @returns {rgb}
+ */
+const Color2Vec = function (color_string: string): number[] {
 
-var Color2Vec = function (color_string: string): number[] {
-
-  var clean_color_string = color_string.replace(/ /g, ""); // remove spaces
+  let clean_color_string = color_string.replace(/ /g, ""); // remove spaces
+  let rgb: number[]
 
   // rgb(r,g,b) format
   if (clean_color_string.length >= 10) {
     // use the rgb string parce a vector
-    var rgb: number[] = clean_color_string.substring(4, clean_color_string.length - 1).replace(/ /g, '').split(',').map(val => parseInt(val, 10));
+    rgb = clean_color_string.substring(4, clean_color_string.length - 1).replace(/ /g, '').split(',').map(val => parseInt(val, 10));
     if ( (rgb.length <= 1) || (isNaN(rgb[0])) ) {
-      console.log("throwing...")
-      throw new Error(`rgb string in wrong format`)
+      throw new Error(`Rgb string in wrong format`)
     };
-    return rgb;
 
   // #ffffff format
   } else {
     // convert the hex value to rgb
-    var result = /^#?([a-f\d]{2})([a-f\d]{2})([a-f\d]{2})$/i.exec(clean_color_string);
-    if (!result) { throw new Error("hex string in wrong format") }
-    return [
+    let result = /^#?([a-f\d]{2})([a-f\d]{2})([a-f\d]{2})$/i.exec(clean_color_string);
+    if (!result) { throw new Error("Hex string in wrong format") }
+    rgb = [
       parseInt(result[1], 16),
       parseInt(result[2], 16),
       parseInt(result[3], 16)
     ];
   };
+
+  return rgb;
 };
 
 export {

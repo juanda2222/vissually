@@ -71,23 +71,24 @@ const VChip: React.FunctionComponent<ChipProps> = ({
     >
       <span>{label}</span>
       {
-        onDelete &&
-        <StyledCancelButton
-          background_color={`rgb(${rgb_list[0] - 40}, ${rgb_list[1] - 40}, ${rgb_list[2] - 40})`}
-          hover_background_color={`rgb(${rgb_list[0] - 30}, ${rgb_list[1] - 30}, ${rgb_list[2] - 30})`}
-          text_color={current_theme.textColor1}
-          className={styles.delete_button}
-          onClick={(e) => {
-            e.stopPropagation(); 
-            onDelete && onDelete(e)
-          }}
-        >
-          <XSymbol style={{
-            fill: current_theme.textColor1,
-            width: "0.6em", height: "0.6em",
-            margin: "auto 6px"
-          }} />
-        </StyledCancelButton>
+        onDelete && (
+          <StyledCancelButton
+            background_color={`rgb(${rgb_list[0] - 40}, ${rgb_list[1] - 40}, ${rgb_list[2] - 40})`}
+            hover_background_color={`rgb(${rgb_list[0] - 30}, ${rgb_list[1] - 30}, ${rgb_list[2] - 30})`}
+            text_color={current_theme.textColor1}
+            className={styles.delete_button}
+            onClick={(e) => {
+              e.stopPropagation(); 
+              onDelete && onDelete(e)
+            }}
+          >
+            <XSymbol style={{
+              fill: current_theme.textColor1,
+              width: "0.6em", height: "0.6em",
+              margin: "auto 6px"
+            }} />
+          </StyledCancelButton>
+        )
       }
     </StyledContainer>
   ):null

@@ -5,12 +5,16 @@ import React, {
 
 
 import styles from './VButton.module.css'
-import styled, { } from 'styled-components';
+import styled from 'styled-components';
 import { Color2Vec } from "../Tools/ColorTools"
 import { DefaultThemes, ThemeContext } from "../ThemeProvider/ThemeProvider"
 
 
-const StyledButton = styled("div")<{isActive?:boolean, text_color:string, main_rgb: number[]}>`
+const StyledButton = styled("div") <{
+  isActive?: boolean,
+  text_color: string,
+  main_rgb: number[]
+}>`
 
     color: ${props => props.text_color};
     background-color: ${props => `rgb(${props.main_rgb[0]}, ${props.main_rgb[1]}, ${props.main_rgb[2]})`};
@@ -63,7 +67,7 @@ const VButton: React.FunctionComponent<ButtonProps> = ({
 
   // generate the theme depending on the boolean inputs or the theme input
   const wrapped_className = [styles.action_button, className ? className : ""].join(" ")
-  var current_theme;
+  let current_theme:Theme;
   if (secundary) {
     current_theme = DefaultThemes.secundary
   } else if (dark) {

@@ -69,7 +69,7 @@ const VTextInput: React.FunctionComponent<InputProps> = ({
 
   // generate the theme depending on the boolean inputs or the theme input
   const wrapped_className = [styles.input_element, className ? className : ""].join(" ")
-  var current_theme;
+  let current_theme:Theme;
   if (secundary) {
     current_theme = DefaultThemes.secundary
   } else if (dark) {
