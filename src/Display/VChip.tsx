@@ -32,7 +32,7 @@ const VChip: React.FunctionComponent<ChipProps> = ({
   className,
   style,
   theme,
-  primary, secundary, dark,
+  primary, secondary, dark,
 
   //functional properties
   label,
@@ -46,8 +46,8 @@ const VChip: React.FunctionComponent<ChipProps> = ({
 
   // generate the theme depending on the boolean inputs or the theme input
   var current_theme:Theme;
-  if (secundary) {
-    current_theme = DefaultThemes.secundary
+  if (secondary) {
+    current_theme = DefaultThemes.secondary
   } else if (dark) {
     current_theme = DefaultThemes.dark
   } else if (primary) {

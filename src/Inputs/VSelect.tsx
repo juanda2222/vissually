@@ -14,7 +14,7 @@ const VSelect: React.FunctionComponent<SelectProps> = ({
   className,
   style,
   theme,
-  primary, secundary, dark,
+  primary, secondary, dark,
   listClassName,
 
   //functional properties
@@ -38,8 +38,8 @@ const VSelect: React.FunctionComponent<SelectProps> = ({
 
   // generate the theme depending on the boolean inputs or the theme input
   let current_theme:Theme;
-  if (secundary) {
-    current_theme = DefaultThemes.secundary
+  if (secondary) {
+    current_theme = DefaultThemes.secondary
   } else if (dark) {
     current_theme = DefaultThemes.dark
   } else if (primary) {
@@ -75,7 +75,7 @@ const VSelect: React.FunctionComponent<SelectProps> = ({
       className={styles.big_container}>
       <VButton
         primary={primary}
-        secundary={secundary}
+        secondary={secondary}
         dark={dark}
         isPressed={isOpen}
         style={style}

@@ -32,7 +32,7 @@ const TextInputExample = () => (
             }}
         />
         <p> Themed Text Inputs: </p>
-        <VThemeProvider secundary>
+        <VThemeProvider secondary>
             <VChip label="label!" />
             <VChip
                 label="other one"

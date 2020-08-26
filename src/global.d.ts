@@ -28,7 +28,7 @@ interface Theme {
 }
 interface ThemeProps {
   primary?:boolean,
-  secundary?:boolean,
+  secondary?:boolean,
   dark?:boolean,
   theme?: Theme,
   children?: React.ReactNode,
@@ -40,7 +40,7 @@ interface ListProps {
   theme?: Theme,
   className?: string,
   style?: any,
-  primary?: boolean, secundary?: boolean, dark?: boolean,
+  primary?: boolean, secondary?: boolean, dark?: boolean,
 
   list: string[],
   onClick?: (event:{ index: number, label: string}) => void,
@@ -51,7 +51,7 @@ interface ChipListProps {
   theme?: Theme,
   className?: string,
   style?: any,
-  primary?: boolean, secundary?: boolean, dark?: boolean,
+  primary?: boolean, secondary?: boolean, dark?: boolean,
 
   list: string[],
   onClick?: (event: { index: number, label: string }) => void,
@@ -63,7 +63,7 @@ interface SelectProps {
   theme?: Theme,
   className?: string,
   style?: any,
-  primary?: boolean, secundary?: boolean, dark?: boolean,
+  primary?: boolean, secondary?: boolean, dark?: boolean,
 
   list: string[],
   label: string,
@@ -74,13 +74,13 @@ interface SelectProps {
 
 interface InputProps extends React.DetailedHTMLProps<React.InputHTMLAttributes<HTMLInputElement>, HTMLInputElement> {
   theme?: Theme,
-  primary?:boolean, secundary?:boolean, dark?:boolean,
+  primary?:boolean, secondary?:boolean, dark?:boolean,
   [propName: string]: any;
 }
 
 interface ButtonProps extends React.DetailedHTMLProps<React.HTMLAttributes<HTMLDivElement>, HTMLDivElement> {
   theme?: Theme,
-  primary?: boolean, secundary?: boolean, dark?: boolean,
+  primary?: boolean, secondary?: boolean, dark?: boolean,
   children: React.ReactNode
 
   isPressed?:boolean
@@ -92,7 +92,7 @@ interface ChipProps{
   className?:string,
   style?:any,
   theme?: Theme,
-  primary?: boolean, secundary?: boolean, dark?: boolean,
+  primary?: boolean, secondary?: boolean, dark?: boolean,
   label:string,
   onDelete?:any,
   onClick?:any,
@@ -101,6 +101,6 @@ interface ChipProps{
 
 interface AutoCompleteProps{
   theme?: Theme,
-  primary?: boolean, secundary?: boolean, dark?: boolean,
+  primary?: boolean, secondary?: boolean, dark?: boolean,
   [propName: string]: any;
 }

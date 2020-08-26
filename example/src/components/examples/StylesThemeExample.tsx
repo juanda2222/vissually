@@ -4,26 +4,18 @@ import {
     VButton,
     VThemeProvider,
     VInput,
+    VThemeType
   } from 'vissually'
 
 
-interface Theme {
-    textColor1: string,
-    textColor2: string,
-    color1: string,
-    color2: string,
-    backgroundColor1: string,
-    backgroundColor2: string,
-}
-
-const custom_theme:Theme = {
+const custom_theme = {
     textColor1: "rgb(0, 0, 0)", 
     textColor2: "rgb(255, 255, 255)", 
     color1: "#6D597A", 
     color2: "#E56B6F", 
     backgroundColor1: "rgb(255, 255, 255)", 
     backgroundColor2: "rgb(70, 140, 170)", 
-}
+} as VThemeType
 
 const StylesExample = () => (
     <div style={{
@@ -32,7 +24,7 @@ const StylesExample = () => (
         alignItems: "center",
         backgroundColor: "#fafafa",
     }}>
-        <VThemeProvider secundary>
+        <VThemeProvider secondary>
             <p>Default theme provider:</p>
             <VButton style={{ padding:"30px", }}>{"BIG"}</VButton>
             <VButton style={{ padding: "5px" }}>{"small"}</VButton>

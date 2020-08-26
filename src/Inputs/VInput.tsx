@@ -33,8 +33,11 @@ const VTextInput: React.FunctionComponent<InputProps> = ({
   className,
   style,
   parentStyle,
+  labelStyle,
   theme,
-  primary, secundary, dark,
+  primary,
+  secondary,
+  dark,
 
   //functional properties
   value,
@@ -70,8 +73,8 @@ const VTextInput: React.FunctionComponent<InputProps> = ({
   // generate the theme depending on the boolean inputs or the theme input
   const wrapped_className = [styles.input_element, className ? className : ""].join(" ")
   let current_theme:Theme;
-  if (secundary) {
-    current_theme = DefaultThemes.secundary
+  if (secondary) {
+    current_theme = DefaultThemes.secondary
   } else if (dark) {
     current_theme = DefaultThemes.dark
   } else if (primary) {
@@ -111,6 +114,7 @@ const VTextInput: React.FunctionComponent<InputProps> = ({
       />      
       <StyledLabel
         className={styles.label_element}
+        style={labelStyle}
         isFocused={isFocused}
         textColor={rgb_textColor_list}
         main_rgb={rgb_main_list}

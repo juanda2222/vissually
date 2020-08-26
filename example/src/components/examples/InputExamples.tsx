@@ -10,26 +10,31 @@ const TextInputExample = () => {
             display: "flex",
             flexDirection: "column",
             alignItems: "center",
-            backgroundColor: "#fafafa"
         }}>
             <p> Simple Text Inputs: </p>
             <div style={{display:"flex",  justifyContent:"center", marginBottom:"15px"}}>
-                <VInput placeholder="default" name="name"
+                <VInput
+                    placeholder="default"
+                    name="name"
                     onChange={(e:React.ChangeEvent<HTMLInputElement>) => {
                         console.log("default string: ", e.target.value)
                     }}
                 />
-                <VInput secundary placeholder="secundary" name="name"
+                <VInput
+                    secondary
+                    placeholder="secondary"
+                    name="name"
                     onChange={(e:React.ChangeEvent<HTMLInputElement>) => {
-                        console.log("secundary string: ", e.target.value)
+                        console.log("secondary string: ", e.target.value)
                     }}
                 />
                 <VInput 
-                    style ={{backgroundColor:"rgba(170,50,50, 0.3)", borderColor:"rgb(150,20,20)"}} 
+                    style={{ backgroundColor: "rgba(170,50,50, 0.3)", borderColor: "rgb(150,20,20)" }} 
+                    labelStyle={{color:"rgb(150,20,20)"}}
                     placeholder="custom" 
                     name="name" 
                     onChange={(e: React.ChangeEvent<HTMLInputElement>) => {
-                        console.log("secundary string: ", e.target.value)
+                        console.log("secondary string: ", e.target.value)
                     }} />
             </div>
             <p> Fully controlled: </p>

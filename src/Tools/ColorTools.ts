@@ -11,7 +11,7 @@ const Color2Vec = function (color_string: string): number[] {
 
   // rgb(r,g,b) format
   if (clean_color_string.length >= 10) {
-    // use the rgb string parce a vector
+    // use the rgb string to parse to a vector
     rgb = clean_color_string.substring(4, clean_color_string.length - 1).replace(/ /g, '').split(',').map(val => parseInt(val, 10));
     if ( (rgb.length <= 1) || (isNaN(rgb[0])) ) {
       throw new Error(`Rgb string in wrong format`)

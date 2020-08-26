@@ -33,7 +33,7 @@ const DisplayList: React.FunctionComponent<ChipListProps> = ({
     return (
       <VChip
         style={{margin:"2px"}}
-        key={index}
+        key={label}
         label={label}
         onCLick={() => {
           if (typeof onClick == "function") { onClick({ label: label, index: index }) }
@@ -61,7 +61,7 @@ const DisplayList: React.FunctionComponent<ChipListProps> = ({
 
 const VAutoComplete: React.FunctionComponent<AutoCompleteProps> = ({
   //style properties
-  primary, secundary, dark,
+  primary, secondary, dark,
   className,
   style,
   //functional properties
@@ -79,7 +79,7 @@ const VAutoComplete: React.FunctionComponent<AutoCompleteProps> = ({
   const [isOpen, setOpen] = useState(false)
   const [inputText, setInputText] = useState("")
   const isDoubleBinded = typeof onChange === 'function' && value ? true : false
-  const [SelectedList, setSelectedList] = useState([] as string[])
+  const [selectedList, setSelectedList] = useState([] as string[])
 
   //generate a dynamic list depending on the state
   const wrapped_options = options ? options : []
@@ -106,7 +106,7 @@ const VAutoComplete: React.FunctionComponent<AutoCompleteProps> = ({
 
   // wrapped the rendered element with a two way binding
   const input_component_props = {
-    primary:primary, secundary:secundary, dark:dark,
+    primary:primary, secondary:secondary, dark:dark,
     className: styles.input_style,
     value: isDoubleBinded ? value : inputText,
     onChange: (e: React.ChangeEvent<HTMLInputElement>) => {
@@ -136,11 +136,11 @@ const VAutoComplete: React.FunctionComponent<AutoCompleteProps> = ({
       {// render a list if multiple selection
         multiple ? (
           <DisplayList
-            list={SelectedList}
+            list={selectedList}
             onDelete={(obj) => {
 
               //delete the item from the list
-              setSelectedList(SelectedList.filter(label => label !== obj.label));
+              setSelectedList(selectedList.filter(label => label !== obj.label));
               
             }}
           />
@@ -158,7 +158,7 @@ const VAutoComplete: React.FunctionComponent<AutoCompleteProps> = ({
           
           // add to list if multiple selections is on
           if (multiple) {
-            setSelectedList([...SelectedList, obj.label])
+            setSelectedList([...selectedList, obj.label])
             setInputText("")  
           } else {
             setInputText(obj.label)

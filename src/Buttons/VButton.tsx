@@ -46,7 +46,7 @@ const VButton: React.FunctionComponent<ButtonProps> = ({
   className,
   style,
   theme,
-  primary, secundary, dark,
+  primary, secondary, dark,
 
   //functional properties
   isPressed,
@@ -68,8 +68,8 @@ const VButton: React.FunctionComponent<ButtonProps> = ({
   // generate the theme depending on the boolean inputs or the theme input
   const wrapped_className = [styles.action_button, className ? className : ""].join(" ")
   let current_theme:Theme;
-  if (secundary) {
-    current_theme = DefaultThemes.secundary
+  if (secondary) {
+    current_theme = DefaultThemes.secondary
   } else if (dark) {
     current_theme = DefaultThemes.dark
   } else if (primary) {

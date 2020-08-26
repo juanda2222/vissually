@@ -17,3 +17,5 @@ export {
   VChip,
   VAutoComplete,
 }
+
+export type VThemeType = Theme

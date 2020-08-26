@@ -1,7 +1,7 @@
 import React, { } from 'react'
 
 
-const DefaultThemes: {primary: Theme, secundary: Theme, dark: Theme} = {
+const DefaultThemes: {primary: Theme, secondary: Theme, dark: Theme} = {
   primary: {
     textColor1: "rgb(0, 0, 0)", 
     textColor2: "rgb(255, 255, 255)", 
@@ -10,7 +10,7 @@ const DefaultThemes: {primary: Theme, secundary: Theme, dark: Theme} = {
     backgroundColor1: "rgb(255, 255, 255)", 
     backgroundColor2: "rgb(70, 140, 170)", 
   },
-  secundary: {
+  secondary: {
     textColor1: "rgb(30, 30, 30)",
     textColor2:  "rgb(240, 240, 240)",
     color1: "#10b462",
@@ -34,13 +34,13 @@ const VThemeProvider: React.FunctionComponent<ThemeProps> = ({
   children,
   theme,
   primary,
-  secundary,
+  secondary,
   dark
 }) => {
 
   var current_theme:Theme;
-  if (secundary) {
-    current_theme = DefaultThemes.secundary
+  if (secondary) {
+    current_theme = DefaultThemes.secondary
   } else if (dark) {
     current_theme = DefaultThemes.dark
   } else if (primary) {

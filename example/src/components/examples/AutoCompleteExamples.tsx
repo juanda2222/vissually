@@ -81,11 +81,11 @@ const AutoCompleteExample = () => (
                 renderInput={(params:any) => <VInput {...params} placeholder="Default" />}
             />
             <VAutoComplete
-                secundary
+                secondary
                 options={autocomplete_list}
                 getOptionLabel={(option: {title:number, year:string}) => option.title}
                 style={{ width: 300 }}
-                renderInput={(params:any) => <VInput {...params} placeholder="Secundary" />}
+                renderInput={(params:any) => <VInput {...params} placeholder="Secondary" />}
             />
             <VAutoComplete
                 options={autocomplete_list}

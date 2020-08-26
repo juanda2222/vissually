@@ -15,9 +15,9 @@ const TextInputExample = () => (
                 console.log("default string: ", e.target.value)
             }}
         />
-        <VInput secundary placeholder="secundary" name="year" type="number"
+        <VInput secondary placeholder="secondary" name="year" type="number"
             onChange={(e:React.ChangeEvent<HTMLInputElement>) => {
-                console.log("secundary string: ", e.target.value)
+                console.log("secondary string: ", e.target.value)
             }}
         />
         <VInput 
@@ -26,7 +26,7 @@ const TextInputExample = () => (
             type="number"
             name="year" 
             onChange={(e: React.ChangeEvent<HTMLInputElement>) => {
-                console.log("secundary string: ", e.target.value)
+                console.log("secondary string: ", e.target.value)
             }} />
     </div>
 )
