@@ -2,7 +2,7 @@
 import React, { useState } from 'react'
 import { VInput, VButton, } from 'vissually'
 
-const TextInputExample = () => {
+const TextInputExample = (props: {dark?:boolean}) => {
     
     const [text, setText] = useState("")
     return (    
@@ -11,9 +11,10 @@ const TextInputExample = () => {
             flexDirection: "column",
             alignItems: "center",
         }}>
-            <p> Simple Text Inputs: </p>
+            <h4 style={{ color:props.dark ? "#ffffff":"#000000" }}>Simple Text Inputs:</h4>
             <div style={{display:"flex",  justifyContent:"center", marginBottom:"15px"}}>
                 <VInput
+                    primaryDark={props.dark}
                     placeholder="default"
                     name="name"
                     onChange={(e:React.ChangeEvent<HTMLInputElement>) => {
@@ -21,7 +22,8 @@ const TextInputExample = () => {
                     }}
                 />
                 <VInput
-                    secondary
+                    secondaryDark={props.dark}
+                    secondary={!props.dark}
                     placeholder="secondary"
                     name="name"
                     onChange={(e:React.ChangeEvent<HTMLInputElement>) => {
@@ -29,7 +31,11 @@ const TextInputExample = () => {
                     }}
                 />
                 <VInput 
-                    style={{ backgroundColor: "rgba(170,50,50, 0.3)", borderColor: "rgb(150,20,20)" }} 
+                    primaryDark={props.dark}
+                    style={{
+                        backgroundColor: "rgba(170,50,50, 0.1)",
+                        borderColor: "rgb(150,20,20)"
+                    }} 
                     labelStyle={{color:"rgb(150,20,20)"}}
                     placeholder="custom" 
                     name="name" 
@@ -37,8 +43,12 @@ const TextInputExample = () => {
                         console.log("secondary string: ", e.target.value)
                     }} />
             </div>
-            <p> Fully controlled: </p>
-            <VInput placeholder="controlled input" name="name" value={text} 
+            <h4 style={{ color:props.dark ? "#ffffff":"#000000" }}>Fully controlled:</h4>
+            <VInput
+                placeholder="controlled input"
+                name="name"
+                primaryDark={props.dark}
+                value={text} 
                 onChange={(e:React.ChangeEvent<HTMLInputElement>)=>{
                     setText(e.target.value)
                     console.log("controlled text: ", text)

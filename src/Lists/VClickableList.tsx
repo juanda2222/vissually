@@ -29,8 +29,8 @@ const StyledTopItem = styled(StyledItem)`
   border-top-right-radius: 8px;
 `;
 const StyledBottomItem = styled(StyledItem)`
-  border-top-bottom-radius: 8px;
-  border-top-bottom-radius: 8px;
+  border-bottom-left-radius: 8px;
+  border-bottom-right-radius: 8px;
 `;
     
 const VClickableList: React.FunctionComponent<ListProps> = ({
@@ -38,7 +38,7 @@ const VClickableList: React.FunctionComponent<ListProps> = ({
   className,
   style,
   theme,
-  primary, secondary, dark,
+  primary, secondary, primaryDark, secondaryDark,
   containerClassName,
 
   //functional properties
@@ -56,8 +56,10 @@ const VClickableList: React.FunctionComponent<ListProps> = ({
   let current_theme: Theme;
   if (secondary) {
     current_theme = DefaultThemes.secondary
-  } else if (dark) {
-    current_theme = DefaultThemes.dark
+  } else if (primaryDark) {
+    current_theme = DefaultThemes.primaryDark
+  } else if (secondaryDark) {
+    current_theme = DefaultThemes.secondaryDark
   } else if (primary) {
     current_theme = DefaultThemes.primary
   } else if (!(typeof (context_theme) == "undefined")) {

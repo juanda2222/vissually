@@ -1,7 +1,12 @@
 import React, { } from 'react'
 
 
-const DefaultThemes: {primary: Theme, secondary: Theme, dark: Theme} = {
+const DefaultThemes: {
+  primary: Theme,
+  secondary: Theme,
+  secondaryDark: Theme,
+  primaryDark: Theme
+} = {
   primary: {
     textColor1: "rgb(0, 0, 0)", 
     textColor2: "rgb(255, 255, 255)", 
@@ -13,18 +18,26 @@ const DefaultThemes: {primary: Theme, secondary: Theme, dark: Theme} = {
   secondary: {
     textColor1: "rgb(30, 30, 30)",
     textColor2:  "rgb(240, 240, 240)",
+    color1: "#0e9d55",
+    color2: "#0e9d55",
+    backgroundColor1: "rgb(250, 250, 250)",
+    backgroundColor2: "rgb(70, 140, 170)",
+  },
+  primaryDark: {
+    textColor1: "rgb(192, 197, 206)", 
+    textColor2: "rgb(255, 255, 255)", 
+    color1: "#1e8eb7", 
+    color2: "#1e8eb7", 
+    backgroundColor1: "rgb(255, 255, 255)", 
+    backgroundColor2: "rgb(70, 140, 170)", 
+  },
+  secondaryDark: {
+    textColor1: "rgb(192, 197, 206)", 
+    textColor2: "rgb(255, 255, 255)",
     color1: "#10b462",
     color2: "#10b462",
     backgroundColor1: "rgb(250, 250, 250)",
     backgroundColor2: "rgb(70, 140, 170)",
-  },
-  dark: {
-    textColor1: "rgb(0, 0, 0)",
-    textColor2: "rgb(255, 255, 255)",
-    color1: "#10b462",
-    color2: "#10b462",
-    backgroundColor1: "rgb(70, 140, 170)",
-    backgroundColor2: "rgb(255, 255, 255)",
   }
 }
 
@@ -35,14 +48,17 @@ const VThemeProvider: React.FunctionComponent<ThemeProps> = ({
   theme,
   primary,
   secondary,
-  dark
+  primaryDark,
+  secondaryDark
 }) => {
 
   var current_theme:Theme;
   if (secondary) {
     current_theme = DefaultThemes.secondary
-  } else if (dark) {
-    current_theme = DefaultThemes.dark
+  } else if (secondaryDark) {
+    current_theme = DefaultThemes.secondaryDark
+  } else if (primaryDark) {
+    current_theme = DefaultThemes.primaryDark
   } else if (primary) {
     current_theme = DefaultThemes.primary
   } else if (theme) {

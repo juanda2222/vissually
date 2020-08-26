@@ -7,8 +7,29 @@
 
 .list_container{
 	border-radius: 8px;
-	overflow-y: auto;
+	overflow: overlay;
 	max-height: 200px;
 	margin: 0px 5px;
 }
 
+/* width */
+.list_container::-webkit-scrollbar {
+	width: 12px;
+  }
+  
+/* Track */
+.list_container::-webkit-scrollbar-track {
+	background: rgba(220, 220, 220, 0.9);
+}
+
+/* Handle */
+.list_container::-webkit-scrollbar-thumb {
+	background: #888;
+	border-radius: 10px;
+
+}
+
+/* Handle on hover */
+.list_container::-webkit-scrollbar-thumb:hover {
+	background: rgb(116, 116, 116);
+}

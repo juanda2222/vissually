@@ -61,7 +61,7 @@ const DisplayList: React.FunctionComponent<ChipListProps> = ({
 
 const VAutoComplete: React.FunctionComponent<AutoCompleteProps> = ({
   //style properties
-  primary, secondary, dark,
+  primary, secondary, primaryDark, secondaryDark,
   className,
   style,
   //functional properties
@@ -106,7 +106,7 @@ const VAutoComplete: React.FunctionComponent<AutoCompleteProps> = ({
 
   // wrapped the rendered element with a two way binding
   const input_component_props = {
-    primary:primary, secondary:secondary, dark:dark,
+    primary, secondary, primaryDark, secondaryDark,
     className: styles.input_style,
     value: isDoubleBinded ? value : inputText,
     onChange: (e: React.ChangeEvent<HTMLInputElement>) => {

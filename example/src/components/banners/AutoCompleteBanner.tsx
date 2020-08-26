@@ -12,7 +12,7 @@ const TextInputBanner = (props: {dark?:boolean}) => {
   return (
     <div>
       <h3 style={{ color:props.dark ? "#ffffff":"#000000" }}>AutoComplete example:</h3>
-        <AutoCompleteExamples/>
+        <AutoCompleteExamples dark={props.dark}/>
         <h3 style={{ color:props.dark ? "#ffffff":"#000000" }}>Full Code:</h3>
         <SyntaxHighlighter language="javascript" style={props.dark ? anOldHope : docco}>
             {AutoCompleteExamplesCode.string}

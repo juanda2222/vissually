@@ -35,9 +35,7 @@ const VTextInput: React.FunctionComponent<InputProps> = ({
   parentStyle,
   labelStyle,
   theme,
-  primary,
-  secondary,
-  dark,
+  primary, secondary, primaryDark, secondaryDark,
 
   //functional properties
   value,
@@ -75,8 +73,10 @@ const VTextInput: React.FunctionComponent<InputProps> = ({
   let current_theme:Theme;
   if (secondary) {
     current_theme = DefaultThemes.secondary
-  } else if (dark) {
-    current_theme = DefaultThemes.dark
+  } else if (primaryDark) {
+    current_theme = DefaultThemes.primaryDark
+  } else if (secondaryDark) {
+    current_theme = DefaultThemes.secondaryDark
   } else if (primary) {
     current_theme = DefaultThemes.primary
   } else if (!(typeof (context_theme) == "undefined")) {

@@ -65,29 +65,31 @@ const autocomplete_list = [
     { title: 'Django Unchained', year: 2012 },
 ]
 
-const AutoCompleteExample = () => (
+const AutoCompleteExample = (props: {dark?:boolean}) => (
     <div style={{
         display: "flex",
         flexDirection: "column",
         alignItems: "center",
-        backgroundColor: "#fafafa"
     }}>
-        <p> Simple AutoComplete: </p>
+        <h4 style={{ color:props.dark ? "#ffffff":"#000000" }}> Simple AutoComplete: </h4>
         <div style={{ display:"flex",  justifyContent:"center", marginBottom:"15px" }}>
             <VAutoComplete
+                primaryDark={props.dark}
                 options={autocomplete_list}
                 getOptionLabel={(option: {title:number, year:string}) => option.title}
                 style={{ width: 300 }}
                 renderInput={(params:any) => <VInput {...params} placeholder="Default" />}
             />
             <VAutoComplete
-                secondary
+                secondary={!props.dark}
+                secondaryDark={props.dark}
                 options={autocomplete_list}
                 getOptionLabel={(option: {title:number, year:string}) => option.title}
                 style={{ width: 300 }}
                 renderInput={(params:any) => <VInput {...params} placeholder="Secondary" />}
             />
             <VAutoComplete
+                primaryDark={props.dark}
                 options={autocomplete_list}
                 getOptionLabel={(option: {title:number, year:string}) => option.title}
                 style={{ width: 300}}
@@ -97,9 +99,10 @@ const AutoCompleteExample = () => (
                 />}
             />
         </div>
-        <p> Multiple Selection: </p>
+        <h4 style={{ color:props.dark ? "#ffffff":"#000000" }}> Multiple Selection AutoComplete: </h4>
         <VAutoComplete
             multiple
+            primaryDark={props.dark}
             options={autocomplete_list}
             getOptionLabel={(option: { title:number, year:string }) => option.title}
             style={{ width: 300 }}

@@ -2,26 +2,36 @@
 import React from 'react'
 import { VInput } from 'vissually'
 
-const TextInputExample = () => (
+const TextInputExample = (props: {dark?:boolean}) => (
     
     <div style={{
         display: "flex",
         justifyContent: "center",
         marginBottom: "15px",
-        backgroundColor: "#fafafa"
     }}>
-        <VInput placeholder="default" name="year" type="number"
+        <VInput
+            primaryDark={props.dark}
+            placeholder="default"
+            name="year"
+            type="number"
             onChange={(e:React.ChangeEvent<HTMLInputElement>) => {
                 console.log("default string: ", e.target.value)
             }}
         />
-        <VInput secondary placeholder="secondary" name="year" type="number"
+        <VInput
+            secondary={!props.dark}
+            secondaryDark={props.dark}
+            placeholder="secondary"
+            name="year"
+            type="number"
             onChange={(e:React.ChangeEvent<HTMLInputElement>) => {
                 console.log("secondary string: ", e.target.value)
             }}
         />
         <VInput 
-            style ={{backgroundColor:"rgba(170,50,50, 0.3)", borderColor:"rgb(150,20,20)"}} 
+            style={{ backgroundColor: "rgba(170,50,50, 0.1)", borderColor: "rgb(150,20,20)" }} 
+            labelStyle={{ color: "rgb(150,20,20)" }}
+            primaryDark={props.dark}
             placeholder="custom" 
             type="number"
             name="year" 
