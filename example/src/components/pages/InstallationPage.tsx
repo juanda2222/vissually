@@ -56,7 +56,7 @@ const InstallationPage = (props: {dark:boolean}) => {
       <Typography className={classes.text} variant="h5">
         Install Vissually, the world's most popular React UI framework.
       </Typography>
-      <Typography className={classes.text} variant="h6">
+      <Typography className={classes.text} variant="h5">
         Vissually is available as an <Link color="secondary" href="https://www.npmjs.com/package/@juandara22/vissually" >npm package.</Link>
       </Typography>
       <Typography  className={classes.text} variant="h2" >

@@ -72,7 +72,7 @@ const AutoCompleteExample = (props: {dark?:boolean}) => (
         alignItems: "center",
     }}>
         <h4 style={{ color:props.dark ? "#ffffff":"#000000" }}> Simple AutoComplete: </h4>
-        <div style={{ display:"flex",  justifyContent:"center", marginBottom:"15px" }}>
+        <div className={"responsiveFlex"} style={{marginBottom:"15px"}}>
             <VAutoComplete
                 primaryDark={props.dark}
                 options={autocomplete_list}

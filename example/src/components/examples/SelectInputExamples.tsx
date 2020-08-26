@@ -21,7 +21,7 @@ const example_list=[
     ]
     
 const SelectInputExample = () => (
-    <div style={{display:"flex",  justifyContent:"center"}}>
+    <div className={"responsiveFlex"}>
         <VSelect label="default" list={example_list} />
         <VSelect label="secondary" list={example_list} secondary/>
         <VSelect label="custom" style={{

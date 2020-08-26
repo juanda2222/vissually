@@ -4,7 +4,7 @@ import { VButton } from 'vissually'
 
 const ButtonExample = () => (
     
-    <div style={{ display:"flex",  justifyContent:"center" }}>
+    <div className={"responsiveFlex"}>
         <VButton>{"Default"}</VButton>
         <VButton secondary>{"Secondary"}</VButton>
         <VButton style={{

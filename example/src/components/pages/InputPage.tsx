@@ -45,14 +45,14 @@ const InputPage = (props: {dark?:boolean}) => {
       <Typography className={classes.text} variant="h5">
         Text and number fields let users enter and edit values like a normal html input tag.
       </Typography>
-      <Typography className={classes.text} variant="h6">
+      <Typography className={classes.text} variant="h5">
         Text fields allow users to enter text into a UI. They typically appear in forms and dialogs.
       </Typography>
-      <Typography className={classes.text} variant="h4">
+      <Typography className={classes.text} variant="h3">
         Text Input
       </Typography>
       <InputBanner dark={dark} />
-      <Typography className={classes.text} variant="h4">
+      <Typography className={classes.text} variant="h3">
         Number Input
       </Typography>
       <NumberInputBanner dark={dark} />
@@ -94,7 +94,7 @@ const InputPage = (props: {dark?:boolean}) => {
           color="secondary"
           href="https://personal-public-files-23rde2.s3.amazonaws.com/documentation/index.html"
         >
-          here.
+          {" here."}
         </Link>
       </Typography>
     </div>

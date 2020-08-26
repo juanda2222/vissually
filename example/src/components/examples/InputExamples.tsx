@@ -12,7 +12,7 @@ const TextInputExample = (props: {dark?:boolean}) => {
             alignItems: "center",
         }}>
             <h4 style={{ color:props.dark ? "#ffffff":"#000000" }}>Simple Text Inputs:</h4>
-            <div style={{display:"flex",  justifyContent:"center", marginBottom:"15px"}}>
+            <div className={"responsiveFlex"} style={{marginBottom:"15px"}}>
                 <VInput
                     primaryDark={props.dark}
                     placeholder="default"

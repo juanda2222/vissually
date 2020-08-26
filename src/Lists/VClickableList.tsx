@@ -7,20 +7,20 @@ import { DefaultThemes, ThemeContext } from "../ThemeProvider/ThemeProvider"
 
 
 // style the container
-const StyledContainer = styled("div")<{border_color:string}>`
-  border: 0.5px solid ${props => props.border_color};
+const StyledContainer = styled("div")<{borderColor:string}>`
+  border: 0.5px solid ${props => props.borderColor};
 `;
 
 // style the selectable item:
-const StyledItem = styled("div") < { text_color: string, main_rgb: number[] }>`
+const StyledItem = styled("div") < { text_color: string, rgbBackgroundColor: number[] }>`
   
   color: ${props => props.text_color};
-  background: ${ props => `rgba(${props.main_rgb[0] - 20}, ${props.main_rgb[1] - 20}, ${props.main_rgb[2] - 20}, 0.9)`};
+  background: ${ props => `rgba(${props.rgbBackgroundColor[0] - 20}, ${props.rgbBackgroundColor[1] - 20}, ${props.rgbBackgroundColor[2] - 20}, 0.9)`};
   &:hover{
-    background: ${ props => `rgba(${props.main_rgb[0] - 40}, ${props.main_rgb[1] - 40}, ${props.main_rgb[2] - 40}, 0.9)`};
+    background: ${ props => `rgba(${props.rgbBackgroundColor[0] - 40}, ${props.rgbBackgroundColor[1] - 40}, ${props.rgbBackgroundColor[2] - 40}, 0.9)`};
   };
   &:active{
-    background: ${ props => `rgba(${props.main_rgb[0] - 60}, ${props.main_rgb[1] - 60}, ${props.main_rgb[2] - 60}, 0.9)`};
+    background: ${ props => `rgba(${props.rgbBackgroundColor[0] - 60}, ${props.rgbBackgroundColor[1] - 60}, ${props.rgbBackgroundColor[2] - 60}, 0.9)`};
   }
 `;
 
@@ -69,7 +69,7 @@ const VClickableList: React.FunctionComponent<ListProps> = ({
   }
   
   // generate the component from the style
-  const rgb_list = Color2Vec(current_theme.backgroundColor1)
+  const rgbThemeBackgroundColor = Color2Vec(current_theme.backgroundColor1)
   
 
   // style the children:
@@ -86,10 +86,10 @@ const VClickableList: React.FunctionComponent<ListProps> = ({
     }
 
 
-    let item_props = {
+    const item_props = {
       //custom theme:
       text_color: current_theme.textColor1,
-      main_rgb: rgb_list,
+      rgbBackgroundColor: rgbThemeBackgroundColor,
       //styling
       className: wrapped_className,
       style: style,
@@ -114,7 +114,7 @@ const VClickableList: React.FunctionComponent<ListProps> = ({
   return (
     wrapped_list.length > 0 ? (
       <StyledContainer
-        border_color={current_theme.color1}
+        borderColor={current_theme.color1}
         className={wrapped_container_className}
       >
         {div_list}

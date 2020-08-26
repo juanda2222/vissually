@@ -48,7 +48,7 @@ const GetStartedPage = (props: { dark: boolean }) => {
       <Typography className={classes.text} variant="h5">
         Get started with React and Vissually in no time.
       </Typography>
-      <Typography className={classes.text} variant="h6">
+      <Typography className={classes.text} variant="h5">
         You can use any of the components as demonstrated in the documentation. Please refer to each component's demo page to see how they should be imported.
         <Link
           component={RouterLink}
@@ -61,14 +61,12 @@ const GetStartedPage = (props: { dark: boolean }) => {
       <Typography className={classes.text} variant="h3">
         Quick start
       </Typography>
-      <div style={{ display: "flex" }}>
-        <Typography className={classes.text} variant="h6">
-          Here's a quick example to get you started, it's
-        </Typography>
-        <Typography className={classes.text} variant="h6" style={{marginLeft:"6px" ,fontWeight:550}}>
-            literally all you need:
-          </Typography>
-      </div>
+      <Typography className={classes.text} variant="h6">
+        Here's a quick example to get you started.
+      </Typography>
+      <Typography className={classes.text} variant="h6" style={{marginLeft:"6px", fontWeight:550, minWidth:"50%"}}>
+          It is literally all you need:
+      </Typography>
       <SyntaxHighlighter language="javascript" style={props.dark ? anOldHope : docco}>
         {
           `
@@ -79,7 +77,7 @@ const GetStartedPage = (props: { dark: boolean }) => {
 
           function App() {
             return (
-              <Button primary>
+              <Button>
                 Hello World
               </Button>
             );
@@ -135,7 +133,7 @@ const GetStartedPage = (props: { dark: boolean }) => {
           color="secondary"
           href="https://personal-public-files-23rde2.s3.amazonaws.com/documentation/index.html"
         >
-          here.
+          {" here."}
         </Link>
       </Typography>
     </div>

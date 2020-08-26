@@ -44,9 +44,6 @@ const SelectPage = (props: {dark?:boolean}) => {
       <Typography className={classes.text} variant="h5">
         Select components are used for collecting user provided information from a list of options.
       </Typography>
-      <Typography className={classes.text} variant="h4">
-        Select Input
-      </Typography>
       <SelectInputBanner dark={dark} />
       <Typography className={classes.text} variant="h5">
         Keep reading!
@@ -81,12 +78,12 @@ const SelectPage = (props: {dark?:boolean}) => {
         </li>
       </ul>
       <Typography className={classes.text} variant="h6">
-        Need more? See the full documentation
+        Need more? See the full documentation 
         <Link
           color="secondary"
           href="https://personal-public-files-23rde2.s3.amazonaws.com/documentation/index.html"
         >
-          here.
+          {" here."}
         </Link>
       </Typography>
     </div>

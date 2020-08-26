@@ -7,7 +7,7 @@
 
 .list_container{
 	border-radius: 8px;
-	overflow: overlay;
+	overflow: auto;
 	max-height: 200px;
 	margin: 0px 5px;
 }

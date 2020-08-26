@@ -21,9 +21,9 @@ const StyledButton = styled("div") <{
     border-bottom: 5px solid ${props => `rgb(${props.main_rgb[0] - 40}, ${props.main_rgb[1] - 40}, ${props.main_rgb[2] - 40})`};
 
     ${props => props.isActive ? `
-      margin: 14px auto 7px auto;
-      transform: translate(0px,5px);
-      -webkit-transform: translate(0px,5px);
+      margin: 18px 8px 11px 8px;
+      transform: translate(0px,3px);
+      -webkit-transform: translate(0px,3px);
       border-bottom: 1px solid;
       border-color: transparent;
     `: ""}
@@ -33,9 +33,9 @@ const StyledButton = styled("div") <{
     }`}
     
     &:active{
-      margin: 14px auto 7px auto;
-      transform: translate(0px,5px);
-      -webkit-transform: translate(0px,5px);
+      margin: 18px 8px 11px 8px;
+      transform: translate(0px,3px);
+      -webkit-transform: translate(0px,3px);
       border-bottom: 1px solid;
       border-color: transparent;
     }
