@@ -4,7 +4,12 @@ import { VInput } from 'vissually'
 
 const TextInputExample = () => (
     
-    <div style={{display:"flex",  justifyContent:"center", marginBottom:"15px", backgroundColor:"#fafafa"}}>
+    <div style={{
+        display: "flex",
+        justifyContent: "center",
+        marginBottom: "15px",
+        backgroundColor: "#fafafa"
+    }}>
         <VInput placeholder="default" name="year" type="number"
             onChange={(e:React.ChangeEvent<HTMLInputElement>) => {
                 console.log("default string: ", e.target.value)

@@ -7,7 +7,12 @@ import {
 
 const TextInputExample = () => (
 
-    <div style={{ display: "flex", flexDirection: "column", alignItems: "center", backgroundColor: "#fafafa" }}>
+    <div style={{
+        display: "flex",
+        flexDirection: "column",
+        alignItems: "center",
+        backgroundColor: "#fafafa"
+    }}>
         <h3>Inputs:</h3>
         <p> Default Text Inputs: </p>
         <VChip label="label!" />

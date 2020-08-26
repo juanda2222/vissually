@@ -66,9 +66,14 @@ const autocomplete_list = [
 ]
 
 const AutoCompleteExample = () => (
-    <div style={{display:"flex", flexDirection:"column", alignItems:"center", backgroundColor:"#fafafa"}}>
+    <div style={{
+        display: "flex",
+        flexDirection: "column",
+        alignItems: "center",
+        backgroundColor: "#fafafa"
+    }}>
         <p> Simple AutoComplete: </p>
-        <div style={{display:"flex",  justifyContent:"center", marginBottom:"15px"}}>
+        <div style={{ display:"flex",  justifyContent:"center", marginBottom:"15px" }}>
             <VAutoComplete
                 options={autocomplete_list}
                 getOptionLabel={(option: {title:number, year:string}) => option.title}
@@ -96,7 +101,7 @@ const AutoCompleteExample = () => (
         <VAutoComplete
             multiple
             options={autocomplete_list}
-            getOptionLabel={(option: {title:number, year:string}) => option.title}
+            getOptionLabel={(option: { title:number, year:string }) => option.title}
             style={{ width: 300 }}
             renderInput={(params:any) => <VInput {...params} placeholder="Multiple" />}
         />

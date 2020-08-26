@@ -26,18 +26,23 @@ const custom_theme:Theme = {
 }
 
 const StylesExample = () => (
-    <div style={{ display: "flex", flexDirection: "column", alignItems: "center", backgroundColor:"#fafafa"}}>
+    <div style={{
+        display: "flex",
+        flexDirection: "column",
+        alignItems: "center",
+        backgroundColor: "#fafafa",
+    }}>
         <VThemeProvider secundary>
             <p>Default theme provider:</p>
-            <VButton style={{padding:"30px", }}>{"BIG"}</VButton>
+            <VButton style={{ padding:"30px", }}>{"BIG"}</VButton>
             <VButton style={{ padding: "5px" }}>{"small"}</VButton>
-            <VInput parentStyle={{width: "400px"}} placeholder="large" name="name"/>
+            <VInput parentStyle={{ width: "400px" }} placeholder="large" name="name"/>
         </VThemeProvider>
         <VThemeProvider theme={custom_theme}>
             <p>Custom theme:</p>
-            <VButton style={{padding:"30px", }}>{"BIG"}</VButton>
+            <VButton style={{ padding:"30px" }}>{"BIG"}</VButton>
             <VButton style={{ padding: "5px" }}>{"small"}</VButton>
-            <VInput parentStyle={{width: "400px"}} placeholder="large" name="name"/>
+            <VInput parentStyle={{ width: "400px" }} placeholder="large" name="name"/>
         </VThemeProvider>
     </div>
 )

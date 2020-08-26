@@ -24,7 +24,10 @@ const SelectInputExample = () => (
     <div style={{display:"flex",  justifyContent:"center"}}>
         <VSelect label="default" list={example_list} />
         <VSelect label="secundary" list={example_list} secundary/>
-        <VSelect label="custom" style={{backgroundColor:"rgb(170,50,50)", borderColor:"rgb(150,20,20)"}} list={example_list}/>
+        <VSelect label="custom" style={{
+            backgroundColor: "rgb(170,50,50)",
+            borderColor: "rgb(150,20,20)"
+        }} list={example_list} />
     </div>
 )
 

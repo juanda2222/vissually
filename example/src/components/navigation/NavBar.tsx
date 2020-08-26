@@ -53,12 +53,7 @@ const ButtonAppBar = (props:ButtonAppBarProps) => {
       <AppBar position="static">
         <Toolbar>
           <MenuButtonLeftDrawer className={classes.menuButton}/>
-          <Button
-            variant="text"
-            color="inherit"
-            className={classes.title}
-            component={RouterLink} to="/"
-          >
+          <Button variant="text" color="inherit" className={classes.title} component={RouterLink} to="/">
             Vissually
           </Button>  
           {is_dark ?
@@ -81,7 +76,6 @@ const ButtonAppBar = (props:ButtonAppBarProps) => {
     </div>
   );
 }
-
 
 
 const mapStateToProps = (state:ThemeStateType /*, ownProps*/) => {
