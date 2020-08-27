@@ -55,7 +55,7 @@ const VButton: React.FunctionComponent<ButtonProps> = ({
 }) => {  
 
   // get the theme from the context and its hooks
-  const context_theme: Theme = useContext(ThemeContext);
+  const context_theme = useContext(ThemeContext);
 
 
   // all the event handlers wrapped for custom styling
@@ -67,7 +67,8 @@ const VButton: React.FunctionComponent<ButtonProps> = ({
 
   // generate the theme depending on the boolean inputs or the theme input
   const wrapped_className = [styles.action_button, className ? className : ""].join(" ")
-  let current_theme:Theme;
+
+  let current_theme: DefaultTheme;
   if (secondary) {
     current_theme = DefaultThemes.secondary
   } else if (primaryDark) {
@@ -79,7 +80,10 @@ const VButton: React.FunctionComponent<ButtonProps> = ({
   } else if (!(typeof (context_theme) == "undefined")) {
     current_theme = context_theme
   } else {
-    current_theme = theme ? theme : DefaultThemes.primary
+    current_theme = {
+      ...DefaultThemes.primary,
+      ...(theme && theme)
+    } 
   }
 
   // generate the component style theme

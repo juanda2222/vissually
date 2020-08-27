@@ -35,7 +35,7 @@ const DisplayList: React.FunctionComponent<ChipListProps> = ({
         style={{margin:"2px"}}
         key={label}
         label={label}
-        onCLick={() => {
+        onClick={() => {
           if (typeof onClick == "function") { onClick({ label: label, index: index }) }
         }}
         onDelete={() => {

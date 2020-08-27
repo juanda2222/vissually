@@ -2,10 +2,10 @@ import React, { } from 'react'
 
 
 const DefaultThemes: {
-  primary: Theme,
-  secondary: Theme,
-  secondaryDark: Theme,
-  primaryDark: Theme
+  primary: DefaultTheme,
+  secondary: DefaultTheme,
+  secondaryDark: DefaultTheme,
+  primaryDark: DefaultTheme
 } = {
   primary: {
     textColor1: "rgb(0, 0, 0)", 
@@ -43,7 +43,7 @@ const DefaultThemes: {
 
 const ThemeContext = React.createContext(DefaultThemes.primary)
 
-const VThemeProvider: React.FunctionComponent<ThemeProps> = ({
+const VThemeProvider: React.FunctionComponent<ThemeProviderProps> = ({
   children,
   theme,
   primary,
@@ -52,7 +52,7 @@ const VThemeProvider: React.FunctionComponent<ThemeProps> = ({
   secondaryDark
 }) => {
 
-  var current_theme:Theme;
+  var current_theme:DefaultTheme;
   if (secondary) {
     current_theme = DefaultThemes.secondary
   } else if (secondaryDark) {
@@ -62,7 +62,10 @@ const VThemeProvider: React.FunctionComponent<ThemeProps> = ({
   } else if (primary) {
     current_theme = DefaultThemes.primary
   } else if (theme) {
-    current_theme = theme
+    current_theme = {
+      ...DefaultThemes.primary,
+      ...( theme && theme )
+    } 
   } else {
     current_theme = DefaultThemes.primary
   }

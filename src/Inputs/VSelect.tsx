@@ -48,7 +48,10 @@ const VSelect: React.FunctionComponent<SelectProps> = ({
   } else if (!(typeof (context_theme) == "undefined")) {
     current_theme = context_theme
   } else {
-    current_theme = theme ? theme : DefaultThemes.primary
+    current_theme = {
+      ...DefaultThemes.primary,
+      ...(theme && theme)
+    } 
   }
 
   // use effect to subscribe the outside click element
