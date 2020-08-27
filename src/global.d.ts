@@ -119,8 +119,8 @@ interface ChipListProps {
 }
 
 interface AutoCompleteProps{
-  className,
-  style,
+  className?,
+  style?,
   theme?: Theme,
   primary?: boolean, secondary?: boolean,
   primaryDark?: boolean, secondaryDark?: boolean,
@@ -129,8 +129,8 @@ interface AutoCompleteProps{
   value?: string,
   getOptionLabel?: (optionElement: any) => string,
   onChange?: (event: React.ChangeEvent<HTMLInputElement>) => void,
-  onFocus: (event: React.FocusEvent<HTMLInputElement>) => void,
-  onBlur: (event: React.FocusEvent<HTMLInputElement>) => void,
+  onFocus?: (event: React.FocusEvent<HTMLInputElement>) => void,
+  onBlur?: (event: React.FocusEvent<HTMLInputElement>) => void,
   
   options: any[],
   renderInput: (props: any) => React.ReactNode,
