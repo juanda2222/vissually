@@ -30,8 +30,7 @@ deploy:
 
   - provider: s3
     access_key_id: "$AWS_ACCESS_KEY"
-    secret_access_key:
-      secure: "qdqGIMqBVQj/+l3CJ+wWP+axtNFrSacwi1hm8Xr1BJvhWS0Jcc4IeAKzxqAGNXMDGkyfPDZ0wUCg+d5QbnQgCkqELx99ChqcUl+Dh7/u64DCKXLKjjHruVqc645t7NeyfXrrvYeq0CKuhNscCi04eWMYrYTzPyqcnF1CAiQ3rOUpRcO7eYB8qSMH3XrIjMm1ZPq5d9iJ49l+eh9MZQZ/KXSimKIoTf/jl95mJ9RrvTPKC4punWt/fp73v4bId2cmPH1lsbKGNl5rHgW3V+ZUMoRt9cMdDFy8Z6rJ3mjU/TICODyA+6GKYS6b34smXLBMfIteQeeHrBPKC3S/SPTzeDlnYRaJetAhoeIChEfywEo2J0gKgTgNhG5B6JS25kNec/zHduisL2IMabkDevXyGw8FTOaD0eLdC4uNmz3v9iBE8jFaknL+OB7xW5lvV8N7xSW0k+ML7sezQN5gsUwJpbOf+bmF9evF1+S7jUoVip58S50psMEhWcL3vC8w38sanpL5HnQJ5DFch7ZCoJv/esSW/BqinUJ5NlXdfJ1MLrHDWJdEy1fEvzeF4rdXKkIr5nB3AmARx0p266RErOoLS8gKZHqcP0QGASPYkromHETlm6vHb+MW4hyYEwuV1ng+ZWX5gb5SLi2+BgmmxAIzQj/jz8bpIkhD0qObzryQqUE="
+    secret_access_key: "$AWS_SECRET_ACCESS_KEY"
     bucket: personal-public-files-23rde2
     local-dir: documentation
     acl: public_read
