@@ -6,7 +6,7 @@ import React, {
 
 import styles from './VAutoComplete.module.css'
 import VClickableList from "../Lists/VClickableList"
-import VChipList from "../lists/VChipList"
+import VChipList from "../Lists/VChipList"
 
 
 function VAutoComplete({

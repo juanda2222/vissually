@@ -14,7 +14,7 @@ cache:
   directories:
   - node_modules
 
-  before_deploy:
+before_deploy:
   - typedoc --out ./documentation/ src
 
 deploy:
