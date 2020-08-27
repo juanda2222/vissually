@@ -24,17 +24,16 @@ deploy:
     api_key: "$NPM_API_KEY"
     on:
       tags: true
-      all_branches: true
       repo: juanda2222/vissually
-    skip_cleanup: 'true'
+    cleanup: 'true'
 
   - provider: s3
     access_key_id: "$AWS_ACCESS_KEY"
     secret_access_key: "$AWS_SECRET_ACCESS_KEY"
     bucket: personal-public-files-23rde2
-    local-dir: documentation
+    local_dir: documentation
     acl: public_read
     on:
       repo: juanda2222/vissually
-    skip_cleanup: 'true'
+    cleanup: 'true'
 
