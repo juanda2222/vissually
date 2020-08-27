@@ -31,6 +31,7 @@ const useStyles = makeStyles((theme: Theme) =>
       display: "flex",
       flexDirection: "column",
       padding: "5vh",
+      minHeight: "calc(100vh - 124px)",
       "& > *": {
         margin: "10px",
       }

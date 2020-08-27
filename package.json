@@ -1,10 +1,10 @@
 {
   "name": "@juandara22/vissually",
   "version": "1.0.1",
-  "description": "Easy to use grafic components for react",
-  "author": "juanda2222",
+  "description": "Easy to use graphic components for react",
+  "author": "juandara22",
   "license": "MIT",
-  "repository": "juanda2222/vissually",
+  "repository": "@juandara22/vissually",
   "main": "dist/index.js",
   "module": "dist/index.modern.js",
   "source": "src/index.tsx",
