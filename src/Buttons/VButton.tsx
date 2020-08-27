@@ -11,25 +11,25 @@ import { DefaultThemes, ThemeContext } from "../ThemeProvider/ThemeProvider"
 
 
 const StyledButton = styled("div") <{
-  isActive?: boolean,
-  text_color: string,
-  main_rgb: number[]
+  buttonIsActive?: boolean,
+  textColor: string,
+  rgbMainButtonColor: number[]
 }>`
 
-    color: ${props => props.text_color};
-    background-color: ${props => `rgb(${props.main_rgb[0]}, ${props.main_rgb[1]}, ${props.main_rgb[2]})`};
-    border-bottom: 5px solid ${props => `rgb(${props.main_rgb[0] - 40}, ${props.main_rgb[1] - 40}, ${props.main_rgb[2] - 40})`};
+    color: ${props => props.textColor};
+    background-color: ${props => `rgb(${props.rgbMainButtonColor[0]}, ${props.rgbMainButtonColor[1]}, ${props.rgbMainButtonColor[2]})`};
+    border-bottom: 5px solid ${props => `rgb(${props.rgbMainButtonColor[0] - 40}, ${props.rgbMainButtonColor[1] - 40}, ${props.rgbMainButtonColor[2] - 40})`};
 
-    ${props => props.isActive ? `
+    ${props => props.buttonIsActive ? `
       margin: 18px 8px 11px 8px;
       transform: translate(0px,3px);
       -webkit-transform: translate(0px,3px);
       border-bottom: 1px solid;
       border-color: transparent;
     `: ""}
-    ${props => props.isActive ? "": `&:hover{
-      background-color: rgb(${props.main_rgb[0] + 20}, ${props.main_rgb[1] + 20}, ${props.main_rgb[2] + 20});
-      border-bottom: 5px solid rgb(${props.main_rgb[0] - 20}, ${props.main_rgb[1] - 20}, ${props.main_rgb[2] - 20});
+    ${props => props.buttonIsActive ? "": `&:hover{
+      background-color: rgb(${props.rgbMainButtonColor[0] + 20}, ${props.rgbMainButtonColor[1] + 20}, ${props.rgbMainButtonColor[2] + 20});
+      border-bottom: 5px solid rgb(${props.rgbMainButtonColor[0] - 20}, ${props.rgbMainButtonColor[1] - 20}, ${props.rgbMainButtonColor[2] - 20});
     }`}
     
     &:active{
@@ -83,14 +83,14 @@ const VButton: React.FunctionComponent<ButtonProps> = ({
   }
 
   // generate the component style theme
-  const main_rgb = Color2Vec(current_theme.color1)
+  const rgbMain = Color2Vec(current_theme.color1)
 
   return (
     <StyledButton
       // custom style props
-      isActive={isPressed}
-      text_color={current_theme.textColor2}
-      main_rgb={main_rgb}
+      buttonIsActive={isPressed}
+      textColor={current_theme.textColor2}
+      rgbMainButtonColor={rgbMain}
 
       //hierarchy props
       className={wrapped_className}

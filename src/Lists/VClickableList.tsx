@@ -49,8 +49,8 @@ const VClickableList: React.FunctionComponent<ListProps> = ({
 
   // get the theme from the context
   const context_theme = useContext(ThemeContext);
-  const wrapped_className = [styles.list_item, className ? className : ""].join(" ")
-  const wrapped_container_className = [styles.list_container, containerClassName].join(" ")
+  const wrappedClassName = [styles.list_item, className ? className : ""].join(" ")
+  const wrappedContainerClassName = [styles.list_container, containerClassName].join(" ")
 
   // generate the theme depending on the boolean inputs or the theme input
   let current_theme: Theme;
@@ -74,7 +74,7 @@ const VClickableList: React.FunctionComponent<ListProps> = ({
 
   // style the children:
   const wrapped_list = list ? list : []
-  const div_list = wrapped_list.map((item, index) => {
+  const DivList = wrapped_list.map((item, index) => {
 
     let label = ""
     // depending on the list structure get the label:
@@ -91,10 +91,10 @@ const VClickableList: React.FunctionComponent<ListProps> = ({
       text_color: current_theme.textColor1,
       rgbBackgroundColor: rgbThemeBackgroundColor,
       //styling
-      className: wrapped_className,
+      className: wrappedClassName,
       style: style,
       //function:
-      key: index,
+      key: label,
       onClick: () => { onClick && onClick({ index: index, label: label }) },
     }
 
@@ -115,9 +115,9 @@ const VClickableList: React.FunctionComponent<ListProps> = ({
     wrapped_list.length > 0 ? (
       <StyledContainer
         borderColor={current_theme.color1}
-        className={wrapped_container_className}
+        className={wrappedContainerClassName}
       >
-        {div_list}
+        {DivList}
       </StyledContainer>
     ): null
   )

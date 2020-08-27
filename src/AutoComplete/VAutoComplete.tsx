@@ -76,14 +76,14 @@ const VAutoComplete: React.FunctionComponent<AutoCompleteProps> = ({
 }) => {
 
   // hooks and state:
-  const [isOpen, setOpen] = useState(false)
+  const [listIsOpen, setListOpen] = useState(false)
   const [inputText, setInputText] = useState("")
   const isDoubleBinded = typeof onChange === 'function' && value ? true : false
   const [selectedList, setSelectedList] = useState([] as string[])
 
   //generate a dynamic list depending on the state
-  const wrapped_options = options ? options : []
-  const filtered_list = wrapped_options.filter( (item:any) => { 
+  const wrappedOptions = options ? options : [] as string[]
+  const filteredList = wrappedOptions.filter( (item:any) => { 
     let label = ""
     // depending on the list structure get the label:
     if (typeof getOptionLabel === 'function') {
@@ -98,14 +98,14 @@ const VAutoComplete: React.FunctionComponent<AutoCompleteProps> = ({
   })
 
   // create all the wrappers for the inputs
-  const wrapped_list_className = [
+  const wrappedListClassName = [
     styles.list_style,
-    isOpen ? styles.fadeIn : styles.fadeOut,
+    listIsOpen ? styles.fadeIn : styles.fadeOut,
     className ? className : ""
   ].join(" ")
 
   // wrapped the rendered element with a two way binding
-  const input_component_props = {
+  const inputComponentProps = {
     primary, secondary, primaryDark, secondaryDark,
     className: styles.input_style,
     value: isDoubleBinded ? value : inputText,
@@ -116,14 +116,14 @@ const VAutoComplete: React.FunctionComponent<AutoCompleteProps> = ({
 
     // add the close and open interaction when the input is focused
     onFocus: (e: React.FocusEvent<HTMLInputElement>) => {
-      setOpen(true)
+      setListOpen(true)
       if (typeof onFocus === 'function') {onFocus(e)}
     },
     onBlur: (e: React.FocusEvent<HTMLInputElement>) => {
-      setOpen(false)
+      setListOpen(false)
 
       // clear if the text has no option
-      if (filtered_list.length < 1) { setInputText("") } 
+      if (filteredList.length < 1) { setInputText("") } 
       if (typeof onBlur === 'function') {onBlur(e)}
     },
   }
@@ -146,15 +146,15 @@ const VAutoComplete: React.FunctionComponent<AutoCompleteProps> = ({
           />
         ) : null
       }
-      {typeof renderInput === 'function' && renderInput(input_component_props)}
+      {typeof renderInput === 'function' && renderInput(inputComponentProps)}
       <VClickableList
         style={style}
-        list={filtered_list}
+        list={filteredList}
         getLabel={getOptionLabel}
-        containerClassName={wrapped_list_className}
+        containerClassName={wrappedListClassName}
         onClick={(obj) => {
 
-          setOpen(false)
+          setListOpen(false)
           
           // add to list if multiple selections is on
           if (multiple) {

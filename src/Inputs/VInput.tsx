@@ -51,25 +51,25 @@ const VTextInput: React.FunctionComponent<InputProps> = ({
 
   // get the theme from the context
   const context_theme: Theme = useContext(ThemeContext);
-  const [isFocused, setFocused] = useState(false)
+  const [inputIsFocused, setInputFocused] = useState(false)
 
   // all the event handlers wrapped for custom styling
-  const wrapped_onFocus = (
+  const wrappedOnFocus = (
     event: React.FocusEvent<HTMLInputElement>,
   ) => {
-    setFocused(true)
+    setInputFocused(true)
     if (typeof onFocus === 'function') {onFocus(event)}
   }
 
-  const wrapped_onBlur = (
+  const wrappedOnBlur = (
     event: React.FocusEvent<HTMLInputElement>,
   ) => {
-    setFocused(false)
+    setInputFocused(false)
     if (typeof onBlur === 'function') {onBlur(event)}
   }
 
   // generate the theme depending on the boolean inputs or the theme input
-  const wrapped_className = [styles.input_element, className ? className : ""].join(" ")
+  const wrappedClassName = [styles.input_element, className ? className : ""].join(" ")
   let current_theme:Theme;
   if (secondary) {
     current_theme = DefaultThemes.secondary
@@ -99,7 +99,7 @@ const VTextInput: React.FunctionComponent<InputProps> = ({
         main_rgb={rgb_main_list}
         textColor={rgb_textColor_list}
         // parent styling props:
-        className={wrapped_className}
+        className={wrappedClassName}
         style={style}
         // functional props:
         value={value}
@@ -109,13 +109,13 @@ const VTextInput: React.FunctionComponent<InputProps> = ({
         type={type}
         required={required}
         onChange={onChange}
-        onFocus={wrapped_onFocus}
-        onBlur={wrapped_onBlur}
+        onFocus={wrappedOnFocus}
+        onBlur={wrappedOnBlur}
       />      
       <StyledLabel
         className={styles.label_element}
         style={labelStyle}
-        isFocused={isFocused}
+        isFocused={inputIsFocused}
         textColor={rgb_textColor_list}
         main_rgb={rgb_main_list}
       >

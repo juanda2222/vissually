@@ -23,16 +23,15 @@ const VSelect: React.FunctionComponent<SelectProps> = ({
   label,
 }) => {
 
-  const [isOpen, setOpen] = useState(false)
+  const [isListOpen, setListOpen] = useState(false)
   const [selectedItem, setSelectedItem] = useState("")
-
 
   // get the theme from the context
   const context_theme: Theme = useContext(ThemeContext);
-  const wrapped_className = [styles.button_style, className ? className : ""].join(" ")
-  const wrapped_list_className = [
+  const wrappedClassName = [styles.button_style, className ? className : ""].join(" ")
+  const wrappedListClassName = [
     styles.list_style,
-    isOpen ? styles.fadeIn : styles.fadeOut,
+    isListOpen ? styles.fadeIn : styles.fadeOut,
     listClassName ? listClassName : ""
   ].join(" ")
 
@@ -59,7 +58,7 @@ const VSelect: React.FunctionComponent<SelectProps> = ({
     // on outside click handler
     const handleClickOutside = (event: MouseEvent) => {
       if (wrapperRef.current && !wrapperRef.current.contains(event.target as Node)) {
-        setOpen(false)
+        setListOpen(false)
       }
     }
     document.addEventListener('mousedown', handleClickOutside);
@@ -80,16 +79,16 @@ const VSelect: React.FunctionComponent<SelectProps> = ({
         secondary={secondary}
         primaryDark={primaryDark}
         secondaryDark={secondaryDark}
-        isPressed={isOpen}
+        isPressed={isListOpen}
         style={style}
-        className={wrapped_className}
+        className={wrappedClassName}
         theme={current_theme}
         onClick={() => {
-          setOpen(!isOpen)
+          setListOpen(!isListOpen)
         }}
       >
         {selectedItem == "" ? label : selectedItem}
-        {isOpen ? (
+        {isListOpen ? (
           <ArrowUpSVG style={{
             fill: current_theme.textColor2,
             width: "0.7em", height: "0.7em",
@@ -106,9 +105,9 @@ const VSelect: React.FunctionComponent<SelectProps> = ({
       <VClickableList
         list={list}
         className={styles.list_item}
-        containerClassName={wrapped_list_className}
+        containerClassName={wrappedListClassName}
         onClick={({ index, label }) => {
-          setOpen(false)
+          setListOpen(false)
           setSelectedItem(label)
           onSelect && onSelect(index, label)
         }}

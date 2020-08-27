@@ -4,7 +4,7 @@
 ![Demo Page](http://g.recordit.co/UrGlueJ1zJ.gif)
 
 This is a npm React package for faster and simpler web development. Build your own design system! Start here
-[here](https://salty-sierra-97134.herokuapp.com/).
+[here](https://vissually-97134.herokuapp.com/).
 [![NPM](https://img.shields.io/npm/v/@juandara22/vissually.svg)](https://www.npmjs.com/package/@juandara22/vissually) [![JavaScript Style Guide](https://img.shields.io/badge/code_style-standard-brightgreen.svg)](https://standardjs.com)
 
 ## Quickstart
@@ -27,7 +27,7 @@ Here is a quick example to get you started, it's all you need:
 
 import React from 'react';
 import ReactDOM from 'react-dom';
-import VButton from '@juandara/vissually';
+import VButton from '@juandara22/vissually';
 import '@juandara22/vissually/dist/index.css'
 
 function App() {
@@ -41,7 +41,7 @@ function App() {
 ReactDOM.render(<App />, document.querySelector('#app'));
 ```
 
-### About the [Demo App](https://salty-sierra-97134.herokuapp.com/)
+### About the [Demo App](https://vissually-97134.herokuapp.com/)
 
 Keep it responsive!
 ![Recordit GIF](http://g.recordit.co/Xd44Tr823T.gif))
@@ -62,4 +62,4 @@ You can always donate me [here](https://david.alfagenos.com/donate)
 [![License](http://img.shields.io/:license-mit-blue.svg?style=flat-square)](http://badges.mit-license.org)
 
 - **[MIT license](http://opensource.org/licenses/mit-license.php)**
-- Copyright 2015 © <a href="http://fvcproductions.com" target="_blank">FVCproductions</a>.
+- Copyright 2018 © <a href="http://alfagenos.com" target="_blank">AlfagenosProductions</a>.

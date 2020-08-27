@@ -85,7 +85,7 @@ const AutoCompletePage = (props: {dark?:boolean}) => {
           color="secondary"
           href="https://personal-public-files-23rde2.s3.amazonaws.com/documentation/index.html"
         >
-          here.
+          {" here."}
         </Link>
       </Typography>
     </div>

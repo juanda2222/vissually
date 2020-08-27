@@ -7,23 +7,23 @@ import { DefaultThemes, ThemeContext } from "../ThemeProvider/ThemeProvider"
 import XSymbol from "../assets/x-symbol"
 
 // style the container
-const StyledContainer = styled("div")<{background_color:string, hover_background_color:string}>`
-  background-color: ${props => props.background_color};
+const StyledContainer = styled("div")<{backgroundColor:string, hoverBackgroundColor:string}>`
+  background-color: ${props => props.backgroundColor};
   &:hover{
-    background-color: ${props => props.hover_background_color};  
+    background-color: ${props => props.hoverBackgroundColor};  
   } 
   `;
 
     
 const StyledCancelButton = styled("div") <{
-  background_color: string,
-  hover_background_color: string,
-  text_color: string
+  backgroundColor: string,
+  hoverBackgroundColor: string,
+  textColor: string
 }>`
-  background-color: ${props => props.background_color};
-  text-color: ${props => props.text_color};
+  background-color: ${props => props.backgroundColor};
+  text-color: ${props => props.textColor};
   &:hover{
-    background-color: ${props => props.hover_background_color};  
+    background-color: ${props => props.hoverBackgroundColor};  
   }
 `;
 
@@ -65,8 +65,8 @@ const VChip: React.FunctionComponent<ChipProps> = ({
 
   return StyledContainer ? (
     <StyledContainer
-      background_color={`rgb(${rgb_list[0] - 20}, ${rgb_list[1] - 20}, ${rgb_list[2] - 20})`}
-      hover_background_color={`rgb(${rgb_list[0] - 10}, ${rgb_list[1] - 10}, ${rgb_list[2] - 10})`}
+      backgroundColor={`rgb(${rgb_list[0] - 20}, ${rgb_list[1] - 20}, ${rgb_list[2] - 20})`}
+      hoverBackgroundColor={`rgb(${rgb_list[0] - 10}, ${rgb_list[1] - 10}, ${rgb_list[2] - 10})`}
       className={wrapped_className}
       style={style}
       onClick={onClick}
@@ -75,9 +75,9 @@ const VChip: React.FunctionComponent<ChipProps> = ({
       {
         onDelete && (
           <StyledCancelButton
-            background_color={`rgb(${rgb_list[0] - 40}, ${rgb_list[1] - 40}, ${rgb_list[2] - 40})`}
-            hover_background_color={`rgb(${rgb_list[0] - 30}, ${rgb_list[1] - 30}, ${rgb_list[2] - 30})`}
-            text_color={current_theme.textColor1}
+            backgroundColor={`rgb(${rgb_list[0] - 40}, ${rgb_list[1] - 40}, ${rgb_list[2] - 40})`}
+            hoverBackgroundColor={`rgb(${rgb_list[0] - 30}, ${rgb_list[1] - 30}, ${rgb_list[2] - 30})`}
+            textColor={current_theme.textColor1}
             className={styles.delete_button}
             onClick={(e) => {
               e.stopPropagation(); 
