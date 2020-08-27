@@ -26,6 +26,7 @@ deploy:
       repo: juanda2222/vissually
     skip_cleanup: 'true'
 
+    
   - provider: s3
     access_key_id: "$AWS_ACCESS_KEY"
     secret_access_key: "$AWS_SECRET_ACCESS_KEY"
