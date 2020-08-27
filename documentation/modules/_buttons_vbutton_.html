@@ -90,10 +90,10 @@
 				<section class="tsd-panel tsd-member tsd-kind-variable tsd-parent-kind-module tsd-is-not-exported">
 					<a name="styledbutton" class="tsd-anchor"></a>
 					<h3><span class="tsd-flag ts-flagConst">Const</span> Styled<wbr>Button</h3>
-					<div class="tsd-signature tsd-kind-icon">Styled<wbr>Button<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">StyledComponent</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">"div"</span><span class="tsd-signature-symbol">, </span><span class="tsd-signature-type">any</span><span class="tsd-signature-symbol">, </span><span class="tsd-signature-symbol">{ </span>isActive<span class="tsd-signature-symbol">?: </span><span class="tsd-signature-type">undefined</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">false</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">true</span><span class="tsd-signature-symbol">; </span>main_rgb<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">number</span><span class="tsd-signature-symbol">[]</span><span class="tsd-signature-symbol">; </span>text_color<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol"> }</span><span class="tsd-signature-symbol">, </span><span class="tsd-signature-type">never</span><span class="tsd-signature-symbol">&gt;</span><span class="tsd-signature-symbol"> = styled(&quot;div&quot;)&lt;{isActive?:boolean, text_color:string, main_rgb: number[]}&gt;&#x60;color: ${props &#x3D;&gt; props.text_color};background-color: ${props &#x3D;&gt; &#x60;rgb(${props.main_rgb[0]}, ${props.main_rgb[1]}, ${props.main_rgb[2]})&#x60;};border-bottom: 5px solid ${props &#x3D;&gt; &#x60;rgb(${props.main_rgb[0] - 40}, ${props.main_rgb[1] - 40}, ${props.main_rgb[2] - 40})&#x60;};${props &#x3D;&gt; props.isActive ? &#x60;margin: 14px auto 7px auto;transform: translate(0px,5px);-webkit-transform: translate(0px,5px);border-bottom: 1px solid;border-color: transparent;&#x60;: &quot;&quot;}${props &#x3D;&gt; props.isActive ? &quot;&quot;: &#x60;&amp;:hover{background-color: rgb(${props.main_rgb[0] + 20}, ${props.main_rgb[1] + 20}, ${props.main_rgb[2] + 20});border-bottom: 5px solid rgb(${props.main_rgb[0] - 20}, ${props.main_rgb[1] - 20}, ${props.main_rgb[2] - 20});}&#x60;}&amp;:active{margin: 14px auto 7px auto;transform: translate(0px,5px);-webkit-transform: translate(0px,5px);border-bottom: 1px solid;border-color: transparent;}&#x60;</span></div>
+					<div class="tsd-signature tsd-kind-icon">Styled<wbr>Button<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">StyledComponent</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">"div"</span><span class="tsd-signature-symbol">, </span><span class="tsd-signature-type">any</span><span class="tsd-signature-symbol">, </span><span class="tsd-signature-symbol">{ </span>buttonIsActive<span class="tsd-signature-symbol">?: </span><span class="tsd-signature-type">undefined</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">false</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">true</span><span class="tsd-signature-symbol">; </span>rgbMainButtonColor<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">number</span><span class="tsd-signature-symbol">[]</span><span class="tsd-signature-symbol">; </span>textColor<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol"> }</span><span class="tsd-signature-symbol">, </span><span class="tsd-signature-type">never</span><span class="tsd-signature-symbol">&gt;</span><span class="tsd-signature-symbol"> = styled(&quot;div&quot;) &lt;{buttonIsActive?: boolean,textColor: string,rgbMainButtonColor: number[]}&gt;&#x60;color: ${props &#x3D;&gt; props.textColor};background-color: ${props &#x3D;&gt; &#x60;rgb(${props.rgbMainButtonColor[0]}, ${props.rgbMainButtonColor[1]}, ${props.rgbMainButtonColor[2]})&#x60;};border-bottom: 5px solid ${props &#x3D;&gt; &#x60;rgb(${props.rgbMainButtonColor[0] - 40}, ${props.rgbMainButtonColor[1] - 40}, ${props.rgbMainButtonColor[2] - 40})&#x60;};${props &#x3D;&gt; props.buttonIsActive ? &#x60;margin: 18px 8px 11px 8px;transform: translate(0px,3px);-webkit-transform: translate(0px,3px);border-bottom: 1px solid;border-color: transparent;&#x60;: &quot;&quot;}${props &#x3D;&gt; props.buttonIsActive ? &quot;&quot;: &#x60;&amp;:hover{background-color: rgb(${props.rgbMainButtonColor[0] + 20}, ${props.rgbMainButtonColor[1] + 20}, ${props.rgbMainButtonColor[2] + 20});border-bottom: 5px solid rgb(${props.rgbMainButtonColor[0] - 20}, ${props.rgbMainButtonColor[1] - 20}, ${props.rgbMainButtonColor[2] - 20});}&#x60;}&amp;:active{margin: 18px 8px 11px 8px;transform: translate(0px,3px);-webkit-transform: translate(0px,3px);border-bottom: 1px solid;border-color: transparent;}&#x60;</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in <a href="https://github.com/juanda2222/vissually/blob/19bd3ab/src/Buttons/VButton.tsx#L13">Buttons/VButton.tsx:13</a></li>
+							<li>Defined in <a href="https://github.com/juanda2222/vissually/blob/3199229/src/Buttons/VButton.tsx#L13">Buttons/VButton.tsx:13</a></li>
 						</ul>
 					</aside>
 				</section>
@@ -102,30 +102,27 @@
 				<h2>Functions</h2>
 				<section class="tsd-panel tsd-member tsd-kind-function tsd-parent-kind-module">
 					<a name="vbutton" class="tsd-anchor"></a>
-					<h3><span class="tsd-flag ts-flagConst">Const</span> VButton</h3>
+					<h3>VButton</h3>
 					<ul class="tsd-signatures tsd-kind-function tsd-parent-kind-module">
-						<li class="tsd-signature tsd-kind-icon">VButton<span class="tsd-signature-symbol">(</span>__namedParameters<span class="tsd-signature-symbol">: </span><span class="tsd-signature-symbol">{ </span>children<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">ReactNode</span><span class="tsd-signature-symbol">; </span>className<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">undefined</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">; </span>dark<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">undefined</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">false</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">true</span><span class="tsd-signature-symbol">; </span>isPressed<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">undefined</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">false</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">true</span><span class="tsd-signature-symbol">; </span>onClick<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">undefined</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">bivarianceHack</span><span class="tsd-signature-symbol">; </span>primary<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">undefined</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">false</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">true</span><span class="tsd-signature-symbol">; </span>secundary<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">undefined</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">false</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">true</span><span class="tsd-signature-symbol">; </span>style<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">undefined</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">CSSProperties</span><span class="tsd-signature-symbol">; </span>theme<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">undefined</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">Theme</span><span class="tsd-signature-symbol"> }</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">Element</span></li>
+						<li class="tsd-signature tsd-kind-icon">VButton<span class="tsd-signature-symbol">(</span>__namedParameters<span class="tsd-signature-symbol">: </span><span class="tsd-signature-symbol">{ </span>children<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">ReactNode</span><span class="tsd-signature-symbol">; </span>className<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">undefined</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">; </span>isPressed<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">undefined</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">false</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">true</span><span class="tsd-signature-symbol">; </span>onClick<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">undefined</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">bivarianceHack</span><span class="tsd-signature-symbol">; </span>primary<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">undefined</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">false</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">true</span><span class="tsd-signature-symbol">; </span>primaryDark<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">undefined</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">false</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">true</span><span class="tsd-signature-symbol">; </span>secondary<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">undefined</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">false</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">true</span><span class="tsd-signature-symbol">; </span>secondaryDark<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">undefined</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">false</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">true</span><span class="tsd-signature-symbol">; </span>style<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">undefined</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">CSSProperties</span><span class="tsd-signature-symbol">; </span>theme<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">undefined</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">Theme</span><span class="tsd-signature-symbol"> }</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">Element</span></li>
 					</ul>
 					<ul class="tsd-descriptions">
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in <a href="https://github.com/juanda2222/vissually/blob/19bd3ab/src/Buttons/VButton.tsx#L40">Buttons/VButton.tsx:40</a></li>
+									<li>Defined in <a href="https://github.com/juanda2222/vissually/blob/3199229/src/Buttons/VButton.tsx#L44">Buttons/VButton.tsx:44</a></li>
 								</ul>
 							</aside>
 							<h4 class="tsd-parameters-title">Parameters</h4>
 							<ul class="tsd-parameters">
 								<li>
-									<h5>__namedParameters: <span class="tsd-signature-symbol">{ </span>children<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">ReactNode</span><span class="tsd-signature-symbol">; </span>className<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">undefined</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">; </span>dark<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">undefined</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">false</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">true</span><span class="tsd-signature-symbol">; </span>isPressed<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">undefined</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">false</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">true</span><span class="tsd-signature-symbol">; </span>onClick<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">undefined</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">bivarianceHack</span><span class="tsd-signature-symbol">; </span>primary<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">undefined</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">false</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">true</span><span class="tsd-signature-symbol">; </span>secundary<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">undefined</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">false</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">true</span><span class="tsd-signature-symbol">; </span>style<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">undefined</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">CSSProperties</span><span class="tsd-signature-symbol">; </span>theme<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">undefined</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">Theme</span><span class="tsd-signature-symbol"> }</span></h5>
+									<h5>__namedParameters: <span class="tsd-signature-symbol">{ </span>children<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">ReactNode</span><span class="tsd-signature-symbol">; </span>className<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">undefined</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">; </span>isPressed<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">undefined</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">false</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">true</span><span class="tsd-signature-symbol">; </span>onClick<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">undefined</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">bivarianceHack</span><span class="tsd-signature-symbol">; </span>primary<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">undefined</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">false</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">true</span><span class="tsd-signature-symbol">; </span>primaryDark<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">undefined</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">false</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">true</span><span class="tsd-signature-symbol">; </span>secondary<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">undefined</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">false</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">true</span><span class="tsd-signature-symbol">; </span>secondaryDark<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">undefined</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">false</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">true</span><span class="tsd-signature-symbol">; </span>style<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">undefined</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">CSSProperties</span><span class="tsd-signature-symbol">; </span>theme<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">undefined</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">Theme</span><span class="tsd-signature-symbol"> }</span></h5>
 									<ul class="tsd-parameters">
 										<li class="tsd-parameter">
 											<h5>children<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">ReactNode</span></h5>
 										</li>
 										<li class="tsd-parameter">
 											<h5>class<wbr>Name<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">undefined</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">string</span></h5>
-										</li>
-										<li class="tsd-parameter">
-											<h5>dark<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">undefined</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">false</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">true</span></h5>
 										</li>
 										<li class="tsd-parameter">
 											<h5>is<wbr>Pressed<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">undefined</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">false</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">true</span></h5>
@@ -137,7 +134,13 @@
 											<h5>primary<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">undefined</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">false</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">true</span></h5>
 										</li>
 										<li class="tsd-parameter">
-											<h5>secundary<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">undefined</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">false</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">true</span></h5>
+											<h5>primary<wbr>Dark<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">undefined</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">false</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">true</span></h5>
+										</li>
+										<li class="tsd-parameter">
+											<h5>secondary<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">undefined</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">false</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">true</span></h5>
+										</li>
+										<li class="tsd-parameter">
+											<h5>secondary<wbr>Dark<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">undefined</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">false</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">true</span></h5>
 										</li>
 										<li class="tsd-parameter">
 											<h5>style<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">undefined</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">CSSProperties</span></h5>
@@ -161,52 +164,31 @@
 						<a href="../globals.html"><em>Globals</em></a>
 					</li>
 					<li class=" tsd-kind-module">
-						<a href="_autocomplete_vautocomplete_.html">&quot;<wbr>Autocomplete/VAuto<wbr>Complete&quot;</a>
-					</li>
-					<li class=" tsd-kind-module">
-						<a href="_autocomplete_vautocomplete_test_.html">&quot;<wbr>Autocomplete/VAuto<wbr>Complete.test&quot;</a>
+						<a href="_autocomplete_vautocomplete_.html">&quot;<wbr>Auto<wbr>Complete/VAuto<wbr>Complete&quot;</a>
 					</li>
 					<li class="current tsd-kind-module">
 						<a href="_buttons_vbutton_.html">&quot;<wbr>Buttons/VButton&quot;</a>
 					</li>
 					<li class=" tsd-kind-module">
-						<a href="_buttons_vbutton_test_.html">&quot;<wbr>Buttons/VButton.test&quot;</a>
-					</li>
-					<li class=" tsd-kind-module">
 						<a href="_display_vchip_.html">&quot;<wbr>Display/VChip&quot;</a>
-					</li>
-					<li class=" tsd-kind-module">
-						<a href="_display_vchip_test_.html">&quot;<wbr>Display/VChip.test&quot;</a>
 					</li>
 					<li class=" tsd-kind-module">
 						<a href="_inputs_vinput_.html">&quot;<wbr>Inputs/VInput&quot;</a>
 					</li>
 					<li class=" tsd-kind-module">
-						<a href="_inputs_vinput_test_.html">&quot;<wbr>Inputs/VInput.test&quot;</a>
-					</li>
-					<li class=" tsd-kind-module">
 						<a href="_inputs_vselect_.html">&quot;<wbr>Inputs/VSelect&quot;</a>
 					</li>
 					<li class=" tsd-kind-module">
-						<a href="_inputs_vselect_test_.html">&quot;<wbr>Inputs/VSelect.test&quot;</a>
+						<a href="_lists_vchiplist_.html">&quot;<wbr>Lists/VChip<wbr>List&quot;</a>
 					</li>
 					<li class=" tsd-kind-module">
 						<a href="_lists_vclickablelist_.html">&quot;<wbr>Lists/VClickable<wbr>List&quot;</a>
 					</li>
 					<li class=" tsd-kind-module">
-						<a href="_lists_vclickablelist_test_.html">&quot;<wbr>Lists/VClickable<wbr>List.test&quot;</a>
-					</li>
-					<li class=" tsd-kind-module">
 						<a href="_themeprovider_themeprovider_.html">&quot;<wbr>Theme<wbr>Provider/<wbr>Theme<wbr>Provider&quot;</a>
 					</li>
 					<li class=" tsd-kind-module">
-						<a href="_themeprovider_themeprovider_test_.html">&quot;<wbr>Theme<wbr>Provider/<wbr>Theme<wbr>Provider.test&quot;</a>
-					</li>
-					<li class=" tsd-kind-module">
 						<a href="_tools_colortools_.html">&quot;<wbr>Tools/<wbr>Color<wbr>Tools&quot;</a>
-					</li>
-					<li class=" tsd-kind-module">
-						<a href="_tools_colortools_test_.html">&quot;<wbr>Tools/<wbr>Color<wbr>Tools.test&quot;</a>
 					</li>
 					<li class=" tsd-kind-module">
 						<a href="_assets_arrow_down_.html">&quot;assets/arrow-<wbr>down&quot;</a>
@@ -216,9 +198,6 @@
 					</li>
 					<li class=" tsd-kind-module">
 						<a href="_assets_x_symbol_.html">&quot;assets/x-<wbr>symbol&quot;</a>
-					</li>
-					<li class=" tsd-kind-module">
-						<a href="_index_.html">&quot;index&quot;</a>
 					</li>
 				</ul>
 			</nav>

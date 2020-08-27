@@ -21,7 +21,9 @@ describe('AutoComplete', () => {
   })
 
   test("Default render. Snapshot test", () => { 
-    const AutoCompleteTree = renderer.create(<VAutoComplete/>).toJSON();
+    const AutoCompleteTree = renderer.create(
+      <VAutoComplete options={[]} renderInput={() => <React.Fragment />} />
+    ).toJSON();
     console.log(AutoCompleteTree)
     expect(AutoCompleteTree).toMatchSnapshot();
   })

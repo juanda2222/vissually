@@ -20,8 +20,8 @@ describe('VClickableList', () => {
     const vClickableListSnap = renderer.create(
       <VClickableList
         list={["some_thing", "some_name", "some_name2", "other name", "whatever list"]}
-        onCLick={({ i, text }) => {
-          console.log("clicked! index:", i.toString(10), " Text: ", text)
+        onClick={({ index, label }) => {
+          console.log("clicked! index:", index.toString(10), " Text: ", label)
         }}
       />
     ).toJSON();

@@ -20,11 +20,11 @@ describe('VChipList', () => {
     const vChipListSnap = renderer.create(
       <VChipList
         list={["some_thing", "some_name", "some_name2", "other name", "whatever list"]}
-        onClick={({ i , text }) => {
-          console.log("clicked! index:", i.toString(10), " Text: ", text)
+        onClick={({ index , label }) => {
+          console.log("clicked! index:", index.toString(10), " label: ", label)
         }}
-        onDelete={({ i, text }) => {
-          console.log("Deleted! index:", i.toString(10), " Text: ", text)
+        onDelete={({ index, label }) => {
+          console.log("Deleted! index:", index.toString(10), " label: ", label)
         }}
       />
     ).toJSON();
@@ -39,11 +39,11 @@ describe('VChipList', () => {
       <VChipList
         list={["some_thing", "some_name", "some_name2", "other name", "whatever list"]}
         getListLabel={(element) => element}
-        onClick={({ i, text }) => {
-          console.log("clicked! index:", i.toString(10), " Text: ", text)
+        onClick={({ index, label }) => {
+          console.log("clicked! index:", index.toString(10), " label: ", label)
         }}
-        onDelete={({ i, text }) => {
-          console.log("Deleted! index:", i.toString(10), " Text: ", text)
+        onDelete={({ index, label }) => {
+          console.log("Deleted! index:", index.toString(10), " label: ", label)
         }}
       />
     ).toJSON();

@@ -15,8 +15,7 @@ cache:
   - node_modules
 
 before_deploy:
-  - npm install typedoc
-  - typedoc --out ./documentation/ src
+  - npx typedoc --out ./documentation/ src --exclude "**/*+(test|index).tsx" --allowJs
 
 deploy:
 

@@ -96,10 +96,10 @@
 				<section class="tsd-panel tsd-member tsd-kind-variable tsd-parent-kind-module">
 					<a name="themecontext" class="tsd-anchor"></a>
 					<h3><span class="tsd-flag ts-flagConst">Const</span> Theme<wbr>Context</h3>
-					<div class="tsd-signature tsd-kind-icon">Theme<wbr>Context<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">Context</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">Theme</span><span class="tsd-signature-symbol">&gt;</span><span class="tsd-signature-symbol"> = React.createContext(DefaultThemes.primary)</span></div>
+					<div class="tsd-signature tsd-kind-icon">Theme<wbr>Context<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">Context</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">DefaultTheme</span><span class="tsd-signature-symbol">&gt;</span><span class="tsd-signature-symbol"> = React.createContext(DefaultThemes.primary)</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in <a href="https://github.com/juanda2222/vissually/blob/19bd3ab/src/ThemeProvider/ThemeProvider.tsx#L31">ThemeProvider/ThemeProvider.tsx:31</a></li>
+							<li>Defined in <a href="https://github.com/juanda2222/vissually/blob/3199229/src/ThemeProvider/ThemeProvider.tsx#L44">ThemeProvider/ThemeProvider.tsx:44</a></li>
 						</ul>
 					</aside>
 				</section>
@@ -108,21 +108,41 @@
 				<h2>Functions</h2>
 				<section class="tsd-panel tsd-member tsd-kind-function tsd-parent-kind-module">
 					<a name="vthemeprovider" class="tsd-anchor"></a>
-					<h3><span class="tsd-flag ts-flagConst">Const</span> VTheme<wbr>Provider</h3>
+					<h3>VTheme<wbr>Provider</h3>
 					<ul class="tsd-signatures tsd-kind-function tsd-parent-kind-module">
-						<li class="tsd-signature tsd-kind-icon">VTheme<wbr>Provider<span class="tsd-signature-symbol">(</span>props<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">ThemeProps</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">Element</span></li>
+						<li class="tsd-signature tsd-kind-icon">VTheme<wbr>Provider<span class="tsd-signature-symbol">(</span>__namedParameters<span class="tsd-signature-symbol">: </span><span class="tsd-signature-symbol">{ </span>children<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">ReactNode</span><span class="tsd-signature-symbol">; </span>primary<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">undefined</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">false</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">true</span><span class="tsd-signature-symbol">; </span>primaryDark<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">undefined</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">false</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">true</span><span class="tsd-signature-symbol">; </span>secondary<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">undefined</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">false</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">true</span><span class="tsd-signature-symbol">; </span>secondaryDark<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">undefined</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">false</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">true</span><span class="tsd-signature-symbol">; </span>theme<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">undefined</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">Theme</span><span class="tsd-signature-symbol"> }</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">Element</span></li>
 					</ul>
 					<ul class="tsd-descriptions">
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in <a href="https://github.com/juanda2222/vissually/blob/19bd3ab/src/ThemeProvider/ThemeProvider.tsx#L33">ThemeProvider/ThemeProvider.tsx:33</a></li>
+									<li>Defined in <a href="https://github.com/juanda2222/vissually/blob/3199229/src/ThemeProvider/ThemeProvider.tsx#L46">ThemeProvider/ThemeProvider.tsx:46</a></li>
 								</ul>
 							</aside>
 							<h4 class="tsd-parameters-title">Parameters</h4>
 							<ul class="tsd-parameters">
 								<li>
-									<h5>props: <span class="tsd-signature-type">ThemeProps</span></h5>
+									<h5>__namedParameters: <span class="tsd-signature-symbol">{ </span>children<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">ReactNode</span><span class="tsd-signature-symbol">; </span>primary<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">undefined</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">false</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">true</span><span class="tsd-signature-symbol">; </span>primaryDark<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">undefined</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">false</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">true</span><span class="tsd-signature-symbol">; </span>secondary<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">undefined</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">false</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">true</span><span class="tsd-signature-symbol">; </span>secondaryDark<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">undefined</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">false</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">true</span><span class="tsd-signature-symbol">; </span>theme<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">undefined</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">Theme</span><span class="tsd-signature-symbol"> }</span></h5>
+									<ul class="tsd-parameters">
+										<li class="tsd-parameter">
+											<h5>children<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">ReactNode</span></h5>
+										</li>
+										<li class="tsd-parameter">
+											<h5>primary<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">undefined</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">false</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">true</span></h5>
+										</li>
+										<li class="tsd-parameter">
+											<h5>primary<wbr>Dark<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">undefined</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">false</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">true</span></h5>
+										</li>
+										<li class="tsd-parameter">
+											<h5>secondary<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">undefined</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">false</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">true</span></h5>
+										</li>
+										<li class="tsd-parameter">
+											<h5>secondary<wbr>Dark<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">undefined</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">false</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">true</span></h5>
+										</li>
+										<li class="tsd-parameter">
+											<h5>theme<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">undefined</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">Theme</span></h5>
+										</li>
+									</ul>
 								</li>
 							</ul>
 							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">Element</span></h4>
@@ -138,215 +158,285 @@
 					<div class="tsd-signature tsd-kind-icon">Default<wbr>Themes<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">object</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in <a href="https://github.com/juanda2222/vissually/blob/19bd3ab/src/ThemeProvider/ThemeProvider.tsx#L4">ThemeProvider/ThemeProvider.tsx:4</a></li>
+							<li>Defined in <a href="https://github.com/juanda2222/vissually/blob/3199229/src/ThemeProvider/ThemeProvider.tsx#L4">ThemeProvider/ThemeProvider.tsx:4</a></li>
 						</ul>
 					</aside>
-					<section class="tsd-panel tsd-member tsd-kind-object-literal tsd-parent-kind-object-literal">
-						<a name="defaultthemes.dark" class="tsd-anchor"></a>
-						<h3>dark</h3>
-						<div class="tsd-signature tsd-kind-icon">dark<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">object</span></div>
-						<aside class="tsd-sources">
-							<ul>
-								<li>Defined in <a href="https://github.com/juanda2222/vissually/blob/19bd3ab/src/ThemeProvider/ThemeProvider.tsx#L21">ThemeProvider/ThemeProvider.tsx:21</a></li>
-							</ul>
-						</aside>
-						<section class="tsd-panel tsd-member tsd-kind-variable tsd-parent-kind-object-literal">
-							<a name="defaultthemes.dark.backgroundcolor1" class="tsd-anchor"></a>
-							<h3>background<wbr>Color1</h3>
-							<div class="tsd-signature tsd-kind-icon">background<wbr>Color1<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">string</span><span class="tsd-signature-symbol"> = &quot;rgb(70, 140, 170)&quot;</span></div>
-							<aside class="tsd-sources">
-								<ul>
-									<li>Defined in <a href="https://github.com/juanda2222/vissually/blob/19bd3ab/src/ThemeProvider/ThemeProvider.tsx#L26">ThemeProvider/ThemeProvider.tsx:26</a></li>
-								</ul>
-							</aside>
-						</section>
-						<section class="tsd-panel tsd-member tsd-kind-variable tsd-parent-kind-object-literal">
-							<a name="defaultthemes.dark.backgroundcolor2" class="tsd-anchor"></a>
-							<h3>background<wbr>Color2</h3>
-							<div class="tsd-signature tsd-kind-icon">background<wbr>Color2<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">string</span><span class="tsd-signature-symbol"> = &quot;rgb(255, 255, 255)&quot;</span></div>
-							<aside class="tsd-sources">
-								<ul>
-									<li>Defined in <a href="https://github.com/juanda2222/vissually/blob/19bd3ab/src/ThemeProvider/ThemeProvider.tsx#L27">ThemeProvider/ThemeProvider.tsx:27</a></li>
-								</ul>
-							</aside>
-						</section>
-						<section class="tsd-panel tsd-member tsd-kind-variable tsd-parent-kind-object-literal">
-							<a name="defaultthemes.dark.color1" class="tsd-anchor"></a>
-							<h3>color1</h3>
-							<div class="tsd-signature tsd-kind-icon">color1<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">string</span><span class="tsd-signature-symbol"> = &quot;#10b462&quot;</span></div>
-							<aside class="tsd-sources">
-								<ul>
-									<li>Defined in <a href="https://github.com/juanda2222/vissually/blob/19bd3ab/src/ThemeProvider/ThemeProvider.tsx#L24">ThemeProvider/ThemeProvider.tsx:24</a></li>
-								</ul>
-							</aside>
-						</section>
-						<section class="tsd-panel tsd-member tsd-kind-variable tsd-parent-kind-object-literal">
-							<a name="defaultthemes.dark.color2" class="tsd-anchor"></a>
-							<h3>color2</h3>
-							<div class="tsd-signature tsd-kind-icon">color2<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">string</span><span class="tsd-signature-symbol"> = &quot;#10b462&quot;</span></div>
-							<aside class="tsd-sources">
-								<ul>
-									<li>Defined in <a href="https://github.com/juanda2222/vissually/blob/19bd3ab/src/ThemeProvider/ThemeProvider.tsx#L25">ThemeProvider/ThemeProvider.tsx:25</a></li>
-								</ul>
-							</aside>
-						</section>
-						<section class="tsd-panel tsd-member tsd-kind-variable tsd-parent-kind-object-literal">
-							<a name="defaultthemes.dark.textcolor1" class="tsd-anchor"></a>
-							<h3>text<wbr>Color1</h3>
-							<div class="tsd-signature tsd-kind-icon">text<wbr>Color1<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">string</span><span class="tsd-signature-symbol"> = &quot;rgb(0, 0, 0)&quot;</span></div>
-							<aside class="tsd-sources">
-								<ul>
-									<li>Defined in <a href="https://github.com/juanda2222/vissually/blob/19bd3ab/src/ThemeProvider/ThemeProvider.tsx#L22">ThemeProvider/ThemeProvider.tsx:22</a></li>
-								</ul>
-							</aside>
-						</section>
-						<section class="tsd-panel tsd-member tsd-kind-variable tsd-parent-kind-object-literal">
-							<a name="defaultthemes.dark.textcolor2" class="tsd-anchor"></a>
-							<h3>text<wbr>Color2</h3>
-							<div class="tsd-signature tsd-kind-icon">text<wbr>Color2<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">string</span><span class="tsd-signature-symbol"> = &quot;rgb(255, 255, 255)&quot;</span></div>
-							<aside class="tsd-sources">
-								<ul>
-									<li>Defined in <a href="https://github.com/juanda2222/vissually/blob/19bd3ab/src/ThemeProvider/ThemeProvider.tsx#L23">ThemeProvider/ThemeProvider.tsx:23</a></li>
-								</ul>
-							</aside>
-						</section>
-					</section>
 					<section class="tsd-panel tsd-member tsd-kind-object-literal tsd-parent-kind-object-literal">
 						<a name="defaultthemes.primary" class="tsd-anchor"></a>
 						<h3>primary</h3>
 						<div class="tsd-signature tsd-kind-icon">primary<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">object</span></div>
 						<aside class="tsd-sources">
 							<ul>
-								<li>Defined in <a href="https://github.com/juanda2222/vissually/blob/19bd3ab/src/ThemeProvider/ThemeProvider.tsx#L5">ThemeProvider/ThemeProvider.tsx:5</a></li>
+								<li>Defined in <a href="https://github.com/juanda2222/vissually/blob/3199229/src/ThemeProvider/ThemeProvider.tsx#L10">ThemeProvider/ThemeProvider.tsx:10</a></li>
 							</ul>
 						</aside>
 						<section class="tsd-panel tsd-member tsd-kind-variable tsd-parent-kind-object-literal">
-							<a name="defaultthemes.primary.backgroundcolor1-1" class="tsd-anchor"></a>
+							<a name="defaultthemes.primary.backgroundcolor1" class="tsd-anchor"></a>
 							<h3>background<wbr>Color1</h3>
 							<div class="tsd-signature tsd-kind-icon">background<wbr>Color1<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">string</span><span class="tsd-signature-symbol"> = &quot;rgb(255, 255, 255)&quot;</span></div>
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in <a href="https://github.com/juanda2222/vissually/blob/19bd3ab/src/ThemeProvider/ThemeProvider.tsx#L10">ThemeProvider/ThemeProvider.tsx:10</a></li>
+									<li>Defined in <a href="https://github.com/juanda2222/vissually/blob/3199229/src/ThemeProvider/ThemeProvider.tsx#L15">ThemeProvider/ThemeProvider.tsx:15</a></li>
 								</ul>
 							</aside>
 						</section>
 						<section class="tsd-panel tsd-member tsd-kind-variable tsd-parent-kind-object-literal">
-							<a name="defaultthemes.primary.backgroundcolor2-1" class="tsd-anchor"></a>
+							<a name="defaultthemes.primary.backgroundcolor2" class="tsd-anchor"></a>
 							<h3>background<wbr>Color2</h3>
 							<div class="tsd-signature tsd-kind-icon">background<wbr>Color2<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">string</span><span class="tsd-signature-symbol"> = &quot;rgb(70, 140, 170)&quot;</span></div>
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in <a href="https://github.com/juanda2222/vissually/blob/19bd3ab/src/ThemeProvider/ThemeProvider.tsx#L11">ThemeProvider/ThemeProvider.tsx:11</a></li>
+									<li>Defined in <a href="https://github.com/juanda2222/vissually/blob/3199229/src/ThemeProvider/ThemeProvider.tsx#L16">ThemeProvider/ThemeProvider.tsx:16</a></li>
 								</ul>
 							</aside>
 						</section>
 						<section class="tsd-panel tsd-member tsd-kind-variable tsd-parent-kind-object-literal">
-							<a name="defaultthemes.primary.color1-1" class="tsd-anchor"></a>
+							<a name="defaultthemes.primary.color1" class="tsd-anchor"></a>
 							<h3>color1</h3>
 							<div class="tsd-signature tsd-kind-icon">color1<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">string</span><span class="tsd-signature-symbol"> = &quot;#135b75&quot;</span></div>
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in <a href="https://github.com/juanda2222/vissually/blob/19bd3ab/src/ThemeProvider/ThemeProvider.tsx#L8">ThemeProvider/ThemeProvider.tsx:8</a></li>
+									<li>Defined in <a href="https://github.com/juanda2222/vissually/blob/3199229/src/ThemeProvider/ThemeProvider.tsx#L13">ThemeProvider/ThemeProvider.tsx:13</a></li>
 								</ul>
 							</aside>
 						</section>
 						<section class="tsd-panel tsd-member tsd-kind-variable tsd-parent-kind-object-literal">
-							<a name="defaultthemes.primary.color2-1" class="tsd-anchor"></a>
+							<a name="defaultthemes.primary.color2" class="tsd-anchor"></a>
 							<h3>color2</h3>
 							<div class="tsd-signature tsd-kind-icon">color2<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">string</span><span class="tsd-signature-symbol"> = &quot;#135b75&quot;</span></div>
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in <a href="https://github.com/juanda2222/vissually/blob/19bd3ab/src/ThemeProvider/ThemeProvider.tsx#L9">ThemeProvider/ThemeProvider.tsx:9</a></li>
+									<li>Defined in <a href="https://github.com/juanda2222/vissually/blob/3199229/src/ThemeProvider/ThemeProvider.tsx#L14">ThemeProvider/ThemeProvider.tsx:14</a></li>
 								</ul>
 							</aside>
 						</section>
 						<section class="tsd-panel tsd-member tsd-kind-variable tsd-parent-kind-object-literal">
-							<a name="defaultthemes.primary.textcolor1-1" class="tsd-anchor"></a>
+							<a name="defaultthemes.primary.textcolor1" class="tsd-anchor"></a>
 							<h3>text<wbr>Color1</h3>
 							<div class="tsd-signature tsd-kind-icon">text<wbr>Color1<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">string</span><span class="tsd-signature-symbol"> = &quot;rgb(0, 0, 0)&quot;</span></div>
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in <a href="https://github.com/juanda2222/vissually/blob/19bd3ab/src/ThemeProvider/ThemeProvider.tsx#L6">ThemeProvider/ThemeProvider.tsx:6</a></li>
+									<li>Defined in <a href="https://github.com/juanda2222/vissually/blob/3199229/src/ThemeProvider/ThemeProvider.tsx#L11">ThemeProvider/ThemeProvider.tsx:11</a></li>
 								</ul>
 							</aside>
 						</section>
 						<section class="tsd-panel tsd-member tsd-kind-variable tsd-parent-kind-object-literal">
-							<a name="defaultthemes.primary.textcolor2-1" class="tsd-anchor"></a>
+							<a name="defaultthemes.primary.textcolor2" class="tsd-anchor"></a>
 							<h3>text<wbr>Color2</h3>
 							<div class="tsd-signature tsd-kind-icon">text<wbr>Color2<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">string</span><span class="tsd-signature-symbol"> = &quot;rgb(255, 255, 255)&quot;</span></div>
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in <a href="https://github.com/juanda2222/vissually/blob/19bd3ab/src/ThemeProvider/ThemeProvider.tsx#L7">ThemeProvider/ThemeProvider.tsx:7</a></li>
+									<li>Defined in <a href="https://github.com/juanda2222/vissually/blob/3199229/src/ThemeProvider/ThemeProvider.tsx#L12">ThemeProvider/ThemeProvider.tsx:12</a></li>
 								</ul>
 							</aside>
 						</section>
 					</section>
 					<section class="tsd-panel tsd-member tsd-kind-object-literal tsd-parent-kind-object-literal">
-						<a name="defaultthemes.secundary" class="tsd-anchor"></a>
-						<h3>secundary</h3>
-						<div class="tsd-signature tsd-kind-icon">secundary<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">object</span></div>
+						<a name="defaultthemes.primarydark" class="tsd-anchor"></a>
+						<h3>primary<wbr>Dark</h3>
+						<div class="tsd-signature tsd-kind-icon">primary<wbr>Dark<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">object</span></div>
 						<aside class="tsd-sources">
 							<ul>
-								<li>Defined in <a href="https://github.com/juanda2222/vissually/blob/19bd3ab/src/ThemeProvider/ThemeProvider.tsx#L13">ThemeProvider/ThemeProvider.tsx:13</a></li>
+								<li>Defined in <a href="https://github.com/juanda2222/vissually/blob/3199229/src/ThemeProvider/ThemeProvider.tsx#L26">ThemeProvider/ThemeProvider.tsx:26</a></li>
 							</ul>
 						</aside>
 						<section class="tsd-panel tsd-member tsd-kind-variable tsd-parent-kind-object-literal">
-							<a name="defaultthemes.secundary.backgroundcolor1-2" class="tsd-anchor"></a>
+							<a name="defaultthemes.primarydark.backgroundcolor1-1" class="tsd-anchor"></a>
 							<h3>background<wbr>Color1</h3>
-							<div class="tsd-signature tsd-kind-icon">background<wbr>Color1<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">string</span><span class="tsd-signature-symbol"> = &quot;rgb(250, 250, 250)&quot;</span></div>
+							<div class="tsd-signature tsd-kind-icon">background<wbr>Color1<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">string</span><span class="tsd-signature-symbol"> = &quot;rgb(255, 255, 255)&quot;</span></div>
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in <a href="https://github.com/juanda2222/vissually/blob/19bd3ab/src/ThemeProvider/ThemeProvider.tsx#L18">ThemeProvider/ThemeProvider.tsx:18</a></li>
+									<li>Defined in <a href="https://github.com/juanda2222/vissually/blob/3199229/src/ThemeProvider/ThemeProvider.tsx#L31">ThemeProvider/ThemeProvider.tsx:31</a></li>
 								</ul>
 							</aside>
 						</section>
 						<section class="tsd-panel tsd-member tsd-kind-variable tsd-parent-kind-object-literal">
-							<a name="defaultthemes.secundary.backgroundcolor2-2" class="tsd-anchor"></a>
+							<a name="defaultthemes.primarydark.backgroundcolor2-1" class="tsd-anchor"></a>
 							<h3>background<wbr>Color2</h3>
 							<div class="tsd-signature tsd-kind-icon">background<wbr>Color2<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">string</span><span class="tsd-signature-symbol"> = &quot;rgb(70, 140, 170)&quot;</span></div>
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in <a href="https://github.com/juanda2222/vissually/blob/19bd3ab/src/ThemeProvider/ThemeProvider.tsx#L19">ThemeProvider/ThemeProvider.tsx:19</a></li>
+									<li>Defined in <a href="https://github.com/juanda2222/vissually/blob/3199229/src/ThemeProvider/ThemeProvider.tsx#L32">ThemeProvider/ThemeProvider.tsx:32</a></li>
 								</ul>
 							</aside>
 						</section>
 						<section class="tsd-panel tsd-member tsd-kind-variable tsd-parent-kind-object-literal">
-							<a name="defaultthemes.secundary.color1-2" class="tsd-anchor"></a>
+							<a name="defaultthemes.primarydark.color1-1" class="tsd-anchor"></a>
 							<h3>color1</h3>
-							<div class="tsd-signature tsd-kind-icon">color1<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">string</span><span class="tsd-signature-symbol"> = &quot;#10b462&quot;</span></div>
+							<div class="tsd-signature tsd-kind-icon">color1<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">string</span><span class="tsd-signature-symbol"> = &quot;#1e8eb7&quot;</span></div>
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in <a href="https://github.com/juanda2222/vissually/blob/19bd3ab/src/ThemeProvider/ThemeProvider.tsx#L16">ThemeProvider/ThemeProvider.tsx:16</a></li>
+									<li>Defined in <a href="https://github.com/juanda2222/vissually/blob/3199229/src/ThemeProvider/ThemeProvider.tsx#L29">ThemeProvider/ThemeProvider.tsx:29</a></li>
 								</ul>
 							</aside>
 						</section>
 						<section class="tsd-panel tsd-member tsd-kind-variable tsd-parent-kind-object-literal">
-							<a name="defaultthemes.secundary.color2-2" class="tsd-anchor"></a>
+							<a name="defaultthemes.primarydark.color2-1" class="tsd-anchor"></a>
 							<h3>color2</h3>
-							<div class="tsd-signature tsd-kind-icon">color2<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">string</span><span class="tsd-signature-symbol"> = &quot;#10b462&quot;</span></div>
+							<div class="tsd-signature tsd-kind-icon">color2<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">string</span><span class="tsd-signature-symbol"> = &quot;#1e8eb7&quot;</span></div>
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in <a href="https://github.com/juanda2222/vissually/blob/19bd3ab/src/ThemeProvider/ThemeProvider.tsx#L17">ThemeProvider/ThemeProvider.tsx:17</a></li>
+									<li>Defined in <a href="https://github.com/juanda2222/vissually/blob/3199229/src/ThemeProvider/ThemeProvider.tsx#L30">ThemeProvider/ThemeProvider.tsx:30</a></li>
 								</ul>
 							</aside>
 						</section>
 						<section class="tsd-panel tsd-member tsd-kind-variable tsd-parent-kind-object-literal">
-							<a name="defaultthemes.secundary.textcolor1-2" class="tsd-anchor"></a>
+							<a name="defaultthemes.primarydark.textcolor1-1" class="tsd-anchor"></a>
+							<h3>text<wbr>Color1</h3>
+							<div class="tsd-signature tsd-kind-icon">text<wbr>Color1<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">string</span><span class="tsd-signature-symbol"> = &quot;rgb(192, 197, 206)&quot;</span></div>
+							<aside class="tsd-sources">
+								<ul>
+									<li>Defined in <a href="https://github.com/juanda2222/vissually/blob/3199229/src/ThemeProvider/ThemeProvider.tsx#L27">ThemeProvider/ThemeProvider.tsx:27</a></li>
+								</ul>
+							</aside>
+						</section>
+						<section class="tsd-panel tsd-member tsd-kind-variable tsd-parent-kind-object-literal">
+							<a name="defaultthemes.primarydark.textcolor2-1" class="tsd-anchor"></a>
+							<h3>text<wbr>Color2</h3>
+							<div class="tsd-signature tsd-kind-icon">text<wbr>Color2<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">string</span><span class="tsd-signature-symbol"> = &quot;rgb(255, 255, 255)&quot;</span></div>
+							<aside class="tsd-sources">
+								<ul>
+									<li>Defined in <a href="https://github.com/juanda2222/vissually/blob/3199229/src/ThemeProvider/ThemeProvider.tsx#L28">ThemeProvider/ThemeProvider.tsx:28</a></li>
+								</ul>
+							</aside>
+						</section>
+					</section>
+					<section class="tsd-panel tsd-member tsd-kind-object-literal tsd-parent-kind-object-literal">
+						<a name="defaultthemes.secondary" class="tsd-anchor"></a>
+						<h3>secondary</h3>
+						<div class="tsd-signature tsd-kind-icon">secondary<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">object</span></div>
+						<aside class="tsd-sources">
+							<ul>
+								<li>Defined in <a href="https://github.com/juanda2222/vissually/blob/3199229/src/ThemeProvider/ThemeProvider.tsx#L18">ThemeProvider/ThemeProvider.tsx:18</a></li>
+							</ul>
+						</aside>
+						<section class="tsd-panel tsd-member tsd-kind-variable tsd-parent-kind-object-literal">
+							<a name="defaultthemes.secondary.backgroundcolor1-2" class="tsd-anchor"></a>
+							<h3>background<wbr>Color1</h3>
+							<div class="tsd-signature tsd-kind-icon">background<wbr>Color1<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">string</span><span class="tsd-signature-symbol"> = &quot;rgb(250, 250, 250)&quot;</span></div>
+							<aside class="tsd-sources">
+								<ul>
+									<li>Defined in <a href="https://github.com/juanda2222/vissually/blob/3199229/src/ThemeProvider/ThemeProvider.tsx#L23">ThemeProvider/ThemeProvider.tsx:23</a></li>
+								</ul>
+							</aside>
+						</section>
+						<section class="tsd-panel tsd-member tsd-kind-variable tsd-parent-kind-object-literal">
+							<a name="defaultthemes.secondary.backgroundcolor2-2" class="tsd-anchor"></a>
+							<h3>background<wbr>Color2</h3>
+							<div class="tsd-signature tsd-kind-icon">background<wbr>Color2<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">string</span><span class="tsd-signature-symbol"> = &quot;rgb(70, 140, 170)&quot;</span></div>
+							<aside class="tsd-sources">
+								<ul>
+									<li>Defined in <a href="https://github.com/juanda2222/vissually/blob/3199229/src/ThemeProvider/ThemeProvider.tsx#L24">ThemeProvider/ThemeProvider.tsx:24</a></li>
+								</ul>
+							</aside>
+						</section>
+						<section class="tsd-panel tsd-member tsd-kind-variable tsd-parent-kind-object-literal">
+							<a name="defaultthemes.secondary.color1-2" class="tsd-anchor"></a>
+							<h3>color1</h3>
+							<div class="tsd-signature tsd-kind-icon">color1<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">string</span><span class="tsd-signature-symbol"> = &quot;#0e9d55&quot;</span></div>
+							<aside class="tsd-sources">
+								<ul>
+									<li>Defined in <a href="https://github.com/juanda2222/vissually/blob/3199229/src/ThemeProvider/ThemeProvider.tsx#L21">ThemeProvider/ThemeProvider.tsx:21</a></li>
+								</ul>
+							</aside>
+						</section>
+						<section class="tsd-panel tsd-member tsd-kind-variable tsd-parent-kind-object-literal">
+							<a name="defaultthemes.secondary.color2-2" class="tsd-anchor"></a>
+							<h3>color2</h3>
+							<div class="tsd-signature tsd-kind-icon">color2<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">string</span><span class="tsd-signature-symbol"> = &quot;#0e9d55&quot;</span></div>
+							<aside class="tsd-sources">
+								<ul>
+									<li>Defined in <a href="https://github.com/juanda2222/vissually/blob/3199229/src/ThemeProvider/ThemeProvider.tsx#L22">ThemeProvider/ThemeProvider.tsx:22</a></li>
+								</ul>
+							</aside>
+						</section>
+						<section class="tsd-panel tsd-member tsd-kind-variable tsd-parent-kind-object-literal">
+							<a name="defaultthemes.secondary.textcolor1-2" class="tsd-anchor"></a>
 							<h3>text<wbr>Color1</h3>
 							<div class="tsd-signature tsd-kind-icon">text<wbr>Color1<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">string</span><span class="tsd-signature-symbol"> = &quot;rgb(30, 30, 30)&quot;</span></div>
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in <a href="https://github.com/juanda2222/vissually/blob/19bd3ab/src/ThemeProvider/ThemeProvider.tsx#L14">ThemeProvider/ThemeProvider.tsx:14</a></li>
+									<li>Defined in <a href="https://github.com/juanda2222/vissually/blob/3199229/src/ThemeProvider/ThemeProvider.tsx#L19">ThemeProvider/ThemeProvider.tsx:19</a></li>
 								</ul>
 							</aside>
 						</section>
 						<section class="tsd-panel tsd-member tsd-kind-variable tsd-parent-kind-object-literal">
-							<a name="defaultthemes.secundary.textcolor2-2" class="tsd-anchor"></a>
+							<a name="defaultthemes.secondary.textcolor2-2" class="tsd-anchor"></a>
 							<h3>text<wbr>Color2</h3>
 							<div class="tsd-signature tsd-kind-icon">text<wbr>Color2<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">string</span><span class="tsd-signature-symbol"> = &quot;rgb(240, 240, 240)&quot;</span></div>
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in <a href="https://github.com/juanda2222/vissually/blob/19bd3ab/src/ThemeProvider/ThemeProvider.tsx#L15">ThemeProvider/ThemeProvider.tsx:15</a></li>
+									<li>Defined in <a href="https://github.com/juanda2222/vissually/blob/3199229/src/ThemeProvider/ThemeProvider.tsx#L20">ThemeProvider/ThemeProvider.tsx:20</a></li>
+								</ul>
+							</aside>
+						</section>
+					</section>
+					<section class="tsd-panel tsd-member tsd-kind-object-literal tsd-parent-kind-object-literal">
+						<a name="defaultthemes.secondarydark" class="tsd-anchor"></a>
+						<h3>secondary<wbr>Dark</h3>
+						<div class="tsd-signature tsd-kind-icon">secondary<wbr>Dark<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">object</span></div>
+						<aside class="tsd-sources">
+							<ul>
+								<li>Defined in <a href="https://github.com/juanda2222/vissually/blob/3199229/src/ThemeProvider/ThemeProvider.tsx#L34">ThemeProvider/ThemeProvider.tsx:34</a></li>
+							</ul>
+						</aside>
+						<section class="tsd-panel tsd-member tsd-kind-variable tsd-parent-kind-object-literal">
+							<a name="defaultthemes.secondarydark.backgroundcolor1-3" class="tsd-anchor"></a>
+							<h3>background<wbr>Color1</h3>
+							<div class="tsd-signature tsd-kind-icon">background<wbr>Color1<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">string</span><span class="tsd-signature-symbol"> = &quot;rgb(250, 250, 250)&quot;</span></div>
+							<aside class="tsd-sources">
+								<ul>
+									<li>Defined in <a href="https://github.com/juanda2222/vissually/blob/3199229/src/ThemeProvider/ThemeProvider.tsx#L39">ThemeProvider/ThemeProvider.tsx:39</a></li>
+								</ul>
+							</aside>
+						</section>
+						<section class="tsd-panel tsd-member tsd-kind-variable tsd-parent-kind-object-literal">
+							<a name="defaultthemes.secondarydark.backgroundcolor2-3" class="tsd-anchor"></a>
+							<h3>background<wbr>Color2</h3>
+							<div class="tsd-signature tsd-kind-icon">background<wbr>Color2<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">string</span><span class="tsd-signature-symbol"> = &quot;rgb(70, 140, 170)&quot;</span></div>
+							<aside class="tsd-sources">
+								<ul>
+									<li>Defined in <a href="https://github.com/juanda2222/vissually/blob/3199229/src/ThemeProvider/ThemeProvider.tsx#L40">ThemeProvider/ThemeProvider.tsx:40</a></li>
+								</ul>
+							</aside>
+						</section>
+						<section class="tsd-panel tsd-member tsd-kind-variable tsd-parent-kind-object-literal">
+							<a name="defaultthemes.secondarydark.color1-3" class="tsd-anchor"></a>
+							<h3>color1</h3>
+							<div class="tsd-signature tsd-kind-icon">color1<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">string</span><span class="tsd-signature-symbol"> = &quot;#10b462&quot;</span></div>
+							<aside class="tsd-sources">
+								<ul>
+									<li>Defined in <a href="https://github.com/juanda2222/vissually/blob/3199229/src/ThemeProvider/ThemeProvider.tsx#L37">ThemeProvider/ThemeProvider.tsx:37</a></li>
+								</ul>
+							</aside>
+						</section>
+						<section class="tsd-panel tsd-member tsd-kind-variable tsd-parent-kind-object-literal">
+							<a name="defaultthemes.secondarydark.color2-3" class="tsd-anchor"></a>
+							<h3>color2</h3>
+							<div class="tsd-signature tsd-kind-icon">color2<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">string</span><span class="tsd-signature-symbol"> = &quot;#10b462&quot;</span></div>
+							<aside class="tsd-sources">
+								<ul>
+									<li>Defined in <a href="https://github.com/juanda2222/vissually/blob/3199229/src/ThemeProvider/ThemeProvider.tsx#L38">ThemeProvider/ThemeProvider.tsx:38</a></li>
+								</ul>
+							</aside>
+						</section>
+						<section class="tsd-panel tsd-member tsd-kind-variable tsd-parent-kind-object-literal">
+							<a name="defaultthemes.secondarydark.textcolor1-3" class="tsd-anchor"></a>
+							<h3>text<wbr>Color1</h3>
+							<div class="tsd-signature tsd-kind-icon">text<wbr>Color1<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">string</span><span class="tsd-signature-symbol"> = &quot;rgb(192, 197, 206)&quot;</span></div>
+							<aside class="tsd-sources">
+								<ul>
+									<li>Defined in <a href="https://github.com/juanda2222/vissually/blob/3199229/src/ThemeProvider/ThemeProvider.tsx#L35">ThemeProvider/ThemeProvider.tsx:35</a></li>
+								</ul>
+							</aside>
+						</section>
+						<section class="tsd-panel tsd-member tsd-kind-variable tsd-parent-kind-object-literal">
+							<a name="defaultthemes.secondarydark.textcolor2-3" class="tsd-anchor"></a>
+							<h3>text<wbr>Color2</h3>
+							<div class="tsd-signature tsd-kind-icon">text<wbr>Color2<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">string</span><span class="tsd-signature-symbol"> = &quot;rgb(255, 255, 255)&quot;</span></div>
+							<aside class="tsd-sources">
+								<ul>
+									<li>Defined in <a href="https://github.com/juanda2222/vissually/blob/3199229/src/ThemeProvider/ThemeProvider.tsx#L36">ThemeProvider/ThemeProvider.tsx:36</a></li>
 								</ul>
 							</aside>
 						</section>
@@ -361,52 +451,31 @@
 						<a href="../globals.html"><em>Globals</em></a>
 					</li>
 					<li class=" tsd-kind-module">
-						<a href="_autocomplete_vautocomplete_.html">&quot;<wbr>Autocomplete/VAuto<wbr>Complete&quot;</a>
-					</li>
-					<li class=" tsd-kind-module">
-						<a href="_autocomplete_vautocomplete_test_.html">&quot;<wbr>Autocomplete/VAuto<wbr>Complete.test&quot;</a>
+						<a href="_autocomplete_vautocomplete_.html">&quot;<wbr>Auto<wbr>Complete/VAuto<wbr>Complete&quot;</a>
 					</li>
 					<li class=" tsd-kind-module">
 						<a href="_buttons_vbutton_.html">&quot;<wbr>Buttons/VButton&quot;</a>
 					</li>
 					<li class=" tsd-kind-module">
-						<a href="_buttons_vbutton_test_.html">&quot;<wbr>Buttons/VButton.test&quot;</a>
-					</li>
-					<li class=" tsd-kind-module">
 						<a href="_display_vchip_.html">&quot;<wbr>Display/VChip&quot;</a>
-					</li>
-					<li class=" tsd-kind-module">
-						<a href="_display_vchip_test_.html">&quot;<wbr>Display/VChip.test&quot;</a>
 					</li>
 					<li class=" tsd-kind-module">
 						<a href="_inputs_vinput_.html">&quot;<wbr>Inputs/VInput&quot;</a>
 					</li>
 					<li class=" tsd-kind-module">
-						<a href="_inputs_vinput_test_.html">&quot;<wbr>Inputs/VInput.test&quot;</a>
-					</li>
-					<li class=" tsd-kind-module">
 						<a href="_inputs_vselect_.html">&quot;<wbr>Inputs/VSelect&quot;</a>
 					</li>
 					<li class=" tsd-kind-module">
-						<a href="_inputs_vselect_test_.html">&quot;<wbr>Inputs/VSelect.test&quot;</a>
+						<a href="_lists_vchiplist_.html">&quot;<wbr>Lists/VChip<wbr>List&quot;</a>
 					</li>
 					<li class=" tsd-kind-module">
 						<a href="_lists_vclickablelist_.html">&quot;<wbr>Lists/VClickable<wbr>List&quot;</a>
-					</li>
-					<li class=" tsd-kind-module">
-						<a href="_lists_vclickablelist_test_.html">&quot;<wbr>Lists/VClickable<wbr>List.test&quot;</a>
 					</li>
 					<li class="current tsd-kind-module">
 						<a href="_themeprovider_themeprovider_.html">&quot;<wbr>Theme<wbr>Provider/<wbr>Theme<wbr>Provider&quot;</a>
 					</li>
 					<li class=" tsd-kind-module">
-						<a href="_themeprovider_themeprovider_test_.html">&quot;<wbr>Theme<wbr>Provider/<wbr>Theme<wbr>Provider.test&quot;</a>
-					</li>
-					<li class=" tsd-kind-module">
 						<a href="_tools_colortools_.html">&quot;<wbr>Tools/<wbr>Color<wbr>Tools&quot;</a>
-					</li>
-					<li class=" tsd-kind-module">
-						<a href="_tools_colortools_test_.html">&quot;<wbr>Tools/<wbr>Color<wbr>Tools.test&quot;</a>
 					</li>
 					<li class=" tsd-kind-module">
 						<a href="_assets_arrow_down_.html">&quot;assets/arrow-<wbr>down&quot;</a>
@@ -416,9 +485,6 @@
 					</li>
 					<li class=" tsd-kind-module">
 						<a href="_assets_x_symbol_.html">&quot;assets/x-<wbr>symbol&quot;</a>
-					</li>
-					<li class=" tsd-kind-module">
-						<a href="_index_.html">&quot;index&quot;</a>
 					</li>
 				</ul>
 			</nav>
