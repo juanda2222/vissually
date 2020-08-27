@@ -15,6 +15,7 @@ cache:
   - node_modules
 
 before_deploy:
+  - npm install typedoc
   - typedoc --out ./documentation/ src
 
 deploy:
