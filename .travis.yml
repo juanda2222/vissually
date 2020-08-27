@@ -5,7 +5,6 @@ node_js:
 before_install:
 - echo "Ready to install!"
 
-
 branches:
   only:
   - master
@@ -21,8 +20,7 @@ deploy:
 
   - provider: npm
     email: juandara2222@gmail.com
-    api_key:
-      secure: VM1kopn72webVf0gHP6B1kvf8I1H2TU5q//BCyi817cB0lc+u78SPTfVtJSkjgUl8A5N1CLz8ORC4ZLH71BFsc+pIgxPUkJqP04UOkhO+BlckDjkNGGmOIvs5zJlonnmZ02/OUAOjiQSbTliqS8SRkSObV2inRSTCMhO9DjohBnrxeLmRvDCNYV6N3r7xiV7BsJ8KumcE/ML4sfStN9WpUTBPinjaM//t9kBm4RZCud6Tkl1sjz/ckpo1nsTRLZeuM7rbs0b3dc3xE8u2IQdFnAnu7z0JY/5HdZlL27rFnaqq0z5Ds7Wc1Yn0nKmBcunmeLoDIHZvnQ8v7fFn84yuFdnoMLeQ/FsHwgCtFVnbsGpLmW9x6IkopFPKsJ0r7zgu4+QcOwlEzX9xyuIssi5U+Zbc7Fh/Q9aNw/i/kA6vt5olzcF55L35K3fu9eNPYpOGHQ4KgmtLXRlhy2pUPlrDwDyrFw5cLx4RjOLY22Wp80dv2/dNC2ungD3ImmcE5jLu1KENXOJ780QvVjO1WPpxWagqjEttITb/IsBWwG0mcDLgVvRGzVhdQHWGpoSmoT4EDAbI+3MszFtdD5iRpwrz6y+ZqMxcXgC3L57HfMpRBvER3w2TH0JqF7khA0DA5lLO0Nxxhokju+EvbdQn3V0LI/p2y/HRAfUzE3PpMGnAj4=
+    api_key: "$NPM_API_KEY"
     on:
       tags: true
       repo: juanda2222/vissually
