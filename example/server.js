@@ -1,13 +1,13 @@
 const express = require('express');
 const path = require('path');
-const helmet = require('helmet')
-const cors = require('cors')
+//const helmet = require('helmet')
+//const cors = require('cors')
 
 const app = express();
 
 // Serve static files from the React app
-app.use(helmet())
-app.use(cors())
+//app.use(helmet())
+//app.use(cors())
 app.use(express.static(path.join(__dirname, 'build')));
 
 // The "catchall" handler: for any request that doesn't
