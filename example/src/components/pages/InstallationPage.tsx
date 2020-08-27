@@ -44,7 +44,7 @@ const useStyles = makeStyles((theme: Theme) =>
   })
 );
 
-const InstallationPage = (props: {dark:boolean}) => {
+function InstallationPage (props: {dark:boolean}) {
 
   const classes = useStyles();
 

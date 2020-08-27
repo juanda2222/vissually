@@ -8,7 +8,7 @@ import  SyntaxHighlighter from 'react-syntax-highlighter';
 import AutoCompleteExamplesCode from "../../assets/AutoCompleteExamples"
 import AutoCompleteExamples from "../examples/AutoCompleteExamples"
 
-const TextInputBanner = (props: {dark?:boolean}) => {
+function TextInputBanner (props: {dark?:boolean}){
   return (
     <div>
       <h3 style={{ color:props.dark ? "#ffffff":"#000000" }}>AutoComplete example:</h3>

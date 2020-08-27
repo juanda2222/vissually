@@ -41,7 +41,7 @@ const StyledButton = styled("div") <{
     }
   `
 
-const VButton: React.FunctionComponent<ButtonProps> = ({
+function VButton({
   //styling properties
   className,
   style,
@@ -52,7 +52,7 @@ const VButton: React.FunctionComponent<ButtonProps> = ({
   isPressed,
   children,
   onClick,
-}) => {  
+}: ButtonProps ){  
 
   // get the theme from the context and its hooks
   const context_theme = useContext(ThemeContext);

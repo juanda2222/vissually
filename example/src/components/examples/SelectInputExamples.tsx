@@ -20,15 +20,17 @@ const example_list=[
         "last one",
     ]
     
-const SelectInputExample = () => (
-    <div className={"responsiveFlex"}>
-        <VSelect label="default" list={example_list} />
-        <VSelect label="secondary" list={example_list} secondary/>
-        <VSelect label="custom" style={{
-            backgroundColor: "rgb(170,50,50)",
-            borderColor: "rgb(150,20,20)"
-        }} list={example_list} />
-    </div>
-)
+function SelectInputExample () {
+    return (
+        <div className={"responsiveFlex"}>
+            <VSelect label="default" list={example_list} />
+            <VSelect label="secondary" list={example_list} secondary/>
+            <VSelect label="custom" style={{
+                backgroundColor: "rgb(170,50,50)",
+                borderColor: "rgb(150,20,20)"
+            }} list={example_list} />
+        </div>
+    )
+}
 
 export default SelectInputExample

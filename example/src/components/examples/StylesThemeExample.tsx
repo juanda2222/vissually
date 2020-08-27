@@ -17,26 +17,28 @@ const custom_theme = {
     backgroundColor2: "rgb(70, 140, 170)", 
 } as VThemeType
 
-const StylesExample = () => (
-    <div style={{
-        display: "flex",
-        flexDirection: "column",
-        alignItems: "center",
-        backgroundColor: "#fafafa",
-    }}>
-        <VThemeProvider secondary>
-            <p>Default theme provider:</p>
-            <VButton style={{ padding:"30px", }}>{"BIG"}</VButton>
-            <VButton style={{ padding: "5px" }}>{"small"}</VButton>
-            <VInput parentStyle={{ width: "400px" }} placeholder="large" name="name"/>
-        </VThemeProvider>
-        <VThemeProvider theme={custom_theme}>
-            <p>Custom theme:</p>
-            <VButton style={{ padding:"30px" }}>{"BIG"}</VButton>
-            <VButton style={{ padding: "5px" }}>{"small"}</VButton>
-            <VInput parentStyle={{ width: "400px" }} placeholder="large" name="name"/>
-        </VThemeProvider>
-    </div>
-)
+function StylesExample() {
+    return (
+        <div style={{
+            display: "flex",
+            flexDirection: "column",
+            alignItems: "center",
+            backgroundColor: "#fafafa",
+        }}>
+            <VThemeProvider secondary>
+                <p>Default theme provider:</p>
+                <VButton style={{ padding: "30px", }}>{"BIG"}</VButton>
+                <VButton style={{ padding: "5px" }}>{"small"}</VButton>
+                <VInput parentStyle={{ width: "400px" }} placeholder="large" name="name" />
+            </VThemeProvider>
+            <VThemeProvider theme={custom_theme}>
+                <p>Custom theme:</p>
+                <VButton style={{ padding: "30px" }}>{"BIG"}</VButton>
+                <VButton style={{ padding: "5px" }}>{"small"}</VButton>
+                <VInput parentStyle={{ width: "400px" }} placeholder="large" name="name" />
+            </VThemeProvider>
+        </div>
+    )
+}
 
 export default StylesExample

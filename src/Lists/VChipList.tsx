@@ -1,13 +1,13 @@
 import React from 'react'
 import VChip from "../Display/VChip"
 
-const VChipList: React.FunctionComponent<ChipListProps> = ({
+function VChipList ({
   //functional
   onDelete,
   onClick,
   getListLabel,
   list,
-}) => {
+}: ChipListProps ){
 
   // style the children:
   const wrapped_list = list ? list : []

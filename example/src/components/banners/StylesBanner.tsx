@@ -8,7 +8,7 @@ import  SyntaxHighlighter from 'react-syntax-highlighter';
 import StylesExampleCode from "../../assets/StylesExample"
 import StylesExample from "../examples/StylesExample"
 
-const TextInputBanner = (props: {dark?:boolean}) => {
+function TextInputBanner (props: {dark?:boolean}) {
   return (
     <div>
         <h3 style={{ color:props.dark ? "#ffffff":"#000000" }}>Simple styling examples:</h3>

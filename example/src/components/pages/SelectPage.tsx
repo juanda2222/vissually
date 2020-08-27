@@ -31,7 +31,7 @@ const useStyles = makeStyles((theme:Theme) =>
   })
 );
 
-const SelectPage = (props: {dark?:boolean}) => {
+function SelectPage (props: {dark?:boolean}) {
   
   const classes = useStyles();
   const { dark } = props

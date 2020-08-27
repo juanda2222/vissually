@@ -12,9 +12,9 @@ const StyledContainer = styled("div")<{backgroundColor:string, hoverBackgroundCo
   &:hover{
     background-color: ${props => props.hoverBackgroundColor};  
   } 
-  `;
+`;
 
-    
+// style the button itself
 const StyledCancelButton = styled("div") <{
   backgroundColor: string,
   hoverBackgroundColor: string,
@@ -27,7 +27,7 @@ const StyledCancelButton = styled("div") <{
   }
 `;
 
-const VChip: React.FunctionComponent<ChipProps> = ({
+function VChip({
   //styling properties
   className,
   style,
@@ -38,7 +38,7 @@ const VChip: React.FunctionComponent<ChipProps> = ({
   label,
   onDelete,
   onClick,
-}) => {
+}: ChipProps ){
 
   // get the theme from the context
   const context_theme = useContext(ThemeContext);

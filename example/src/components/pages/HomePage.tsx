@@ -58,7 +58,7 @@ const useStyles = makeStyles((theme: Theme) =>
   })
 );
 
-const HomePage = () => {
+function HomePage () {
 
   const classes = useStyles();
 

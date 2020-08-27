@@ -25,7 +25,7 @@ const useStyles = makeStyles((theme:Theme) =>
 );
 
 
-const StylePage = (props: {dark:boolean}) => {
+function StylePage (props: {dark:boolean}) {
   
   const classes = useStyles();
 

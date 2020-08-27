@@ -33,7 +33,7 @@ const useStyles = makeStyles((theme: Theme) =>
 );
 
 
-const AutoCompletePage = (props: {dark?:boolean}) => {
+function AutoCompletePage (props: {dark?:boolean}) {
   
   const classes = useStyles();
   const { dark } = props

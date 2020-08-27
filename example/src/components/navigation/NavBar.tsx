@@ -43,7 +43,7 @@ interface ButtonAppBarProps {
   is_dark: boolean,
 }
 
-const ButtonAppBar = (props:ButtonAppBarProps) => {
+function ButtonAppBar (props:ButtonAppBarProps) {
 
   const { change_theme, is_dark } = props
   const classes = useStyles();

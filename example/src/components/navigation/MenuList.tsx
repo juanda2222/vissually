@@ -25,7 +25,8 @@ const useStyles = makeStyles({
 interface MenListProps {
   closeSignal: (event: React.KeyboardEvent | React.MouseEvent) => void
 }
-const MenuList:React.FunctionComponent<MenListProps> = ({ closeSignal }) => {
+
+function MenuList ({ closeSignal }: MenListProps) {
 
   const classes = useStyles();
   const [state, setState] = React.useState({

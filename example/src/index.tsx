@@ -10,4 +10,5 @@ import store from './redux/stores/RootStore'
 ReactDOM.render(
   <Provider store={store}>
     <App />
-  </Provider>, document.getElementById('root'))
+  </Provider>, document.getElementById('root')
+)

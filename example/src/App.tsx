@@ -31,7 +31,7 @@ interface AppProps {
 
 
 
-const App = (props:AppProps) => {
+function App (props: AppProps) {
 
   const { palette_type, is_dark } = props
 

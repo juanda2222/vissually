@@ -33,7 +33,7 @@ const StyledBottomItem = styled(StyledItem)`
   border-bottom-right-radius: 8px;
 `;
     
-const VClickableList: React.FunctionComponent<ListProps> = ({
+function VClickableList ({
   //styling properties
   className,
   style,
@@ -45,7 +45,7 @@ const VClickableList: React.FunctionComponent<ListProps> = ({
   list,
   getLabel,
   onClick,
-}) => {
+}: ListProps ){
 
   // get the theme from the context
   const context_theme = useContext(ThemeContext);

@@ -8,7 +8,7 @@ import SyntaxHighlighter from 'react-syntax-highlighter';
 import ButtonExampleCode from "../../assets/ButtonExamples"
 import ButtonExample from "../examples/ButtonExamples"
 
-const ButtonBanner = (props: {dark?:boolean}) => {
+function ButtonBanner (props: {dark?:boolean}){
   return (
     <div>
         <h3 style={{ color:props.dark ? "#ffffff":"#000000" }}>Button examples:</h3>

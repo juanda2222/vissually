@@ -32,7 +32,7 @@ const useStyles = makeStyles((theme:Theme) =>
   })
 );
 
-const InputPage = (props: {dark?:boolean}) => {
+function InputPage (props: {dark?:boolean}) {
   
   const classes = useStyles();
   const { dark } = props

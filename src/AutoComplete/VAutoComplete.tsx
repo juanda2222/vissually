@@ -9,7 +9,7 @@ import VClickableList from "../Lists/VClickableList"
 import VChipList from "../lists/VChipList"
 
 
-const VAutoComplete: React.FunctionComponent<AutoCompleteProps> = ({
+function VAutoComplete({
   //style properties
   primary, secondary, primaryDark, secondaryDark,
   className,
@@ -23,7 +23,7 @@ const VAutoComplete: React.FunctionComponent<AutoCompleteProps> = ({
   value,
   onFocus,
   onBlur,
-}) => {
+}: AutoCompleteProps) {
 
   // hooks and state:
   const [listIsOpen, setListOpen] = useState(false)

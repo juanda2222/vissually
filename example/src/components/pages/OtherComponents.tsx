@@ -4,8 +4,11 @@ import React from "react"
 
 import ChipBanner from "../banners/ChipBanner"
 
+/**
+ * TODO: Include in the page the components: VChipBanner, VChipList, VClickableList
+ */
 
-const OtherComponents = () => {
+function OtherComponents () {
   
   return (
     <React.Fragment>
@@ -13,6 +16,5 @@ const OtherComponents = () => {
     </React.Fragment>
   );
 };
-
 
 export default OtherComponents

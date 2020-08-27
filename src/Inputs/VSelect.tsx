@@ -9,7 +9,7 @@ import ArrowDownSVG from "../assets/arrow-down.js"
 import ArrowUpSVG from "../assets/arrow-up.js"
 
 
-const VSelect: React.FunctionComponent<SelectProps> = ({
+function VSelect ({
   //styling properties
   className,
   style,
@@ -21,13 +21,13 @@ const VSelect: React.FunctionComponent<SelectProps> = ({
   list,
   onSelect,
   label,
-}) => {
+}: SelectProps ){
 
   const [isListOpen, setListOpen] = useState(false)
   const [selectedItem, setSelectedItem] = useState("")
 
   // get the theme from the context
-  const context_theme: Theme = useContext(ThemeContext);
+  const context_theme = useContext(ThemeContext);
   const wrappedClassName = [styles.button_style, className ? className : ""].join(" ")
   const wrappedListClassName = [
     styles.list_style,
@@ -36,7 +36,7 @@ const VSelect: React.FunctionComponent<SelectProps> = ({
   ].join(" ")
 
   // generate the theme depending on the boolean inputs or the theme input
-  let current_theme:Theme;
+  let current_theme:DefaultTheme;
   if (secondary) {
     current_theme = DefaultThemes.secondary
   } else if (primaryDark) {

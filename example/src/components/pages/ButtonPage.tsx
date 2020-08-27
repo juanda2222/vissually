@@ -32,7 +32,7 @@ const useStyles = makeStyles((theme:Theme) =>
   })
 );
 
-const ButtonPage = (props: {dark?:boolean}) => {
+function ButtonPage (props: {dark?:boolean}) {
   
   const classes = useStyles();
   const { dark } = props

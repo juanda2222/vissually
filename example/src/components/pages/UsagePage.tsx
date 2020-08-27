@@ -36,7 +36,7 @@ const useStyles = makeStyles((theme:Theme) =>
   })
 );
 
-const GetStartedPage = (props: { dark: boolean }) => {
+function GetStartedPage (props: { dark: boolean }) {
 
   const classes = useStyles();
 

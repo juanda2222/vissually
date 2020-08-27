@@ -8,7 +8,7 @@ import  SyntaxHighlighter from 'react-syntax-highlighter';
 import ChipExampleCode from "../../assets/ChipExamples"
 import ChipExample from "../examples/ChipExamples"
 
-const TextInputBanner = (props:{dark?:boolean}) => {
+function TextInputBanner (props:{dark?:boolean}){
   return (
     <div>
         <h3 style={{ color:props.dark ? "#ffffff":"#000000" }}>Chip examples:</h3>

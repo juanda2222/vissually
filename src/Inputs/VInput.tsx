@@ -32,7 +32,7 @@ const StyledLabel = styled("label") <{
   };
 `;
 
-const VTextInput: React.FunctionComponent<InputProps> = ({
+function VTextInput ({
   //styling properties
   className,
   style,
@@ -51,7 +51,7 @@ const VTextInput: React.FunctionComponent<InputProps> = ({
   onChange,
   onFocus,
   onBlur,
-}) => {  
+}: InputProps ){  
 
   // get the theme from the context
   const context_theme = useContext(ThemeContext);

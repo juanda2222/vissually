@@ -12,10 +12,10 @@ interface TemporaryDrawerProps {
   className?:string,
 }
 
-const TemporaryDrawerButton:React.FunctionComponent<TemporaryDrawerProps>  = ({
+function TemporaryDrawerButton ({
   onChange,
   className,
-}) => {
+}: TemporaryDrawerProps ){
   
   const [state, setState] = React.useState({
     isDrawerOpen: false,

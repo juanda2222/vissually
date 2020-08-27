@@ -8,7 +8,7 @@ import SyntaxHighlighter from 'react-syntax-highlighter';
 import SelectInputExampleCode from "../../assets/SelectInputExamples"
 import SelectInputExample from "../examples/SelectInputExamples"
 
-const SelectBanner = (props: {dark?:boolean}) => {
+function SelectBanner (props: {dark?:boolean}) {
   return (
     <div>
         <h3 style={{ color:props.dark ? "#ffffff":"#000000" }}>SelectInput examples:</h3>
