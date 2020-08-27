@@ -29,7 +29,7 @@ deploy:
     skip_cleanup: 'true'
 
   - provider: s3
-    access_key_id: AKIAJEX56CB2LDOONAAQ
+    access_key_id: $AWS_ACCESS_KEY
     secret_access_key:
       secure: K7/CyOOgVe6kyjsE6528soaEBq4TQvRSFuOduXJak4+PY5QJdVueaFjBzqTTorkkxCCiFzIkJToNQUg74Za9/h1d6m1ETdzpzMTJ9jqu8mVJ91HJhWybSQ/4pFEZuv/BSqVujBXThVxN4NwSfmAltiIRccdIc3CDUSTvbn2/98JP64KYGGzF9O1gI/RycbpfyqeKbaFAbhSdhjS2EV2qheUc4Ka5gqco04dS8kCb8r1NfiP2bcNqZr0MDcrLg8I7VKuQ9YF/LRV0zlrCY5sLy1y9ngqlpDGxZh4wNkfqkzUBblVyRaUiNe0kBfoQjJF4/0nqSU2tkzXeCxYpmC/4lRqGzQ6rR0GVVfKBKwx/ELhu58BDD9CRoumgC3KugrIk0RLUO2Sa/tGKJlqTFD1i6Sl8keCmVFhudPmbXhNJDxemiMCAhYYR3eGO0PXVjpLoo/lrPUUNru7rnwqMMAdxftb0bnoDWpVUAsB2ctHCOICQGw3+jn3Vk4VopmPGXrwDFJ6szWjxO98N7dBZT/LHf1/JKz4clEZ2ZyIEL0ZtBroFE3OmbNTO7k7r61/5C7qYbwvTZ3+HYs0BCyftmzMMOXwPUHK9bdBsGWqEUYoOgVwc4spVBm1ure+/6eDnBnaLZdZeCPrk1sC2RNykNtAXVyKtowxydQJkQCAmvVfWvsI=
     bucket: personal-public-files-23rde2
