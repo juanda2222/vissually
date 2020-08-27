@@ -2,7 +2,7 @@
 
 exports[`VButton Default render. no list given 1`] = `
 <div
-  className="sc-AxjAm dkuJXE container "
+  className="sc-AxjAm iGEuyI container "
 >
   <span>
     snapshot
@@ -13,14 +13,14 @@ exports[`VButton Default render. no list given 1`] = `
 exports[`VButton Rendering with props. Snapshot test 1`] = `
 <div>
   <div
-    className="sc-AxjAm dkuJXE container "
+    className="sc-AxjAm iGEuyI container "
   >
     <span>
       label!
     </span>
   </div>
   <div
-    className="sc-AxjAm dkuJXE container "
+    className="sc-AxjAm iGEuyI container "
     onClick={[Function]}
   >
     <span>
@@ -28,7 +28,7 @@ exports[`VButton Rendering with props. Snapshot test 1`] = `
     </span>
   </div>
   <div
-    className="sc-AxjAm dkuJXE container "
+    className="sc-AxjAm iGEuyI container "
     onClick={[Function]}
   >
     <span>

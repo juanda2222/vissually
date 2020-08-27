@@ -13,7 +13,7 @@ exports[`VChipList Default render. no list given 1`] = `
   }
 >
   <div
-    className="sc-AxjAm dkuJXE container "
+    className="sc-AxjAm iGEuyI container "
     onClick={[Function]}
     style={
       Object {
@@ -48,7 +48,7 @@ exports[`VChipList Default render. no list given 1`] = `
     </div>
   </div>
   <div
-    className="sc-AxjAm dkuJXE container "
+    className="sc-AxjAm iGEuyI container "
     onClick={[Function]}
     style={
       Object {
@@ -98,7 +98,7 @@ exports[`VChipList Rendering with props. Snapshot test (With getLabel property) 
   }
 >
   <div
-    className="sc-AxjAm dkuJXE container "
+    className="sc-AxjAm iGEuyI container "
     onClick={[Function]}
     style={
       Object {
@@ -133,7 +133,7 @@ exports[`VChipList Rendering with props. Snapshot test (With getLabel property) 
     </div>
   </div>
   <div
-    className="sc-AxjAm dkuJXE container "
+    className="sc-AxjAm iGEuyI container "
     onClick={[Function]}
     style={
       Object {
@@ -168,7 +168,7 @@ exports[`VChipList Rendering with props. Snapshot test (With getLabel property) 
     </div>
   </div>
   <div
-    className="sc-AxjAm dkuJXE container "
+    className="sc-AxjAm iGEuyI container "
     onClick={[Function]}
     style={
       Object {
@@ -203,7 +203,7 @@ exports[`VChipList Rendering with props. Snapshot test (With getLabel property) 
     </div>
   </div>
   <div
-    className="sc-AxjAm dkuJXE container "
+    className="sc-AxjAm iGEuyI container "
     onClick={[Function]}
     style={
       Object {
@@ -238,7 +238,7 @@ exports[`VChipList Rendering with props. Snapshot test (With getLabel property) 
     </div>
   </div>
   <div
-    className="sc-AxjAm dkuJXE container "
+    className="sc-AxjAm iGEuyI container "
     onClick={[Function]}
     style={
       Object {
@@ -288,7 +288,7 @@ exports[`VChipList Rendering with props. Snapshot test 1`] = `
   }
 >
   <div
-    className="sc-AxjAm dkuJXE container "
+    className="sc-AxjAm iGEuyI container "
     onClick={[Function]}
     style={
       Object {
@@ -323,7 +323,7 @@ exports[`VChipList Rendering with props. Snapshot test 1`] = `
     </div>
   </div>
   <div
-    className="sc-AxjAm dkuJXE container "
+    className="sc-AxjAm iGEuyI container "
     onClick={[Function]}
     style={
       Object {
@@ -358,7 +358,7 @@ exports[`VChipList Rendering with props. Snapshot test 1`] = `
     </div>
   </div>
   <div
-    className="sc-AxjAm dkuJXE container "
+    className="sc-AxjAm iGEuyI container "
     onClick={[Function]}
     style={
       Object {
@@ -393,7 +393,7 @@ exports[`VChipList Rendering with props. Snapshot test 1`] = `
     </div>
   </div>
   <div
-    className="sc-AxjAm dkuJXE container "
+    className="sc-AxjAm iGEuyI container "
     onClick={[Function]}
     style={
       Object {
@@ -428,7 +428,7 @@ exports[`VChipList Rendering with props. Snapshot test 1`] = `
     </div>
   </div>
   <div
-    className="sc-AxjAm dkuJXE container "
+    className="sc-AxjAm iGEuyI container "
     onClick={[Function]}
     style={
       Object {
