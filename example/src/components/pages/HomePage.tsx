@@ -72,7 +72,7 @@ const HomePage = () => {
         display: "block",
         maxWidth:"170px",
 
-      }} alt="personal logo" src={personal_logo} />
+      }} alt="Alfagenos David personal logo" src={personal_logo} />
       <div className={classes.container}>
         <Typography className={classes.text} color="primary" variant="h2">
           Vissually
