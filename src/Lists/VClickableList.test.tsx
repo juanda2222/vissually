@@ -3,9 +3,9 @@ import React from "react"
 import renderer from 'react-test-renderer';
 import VClickableList from './VClickableList'
 
-describe('VButton', () => {
+describe('VClickableList', () => {
 
-  test('Button declaration has no errors', () => {
+  test('VClickableList declaration has no errors', () => {
     expect(VClickableList).toBeTruthy()
   })
 
@@ -17,7 +17,7 @@ describe('VButton', () => {
 
   test("Rendering with props. Snapshot test", () => { 
 
-    const ButtonWithProps = renderer.create(
+    const vClickableListSnap = renderer.create(
       <VClickableList
         list={["some_thing", "some_name", "some_name2", "other name", "whatever list"]}
         onCLick={(i: number, text: string) => {
@@ -26,8 +26,8 @@ describe('VButton', () => {
       />
     ).toJSON();
 
-    console.log(ButtonWithProps)
-    expect(ButtonWithProps).toMatchSnapshot();
+    console.log(vClickableListSnap)
+    expect(vClickableListSnap).toMatchSnapshot();
   })
 
 

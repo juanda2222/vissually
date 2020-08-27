@@ -20,7 +20,7 @@ exports[`VInput VInput rendering with props type='number'. Snapshot test 1`] = `
   className="container"
 >
   <input
-    className="sc-AxjAm LIrVh input_element some_classname"
+    className="sc-AxjAm LIrVh input_element some_className"
     name="age"
     onBlur={[Function]}
     onChange={[Function]}
@@ -41,7 +41,7 @@ exports[`VInput VInput rendering with props. Snapshot test 1`] = `
   className="container"
 >
   <input
-    className="sc-AxjAm LIrVh input_element some_classname"
+    className="sc-AxjAm LIrVh input_element some_className"
     onBlur={[Function]}
     onChange={[Function]}
     onFocus={[Function]}

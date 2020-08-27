@@ -23,11 +23,11 @@ describe('Color2Vec functions test', () => {
     
     expect(() => {
       Color2Vec("wrong input")
-    }).toThrow(new Error(`rgb string in wrong format`))
+    }).toThrow(new Error(`Rgb string in wrong format`))
     
     expect(() => {
       Color2Vec("bad in")
-    }).toThrow(new Error("hex string in wrong format"))
+    }).toThrow(new Error("Hex string in wrong format"))
     
   })
 

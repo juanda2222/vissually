@@ -6,58 +6,8 @@ import React, {
 
 import styles from './VAutoComplete.module.css'
 import VClickableList from "../Lists/VClickableList"
-import VChip from "../Display/VChip"
+import VChipList from "../lists/VChipList"
 
-
-const DisplayList: React.FunctionComponent<ChipListProps> = ({
-  //functional
-  onDelete,
-  onClick,
-  getListLabel,
-  list,
-}) => {
-
-  // style the children:
-  const wrapped_list = list ? list : []
-  const list_component =  wrapped_list.map((item, index) => {
-
-    let label = ""
-    // depending on the list structure get the label:
-    if (typeof getListLabel === 'function') {
-      label = getListLabel(item)
-      // a plain text list:
-    } else {
-      label = item
-    }
-
-    return (
-      <VChip
-        style={{margin:"2px"}}
-        key={label}
-        label={label}
-        onClick={() => {
-          if (typeof onClick == "function") { onClick({ label: label, index: index }) }
-        }}
-        onDelete={() => {
-          if (typeof onDelete == "function") { onDelete({ label: label, index: index }) }
-        }}
-      />
-    )
-  })
-
-  return (
-    <div
-      style={{
-        flex:1,
-        display: "flex",
-        flexWrap: "wrap",
-        justifyContent:"center",
-        alignItems: "flex-start",
-      }}
-    >
-    {list_component}
-  </div>)
-}
 
 const VAutoComplete: React.FunctionComponent<AutoCompleteProps> = ({
   //style properties
@@ -135,7 +85,7 @@ const VAutoComplete: React.FunctionComponent<AutoCompleteProps> = ({
       
       {// render a list if multiple selection
         multiple ? (
-          <DisplayList
+          <VChipList
             list={selectedList}
             onDelete={(obj) => {
 

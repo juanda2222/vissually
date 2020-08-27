@@ -2,7 +2,7 @@
 
 exports[`ThemeConfig Rendering with props. Snapshot test 1`] = `
 <div
-  className="sc-AxjAm gDXVAl action_button "
+  className="sc-AxjAm btSQui action_button "
   onClick={[Function]}
 >
   Button test with theme

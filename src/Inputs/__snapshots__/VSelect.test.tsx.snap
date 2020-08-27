@@ -5,7 +5,7 @@ exports[`VSelect Default render. Snapshot test 1`] = `
   className="big_container"
 >
   <div
-    className="sc-AxjAm gDXVAl action_button button_style "
+    className="sc-AxjAm btSQui action_button button_style "
     onClick={[Function]}
   >
     label
@@ -32,7 +32,7 @@ exports[`VSelect Default render. Snapshot test 1`] = `
     </svg>
   </div>
   <div
-    className="sc-AxirZ fVduVY list_container list_style fadeOut "
+    className="sc-AxirZ cRdIKK list_container list_style fadeOut "
   >
     <div
       className="sc-AxiKw sc-AxhCb gcNYfB list_item list_item"
@@ -41,7 +41,7 @@ exports[`VSelect Default render. Snapshot test 1`] = `
       1
     </div>
     <div
-      className="sc-AxiKw sc-AxhUy bjGxvv list_item list_item"
+      className="sc-AxiKw sc-AxhUy dJsdac list_item list_item"
       onClick={[Function]}
     >
       2
@@ -55,7 +55,7 @@ exports[`VSelect Rendering with props. Snapshot test 1`] = `
   className="big_container"
 >
   <div
-    className="sc-AxjAm gDXVAl action_button button_style "
+    className="sc-AxjAm btSQui action_button button_style "
     onClick={[Function]}
   >
     label
@@ -82,7 +82,7 @@ exports[`VSelect Rendering with props. Snapshot test 1`] = `
     </svg>
   </div>
   <div
-    className="sc-AxirZ fVduVY list_container list_style fadeOut "
+    className="sc-AxirZ cRdIKK list_container list_style fadeOut "
   >
     <div
       className="sc-AxiKw sc-AxhCb gcNYfB list_item list_item"
@@ -109,7 +109,7 @@ exports[`VSelect Rendering with props. Snapshot test 1`] = `
       other name
     </div>
     <div
-      className="sc-AxiKw sc-AxhUy bjGxvv list_item list_item"
+      className="sc-AxiKw sc-AxhUy dJsdac list_item list_item"
       onClick={[Function]}
     >
       whatever list

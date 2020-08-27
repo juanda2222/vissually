@@ -1,8 +1,8 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`VButton Default render. no list given 1`] = `
+exports[`VClickableList Default render. no list given 1`] = `
 <div
-  className="sc-AxjAm jNAsBD list_container "
+  className="sc-AxjAm fOcHzp list_container "
 >
   <div
     className="sc-AxirZ sc-AxiKw crVGut list_item "
@@ -11,7 +11,7 @@ exports[`VButton Default render. no list given 1`] = `
     1
   </div>
   <div
-    className="sc-AxirZ sc-AxhCb fvJznW list_item "
+    className="sc-AxirZ sc-AxhCb hWFKht list_item "
     onClick={[Function]}
   >
     2
@@ -19,9 +19,9 @@ exports[`VButton Default render. no list given 1`] = `
 </div>
 `;
 
-exports[`VButton Rendering with props. Snapshot test 1`] = `
+exports[`VClickableList Rendering with props. Snapshot test 1`] = `
 <div
-  className="sc-AxjAm jNAsBD list_container "
+  className="sc-AxjAm fOcHzp list_container "
 >
   <div
     className="sc-AxirZ sc-AxiKw crVGut list_item "
@@ -48,7 +48,7 @@ exports[`VButton Rendering with props. Snapshot test 1`] = `
     other name
   </div>
   <div
-    className="sc-AxirZ sc-AxhCb fvJznW list_item "
+    className="sc-AxirZ sc-AxhCb hWFKht list_item "
     onClick={[Function]}
   >
     whatever list

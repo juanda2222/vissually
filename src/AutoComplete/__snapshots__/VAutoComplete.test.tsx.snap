@@ -28,7 +28,7 @@ exports[`AutoComplete Rendering with props. Snapshot test 1`] = `
     </label>
   </div>
   <div
-    className="sc-AxjAm jNAsBD list_container list_style fadeOut "
+    className="sc-AxjAm fOcHzp list_container list_style fadeOut "
   >
     <div
       className="sc-AxirZ sc-AxiKw crVGut list_item "
@@ -86,7 +86,7 @@ exports[`AutoComplete Rendering with props. Snapshot test 1`] = `
       12 Angry Men
     </div>
     <div
-      className="sc-AxirZ sc-AxhCb fvJznW list_item "
+      className="sc-AxirZ sc-AxhCb hWFKht list_item "
       onClick={[Function]}
       style={
         Object {

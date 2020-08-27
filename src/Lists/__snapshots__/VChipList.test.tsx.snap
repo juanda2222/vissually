@@ -1,0 +1,466 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`VChipList Default render. no list given 1`] = `
+<div
+  style={
+    Object {
+      "alignItems": "flex-start",
+      "display": "flex",
+      "flex": 1,
+      "flexWrap": "wrap",
+      "justifyContent": "center",
+    }
+  }
+>
+  <div
+    className="sc-AxjAm dkuJXE container "
+    onClick={[Function]}
+    style={
+      Object {
+        "margin": "2px",
+      }
+    }
+  >
+    <span>
+      1
+    </span>
+    <div
+      className="sc-AxirZ kWaCOc delete_button"
+      onClick={[Function]}
+    >
+      <svg
+        height="24"
+        style={
+          Object {
+            "fill": "rgb(0, 0, 0)",
+            "height": "0.6em",
+            "margin": "auto 6px",
+            "width": "0.6em",
+          }
+        }
+        viewBox="0 0 24 24"
+        width="24"
+      >
+        <path
+          d="M24 20.188l-8.315-8.209 8.2-8.282-3.697-3.697-8.212 8.318-8.31-8.203-3.666 3.666 8.321 8.24-8.206 8.313 3.666 3.666 8.237-8.318 8.285 8.203z"
+        />
+      </svg>
+    </div>
+  </div>
+  <div
+    className="sc-AxjAm dkuJXE container "
+    onClick={[Function]}
+    style={
+      Object {
+        "margin": "2px",
+      }
+    }
+  >
+    <span>
+      2
+    </span>
+    <div
+      className="sc-AxirZ kWaCOc delete_button"
+      onClick={[Function]}
+    >
+      <svg
+        height="24"
+        style={
+          Object {
+            "fill": "rgb(0, 0, 0)",
+            "height": "0.6em",
+            "margin": "auto 6px",
+            "width": "0.6em",
+          }
+        }
+        viewBox="0 0 24 24"
+        width="24"
+      >
+        <path
+          d="M24 20.188l-8.315-8.209 8.2-8.282-3.697-3.697-8.212 8.318-8.31-8.203-3.666 3.666 8.321 8.24-8.206 8.313 3.666 3.666 8.237-8.318 8.285 8.203z"
+        />
+      </svg>
+    </div>
+  </div>
+</div>
+`;
+
+exports[`VChipList Rendering with props. Snapshot test (With getLabel property) 1`] = `
+<div
+  style={
+    Object {
+      "alignItems": "flex-start",
+      "display": "flex",
+      "flex": 1,
+      "flexWrap": "wrap",
+      "justifyContent": "center",
+    }
+  }
+>
+  <div
+    className="sc-AxjAm dkuJXE container "
+    onClick={[Function]}
+    style={
+      Object {
+        "margin": "2px",
+      }
+    }
+  >
+    <span>
+      some_thing
+    </span>
+    <div
+      className="sc-AxirZ kWaCOc delete_button"
+      onClick={[Function]}
+    >
+      <svg
+        height="24"
+        style={
+          Object {
+            "fill": "rgb(0, 0, 0)",
+            "height": "0.6em",
+            "margin": "auto 6px",
+            "width": "0.6em",
+          }
+        }
+        viewBox="0 0 24 24"
+        width="24"
+      >
+        <path
+          d="M24 20.188l-8.315-8.209 8.2-8.282-3.697-3.697-8.212 8.318-8.31-8.203-3.666 3.666 8.321 8.24-8.206 8.313 3.666 3.666 8.237-8.318 8.285 8.203z"
+        />
+      </svg>
+    </div>
+  </div>
+  <div
+    className="sc-AxjAm dkuJXE container "
+    onClick={[Function]}
+    style={
+      Object {
+        "margin": "2px",
+      }
+    }
+  >
+    <span>
+      some_name
+    </span>
+    <div
+      className="sc-AxirZ kWaCOc delete_button"
+      onClick={[Function]}
+    >
+      <svg
+        height="24"
+        style={
+          Object {
+            "fill": "rgb(0, 0, 0)",
+            "height": "0.6em",
+            "margin": "auto 6px",
+            "width": "0.6em",
+          }
+        }
+        viewBox="0 0 24 24"
+        width="24"
+      >
+        <path
+          d="M24 20.188l-8.315-8.209 8.2-8.282-3.697-3.697-8.212 8.318-8.31-8.203-3.666 3.666 8.321 8.24-8.206 8.313 3.666 3.666 8.237-8.318 8.285 8.203z"
+        />
+      </svg>
+    </div>
+  </div>
+  <div
+    className="sc-AxjAm dkuJXE container "
+    onClick={[Function]}
+    style={
+      Object {
+        "margin": "2px",
+      }
+    }
+  >
+    <span>
+      some_name2
+    </span>
+    <div
+      className="sc-AxirZ kWaCOc delete_button"
+      onClick={[Function]}
+    >
+      <svg
+        height="24"
+        style={
+          Object {
+            "fill": "rgb(0, 0, 0)",
+            "height": "0.6em",
+            "margin": "auto 6px",
+            "width": "0.6em",
+          }
+        }
+        viewBox="0 0 24 24"
+        width="24"
+      >
+        <path
+          d="M24 20.188l-8.315-8.209 8.2-8.282-3.697-3.697-8.212 8.318-8.31-8.203-3.666 3.666 8.321 8.24-8.206 8.313 3.666 3.666 8.237-8.318 8.285 8.203z"
+        />
+      </svg>
+    </div>
+  </div>
+  <div
+    className="sc-AxjAm dkuJXE container "
+    onClick={[Function]}
+    style={
+      Object {
+        "margin": "2px",
+      }
+    }
+  >
+    <span>
+      other name
+    </span>
+    <div
+      className="sc-AxirZ kWaCOc delete_button"
+      onClick={[Function]}
+    >
+      <svg
+        height="24"
+        style={
+          Object {
+            "fill": "rgb(0, 0, 0)",
+            "height": "0.6em",
+            "margin": "auto 6px",
+            "width": "0.6em",
+          }
+        }
+        viewBox="0 0 24 24"
+        width="24"
+      >
+        <path
+          d="M24 20.188l-8.315-8.209 8.2-8.282-3.697-3.697-8.212 8.318-8.31-8.203-3.666 3.666 8.321 8.24-8.206 8.313 3.666 3.666 8.237-8.318 8.285 8.203z"
+        />
+      </svg>
+    </div>
+  </div>
+  <div
+    className="sc-AxjAm dkuJXE container "
+    onClick={[Function]}
+    style={
+      Object {
+        "margin": "2px",
+      }
+    }
+  >
+    <span>
+      whatever list
+    </span>
+    <div
+      className="sc-AxirZ kWaCOc delete_button"
+      onClick={[Function]}
+    >
+      <svg
+        height="24"
+        style={
+          Object {
+            "fill": "rgb(0, 0, 0)",
+            "height": "0.6em",
+            "margin": "auto 6px",
+            "width": "0.6em",
+          }
+        }
+        viewBox="0 0 24 24"
+        width="24"
+      >
+        <path
+          d="M24 20.188l-8.315-8.209 8.2-8.282-3.697-3.697-8.212 8.318-8.31-8.203-3.666 3.666 8.321 8.24-8.206 8.313 3.666 3.666 8.237-8.318 8.285 8.203z"
+        />
+      </svg>
+    </div>
+  </div>
+</div>
+`;
+
+exports[`VChipList Rendering with props. Snapshot test 1`] = `
+<div
+  style={
+    Object {
+      "alignItems": "flex-start",
+      "display": "flex",
+      "flex": 1,
+      "flexWrap": "wrap",
+      "justifyContent": "center",
+    }
+  }
+>
+  <div
+    className="sc-AxjAm dkuJXE container "
+    onClick={[Function]}
+    style={
+      Object {
+        "margin": "2px",
+      }
+    }
+  >
+    <span>
+      some_thing
+    </span>
+    <div
+      className="sc-AxirZ kWaCOc delete_button"
+      onClick={[Function]}
+    >
+      <svg
+        height="24"
+        style={
+          Object {
+            "fill": "rgb(0, 0, 0)",
+            "height": "0.6em",
+            "margin": "auto 6px",
+            "width": "0.6em",
+          }
+        }
+        viewBox="0 0 24 24"
+        width="24"
+      >
+        <path
+          d="M24 20.188l-8.315-8.209 8.2-8.282-3.697-3.697-8.212 8.318-8.31-8.203-3.666 3.666 8.321 8.24-8.206 8.313 3.666 3.666 8.237-8.318 8.285 8.203z"
+        />
+      </svg>
+    </div>
+  </div>
+  <div
+    className="sc-AxjAm dkuJXE container "
+    onClick={[Function]}
+    style={
+      Object {
+        "margin": "2px",
+      }
+    }
+  >
+    <span>
+      some_name
+    </span>
+    <div
+      className="sc-AxirZ kWaCOc delete_button"
+      onClick={[Function]}
+    >
+      <svg
+        height="24"
+        style={
+          Object {
+            "fill": "rgb(0, 0, 0)",
+            "height": "0.6em",
+            "margin": "auto 6px",
+            "width": "0.6em",
+          }
+        }
+        viewBox="0 0 24 24"
+        width="24"
+      >
+        <path
+          d="M24 20.188l-8.315-8.209 8.2-8.282-3.697-3.697-8.212 8.318-8.31-8.203-3.666 3.666 8.321 8.24-8.206 8.313 3.666 3.666 8.237-8.318 8.285 8.203z"
+        />
+      </svg>
+    </div>
+  </div>
+  <div
+    className="sc-AxjAm dkuJXE container "
+    onClick={[Function]}
+    style={
+      Object {
+        "margin": "2px",
+      }
+    }
+  >
+    <span>
+      some_name2
+    </span>
+    <div
+      className="sc-AxirZ kWaCOc delete_button"
+      onClick={[Function]}
+    >
+      <svg
+        height="24"
+        style={
+          Object {
+            "fill": "rgb(0, 0, 0)",
+            "height": "0.6em",
+            "margin": "auto 6px",
+            "width": "0.6em",
+          }
+        }
+        viewBox="0 0 24 24"
+        width="24"
+      >
+        <path
+          d="M24 20.188l-8.315-8.209 8.2-8.282-3.697-3.697-8.212 8.318-8.31-8.203-3.666 3.666 8.321 8.24-8.206 8.313 3.666 3.666 8.237-8.318 8.285 8.203z"
+        />
+      </svg>
+    </div>
+  </div>
+  <div
+    className="sc-AxjAm dkuJXE container "
+    onClick={[Function]}
+    style={
+      Object {
+        "margin": "2px",
+      }
+    }
+  >
+    <span>
+      other name
+    </span>
+    <div
+      className="sc-AxirZ kWaCOc delete_button"
+      onClick={[Function]}
+    >
+      <svg
+        height="24"
+        style={
+          Object {
+            "fill": "rgb(0, 0, 0)",
+            "height": "0.6em",
+            "margin": "auto 6px",
+            "width": "0.6em",
+          }
+        }
+        viewBox="0 0 24 24"
+        width="24"
+      >
+        <path
+          d="M24 20.188l-8.315-8.209 8.2-8.282-3.697-3.697-8.212 8.318-8.31-8.203-3.666 3.666 8.321 8.24-8.206 8.313 3.666 3.666 8.237-8.318 8.285 8.203z"
+        />
+      </svg>
+    </div>
+  </div>
+  <div
+    className="sc-AxjAm dkuJXE container "
+    onClick={[Function]}
+    style={
+      Object {
+        "margin": "2px",
+      }
+    }
+  >
+    <span>
+      whatever list
+    </span>
+    <div
+      className="sc-AxirZ kWaCOc delete_button"
+      onClick={[Function]}
+    >
+      <svg
+        height="24"
+        style={
+          Object {
+            "fill": "rgb(0, 0, 0)",
+            "height": "0.6em",
+            "margin": "auto 6px",
+            "width": "0.6em",
+          }
+        }
+        viewBox="0 0 24 24"
+        width="24"
+      >
+        <path
+          d="M24 20.188l-8.315-8.209 8.2-8.282-3.697-3.697-8.212 8.318-8.31-8.203-3.666 3.666 8.321 8.24-8.206 8.313 3.666 3.666 8.237-8.318 8.285 8.203z"
+        />
+      </svg>
+    </div>
+  </div>
+</div>
+`;
