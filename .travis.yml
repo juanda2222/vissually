@@ -1,25 +1,40 @@
 language: node_js
 node_js:
-  - 12
-  - 10
-
-
+- 12
+- 10
 before_install:
-  - echo "before install script"
-before_script:
-  - echo "before build script"
-after_script:
-  - echo "after build script"
-after_success:
-  - echo "success job!"
-after_failure:
-  - echo "failed job"
-  
-# safelist
+- echo "Ready to install!"
+
+
 branches:
   only:
   - master
 
-cache:  
+cache:
   directories:
-    - node_modules
+  - node_modules
+
+  before_deploy:
+  - typedoc --out ./documentation/ src
+
+deploy:
+
+  - provider: npm
+    email: juandara2222@gmail.com
+    api_key:
+      secure: VM1kopn72webVf0gHP6B1kvf8I1H2TU5q//BCyi817cB0lc+u78SPTfVtJSkjgUl8A5N1CLz8ORC4ZLH71BFsc+pIgxPUkJqP04UOkhO+BlckDjkNGGmOIvs5zJlonnmZ02/OUAOjiQSbTliqS8SRkSObV2inRSTCMhO9DjohBnrxeLmRvDCNYV6N3r7xiV7BsJ8KumcE/ML4sfStN9WpUTBPinjaM//t9kBm4RZCud6Tkl1sjz/ckpo1nsTRLZeuM7rbs0b3dc3xE8u2IQdFnAnu7z0JY/5HdZlL27rFnaqq0z5Ds7Wc1Yn0nKmBcunmeLoDIHZvnQ8v7fFn84yuFdnoMLeQ/FsHwgCtFVnbsGpLmW9x6IkopFPKsJ0r7zgu4+QcOwlEzX9xyuIssi5U+Zbc7Fh/Q9aNw/i/kA6vt5olzcF55L35K3fu9eNPYpOGHQ4KgmtLXRlhy2pUPlrDwDyrFw5cLx4RjOLY22Wp80dv2/dNC2ungD3ImmcE5jLu1KENXOJ780QvVjO1WPpxWagqjEttITb/IsBWwG0mcDLgVvRGzVhdQHWGpoSmoT4EDAbI+3MszFtdD5iRpwrz6y+ZqMxcXgC3L57HfMpRBvER3w2TH0JqF7khA0DA5lLO0Nxxhokju+EvbdQn3V0LI/p2y/HRAfUzE3PpMGnAj4=
+    on:
+      tags: true
+      repo: juanda2222/vissually
+    skip_cleanup: 'true'
+
+  - provider: s3
+    access_key_id: AKIAJEX56CB2LDOONAAQ
+    secret_access_key:
+      secure: K7/CyOOgVe6kyjsE6528soaEBq4TQvRSFuOduXJak4+PY5QJdVueaFjBzqTTorkkxCCiFzIkJToNQUg74Za9/h1d6m1ETdzpzMTJ9jqu8mVJ91HJhWybSQ/4pFEZuv/BSqVujBXThVxN4NwSfmAltiIRccdIc3CDUSTvbn2/98JP64KYGGzF9O1gI/RycbpfyqeKbaFAbhSdhjS2EV2qheUc4Ka5gqco04dS8kCb8r1NfiP2bcNqZr0MDcrLg8I7VKuQ9YF/LRV0zlrCY5sLy1y9ngqlpDGxZh4wNkfqkzUBblVyRaUiNe0kBfoQjJF4/0nqSU2tkzXeCxYpmC/4lRqGzQ6rR0GVVfKBKwx/ELhu58BDD9CRoumgC3KugrIk0RLUO2Sa/tGKJlqTFD1i6Sl8keCmVFhudPmbXhNJDxemiMCAhYYR3eGO0PXVjpLoo/lrPUUNru7rnwqMMAdxftb0bnoDWpVUAsB2ctHCOICQGw3+jn3Vk4VopmPGXrwDFJ6szWjxO98N7dBZT/LHf1/JKz4clEZ2ZyIEL0ZtBroFE3OmbNTO7k7r61/5C7qYbwvTZ3+HYs0BCyftmzMMOXwPUHK9bdBsGWqEUYoOgVwc4spVBm1ure+/6eDnBnaLZdZeCPrk1sC2RNykNtAXVyKtowxydQJkQCAmvVfWvsI=
+    bucket: personal-public-files-23rde2
+    local-dir: documentation
+    acl: public_read
+    on:
+      repo: juanda2222/vissually
+    skip_cleanup: 'true'
