@@ -67,52 +67,53 @@ const autocomplete_list = [
     { title: 'Django Unchained', year: 2012 },
 ]
 
-const AutoCompleteExample = (props: {dark?:boolean}) => (
-    <div style={{
-        display: "flex",
-        flexDirection: "column",
-        alignItems: "center",
-    }}>
-        <h4 style={{ color:props.dark ? "#ffffff":"#000000" }}> Simple AutoComplete: </h4>
-        <div className={"responsiveFlex"} style={{marginBottom:"15px"}}>
+function AutoCompleteExample(props: { dark?: boolean }) {
+    return (
+        <div style={{
+            display: "flex",
+            flexDirection: "column",
+            alignItems: "center",
+        }}>
+            <h4 style={{ color: props.dark ? "#ffffff" : "#000000" }}> Simple AutoComplete: </h4>
+            <div className={"responsiveFlex"} style={{ marginBottom: "15px" }}>
+                <VAutoComplete
+                    primaryDark={props.dark}
+                    options={autocomplete_list}
+                    getOptionLabel={(option: { title: number, year: string }) => option.title}
+                    style={{ width: 300 }}
+                    renderInput={(params: any) => <VInput {...params} placeholder="Default" />}
+                />
+                <VAutoComplete
+                    secondary={!props.dark}
+                    secondaryDark={props.dark}
+                    options={autocomplete_list}
+                    getOptionLabel={(option: { title: number, year: string }) => option.title}
+                    style={{ width: 300 }}
+                    renderInput={(params: any) => <VInput {...params} placeholder="Secondary" />}
+                />
+                <VAutoComplete
+                    primaryDark={props.dark}
+                    options={autocomplete_list}
+                    getOptionLabel={(option: { title: number, year: string }) => option.title}
+                    style={{ width: 300 }}
+                    renderInput={(params: any) => <VInput {...params}
+                        style={{ borderColor: "rgb(150,20,20)" }}
+                        placeholder="Custom"
+                    />}
+                />
+            </div>
+            <h4 style={{ color: props.dark ? "#ffffff" : "#000000" }}> Multiple Selection AutoComplete: </h4>
             <VAutoComplete
+                multiple
                 primaryDark={props.dark}
                 options={autocomplete_list}
-                getOptionLabel={(option: {title:number, year:string}) => option.title}
+                getOptionLabel={(option: { title: number, year: string }) => option.title}
                 style={{ width: 300 }}
-                renderInput={(params:any) => <VInput {...params} placeholder="Default" />}
-            />
-            <VAutoComplete
-                secondary={!props.dark}
-                secondaryDark={props.dark}
-                options={autocomplete_list}
-                getOptionLabel={(option: {title:number, year:string}) => option.title}
-                style={{ width: 300 }}
-                renderInput={(params:any) => <VInput {...params} placeholder="Secondary" />}
-            />
-            <VAutoComplete
-                primaryDark={props.dark}
-                options={autocomplete_list}
-                getOptionLabel={(option: {title:number, year:string}) => option.title}
-                style={{ width: 300}}
-                renderInput={(params: any) => <VInput {...params}
-                    style={{ borderColor: "rgb(150,20,20)" }}
-                    placeholder="Custom"
-                />}
+                renderInput={(params: any) => <VInput {...params} placeholder="Multiple" />}
             />
         </div>
-        <h4 style={{ color:props.dark ? "#ffffff":"#000000" }}> Multiple Selection AutoComplete: </h4>
-        <VAutoComplete
-            multiple
-            primaryDark={props.dark}
-            options={autocomplete_list}
-            getOptionLabel={(option: { title:number, year:string }) => option.title}
-            style={{ width: 300 }}
-            renderInput={(params:any) => <VInput {...params} placeholder="Multiple" />}
-        />
-    </div>
-)
-
+    )
+}
 export default AutoCompleteExample` 
     }
     

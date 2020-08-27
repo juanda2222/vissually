@@ -4,7 +4,7 @@
 import React, { useState } from 'react'
 import { VInput, VButton, } from 'vissually'
 
-const TextInputExample = (props: {dark?:boolean}) => {
+function TextInputExample (props: {dark?:boolean}) {
     
     const [text, setText] = useState("")
     return (    
