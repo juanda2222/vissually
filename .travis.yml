@@ -8,7 +8,7 @@ before_install:
 branches:
   only:
   - master
-  - /^v.*$/
+  - /^v.*$/  # allow tag commits
 
 cache:
   directories:
@@ -24,6 +24,7 @@ deploy:
     api_key: "$NPM_API_KEY"
     on:
       tags: true
+      all_branches: true
       repo: juanda2222/vissually
     skip_cleanup: 'true'
 
