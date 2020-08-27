@@ -8,6 +8,7 @@ before_install:
 branches:
   only:
   - master
+  - /^v.*$/
 
 cache:
   directories:
@@ -36,4 +37,3 @@ deploy:
       repo: juanda2222/vissually
     skip_cleanup: 'true'
 
-    
