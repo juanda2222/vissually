@@ -40,7 +40,7 @@ function AutoCompletePage (props: {dark?:boolean}) {
   
   return (
     <div className={classes.container}>
-      <Typography className={classes.text} variant="h2">
+      <Typography className={classes.text} variant="h3">
         VAutoComplete
       </Typography>
       <Typography className={classes.text} variant="h5">
