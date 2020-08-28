@@ -23,7 +23,7 @@ function StylesExample (props: { dark?: boolean }) {
             </VButton>
             <VInput
                 primaryDark={props.dark}
-                parentStyle={{ width: "500px" }}
+                parentStyle={{ width: "380px" }}
                 placeholder="large"
                 name="name"
             />

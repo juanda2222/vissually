@@ -38,7 +38,7 @@ function StylesExample (props: { dark?: boolean }){
                 <VButton style={{ padding: "30px", }}>{"BIG"}</VButton>
                 <VButton style={{ padding: "5px" }}>{"small"}</VButton>
                 <VInput
-                    parentStyle={{ width: "400px" }}
+                    parentStyle={{ width: "380px" }}
                     placeholder="large"
                     name="name"
                     primaryDark={props.dark}
@@ -48,7 +48,7 @@ function StylesExample (props: { dark?: boolean }){
                 <h4 style={{ color: props.dark ? "#ffffff" : "#000000" }}> Custom theme: </h4>
                 <VButton style={{ padding: "30px" }}>{"BIG"}</VButton>
                 <VButton style={{ padding: "5px" }}>{"small"}</VButton>
-                <VInput parentStyle={{ width: "400px" }} placeholder="large" name="name" />
+                <VInput parentStyle={{ width: "380px" }} placeholder="large" name="name" />
             </VThemeProvider>
         </div>
     )

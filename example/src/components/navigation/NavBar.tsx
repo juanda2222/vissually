@@ -29,8 +29,8 @@ const useStyles = makeStyles((theme:Theme) =>
     },
     title: {
       marginRight: "auto",
-      fontWeight: 500,
-      fontSize: "1rem"
+      fontWeight: 550,
+      fontSize: "1.2rem"
     },
     icons: {
       margin: "4px",
