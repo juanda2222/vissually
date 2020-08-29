@@ -11,7 +11,7 @@ import TextInputExample from "../examples/InputExamples"
 function TextInputBanner (props: {dark?:boolean}){
   return (
     <div>
-        <h3 style={{ color:props.dark ? "#ffffff":"#000000" }}>VInput examples:</h3>
+        <h3 style={{ color:props.dark ? "#ffffff":"#000000" }}>Text VInput examples:</h3>
       <TextInputExample dark={props.dark} />
         <h3 style={{ color:props.dark ? "#ffffff":"#000000" }}>Full Code:</h3>
         <SyntaxHighlighter language="javascript" style={props.dark ? anOldHope : docco}>

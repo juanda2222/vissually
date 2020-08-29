@@ -5,11 +5,7 @@ import { VInput } from 'vissually'
 function TextInputExample (props: { dark?: boolean }) {
     return (
     
-        <div style={{
-            display: "flex",
-            justifyContent: "center",
-            marginBottom: "15px",
-        }}>
+        <div className={"responsiveFlex"}>
             <VInput
                 primaryDark={props.dark}
                 placeholder="default"
